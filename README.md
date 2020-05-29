@@ -1,6 +1,6 @@
 # LSST IR fusion
 
-This is a first step towards combining LSST and VISTA IR imaging. In the first instance we are running Sextractor on HSC and VISTA imaging in dual image mode to create benchmarks against which to compare similar catalogues produced with the LSST stack. These HSC-VISTA catalogues will themselves be an end product but the final aim os for the code to be ready to run as soon as the first LSST coadd images start to arrive in 2021(?).
+This is a first step towards combining LSST and VISTA IR imaging. In the first instance we are running Sextractor on HSC and VISTA imaging in dual image mode to create benchmarks against which to compare similar catalogues produced with the LSST stack. These HSC-VISTA catalogues will themselves be an end product but the final aim is for the code to be ready to run as soon as the first LSST coadd images start to arrive in 2021(?).
 
 ## Technical information
 
