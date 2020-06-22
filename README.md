@@ -8,7 +8,7 @@ We are using data stored on the DIRAC system which manages machines in Cambridge
 
 ssh -l ir-shir1 login.hpc.cam.ac.uk
 
-using the password which can be found at https://protect-eu.mimecast.com/s/vFOUCN05NTM9j8oI4k-TC?domain=safe.epcc.ed.ac.uk
+using the password which can be found at https://safe.epcc.ed.ac.uk/dirac/
 
 ## Data structure
 
