@@ -1,6 +1,6 @@
 # LSST IR fusion
 
-This is a first step towards combining LSST and VISTA IR imaging. In the first instance we are running Sextractor on HSC and VISTA imaging in dual image mode to create benchmarks against which to compare similar catalogues produced with the LSST stack. These HSC-VISTA catalogues will themselves be an end product but the final aim is for the code to be ready to run as soon as the first LSST coadd images start to arrive in 2021(?).
+This is a first step towards combining LSST and VISTA IR imaging. In the first instance we are running Sextractor on HSC and VISTA imaging in dual image mode to create benchmarks against which to compare similar catalogues produced with the LSST stack. These HSC-VISTA catalogues will themselves be an end product but the final aim is for the code to be ready to run as soon as the first LSST coadd images start to arrive in 2023(?).
 
 ## Technical information
 
@@ -17,7 +17,7 @@ This code is developed on a personal laptop on individual tiles. Final processin
 1. [data.yml](a file specifying the location of raw image data on the DIRAC machine)
 2. [data_local.yml](a file overiding the above for local development)
 
-Each stage of the processing is divided in to a seperate folder:
+Each stage of the processing is divided in to a seperate Data Management Unit (DMU) folder:
 
  DMU               |  Contents
 -------------------|------------------------------------------
