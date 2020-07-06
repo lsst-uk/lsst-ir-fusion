@@ -17,6 +17,17 @@ This code is developed on a personal laptop on individual tiles. Final processin
 1. [data.yml](a file specifying the location of raw image data on the DIRAC machine)
 2. [data_local.yml](a file overiding the above for local development)
 
+Each stage of the processing is divided in to a seperate folder:
+
+ DMU               |  Contents
+-------------------|------------------------------------------
+ [DMU1](dmu1)      |  Summarise the imaging data
+ [DMU2](dmu2)      |  Swarping the VISTA data to HSC/LSST pixel base
+ [DMU3](dmu3)      |  SExtractor baseline catalogues
+ [DMU4](dmu4)      |  LSST pipeline catalogues
+ [DMU5](dmu5)      |  Comparisons and diagnostics
+
+
 ## Tiling
 
 The basic tiles will be set by the HSC public imaging product which should be similar to the LSST version. 
