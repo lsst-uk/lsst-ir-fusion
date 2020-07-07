@@ -10,6 +10,16 @@ ssh -l ir-shir1 login.hpc.cam.ac.uk
 
 using the password which can be found at https://safe.epcc.ed.ac.uk/dirac/
 
+The LSST pipeline is installed according to the instructions here:
+
+https://pipelines.lsst.io/install/newinstall.html
+
+These instructions worked on a local mac. There is a submitted ticket at DIRAC to understand how to install them there.
+
+You will need to install jupyter notebooks within the LSST shell to use them
+
+conda install notebook
+
 ## Data structure
 
 This code is developed on a personal laptop on individual tiles. Final processing should be run on individual tiles so each tile can be sent to a queing system as an individual job. 
