@@ -28,6 +28,15 @@ You will also need to activate the LSST shell anytime you use the software
 $ source loadLSST.bash
 ```
 
+For the baseline tests we used SExtractor and SWarp. The installation instructions for which are here:
+
+https://sextractor.readthedocs.io/en/latest/Installing.html
+
+and 
+
+https://www.astromatic.net/software/swarp
+
+
 ## Data structure
 
 This code is developed on a personal laptop on individual tiles. Final processing should be run on individual tiles so each tile can be sent to a queing system as an individual job. 
