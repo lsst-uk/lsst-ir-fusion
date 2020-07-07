@@ -20,12 +20,14 @@ You will need to install jupyter notebooks within the LSST shell to use them
 
 ```Shell
 $ conda install notebook
+
 ```
 
-You will also need to activate the LSST shell anytime you use the software
+You will also need to activate the LSST shell anytime you use the software and add the command line commands to your shell
 
 ```Shell
-$ source loadLSST.bash
+$ source loadLSST.bash # load the lsst shell
+$ setup lsst_distrib   # add commands to shell
 ```
 
 For the baseline tests we used SExtractor and SWarp. The installation instructions for which are here:
