@@ -14,11 +14,19 @@ The LSST pipeline is installed according to the instructions here:
 
 https://pipelines.lsst.io/install/newinstall.html
 
-These instructions worked on a local mac. There is a submitted ticket at DIRAC to understand how to install them there.
+These instructions worked on a local mac and on hpc.cam.ac.uk.
 
 You will need to install jupyter notebooks within the LSST shell to use them
 
-conda install notebook
+```Shell
+$ conda install notebook
+```
+
+You will also need to activate the LSST shell anytime you use the software
+
+```Shell
+$ source loadLSST.bash
+```
 
 ## Data structure
 
