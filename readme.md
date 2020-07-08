@@ -57,15 +57,10 @@ Each stage of the processing is divided in to a seperate Data Management Unit (D
  [DMU5](dmu5)      |  Comparisons and diagnostics
 
 
-## Tiling
+## Tiling, warping and pixel spaces
 
-The basic tiles will be set by the HSC public imaging product which should be similar to the LSST version. 
-
-Questions: 
-
-1) do tiles overlap? how do we deal with objects at the edge of the tile?
-2) Do can we specify these tiles? RA-dec of corners? HealPix?
+The basic tiles will be set by the HSC public imaging product which should be similar to the LSST version. The HSC tiles overlap. We need to decide whether to warp the VISTA images to HSC/LSST tiles or whether we can merge detection catalogues before measurement and leave the VISTA pixel space as it is. If we want to produce chi squared images we will need to warp the VISTA images.
 
 ## Detection images
 
-The code should be capable of running on any set of detection images. To begin we use i band HSC and Ks band VISTA detection images. Eventually we may want to apply all and use flags in a combined catalogue to specify which bands a given object is detected in.
+The code should be capable of running on any set of detection images. To begin we use i band HSC and Ks band VISTA detection images. Eventually we may want to make detection catalogues from every band and or a chi squared image and use flags in a combined catalogue to specify which bands a given object is detected in.
