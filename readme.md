@@ -19,21 +19,22 @@ git clone https://github.com/lsst/lsstsw.git
 cd lsstsw
 ./bin/deploy
 . bin/envconfig
+source /FULL/PATH/TO/bin/envconfig # load the lsst shell
+rebuild lsst_distrib               # add commands to shell
+eups tags --clone bNNNN current    # replace bNNNN with version printed from previous step
 ```
 You will also need to activate the LSST shell and setup lsst_distrib anytime you use the software and add the command line commands to your shell
 
 ```Shell
-source /FULL/PATH/TO/bin/envconfig # load the lsst shell
-rebuild lsst_distrib   # add commands to shell
+setup lsst_distrib
 ```
 
-You will need to install jupyter notebooks within the LSST shell to use them
+You will need to install jupyter notebooks within the LSST shell to use them. 
 
 ```Shell
 conda install notebook
 
 ```
-
 
 For the baseline tests we used SExtractor and SWarp. The installation instructions for which are here:
 
@@ -43,7 +44,7 @@ and
 
 https://www.astromatic.net/software/swarp
 
-Eventually this code will make use of the obs_vista package which is currently under development:
+Eventually this code will make use of the obs_vista package which is currently under development. We will probably require other packages as we develop obs_vista. These will be documented on the obs_vista repository:
 
 https://github.com/raphaelshirley/obs_vista
 
