@@ -18,7 +18,7 @@ Note that when I installed there was a minor disparity between the instructions 
 git clone https://github.com/lsst/lsstsw.git
 cd lsstsw
 ./bin/deploy
-source bin/envconfig
+. bin/envconfig
 ```
 You will also need to activate the LSST shell and setup lsst_distrib anytime you use the software and add the command line commands to your shell
 
