@@ -12,6 +12,8 @@ These instructions worked on a local mac and on hpc.cam.ac.uk. However, in order
 
 https://pipelines.lsst.io/install/lsstsw.html
 
+Note that when I installed there was a minor disparity between the instructions on that page and those given by the installation itself. The code is under development so instructions pages become deprecated quickly.
+
 You will need to install jupyter notebooks within the LSST shell to use them
 
 ```Shell
