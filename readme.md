@@ -10,11 +10,13 @@ ssh -l ir-shir1 login.hpc.cam.ac.uk
 
 using the password which can be found at https://safe.epcc.ed.ac.uk/dirac/
 
-The LSST pipeline is installed according to the instructions here:
+The standard LSST pipeline is installed according to the instructions here:
 
 https://pipelines.lsst.io/install/newinstall.html
 
-These instructions worked on a local mac and on hpc.cam.ac.uk.
+These instructions worked on a local mac and on hpc.cam.ac.uk. However, in order to develop the obs_vista package we will need to install the LSST stack using the lsstsw method:
+
+https://pipelines.lsst.io/install/lsstsw.html
 
 You will need to install jupyter notebooks within the LSST shell to use them
 
