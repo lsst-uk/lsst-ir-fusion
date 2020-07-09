@@ -2,13 +2,7 @@
 
 This is a first step towards combining LSST and VISTA IR imaging. In the first instance we are running Sextractor on HSC and VISTA imaging in dual image mode to create benchmarks against which to compare similar catalogues produced with the LSST stack. These HSC-VISTA catalogues will themselves be an end product but the final aim is for the code to be ready to run as soon as the first LSST coadd images start to arrive in 2023(?).
 
-## Technical information
-
-We are using data stored on the DIRAC system which manages machines in Cambridge. I login with 
-
-ssh -l ir-shir1 login.hpc.cam.ac.uk
-
-using the password which can be found at https://safe.epcc.ed.ac.uk/dirac/
+## Installation
 
 The standard LSST pipeline is installed according to the instructions here:
 
@@ -39,6 +33,12 @@ https://sextractor.readthedocs.io/en/latest/Installing.html
 and 
 
 https://www.astromatic.net/software/swarp
+
+Eventually this code will make use of the obs_vista package which is currently under development:
+
+https://github.com/raphaelshirley/obs_vista
+
+This will tell the LSST stack how to interact with the VISTA database structure and raw files.
 
 
 ## Data structure
