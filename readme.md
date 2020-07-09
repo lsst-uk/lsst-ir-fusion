@@ -19,7 +19,6 @@ git clone https://github.com/lsst/lsstsw.git
 cd lsstsw
 ./bin/deploy
 . bin/envconfig
-source /FULL/PATH/TO/bin/envconfig # load the lsst shell
 rebuild lsst_distrib               # add commands to shell
 eups tags --clone bNNNN current    # replace bNNNN with version printed from previous step
 ```
