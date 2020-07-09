@@ -4,15 +4,11 @@ This is a first step towards combining LSST and VISTA IR imaging. In the first i
 
 ## Installation
 
-The standard LSST pipeline is installed according to the instructions here:
-
-https://pipelines.lsst.io/install/newinstall.html
-
-These instructions can be used to use the standard LSST stack. However, in order to develop the obs_vista package we will need to install the LSST stack using the lsstsw method:
+The standard LSST pipeline is installed according to the instructions [here](https://pipelines.lsst.io/install/newinstall.html). Those instructions can be used to use the standard LSST stack. However, in order to develop the obs_vista package we will need to install the LSST stack using the lsstsw method:
 
 https://pipelines.lsst.io/install/lsstsw.html
 
-Note that when I installed there was a minor disparity between the instructions on that page and those given by the installation itself. The instructions for a lsstsw installation are also subtley different. You will need around 5Gb of hdd for the installation which installs a new miniconda distribution. This means the code is competely separate from any other local miniconda installations you may have. The code is under development so instructions pages become deprecated quickly. The commands I used were:
+Note that when I installed there were minor disparities between the instructions on that page and those given by the installation itself. The instructions for a lsstsw installation are also subtley different. You will need around 5Gb of hdd for the installation which installs a new miniconda distribution. This means the code is competely separate from any other local miniconda installations you may have. The code is under development so instructions pages become deprecated quickly. The commands I used were:
 
 ```Shell
 git clone https://github.com/lsst/lsstsw.git
