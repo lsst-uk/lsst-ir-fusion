@@ -12,20 +12,27 @@ These instructions worked on a local mac and on hpc.cam.ac.uk. However, in order
 
 https://pipelines.lsst.io/install/lsstsw.html
 
-Note that when I installed there was a minor disparity between the instructions on that page and those given by the installation itself. The code is under development so instructions pages become deprecated quickly.
+Note that when I installed there was a minor disparity between the instructions on that page and those given by the installation itself. The code is under development so instructions pages become deprecated quickly. The commands I used were:
+
+```Shell
+git clone https://github.com/lsst/lsstsw.git
+cd lsstsw
+./bin/deploy
+source /FULL/PATH/TO/lsstw/bin/envconfig
+```
 
 You will need to install jupyter notebooks within the LSST shell to use them
 
 ```Shell
-$ conda install notebook
+conda install notebook
 
 ```
 
 You will also need to activate the LSST shell anytime you use the software and add the command line commands to your shell
 
 ```Shell
-$ source loadLSST.bash # load the lsst shell
-$ setup lsst_distrib   # add commands to shell
+source loadLSST.bash # load the lsst shell
+setup lsst_distrib   # add commands to shell
 ```
 
 For the baseline tests we used SExtractor and SWarp. The installation instructions for which are here:
