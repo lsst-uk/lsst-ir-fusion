@@ -8,7 +8,7 @@ The standard LSST pipeline is installed according to the instructions [here](htt
 
 https://pipelines.lsst.io/install/lsstsw.html
 
-Note that when I installed there were minor disparities between the instructions on that page and those given by the installation itself. The instructions for a lsstsw installation are also subtley different. You will need around 5Gb of hdd for the installation which installs a new miniconda distribution. This means the code is competely separate from any other local miniconda installations you may have. The code is under development so instructions pages become deprecated quickly. The commands I used were:
+Note that when I installed there were minor disparities between the instructions on that page and those given by the installation itself. The instructions for a lsstsw installation are also subtley different. You will need around 41Gb of hdd for the installation which installs a new miniconda distribution. This means the code is competely separate from any other local miniconda installations you may have. The code is under development so instructions pages become deprecated quickly. The commands I used were:
 
 ```Shell
 git clone https://github.com/lsst/lsstsw.git
@@ -18,10 +18,13 @@ cd lsstsw
 rebuild lsst_distrib               # add commands to shell
 eups tags --clone bNNNN current    # replace bNNNN with version printed from previous step
 ```
-You will also need to activate the LSST shell and setup lsst_distrib anytime you use the software and add the command line commands to your shell
+You will also need to activate the LSST shell and setup lsst_distrib and the obs_vista package anytime you use the software and add the command line commands to your shell
 
 ```Shell
+# Run these in every new shell
+. bin/envconfig
 setup lsst_distrib
+setup obs_vista 20.0.0-1
 ```
 
 You will need to install jupyter notebooks within the LSST shell to use them. 
