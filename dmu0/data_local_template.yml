@@ -1,12 +1,6 @@
-database_loc: './'
-
-vista:
-    - video: 'DATABASE_LOC/dmu0/dmu0_VISTA/dmu0_VIDEO/data/'
-    - viking: 'DATABASE_LOC/dmu0/dmu0_VISTA/dmu0_VIKING/data/'
-    - vhs: 'DATABASE_LOC/dmu0/dmu0_VISTA/dmu0_VHS/data/'
-    
-hsc: 'DATABASE_LOC/dmu0/dmu0_HSC/data/'
-
-panstarrs: 'DATABASE_LOC/dmu0/dmu0_PanSTARRS/data/'
-
-gaia: 'DATABASE_LOC/dmu0/dmu0_GAIA/data/'
+video: 'BASE/dmu0/dmu0_VISTA/dmu0_VIDEO/data/'
+viking: 'BASE/dmu0/dmu0_VISTA/dmu0_VIKING/data/'
+vhs: 'BASE/dmu0/dmu0_VISTA/dmu0_VHS/data/'
+hsc: 'BASE/dmu0/dmu0_HSC/data/'
+panstarrs: 'BASE/dmu0/dmu0_PanSTARRS/data/'
+gaia: 'BASE/dmu0/dmu0_GAIA/data/'
