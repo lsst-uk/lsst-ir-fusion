@@ -1,0 +1,12 @@
+database_loc: './'
+
+vista:
+    - video: 'DATABASE_LOC/dmu0/dmu0_VISTA/dmu0_VIDEO/data/'
+    - viking: 'DATABASE_LOC/dmu0/dmu0_VISTA/dmu0_VIKING/data/'
+    - vhs: 'DATABASE_LOC/dmu0/dmu0_VISTA/dmu0_VHS/data/'
+    
+hsc: 'DATABASE_LOC/dmu0/dmu0_HSC/data/'
+
+panstarrs: 'DATABASE_LOC/dmu0/dmu0_PanSTARRS/data/'
+
+gaia: 'DATABASE_LOC/dmu0/dmu0_GAIA/data/'
