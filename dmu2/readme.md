@@ -1,13 +1,8 @@
-# VISTA imaging
+# Reference catalogues
 
-## Headers and meta data
+In this repository we make the astrometric and photometric reference catalogues. We are starting with the LSST/HSC PanSTARRS reference catalogues and adding in 2MASS. Colour correction is performed by the obs_vista package.
 
-The wcs headers are deprecated and will not work with matplotlib. They will probably need to be updated to be run through the LSST pipelines.
+## PanSTARRS
 
-## Warping the images
+## 2MASS
 
-Do we need to warp the VISTA imaging to the LSST pixel base?
-
-## Butler
-
-Butler is a python class for handing data. We need to modify this to serve VISTA data.
