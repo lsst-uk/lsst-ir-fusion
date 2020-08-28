@@ -6,3 +6,25 @@ In this repository we make the astrometric and photometric reference catalogues.
 
 ## 2MASS
 
+## LSST formatting
+
+The catalogues must be provided in the LSST format. The format has changed. For instance it now requires degrees for right ascension and declination and magnitudes instead of fluxes. It must also be ingested into the repo with:
+
+```Shell
+ingestReferenceCatalog.py DATA ./ps1_pv3_3pi_20170110_filteredAB/13*.fits --output refcat --configfile indexReferenceCatalogOverride.py
+```
+
+This will put all the ref cats in this folder. These will then need to be linked in any repo which uses them or reingested.
+
+See useful discussion on reference catalogues here:
+
+https://community.lsst.org/t/creating-and-using-new-style-reference-catalogs/1523/9
+
+and here:
+
+https://community.lsst.org/t/pan-starrs-reference-catalog-in-lsst-format/1572
+
+Some code has been reused from here:
+
+https://github.com/jrmullaney/filter_PanSTARRS
+
