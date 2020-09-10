@@ -19,7 +19,7 @@ Each folder contained here will have a corresponding data folder not stored on G
 -------------------|------------------------------------------
  [DMU0](dmu0)      |  Images and catalogues which are inputs to data products produced here.
  [DMU1](dmu1)      |  Summaries and stats for raw data in DMU0
- [DMU2](dmu2)      |  Swarping the VISTA data to HSC/LSST pixel base
+ [DMU2](dmu2)      |  Constructing photometric and astrometric reference catalogues
  [DMU3](dmu3)      |  SExtractor baseline catalogues
  [DMU4](dmu4)      |  LSST pipeline catalogues
  [DMU5](dmu5)      |  Comparisons and diagnostics
@@ -29,5 +29,27 @@ Each folder contained here will have a corresponding data folder not stored on G
 ## Tiling, warping and pixel spaces
 
 The basic tiles are set by the HSC public imaging product which should be similar to the final LSST version. This tiling of the sky into 'tracts' and 'patches' is described in the HSC release pages.
+
+## Basic procedure
+
+After installation of the LSST stack and obs_vista (instructions with the obs_vista package) and cloning this repository you need to do the following for a standard run:
+
+### 1. Put raw data in DMU0
+
+As a minimum you will need the VISTA imaging of interest, the HSC public processed data of interest, the public PanSTARRS photometric and astrometric catalogues used to calibrate HSC, the 2MASS point source catalogue.
+
+### 2. Create data summaries in DMU1
+
+We run some simple data trawls in DMU1 in order to find overlapping areas for the VISTA images with the relevant SkyMap patches for a given HSC survey. You need to create a list of VISTA images, their corresponding HSC patches, PanSTARRS 'shards' to make the PanSTARRS-2MASS reference catalogue.
+
+### 3. Create the reference catalogues in DMU2
+
+We merge the PanSTARRS and 2MASS catalogues using a positional cross match and write it to a format which can be ingested by the LSST stack
+
+### 4. Run the photometry pipeline to create the final Butler repository in DMU4
+
+This stage consists of many steps which are documented in DMU4. In the final DMU4 folder there are numerous repositories for various different data sets and fields. These repositories should follow the structure of the public HSC/LSST data releases as far as possible. This should allow them to incorporated with other data sets created with the LSST stack using the same procedure.
+
+
 
 
