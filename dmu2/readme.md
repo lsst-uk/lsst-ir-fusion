@@ -1,17 +1,24 @@
 # Reference catalogues
 
-In this repository we make the astrometric and photometric reference catalogues. We are starting with the LSST/HSC PanSTARRS reference catalogues and adding in 2MASS. Colour correction is performed by the obs_vista package.
+In this repository we make the astrometric and photometric reference catalogues. We are starting with the LSST/HSC PanSTARRS reference catalogues and adding in 2MASS. Colour correction is performed by the obs_vista package. A key part of using the reference catalogues is using appropriate colour terms. We investigate the relations between the catalogues including final catalogues as a further test in the notebook [./2_Colour_terms.ipynb](./2_Colour_terms.ipynb)
 
 ## PanSTARRS
 
+We are using the HSC PanSTARRS/GAIA reference catalogue used for the public HSC releases which has been limited to 19 mag in r.
+
+TODO: Use full catalogue and recalibrate positions to GAIA DR2?
+
 ## 2MASS
+
+The 2MASS catalogues are described in the associated readme [../dmu0/dmu0_2MASS/readme.md](../dmu0/dmu0_2MASS/readme.md).
 
 ## LSST formatting
 
 The catalogues must be provided in the LSST format. The format has changed. For instance it now requires degrees for right ascension and declination and magnitudes instead of fluxes. It must also be ingested into the repo with:
 
 ```Shell
-ingestReferenceCatalog.py DATA ./ps1_pv3_3pi_20170110_filteredAB/13*.fits --output refcat --configfile indexReferenceCatalogOverride.py
+
+ingestReferenceCatalog.py data ./ps1_pv3_3pi_20170110_filteredAB/13*.fits --output data/refcat_name --configfile indexReferenceCatalogOverride.py
 ```
 
 This will put all the ref cats in this folder. These will then need to be linked in any repo which uses them or reingested.
