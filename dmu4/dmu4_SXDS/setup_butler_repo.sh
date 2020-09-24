@@ -1,0 +1,56 @@
+#!/bin/bash
+#Prepare Butler repo for processCcd and runPhotopipe slurm runs
+source /rfs/project/rfs-L33A9wsNuJk/shared/lsst_stack/loadLSST.bash
+setup lsst_distrib
+setup obs_vista
+mkdir -p data/rerun/coaddPhot/deepCoadd-results/HSC-G
+mkdir -p data/rerun/coaddPhot/deepCoadd-results/HSC-R
+mkdir -p data/rerun/coaddPhot/deepCoadd-results/HSC-I
+mkdir -p data/rerun/coaddPhot/deepCoadd-results/HSC-Z
+mkdir -p data/rerun/coaddPhot/deepCoadd-results/HSC-Y
+#makeSkyMap.py data --rerun processCcdOutputs:coadd --clobber-config
+cp -r /home/ir-shir1/rds/rds-iris-ip005/data/public/HSC/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_dud/deepCoadd-results/HSC-G/8283 data/rerun/coaddPhot/deepCoadd-results/HSC-G 
+cp -r /home/ir-shir1/rds/rds-iris-ip005/data/public/HSC/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_dud/deepCoadd-results/HSC-G/8283 data/rerun/coaddPhot/deepCoadd-results/HSC-G 
+cp -r /home/ir-shir1/rds/rds-iris-ip005/data/public/HSC/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_dud/deepCoadd-results/HSC-G/8283 data/rerun/coaddPhot/deepCoadd-results/HSC-G 
+cp -r /home/ir-shir1/rds/rds-iris-ip005/data/public/HSC/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_dud/deepCoadd-results/HSC-G/8283 data/rerun/coaddPhot/deepCoadd-results/HSC-G 
+cp -r /home/ir-shir1/rds/rds-iris-ip005/data/public/HSC/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_dud/deepCoadd-results/HSC-G/8283 data/rerun/coaddPhot/deepCoadd-results/HSC-G 
+cp -r /home/ir-shir1/rds/rds-iris-ip005/data/public/HSC/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_dud/deepCoadd-results/HSC-G/8283 data/rerun/coaddPhot/deepCoadd-results/HSC-G 
+cp -r /home/ir-shir1/rds/rds-iris-ip005/data/public/HSC/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_dud/deepCoadd-results/HSC-G/8283 data/rerun/coaddPhot/deepCoadd-results/HSC-G 
+cp -r /home/ir-shir1/rds/rds-iris-ip005/data/public/HSC/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_dud/deepCoadd-results/HSC-G/8283 data/rerun/coaddPhot/deepCoadd-results/HSC-G 
+cp -r /home/ir-shir1/rds/rds-iris-ip005/data/public/HSC/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_dud/deepCoadd-results/HSC-G/8283 data/rerun/coaddPhot/deepCoadd-results/HSC-G 
+cp -r /home/ir-shir1/rds/rds-iris-ip005/data/public/HSC/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_dud/deepCoadd-results/HSC-R/8283 data/rerun/coaddPhot/deepCoadd-results/HSC-R 
+cp -r /home/ir-shir1/rds/rds-iris-ip005/data/public/HSC/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_dud/deepCoadd-results/HSC-R/8283 data/rerun/coaddPhot/deepCoadd-results/HSC-R 
+cp -r /home/ir-shir1/rds/rds-iris-ip005/data/public/HSC/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_dud/deepCoadd-results/HSC-R/8283 data/rerun/coaddPhot/deepCoadd-results/HSC-R 
+cp -r /home/ir-shir1/rds/rds-iris-ip005/data/public/HSC/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_dud/deepCoadd-results/HSC-R/8283 data/rerun/coaddPhot/deepCoadd-results/HSC-R 
+cp -r /home/ir-shir1/rds/rds-iris-ip005/data/public/HSC/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_dud/deepCoadd-results/HSC-R/8283 data/rerun/coaddPhot/deepCoadd-results/HSC-R 
+cp -r /home/ir-shir1/rds/rds-iris-ip005/data/public/HSC/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_dud/deepCoadd-results/HSC-R/8283 data/rerun/coaddPhot/deepCoadd-results/HSC-R 
+cp -r /home/ir-shir1/rds/rds-iris-ip005/data/public/HSC/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_dud/deepCoadd-results/HSC-R/8283 data/rerun/coaddPhot/deepCoadd-results/HSC-R 
+cp -r /home/ir-shir1/rds/rds-iris-ip005/data/public/HSC/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_dud/deepCoadd-results/HSC-R/8283 data/rerun/coaddPhot/deepCoadd-results/HSC-R 
+cp -r /home/ir-shir1/rds/rds-iris-ip005/data/public/HSC/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_dud/deepCoadd-results/HSC-R/8283 data/rerun/coaddPhot/deepCoadd-results/HSC-R 
+cp -r /home/ir-shir1/rds/rds-iris-ip005/data/public/HSC/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_dud/deepCoadd-results/HSC-I/8283 data/rerun/coaddPhot/deepCoadd-results/HSC-I 
+cp -r /home/ir-shir1/rds/rds-iris-ip005/data/public/HSC/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_dud/deepCoadd-results/HSC-I/8283 data/rerun/coaddPhot/deepCoadd-results/HSC-I 
+cp -r /home/ir-shir1/rds/rds-iris-ip005/data/public/HSC/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_dud/deepCoadd-results/HSC-I/8283 data/rerun/coaddPhot/deepCoadd-results/HSC-I 
+cp -r /home/ir-shir1/rds/rds-iris-ip005/data/public/HSC/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_dud/deepCoadd-results/HSC-I/8283 data/rerun/coaddPhot/deepCoadd-results/HSC-I 
+cp -r /home/ir-shir1/rds/rds-iris-ip005/data/public/HSC/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_dud/deepCoadd-results/HSC-I/8283 data/rerun/coaddPhot/deepCoadd-results/HSC-I 
+cp -r /home/ir-shir1/rds/rds-iris-ip005/data/public/HSC/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_dud/deepCoadd-results/HSC-I/8283 data/rerun/coaddPhot/deepCoadd-results/HSC-I 
+cp -r /home/ir-shir1/rds/rds-iris-ip005/data/public/HSC/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_dud/deepCoadd-results/HSC-I/8283 data/rerun/coaddPhot/deepCoadd-results/HSC-I 
+cp -r /home/ir-shir1/rds/rds-iris-ip005/data/public/HSC/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_dud/deepCoadd-results/HSC-I/8283 data/rerun/coaddPhot/deepCoadd-results/HSC-I 
+cp -r /home/ir-shir1/rds/rds-iris-ip005/data/public/HSC/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_dud/deepCoadd-results/HSC-I/8283 data/rerun/coaddPhot/deepCoadd-results/HSC-I 
+cp -r /home/ir-shir1/rds/rds-iris-ip005/data/public/HSC/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_dud/deepCoadd-results/HSC-Z/8283 data/rerun/coaddPhot/deepCoadd-results/HSC-Z 
+cp -r /home/ir-shir1/rds/rds-iris-ip005/data/public/HSC/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_dud/deepCoadd-results/HSC-Z/8283 data/rerun/coaddPhot/deepCoadd-results/HSC-Z 
+cp -r /home/ir-shir1/rds/rds-iris-ip005/data/public/HSC/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_dud/deepCoadd-results/HSC-Z/8283 data/rerun/coaddPhot/deepCoadd-results/HSC-Z 
+cp -r /home/ir-shir1/rds/rds-iris-ip005/data/public/HSC/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_dud/deepCoadd-results/HSC-Z/8283 data/rerun/coaddPhot/deepCoadd-results/HSC-Z 
+cp -r /home/ir-shir1/rds/rds-iris-ip005/data/public/HSC/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_dud/deepCoadd-results/HSC-Z/8283 data/rerun/coaddPhot/deepCoadd-results/HSC-Z 
+cp -r /home/ir-shir1/rds/rds-iris-ip005/data/public/HSC/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_dud/deepCoadd-results/HSC-Z/8283 data/rerun/coaddPhot/deepCoadd-results/HSC-Z 
+cp -r /home/ir-shir1/rds/rds-iris-ip005/data/public/HSC/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_dud/deepCoadd-results/HSC-Z/8283 data/rerun/coaddPhot/deepCoadd-results/HSC-Z 
+cp -r /home/ir-shir1/rds/rds-iris-ip005/data/public/HSC/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_dud/deepCoadd-results/HSC-Z/8283 data/rerun/coaddPhot/deepCoadd-results/HSC-Z 
+cp -r /home/ir-shir1/rds/rds-iris-ip005/data/public/HSC/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_dud/deepCoadd-results/HSC-Z/8283 data/rerun/coaddPhot/deepCoadd-results/HSC-Z 
+cp -r /home/ir-shir1/rds/rds-iris-ip005/data/public/HSC/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_dud/deepCoadd-results/HSC-Y/8283 data/rerun/coaddPhot/deepCoadd-results/HSC-Y 
+cp -r /home/ir-shir1/rds/rds-iris-ip005/data/public/HSC/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_dud/deepCoadd-results/HSC-Y/8283 data/rerun/coaddPhot/deepCoadd-results/HSC-Y 
+cp -r /home/ir-shir1/rds/rds-iris-ip005/data/public/HSC/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_dud/deepCoadd-results/HSC-Y/8283 data/rerun/coaddPhot/deepCoadd-results/HSC-Y 
+cp -r /home/ir-shir1/rds/rds-iris-ip005/data/public/HSC/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_dud/deepCoadd-results/HSC-Y/8283 data/rerun/coaddPhot/deepCoadd-results/HSC-Y 
+cp -r /home/ir-shir1/rds/rds-iris-ip005/data/public/HSC/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_dud/deepCoadd-results/HSC-Y/8283 data/rerun/coaddPhot/deepCoadd-results/HSC-Y 
+cp -r /home/ir-shir1/rds/rds-iris-ip005/data/public/HSC/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_dud/deepCoadd-results/HSC-Y/8283 data/rerun/coaddPhot/deepCoadd-results/HSC-Y 
+cp -r /home/ir-shir1/rds/rds-iris-ip005/data/public/HSC/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_dud/deepCoadd-results/HSC-Y/8283 data/rerun/coaddPhot/deepCoadd-results/HSC-Y 
+cp -r /home/ir-shir1/rds/rds-iris-ip005/data/public/HSC/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_dud/deepCoadd-results/HSC-Y/8283 data/rerun/coaddPhot/deepCoadd-results/HSC-Y 
+cp -r /home/ir-shir1/rds/rds-iris-ip005/data/public/HSC/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_dud/deepCoadd-results/HSC-Y/8283 data/rerun/coaddPhot/deepCoadd-results/HSC-Y 
