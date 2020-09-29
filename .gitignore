@@ -1,0 +1,6 @@
+data/
+data_tmp/
+*~
+.ipynb_checkpoints
+.idea
+.DS_Store
