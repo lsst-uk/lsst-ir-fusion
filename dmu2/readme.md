@@ -17,11 +17,12 @@ The 2MASS catalogues are described in the associated readme [../dmu0/dmu0_2MASS/
 The catalogues must be provided in the LSST format. The format has changed. For instance it now requires degrees for right ascension and declination and magnitudes instead of fluxes. It must also be ingested into the repo with:
 
 ```Shell
-
 ingestReferenceCatalog.py data ./ps1_pv3_3pi_20170110_filteredAB/13*.fits --output data/refcat_name --configfile indexReferenceCatalogOverride.py
 ```
 
-This will put all the ref cats in this folder. These will then need to be linked in any repo which uses them or reingested.
+This will put all the ref cats in this folder. These will then need to be linked in any repo which uses them or reingested. The basic process for creating a reference catalogue is described here:
+
+https://pipelines.lsst.io/modules/lsst.meas.algorithms/creating-a-reference-catalog.html
 
 See useful discussion on reference catalogues here:
 
