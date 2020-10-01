@@ -32,7 +32,7 @@ The basic tiles are set by the HSC public imaging product which should be simila
 
 ## Basic procedure
 
-After installation of the LSST stack and obs_vista (instructions with the obs_vista package) and cloning this repository you need to do the following for a standard run:
+To start running the pipeline we recommend you begin with the small area test described in [./dmu4/dmu4_Example](./dmu4/dmu4_Example). After installation of the LSST stack and obs_vista (instructions with the obs_vista package) and cloning this repository you need to do the following for a standard run:
 
 ### 1. Put raw data in DMU0
 
