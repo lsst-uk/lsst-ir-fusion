@@ -5,7 +5,7 @@ setup obs_vista
 mkdir data
 echo "lsst.obs.vista.VistaMapper" > ./data/_mapper 
 mkdir -p data/ref_cats/ps1_pv3_3pi_20170110_2mass
-cp ../../dmu2/data/refcat_2mass_ingested/refcats/cal_ref_cat data/ref_cats/ps1_pv3_3pi_20170110_2mass
+cp ../../dmu2/data/refcat_2mass_ingested/refcats/cal_ref_cat/* data/ref_cats/ps1_pv3_3pi_20170110_2mass
 ingestImages.py data /Users/rs548/GitHub/lsst-ir-fusion/dmu0/dmu0_VISTA/dmu0_VIDEO/data/*/*_st.fit --clobber-config
 #
 processCcd.py data --rerun processCcdOutputs --id --clobber-config
