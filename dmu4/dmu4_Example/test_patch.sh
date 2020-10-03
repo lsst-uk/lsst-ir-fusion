@@ -23,17 +23,20 @@ processCcd.py data --rerun processCcdOutputs --id --clobber-config
 #full SXDS tracts:
 #8282^8283^8284^8523^8524^8525^8765^8766^8767
 makeSkyMap.py data --rerun processCcdOutputs:coadd --clobber-config
+makeCoaddTempExp.py data --rerun coadd --selectId filter=VISTA-Z --id filter=VISTA-Z tract=8524 patch=3,5 --clobber-config
 makeCoaddTempExp.py data --rerun coadd --selectId filter=VISTA-Y --id filter=VISTA-Y tract=8524 patch=3,5 --clobber-config
 makeCoaddTempExp.py data --rerun coadd --selectId filter=VISTA-J --id filter=VISTA-J tract=8524 patch=3,5 --clobber-config
 makeCoaddTempExp.py data --rerun coadd --selectId filter=VISTA-H --id filter=VISTA-H tract=8524 patch=3,5 --clobber-config
 makeCoaddTempExp.py data --rerun coadd --selectId filter=VISTA-Ks --id filter=VISTA-Ks tract=8524 patch=3,5 --clobber-config
 #Then we assemble the coadds 
+assembleCoadd.py data --rerun coadd --selectId filter=VISTA-Z --id filter=VISTA-Z tract=8524 patch=3,5 --clobber-config
 assembleCoadd.py data --rerun coadd --selectId filter=VISTA-Y --id filter=VISTA-Y tract=8524 patch=3,5 --clobber-config
 assembleCoadd.py data --rerun coadd --selectId filter=VISTA-J --id filter=VISTA-J tract=8524 patch=3,5 --clobber-config
 assembleCoadd.py data --rerun coadd --selectId filter=VISTA-H --id filter=VISTA-H tract=8524 patch=3,5 --clobber-config
 assembleCoadd.py data --rerun coadd --selectId filter=VISTA-Ks --id filter=VISTA-Ks tract=8524 patch=3,5 --clobber-config
 
 #Then detect sources 
+detectCoaddSources.py data --rerun coadd:coaddPhot --id filter=VISTA-Z tract=8524 patch=3,5 --clobber-config
 detectCoaddSources.py data --rerun coadd:coaddPhot --id filter=VISTA-Y tract=8524 patch=3,5 --clobber-config
 detectCoaddSources.py data --rerun coadd:coaddPhot --id filter=VISTA-J tract=8524 patch=3,5 --clobber-config
 detectCoaddSources.py data --rerun coadd:coaddPhot --id filter=VISTA-H tract=8524 patch=3,5 --clobber-config
@@ -52,7 +55,7 @@ cp -r ../../dmu0/dmu0_HSC/data/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_d
 #Merge any detection catalogues VISTA-Y^VISTA-Ks^HSC-R
 mergeCoaddDetections.py data --rerun coaddPhot --id filter=VISTA-Ks tract=8524 patch=3,5 --clobber-config
 
-deblendCoaddSources.py data --rerun coaddPhot --id filter=VISTA-Y tract=8524 patch=3,5 --clobber-config
+deblendCoaddSources.py data --rerun coaddPhot --id filter=VISTA-Z tract=8524 patch=3,5 --clobber-config
 deblendCoaddSources.py data --rerun coaddPhot --id filter=VISTA-J tract=8524 patch=3,5 --clobber-config
 deblendCoaddSources.py data --rerun coaddPhot --id filter=VISTA-H tract=8524 patch=3,5 --clobber-config
 deblendCoaddSources.py data --rerun coaddPhot --id filter=VISTA-Ks tract=8524 patch=3,5 --clobber-config
@@ -62,6 +65,7 @@ deblendCoaddSources.py data --rerun coaddPhot --id filter=HSC-I tract=8524 patch
 deblendCoaddSources.py data --rerun coaddPhot --id filter=HSC-Z tract=8524 patch=3,5 --clobber-config
 deblendCoaddSources.py data --rerun coaddPhot --id filter=HSC-Y tract=8524 patch=3,5 --clobber-config
 # measure positions (before this stage detections are given interms of pixel footprints
+measureCoaddSources.py data --rerun coaddPhot --id filter=VISTA-Z tract=8524 patch=3,5 --clobber-config
 measureCoaddSources.py data --rerun coaddPhot --id filter=VISTA-Y tract=8524 patch=3,5 --clobber-config
 measureCoaddSources.py data --rerun coaddPhot --id filter=VISTA-H tract=8524 patch=3,5 --clobber-config
 measureCoaddSources.py data --rerun coaddPhot --id filter=VISTA-J tract=8524 patch=3,5 --clobber-config
@@ -71,9 +75,10 @@ measureCoaddSources.py data --rerun coaddPhot --id filter=HSC-R tract=8524 patch
 measureCoaddSources.py data --rerun coaddPhot --id filter=HSC-I tract=8524 patch=3,5 --clobber-config
 measureCoaddSources.py data --rerun coaddPhot --id filter=HSC-Z tract=8524 patch=3,5 --clobber-config
 measureCoaddSources.py data --rerun coaddPhot --id filter=HSC-Y tract=8524 patch=3,5 --clobber-config
-mergeCoaddMeasurements.py data --rerun coaddPhot --id filter=VISTA-Y^VISTA-J^VISTA-H^VISTA-Ks^HSC-G^HSC-R^HSC-I^HSC-Z^HSC-Y tract=8524 patch=3,5 --clobber-config
+mergeCoaddMeasurements.py data --rerun coaddPhot --id filter=VISTA-Z^VISTA-Y^VISTA-J^VISTA-H^VISTA-Ks^HSC-G^HSC-R^HSC-I^HSC-Z^HSC-Y tract=8524 patch=3,5 --clobber-config
 
-forcedPhotCoadd.py data --rerun coaddPhot:coaddForcedPhot --id filter=VISTA-Y tract=8524 patch=3,5 --clobber-config
+forcedPhotCoadd.py data --rerun coaddPhot:coaddForcedPhot --id filter=VISTA-Z tract=8524 patch=3,5 --clobber-config
+forcedPhotCoadd.py data --rerun coaddForcedPhot --id filter=VISTA-Y tract=8524 patch=3,5 --clobber-config
 forcedPhotCoadd.py data --rerun coaddForcedPhot --id filter=VISTA-J tract=8524 patch=3,5 --clobber-config
 forcedPhotCoadd.py data --rerun coaddForcedPhot --id filter=VISTA-H tract=8524 patch=3,5 --clobber-config
 forcedPhotCoadd.py data --rerun coaddForcedPhot --id filter=VISTA-Ks tract=8524 patch=3,5 --clobber-config
