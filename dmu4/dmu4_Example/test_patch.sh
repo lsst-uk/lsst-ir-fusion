@@ -17,7 +17,7 @@ processCcd.py data --rerun processCcdOutputs --id --clobber-config
 #Lets just run one patch (tract=8524 patch=$PATCHES) for now
 #subset:
 export TRACTS=8524 
-export PATCHES=3^5 #3,3^4,3^5,3^3,4^4,4^5,4^3,5^4,5^5,5
+export PATCHES=3,3^4,3^5,3^3,4^4,4^5,4^3,5^4,5^5,5
 #Full patches for the test sxds tiles: 
 #tract=8523 patch==0,2^0,3^0,4^0,5^0,6^0,7^0,8
 #tract=8524 patch=2,2^2,3^2,4^2,5^2,6^2,7^2,8^3,2^3,3^3,4^3,5^3,6^3,7^3,8^4,2^4,3^4,4^4,5^4,6^4,7^4,8^5,2^5,3^5,4^5,5^5,6^5,7^5,8^6,2^6,3^6,4^6,5^6,6^6,7^6,8^7,2^7,3^7,4^7,5^7,6^7,7^7,8^8,2^8,3^8,4^8,5^8,6^8,7^8,8
@@ -57,6 +57,7 @@ cp -r ../../dmu0/dmu0_HSC/data/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_d
 mergeCoaddDetections.py data --rerun coaddPhot --id filter=VISTA-Ks tract=$TRACTS patch=$PATCHES --clobber-config
 
 deblendCoaddSources.py data --rerun coaddPhot --id filter=VISTA-Z tract=$TRACTS patch=$PATCHES --clobber-config
+deblendCoaddSources.py data --rerun coaddPhot --id filter=VISTA-Y tract=$TRACTS patch=$PATCHES --clobber-config
 deblendCoaddSources.py data --rerun coaddPhot --id filter=VISTA-J tract=$TRACTS patch=$PATCHES --clobber-config
 deblendCoaddSources.py data --rerun coaddPhot --id filter=VISTA-H tract=$TRACTS patch=$PATCHES --clobber-config
 deblendCoaddSources.py data --rerun coaddPhot --id filter=VISTA-Ks tract=$TRACTS patch=$PATCHES --clobber-config
