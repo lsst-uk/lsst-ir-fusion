@@ -1,5 +1,7 @@
 # DMU4 Example field
 
+![Test patches](./figs/sxds_tracts_patches_tiles.png)
+
 This is a small region in SXDS which we are using as a test region. In particular we are looking at a single VISTA tile pointing in the VIDEO VISTA-Y,J,H,Ks survey and producing a single patch within it. This is useful for development of the obs_vista package and testing the output data products against previous catalogues and reductions.
 
 To run this example you must install the LSST stack and obs\_vista. You must also download the raw VISTA images listed in [minimal_stacks.lis](minimal_stacks.lis). You must also download the processed HSC coadds and catalogues for the given test patch (tract:8524 patch:3,5). You may also want to run more patches around this one to produce a larger catalogue. The full list of patches on this tile is produced in [../../dmu1/3_Tile_tracts_patches.ipynb](../../dmu1/3_Tile_tracts_patches.ipynb) and in json dictionary form is:
