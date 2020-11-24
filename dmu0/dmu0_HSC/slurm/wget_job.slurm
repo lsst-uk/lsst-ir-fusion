@@ -2,33 +2,33 @@
 #! This line is a comment
 #! Make sure you only have comments and #SBATCH directives between here and the end of the #SBATCH directives, or things will break
 #! Name of the job:
-#SBATCH -J {job_name}
+#SBATCH -J wget_hsc_xmm_wide
 #! Account name for group, use SL2 for paying queue:
 #SBATCH -A IRIS-IP005-CPU
 #! Output filename:
 #! %A means slurm job ID and %a means array index
-#SBATCH --output={jobNameBase}_%A_%a.out
+#SBATCH --output=wget_job_%A_%a.out
 #! Errors filename:
-#SBATCH --error={jobNameBase}_%A_%a.err
+#SBATCH --error=wget_job_%A_%a.err
 
 #! Number of nodes to be allocated for the job (for single core jobs always leave this at 1)
 #SBATCH --nodes=1
 #! Number of tasks. By default SLURM assumes 1 task per node and 1 CPU per task. (for single core jobs always leave this at 1)
 #SBATCH --ntasks=1
 #! How many many cores will be allocated per task? (for single core jobs always leave this at 1)
-#SBATCH --cpus-per-task={cpus_per_task}
+#SBATCH --cpus-per-task=1
 #! Estimated runtime: hh:mm:ss (job is force-stopped after if exceeded):
-#SBATCH --time={hours}:00:00
+#SBATCH --time=36:00:00
 #! Estimated maximum memory needed (job is force-stopped if exceeded):
 #! RAM is allocated in ~5980mb blocks, you are charged per block used,
 #! and unused fractions of blocks will not be usable by others.
 #! coadding VIDEO needs ~ 5 cpus worth of memory SBATCH --mem=5980mb
 #! Submit a job array with index values between 0 and 31
 #! NOTE: This must be a range, not a single number (i.e. specifying '32' here would only run one job, with index 32)
-#SBATCH --array={start}-{stop}
+#SBATCH --array=0-404
 
 #! This is the partition name.
-#SBATCH -p skylake{himem}
+#SBATCH -p skylake
 
 #! mail alert at start, end and abortion of execution
 #! emails will default to going to your email address
@@ -45,4 +45,4 @@
 echo "This is job" $SLURM_ARRAY_TASK_ID
 
 #! Command line that we want to run:
-{WORK_DIR}/{jobNameBase}.sh $SLURM_ARRAY_TASK_ID
+/Users/rs548/GitHub/lsst-ir-fusion/dmu0/dmu0_HSC/slurm/wget_job.sh $SLURM_ARRAY_TASK_ID

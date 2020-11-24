@@ -1,0 +1,17 @@
+#!/bin/bash
+
+varArray="$(python jobDict.py $1 job_dict.json)"
+varArray=($varArray)
+band=${varArray[0]}
+tract=${varArray[1]}
+
+
+echo $band
+echo $tract
+
+#add username and password and rename file by removing .temp
+wget --user  --password  -r -l2 --no-parent -nc \
+--directory-prefix=~/rds/rds-iris-ip005/ras81/lsst-ir-fusion/dmu0/dmu0_HSC/data/ \
+https://hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_wide/deepCoadd-results/HSC-$band/$tract/
+
+
