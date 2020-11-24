@@ -25,8 +25,8 @@ def main():
     print(
         jobs[job_num][0],
         jobs[job_num][1],
-        jobs[job_num][2],
-        jobs[job_num][3],
+       # jobs[job_num][2],
+       # jobs[job_num][3],
     )
     return None
 

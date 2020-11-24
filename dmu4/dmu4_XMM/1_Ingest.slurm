@@ -10,14 +10,14 @@
 
 #! sbatch directives begin here ###############################
 #! Name of the job:
-#SBATCH -J cpujob
+#SBATCH -J ingestVHS
 #! Which project should be charged:
 #SBATCH -A IRIS-IP005-CPU
 #! How many whole nodes should be allocated?
-#SBATCH --nodes=2
+#SBATCH --nodes=1
 #! How many (MPI) tasks will there be in total? (<= nodes*32)
 #! The skylake/skylake-himem nodes have 32 CPUs (cores) each.
-#SBATCH --ntasks=64
+#SBATCH --ntasks=1
 #! How much wallclock time will be required?
 #SBATCH --time=36:00:00
 #! What types of email messages do you wish to receive?
@@ -57,7 +57,7 @@ module load rhel7/default-peta4            # REQUIRED - loads the basic environm
 #! Insert additional module load commands after this line if needed:
 
 #! Full path to application executable: 
-application="/home/ir-shir1/lsst-ir-fusion/dmu4/dmu4_XMM-LSS/1_Ingest.sh"
+application="/home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/dmu4/dmu4_XMM/1_Ingest.sh"
 
 #! Run options for the application:
 options=""

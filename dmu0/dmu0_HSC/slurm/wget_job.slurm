@@ -45,4 +45,4 @@
 echo "This is job" $SLURM_ARRAY_TASK_ID
 
 #! Command line that we want to run:
-/Users/rs548/GitHub/lsst-ir-fusion/dmu0/dmu0_HSC/slurm/wget_job.sh $SLURM_ARRAY_TASK_ID
+/home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/dmu0/dmu0_HSC/slurm/wget_job.sh $SLURM_ARRAY_TASK_ID
