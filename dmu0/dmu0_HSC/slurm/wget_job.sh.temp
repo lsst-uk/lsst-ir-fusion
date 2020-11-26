@@ -1,6 +1,6 @@
 #!/bin/bash
 
-varArray="$(python jobDict.py $1 job_dict.json)"
+varArray="$(python jobDict.py $1 wget_job_dict.json)"
 varArray=($varArray)
 band=${varArray[0]}
 tract=${varArray[1]}
