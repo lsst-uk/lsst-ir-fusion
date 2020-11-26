@@ -13,7 +13,8 @@ jobs = json.loads(open(sys.argv[2],'r').read())
 def main():
     """Take the array job id and print the job details as a list
     """
-    print(jobs[job_num])
+    for j in jobs[job_num]:
+        print(j)
     return None
 
 if __name__ == "__main__":
