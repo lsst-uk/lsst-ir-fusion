@@ -4,17 +4,21 @@ setup lsst_distrib
 setup obs_vista
 eups admin clearLocks
 
-varArray="$(python jobDict.py $1 processCcd_job_dict.json)"
+varArray="$(python jobDict.py $1 patch_job_dict.json)"
 varArray=($varArray)
 tract=${varArray[0]}
 patch=${varArray[1]}
-numCPUs=10
+numCPUs=1
 
 echo "Job info:"
 echo $tract
 echo $patch
 echo $numCPUs
 
+for f in ../data/rerun/coadd/deepCoadd/VISTA-Y/$tract/$patch/*; do export Y_VISITS=$Y_VISITS^${{f:${{#f}}-23:6}}; done
+export Y_VISITS=${{Y_VISITS//-}}
+export Y_VISITS=${{Y_VISITS//^/' --selectId filter=VISTA-Y visit='}}
+assembleCoadd.py ../data --rerun coadd $Y_VISITS --id filter=VISTA-Y tract=$tract patch=$patch -j=$numCPUs
 
 for f in ../data/rerun/coadd/deepCoadd/VISTA-J/$tract/$patch/*; do export J_VISITS=$J_VISITS^${{f:${{#f}}-23:6}}; done
 export J_VISITS=${{J_VISITS//-}}
