@@ -8,7 +8,10 @@ BUTLER_LOC='../../dmu4/dmu4_SXDS/data'
 butler = dafPersist.Butler(inputs='{}/rerun/coaddForcedPhot'.format(BUTLER_LOC))
 
 full_cat = Table()
-for f in ['3,6','3,7','3,8']: #z_stack_files: #[6:7]
+for f in ['0,5', '0,7', '1,3', '1,5', '1,7', '2,4', '2,6', '2,8', '3,4', 
+      '3,6', '3,8', '7,3', '7,6', '7,8', '8,3', '8,6', '8,8', '0,6', '0,8', '1,4', 
+      '1,6', '1,8', '2,5', '2,7', '3,3', '3,5', '3,7', '7,2', '7,5', '7,7', 
+      '8,2', '8,5', '8,7']: #z_stack_files: #[6:7]
     tract = 8524
     patch = f #str(f[-8:-5])
     print(patch)
