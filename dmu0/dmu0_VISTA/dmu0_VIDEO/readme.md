@@ -31,7 +31,7 @@ SELECT * FROM videoSource WHERE ra BETWEEN 6.3 AND 11.3 AND dec BETWEEN -45.60 A
 SELECT * FROM videoSource WHERE ra BETWEEN 32.1 AND 38.2 AND dec BETWEEN -7.53 AND -1.52
 ```
 
-The video fields are fully included in HELP ones.
+The video fields are fully included in LSST. Only XMM is covered by HSC.
 
 In the catalogues, the position is given in radians (but strangely the queries
 above succeed) so the columns were renamed to `RA_radians` and `DEC_radians` and
