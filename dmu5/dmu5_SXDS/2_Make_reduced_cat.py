@@ -128,9 +128,15 @@ for f in ['3,6','3,7','3,8']: #z_stack_files: #[6:7]
 
     zSources.getSchema().extract('{}_*'.format(fMeas_type))
     isGoodFlux = ~zSources['{}_flag'.format(fMeas_type)]
-    selected = isPrimary & isGoodFlux & inInnerRegions & isStellar  
     
- 
+    cat['isDeblended'] = isDeblended
+    cat['inInnerRegions'] = inInnerRegions
+    cat['isSkyObject'] = isSkyObject
+    cat['isPrimary'] = isPrimary
+    cat['isStellar'] = isStellar
+    cat['isGoodFlux'] = isGoodFlux
+    selected = isPrimary & isGoodFlux & inInnerRegions & isStellar  
+    cat['flag'] = selected
                                                      
 
                 
@@ -139,7 +145,7 @@ for f in ['3,6','3,7','3,8']: #z_stack_files: #[6:7]
     #cat['ra'] =ksMeasSources['coord_ra']
     cat['dec'] = zSources['coord_dec']
     #cat['dec'] = ksMeasSources['coord_dec']
-    cat['flag'] = selected
+    
     full_cat = vstack([full_cat,cat])
     
 full_cat.write('./data/HSC_z_y_comparison.fits', overwrite=True)
