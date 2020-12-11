@@ -4,9 +4,7 @@ In this repository we make the astrometric and photometric reference catalogues.
 
 ## PanSTARRS
 
-We are using the HSC PanSTARRS/GAIA reference catalogue used for the public HSC releases which has been limited to 19 mag in r.
-
-TODO: Use full catalogue and recalibrate positions to GAIA DR2?
+We are using the HSC PanSTARRS/GAIA reference catalogue used for the public HSC releases. We also have a version limited to r<19 however the reduced depth affects astrometric calibration for VISTA.
 
 ## 2MASS
 
