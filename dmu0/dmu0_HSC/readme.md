@@ -10,7 +10,7 @@ https://hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_dud/
 
 https://hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_wide/
 
-The file structure within those directories should mirror the policy file in the obs_subaru package at the time of creation. We are aiming to mirror this file structure policy with obs_vista data.
+The file structure within those directories should mirror the policy file in the obs_subaru package at the time of creation. We are aiming to mirror this file structure policy with obs_vista data. The full wide data set is ~17TB.
 
 
 

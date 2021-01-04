@@ -27,25 +27,28 @@ detectCoaddSources.py ../data --rerun coadd:coaddPhot --id filter=VISTA-H tract=
 detectCoaddSources.py ../data --rerun coadd:coaddPhot --id filter=VISTA-Ks tract=$tract patch=$patch
 
 #HSC files must be copied - Which bands to merge detections from?
-wget --user $user --password $password -r -l2 --no-parent -nc -nd \
---directory-prefix=../data/rerun/coaddPhot/deepCoadd-results/HSC-G/$tract/$patch \
-https://hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_wide/deepCoadd-results/HSC-G/$tract/$patch/calexp-HSC-G-$tract-$patch.fits
+#wget --user $user --password $password -r -l2 --no-parent -nc -nd \
+#--directory-prefix=../data/rerun/coaddPhot/deepCoadd-results/HSC-G/$tract/$patch \
+#https://hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_wide/deepCoadd-results/HSC-G/$tract/$patch/calexp-HSC-G-$tract-$patch.fits
 
-wget --user $user --password $password -r -l2 --no-parent -nc -nd \
---directory-prefix=../data/rerun/coaddPhot/deepCoadd-results/HSC-R/$tract/$patch \
-https://hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_wide/deepCoadd-results/HSC-R/$tract/$patch/calexp-HSC-R-$tract-$patch.fits
+#wget --user $user --password $password -r -l2 --no-parent -nc -nd \
+#--directory-prefix=../data/rerun/coaddPhot/deepCoadd-results/HSC-R/$tract/$patch \
+#https://hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_wide/deepCoadd-results/HSC-R/$tract/$patch/calexp-HSC-R-$tract-$patch.fits
 
-wget --user $user --password $password -r -l2 --no-parent -nc -nd \
---directory-prefix=../data/rerun/coaddPhot/deepCoadd-results/HSC-I/$tract/$patch \
-https://hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_wide/deepCoadd-results/HSC-I/$tract/$patch/calexp-HSC-I-$tract-$patch.fits
+#wget --user $user --password $password -r -l2 --no-parent -nc -nd \
+#--directory-prefix=../data/rerun/coaddPhot/deepCoadd-results/HSC-I/$tract/$patch \
+#https://hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_wide/deepCoadd-results/HSC-I/$tract/$patch/calexp-HSC-I-$tract-$patch.fits
 
-wget --user $user --password $password -r -l2 --no-parent -nc -nd \
---directory-prefix=../data/rerun/coaddPhot/deepCoadd-results/HSC-Z/$tract/$patch \
-https://hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_wide/deepCoadd-results/HSC-Z/$tract/$patch/calexp-HSC-Z-$tract-$patch.fits
+#wget --user $user --password $password -r -l2 --no-parent -nc -nd \
+#--directory-prefix=../data/rerun/coaddPhot/deepCoadd-results/HSC-Z/$tract/$patch \
+#https://hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_wide/deepCoadd-results/HSC-Z/$tract/$patch/calexp-HSC-Z-$tract-$patch.fits
 
-wget --user $user --password $password -r -l2 --no-parent -nc -nd \
---directory-prefix=../data/rerun/coaddPhot/deepCoadd-results/HSC-Y/$tract/$patch \
-https://hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_wide/deepCoadd-results/HSC-Y/$tract/$patch/calexp-HSC-Y-$tract-$patch.fits
+#wget --user $user --password $password -r -l2 --no-parent -nc -nd \
+#--directory-prefix=../data/rerun/coaddPhot/deepCoadd-results/HSC-Y/$tract/$patch \
+#https://hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_wide/deepCoadd-results/HSC-Y/$tract/$patch/calexp-HSC-Y-$tract-$patch.fits
+
+
+
 
 #mergeCoaddDetections.py ../data --rerun coaddPhot --id filter=VISTA-Y^VISTA-J^VISTA-H^VISTA-Ks^HSC-G^HSC-R^HSC-I^HSC-Z^HSC-Y tract=$tract patch=$patch
 mergeCoaddDetections.py ../data --rerun coaddPhot --id filter=VISTA-Ks tract=$tract patch=$patch

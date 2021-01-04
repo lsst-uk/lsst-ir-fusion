@@ -9,15 +9,13 @@ The images are stored accroding to observation date and contain exposures, reduc
 
 ## Catalogues
 
-As our reference catalogue we use the VHS public catalogues on the VSA. These can be downloaded with the following SQL queries run seperately to keep under Vista Science Archive ([VSA](http://horus.roe.ac.uk:8080/vdfs/VSQL_form.jsp))row limits.:
+As our reference catalogue we use the VHS public catalogues on the VSA. These can be downloaded with the following SQL queries run seperately to keep under Vista Science Archive ([VSA](http://horus.roe.ac.uk:8080/vdfs/VSQL_form.jsp)) row limits.:
 
 ```Shell
 #W01
 SELECT * from vhsSource WHERE ra > 14 AND ra < 24 AND dec > -3 AND dec < 3
 #W02 XMM:
 SELECT * from vhsSource WHERE ra > 28 AND ra < 41 AND dec > -8 AND dec < 3
-#W03 GAMA09
-SELECT * from vhsSource WHERE ra > 125 AND ra < 156 AND dec > -3 AND dec < 3
 #W03 GAMA09
 SELECT * from vhsSource WHERE ra > 125 AND ra < 156 AND dec > -3 AND dec < 3
 #W04 GAMA12 and 15
