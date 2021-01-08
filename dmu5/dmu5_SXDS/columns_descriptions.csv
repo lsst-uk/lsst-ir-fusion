@@ -305,86 +305,86 @@ HSC-G_m_slot_PsfFlux_flag_apCorr,set if unable to aperture correct base_PsfFlux,
 HSC-G_m_base_ClassificationExtendedness_value,"Set to 1 for extended sources, 0 for point sources.",None,float64
 HSC-G_m_base_ClassificationExtendedness_flag,Set to 1 for any fatal failure.,None,bool
 HSC-G_m_base_FootprintArea_value,Number of pixels in the source''s detection footprint.,pix,int32
-HSC-G_m_base_SdssShape_mag,,mag,float64
-HSC-G_m_base_SdssShape_magErr,,mag,float64
-HSC-G_m_base_SdssShape_flux,,nJy,float64
-HSC-G_m_base_SdssShape_fluxErr,,nJy,float64
-HSC-G_m_slot_Shape_mag,,mag,float64
-HSC-G_m_slot_Shape_magErr,,mag,float64
-HSC-G_m_slot_Shape_flux,,nJy,float64
-HSC-G_m_slot_Shape_fluxErr,,nJy,float64
-HSC-G_m_base_CircularApertureFlux_3_0_mag,,mag,float64
-HSC-G_m_base_CircularApertureFlux_3_0_magErr,,mag,float64
-HSC-G_m_base_CircularApertureFlux_3_0_flux,,nJy,float64
-HSC-G_m_base_CircularApertureFlux_3_0_fluxErr,,nJy,float64
-HSC-G_m_base_CircularApertureFlux_4_5_mag,,mag,float64
-HSC-G_m_base_CircularApertureFlux_4_5_magErr,,mag,float64
-HSC-G_m_base_CircularApertureFlux_4_5_flux,,nJy,float64
-HSC-G_m_base_CircularApertureFlux_4_5_fluxErr,,nJy,float64
-HSC-G_m_base_CircularApertureFlux_6_0_mag,,mag,float64
-HSC-G_m_base_CircularApertureFlux_6_0_magErr,,mag,float64
-HSC-G_m_base_CircularApertureFlux_6_0_flux,,nJy,float64
-HSC-G_m_base_CircularApertureFlux_6_0_fluxErr,,nJy,float64
-HSC-G_m_base_CircularApertureFlux_9_0_mag,,mag,float64
-HSC-G_m_base_CircularApertureFlux_9_0_magErr,,mag,float64
-HSC-G_m_base_CircularApertureFlux_9_0_flux,,nJy,float64
-HSC-G_m_base_CircularApertureFlux_9_0_fluxErr,,nJy,float64
-HSC-G_m_base_CircularApertureFlux_12_0_mag,,mag,float64
-HSC-G_m_base_CircularApertureFlux_12_0_magErr,,mag,float64
-HSC-G_m_base_CircularApertureFlux_12_0_flux,,nJy,float64
-HSC-G_m_base_CircularApertureFlux_12_0_fluxErr,,nJy,float64
-HSC-G_m_slot_ApFlux_mag,,mag,float64
-HSC-G_m_slot_ApFlux_magErr,,mag,float64
-HSC-G_m_slot_ApFlux_flux,,nJy,float64
-HSC-G_m_slot_ApFlux_fluxErr,,nJy,float64
-HSC-G_m_slot_CalibFlux_mag,,mag,float64
-HSC-G_m_slot_CalibFlux_magErr,,mag,float64
-HSC-G_m_slot_CalibFlux_flux,,nJy,float64
-HSC-G_m_slot_CalibFlux_fluxErr,,nJy,float64
-HSC-G_m_base_CircularApertureFlux_17_0_mag,,mag,float64
-HSC-G_m_base_CircularApertureFlux_17_0_magErr,,mag,float64
-HSC-G_m_base_CircularApertureFlux_17_0_flux,,nJy,float64
-HSC-G_m_base_CircularApertureFlux_17_0_fluxErr,,nJy,float64
-HSC-G_m_base_CircularApertureFlux_25_0_mag,,mag,float64
-HSC-G_m_base_CircularApertureFlux_25_0_magErr,,mag,float64
-HSC-G_m_base_CircularApertureFlux_25_0_flux,,nJy,float64
-HSC-G_m_base_CircularApertureFlux_25_0_fluxErr,,nJy,float64
-HSC-G_m_base_CircularApertureFlux_35_0_mag,,mag,float64
-HSC-G_m_base_CircularApertureFlux_35_0_magErr,,mag,float64
-HSC-G_m_base_CircularApertureFlux_35_0_flux,,nJy,float64
-HSC-G_m_base_CircularApertureFlux_35_0_fluxErr,,nJy,float64
-HSC-G_m_base_CircularApertureFlux_50_0_mag,,mag,float64
-HSC-G_m_base_CircularApertureFlux_50_0_magErr,,mag,float64
-HSC-G_m_base_CircularApertureFlux_50_0_flux,,nJy,float64
-HSC-G_m_base_CircularApertureFlux_50_0_fluxErr,,nJy,float64
-HSC-G_m_base_CircularApertureFlux_70_0_mag,,mag,float64
-HSC-G_m_base_CircularApertureFlux_70_0_magErr,,mag,float64
-HSC-G_m_base_CircularApertureFlux_70_0_flux,,nJy,float64
-HSC-G_m_base_CircularApertureFlux_70_0_fluxErr,,nJy,float64
-HSC-G_m_base_GaussianFlux_mag,,mag,float64
-HSC-G_m_base_GaussianFlux_magErr,,mag,float64
-HSC-G_m_base_GaussianFlux_flux,,nJy,float64
-HSC-G_m_base_GaussianFlux_fluxErr,,nJy,float64
-HSC-G_m_slot_GaussianFlux_mag,,mag,float64
-HSC-G_m_slot_GaussianFlux_magErr,,mag,float64
-HSC-G_m_slot_GaussianFlux_flux,,nJy,float64
-HSC-G_m_slot_GaussianFlux_fluxErr,,nJy,float64
-HSC-G_m_slot_ModelFlux_mag,,mag,float64
-HSC-G_m_slot_ModelFlux_magErr,,mag,float64
-HSC-G_m_slot_ModelFlux_flux,,nJy,float64
-HSC-G_m_slot_ModelFlux_fluxErr,,nJy,float64
-HSC-G_m_base_LocalBackground_mag,,mag,float64
-HSC-G_m_base_LocalBackground_magErr,,mag,float64
-HSC-G_m_base_LocalBackground_flux,,nJy,float64
-HSC-G_m_base_LocalBackground_fluxErr,,nJy,float64
-HSC-G_m_base_PsfFlux_mag,,mag,float64
-HSC-G_m_base_PsfFlux_magErr,,mag,float64
-HSC-G_m_base_PsfFlux_flux,,nJy,float64
-HSC-G_m_base_PsfFlux_fluxErr,,nJy,float64
-HSC-G_m_slot_PsfFlux_mag,,mag,float64
-HSC-G_m_slot_PsfFlux_magErr,,mag,float64
-HSC-G_m_slot_PsfFlux_flux,,nJy,float64
-HSC-G_m_slot_PsfFlux_fluxErr,,nJy,float64
+HSC-G_m_base_SdssShape_mag,,elliptical Gaussian adaptive moments,float64
+HSC-G_m_base_SdssShape_magErr,,elliptical Gaussian adaptive moments,float64
+HSC-G_m_base_SdssShape_flux,,elliptical Gaussian adaptive moments,float64
+HSC-G_m_base_SdssShape_fluxErr,,elliptical Gaussian adaptive moments,float64
+HSC-G_m_slot_Shape_mag,,elliptical Gaussian adaptive moments,float64
+HSC-G_m_slot_Shape_magErr,,elliptical Gaussian adaptive moments,float64
+HSC-G_m_slot_Shape_flux,,elliptical Gaussian adaptive moments,float64
+HSC-G_m_slot_Shape_fluxErr,,elliptical Gaussian adaptive moments,float64
+HSC-G_m_base_CircularApertureFlux_3_0_mag,,mag within 3.000000-pixel aperture,float64
+HSC-G_m_base_CircularApertureFlux_3_0_magErr,,mag within 3.000000-pixel aperture,float64
+HSC-G_m_base_CircularApertureFlux_3_0_flux,,flux within 3.000000-pixel aperture,float64
+HSC-G_m_base_CircularApertureFlux_3_0_fluxErr,,flux within 3.000000-pixel aperture,float64
+HSC-G_m_base_CircularApertureFlux_4_5_mag,,mag within 4.500000-pixel aperture,float64
+HSC-G_m_base_CircularApertureFlux_4_5_magErr,,mag within 4.500000-pixel aperture,float64
+HSC-G_m_base_CircularApertureFlux_4_5_flux,,flux within 4.500000-pixel aperture,float64
+HSC-G_m_base_CircularApertureFlux_4_5_fluxErr,,flux within 4.500000-pixel aperture,float64
+HSC-G_m_base_CircularApertureFlux_6_0_mag,,mag within 6.000000-pixel aperture,float64
+HSC-G_m_base_CircularApertureFlux_6_0_magErr,,mag within 6.000000-pixel aperture,float64
+HSC-G_m_base_CircularApertureFlux_6_0_flux,,flux within 6.000000-pixel aperture,float64
+HSC-G_m_base_CircularApertureFlux_6_0_fluxErr,,flux within 6.000000-pixel aperture,float64
+HSC-G_m_base_CircularApertureFlux_9_0_mag,,mag within 9.000000-pixel aperture,float64
+HSC-G_m_base_CircularApertureFlux_9_0_magErr,,mag within 9.000000-pixel aperture,float64
+HSC-G_m_base_CircularApertureFlux_9_0_flux,,flux within 9.000000-pixel aperture,float64
+HSC-G_m_base_CircularApertureFlux_9_0_fluxErr,,flux within 9.000000-pixel aperture,float64
+HSC-G_m_base_CircularApertureFlux_12_0_mag,,mag within 12.000000-pixel aperture,float64
+HSC-G_m_base_CircularApertureFlux_12_0_magErr,,mag within 12.000000-pixel aperture,float64
+HSC-G_m_base_CircularApertureFlux_12_0_flux,,flux within 12.000000-pixel aperture,float64
+HSC-G_m_base_CircularApertureFlux_12_0_fluxErr,,flux within 12.000000-pixel aperture,float64
+HSC-G_m_slot_ApFlux_mag,,mag within 12.000000-pixel aperture,float64
+HSC-G_m_slot_ApFlux_magErr,,mag within 12.000000-pixel aperture,float64
+HSC-G_m_slot_ApFlux_flux,,flux within 12.000000-pixel aperture,float64
+HSC-G_m_slot_ApFlux_fluxErr,,flux within 12.000000-pixel aperture,float64
+HSC-G_m_slot_CalibFlux_mag,,mag within 12.000000-pixel aperture,float64
+HSC-G_m_slot_CalibFlux_magErr,,mag within 12.000000-pixel aperture,float64
+HSC-G_m_slot_CalibFlux_flux,,flux within 12.000000-pixel aperture,float64
+HSC-G_m_slot_CalibFlux_fluxErr,,flux within 12.000000-pixel aperture,float64
+HSC-G_m_base_CircularApertureFlux_17_0_mag,,mag within 17.000000-pixel aperture,float64
+HSC-G_m_base_CircularApertureFlux_17_0_magErr,,mag within 17.000000-pixel aperture,float64
+HSC-G_m_base_CircularApertureFlux_17_0_flux,,flux within 17.000000-pixel aperture,float64
+HSC-G_m_base_CircularApertureFlux_17_0_fluxErr,,flux within 17.000000-pixel aperture,float64
+HSC-G_m_base_CircularApertureFlux_25_0_mag,,mag within 25.000000-pixel aperture,float64
+HSC-G_m_base_CircularApertureFlux_25_0_magErr,,mag within 25.000000-pixel aperture,float64
+HSC-G_m_base_CircularApertureFlux_25_0_flux,,flux within 25.000000-pixel aperture,float64
+HSC-G_m_base_CircularApertureFlux_25_0_fluxErr,,flux within 25.000000-pixel aperture,float64
+HSC-G_m_base_CircularApertureFlux_35_0_mag,,mag within 35.000000-pixel aperture,float64
+HSC-G_m_base_CircularApertureFlux_35_0_magErr,,mag within 35.000000-pixel aperture,float64
+HSC-G_m_base_CircularApertureFlux_35_0_flux,,flux within 35.000000-pixel aperture,float64
+HSC-G_m_base_CircularApertureFlux_35_0_fluxErr,,flux within 35.000000-pixel aperture,float64
+HSC-G_m_base_CircularApertureFlux_50_0_mag,,mag within 50.000000-pixel aperture,float64
+HSC-G_m_base_CircularApertureFlux_50_0_magErr,,mag within 50.000000-pixel aperture,float64
+HSC-G_m_base_CircularApertureFlux_50_0_flux,,flux within 50.000000-pixel aperture,float64
+HSC-G_m_base_CircularApertureFlux_50_0_fluxErr,,flux within 50.000000-pixel aperture,float64
+HSC-G_m_base_CircularApertureFlux_70_0_mag,,mag within 70.000000-pixel aperture,float64
+HSC-G_m_base_CircularApertureFlux_70_0_magErr,,mag within 70.000000-pixel aperture,float64
+HSC-G_m_base_CircularApertureFlux_70_0_flux,,flux within 70.000000-pixel aperture,float64
+HSC-G_m_base_CircularApertureFlux_70_0_fluxErr,,flux within 70.000000-pixel aperture,float64
+HSC-G_m_base_GaussianFlux_mag,,mag from Gaussian Flux algorithm,float64
+HSC-G_m_base_GaussianFlux_magErr,,mag from Gaussian Flux algorithm,float64
+HSC-G_m_base_GaussianFlux_flux,,flux from Gaussian Flux algorithm,float64
+HSC-G_m_base_GaussianFlux_fluxErr,,flux from Gaussian Flux algorithm,float64
+HSC-G_m_slot_GaussianFlux_mag,,mag from Gaussian Flux algorithm,float64
+HSC-G_m_slot_GaussianFlux_magErr,,mag from Gaussian Flux algorithm,float64
+HSC-G_m_slot_GaussianFlux_flux,,flux from Gaussian Flux algorithm,float64
+HSC-G_m_slot_GaussianFlux_fluxErr,,flux from Gaussian Flux algorithm,float64
+HSC-G_m_slot_ModelFlux_mag,,mag from Gaussian Flux algorithm,float64
+HSC-G_m_slot_ModelFlux_magErr,,mag from Gaussian Flux algorithm,float64
+HSC-G_m_slot_ModelFlux_flux,,flux from Gaussian Flux algorithm,float64
+HSC-G_m_slot_ModelFlux_fluxErr,,flux from Gaussian Flux algorithm,float64
+HSC-G_m_base_LocalBackground_mag,,background in annulus around source,float64
+HSC-G_m_base_LocalBackground_magErr,,background in annulus around source,float64
+HSC-G_m_base_LocalBackground_flux,,background in annulus around source,float64
+HSC-G_m_base_LocalBackground_fluxErr,,background in annulus around source,float64
+HSC-G_m_base_PsfFlux_mag,,mag derived from linear least-squares fit of PSF model,float64
+HSC-G_m_base_PsfFlux_magErr,,mag derived from linear least-squares fit of PSF model,float64
+HSC-G_m_base_PsfFlux_flux,,flux derived from linear least-squares fit of PSF model,float64
+HSC-G_m_base_PsfFlux_fluxErr,,flux derived from linear least-squares fit of PSF model,float64
+HSC-G_m_slot_PsfFlux_mag,,mag derived from linear least-squares fit of PSF model,float64
+HSC-G_m_slot_PsfFlux_magErr,,mag derived from linear least-squares fit of PSF model,float64
+HSC-G_m_slot_PsfFlux_flux,,flux derived from linear least-squares fit of PSF model,float64
+HSC-G_m_slot_PsfFlux_fluxErr,,flux derived from linear least-squares fit of PSF model,float64
 HSC-G_f_coord_ra,position in ra/dec,rad,float64
 HSC-G_f_coord_dec,position in ra/dec,rad,float64
 HSC-G_f_parent,unique ID of parent source,None,int64
@@ -538,62 +538,62 @@ HSC-G_f_base_GaussianFlux_flag_apCorr,set if unable to aperture correct base_Gau
 HSC-G_f_base_PsfFlux_apCorr,aperture correction applied to base_PsfFlux,None,float64
 HSC-G_f_base_PsfFlux_apCorrErr,standard deviation of aperture correction applied to base_PsfFlux,None,float64
 HSC-G_f_base_PsfFlux_flag_apCorr,set if unable to aperture correct base_PsfFlux,None,bool
-HSC-G_f_base_SdssShape_mag,,mag,float64
-HSC-G_f_base_SdssShape_magErr,,mag,float64
-HSC-G_f_base_SdssShape_flux,,nJy,float64
-HSC-G_f_base_SdssShape_fluxErr,,nJy,float64
-HSC-G_f_base_CircularApertureFlux_3_0_mag,,mag,float64
-HSC-G_f_base_CircularApertureFlux_3_0_magErr,,mag,float64
-HSC-G_f_base_CircularApertureFlux_3_0_flux,,nJy,float64
-HSC-G_f_base_CircularApertureFlux_3_0_fluxErr,,nJy,float64
-HSC-G_f_base_CircularApertureFlux_4_5_mag,,mag,float64
-HSC-G_f_base_CircularApertureFlux_4_5_magErr,,mag,float64
-HSC-G_f_base_CircularApertureFlux_4_5_flux,,nJy,float64
-HSC-G_f_base_CircularApertureFlux_4_5_fluxErr,,nJy,float64
-HSC-G_f_base_CircularApertureFlux_6_0_mag,,mag,float64
-HSC-G_f_base_CircularApertureFlux_6_0_magErr,,mag,float64
-HSC-G_f_base_CircularApertureFlux_6_0_flux,,nJy,float64
-HSC-G_f_base_CircularApertureFlux_6_0_fluxErr,,nJy,float64
-HSC-G_f_base_CircularApertureFlux_9_0_mag,,mag,float64
-HSC-G_f_base_CircularApertureFlux_9_0_magErr,,mag,float64
-HSC-G_f_base_CircularApertureFlux_9_0_flux,,nJy,float64
-HSC-G_f_base_CircularApertureFlux_9_0_fluxErr,,nJy,float64
-HSC-G_f_base_CircularApertureFlux_12_0_mag,,mag,float64
-HSC-G_f_base_CircularApertureFlux_12_0_magErr,,mag,float64
-HSC-G_f_base_CircularApertureFlux_12_0_flux,,nJy,float64
-HSC-G_f_base_CircularApertureFlux_12_0_fluxErr,,nJy,float64
-HSC-G_f_base_CircularApertureFlux_17_0_mag,,mag,float64
-HSC-G_f_base_CircularApertureFlux_17_0_magErr,,mag,float64
-HSC-G_f_base_CircularApertureFlux_17_0_flux,,nJy,float64
-HSC-G_f_base_CircularApertureFlux_17_0_fluxErr,,nJy,float64
-HSC-G_f_base_CircularApertureFlux_25_0_mag,,mag,float64
-HSC-G_f_base_CircularApertureFlux_25_0_magErr,,mag,float64
-HSC-G_f_base_CircularApertureFlux_25_0_flux,,nJy,float64
-HSC-G_f_base_CircularApertureFlux_25_0_fluxErr,,nJy,float64
-HSC-G_f_base_CircularApertureFlux_35_0_mag,,mag,float64
-HSC-G_f_base_CircularApertureFlux_35_0_magErr,,mag,float64
-HSC-G_f_base_CircularApertureFlux_35_0_flux,,nJy,float64
-HSC-G_f_base_CircularApertureFlux_35_0_fluxErr,,nJy,float64
-HSC-G_f_base_CircularApertureFlux_50_0_mag,,mag,float64
-HSC-G_f_base_CircularApertureFlux_50_0_magErr,,mag,float64
-HSC-G_f_base_CircularApertureFlux_50_0_flux,,nJy,float64
-HSC-G_f_base_CircularApertureFlux_50_0_fluxErr,,nJy,float64
-HSC-G_f_base_CircularApertureFlux_70_0_mag,,mag,float64
-HSC-G_f_base_CircularApertureFlux_70_0_magErr,,mag,float64
-HSC-G_f_base_CircularApertureFlux_70_0_flux,,nJy,float64
-HSC-G_f_base_CircularApertureFlux_70_0_fluxErr,,nJy,float64
-HSC-G_f_base_GaussianFlux_mag,,mag,float64
-HSC-G_f_base_GaussianFlux_magErr,,mag,float64
-HSC-G_f_base_GaussianFlux_flux,,nJy,float64
-HSC-G_f_base_GaussianFlux_fluxErr,,nJy,float64
-HSC-G_f_base_LocalBackground_mag,,mag,float64
-HSC-G_f_base_LocalBackground_magErr,,mag,float64
-HSC-G_f_base_LocalBackground_flux,,nJy,float64
-HSC-G_f_base_LocalBackground_fluxErr,,nJy,float64
-HSC-G_f_base_PsfFlux_mag,,mag,float64
-HSC-G_f_base_PsfFlux_magErr,,mag,float64
-HSC-G_f_base_PsfFlux_flux,,nJy,float64
-HSC-G_f_base_PsfFlux_fluxErr,,nJy,float64
+HSC-G_f_base_SdssShape_mag,,elliptical Gaussian adaptive moments,float64
+HSC-G_f_base_SdssShape_magErr,,elliptical Gaussian adaptive moments,float64
+HSC-G_f_base_SdssShape_flux,,elliptical Gaussian adaptive moments,float64
+HSC-G_f_base_SdssShape_fluxErr,,elliptical Gaussian adaptive moments,float64
+HSC-G_f_base_CircularApertureFlux_3_0_mag,,mag within 3.000000-pixel aperture,float64
+HSC-G_f_base_CircularApertureFlux_3_0_magErr,,mag within 3.000000-pixel aperture,float64
+HSC-G_f_base_CircularApertureFlux_3_0_flux,,flux within 3.000000-pixel aperture,float64
+HSC-G_f_base_CircularApertureFlux_3_0_fluxErr,,flux within 3.000000-pixel aperture,float64
+HSC-G_f_base_CircularApertureFlux_4_5_mag,,mag within 4.500000-pixel aperture,float64
+HSC-G_f_base_CircularApertureFlux_4_5_magErr,,mag within 4.500000-pixel aperture,float64
+HSC-G_f_base_CircularApertureFlux_4_5_flux,,flux within 4.500000-pixel aperture,float64
+HSC-G_f_base_CircularApertureFlux_4_5_fluxErr,,flux within 4.500000-pixel aperture,float64
+HSC-G_f_base_CircularApertureFlux_6_0_mag,,mag within 6.000000-pixel aperture,float64
+HSC-G_f_base_CircularApertureFlux_6_0_magErr,,mag within 6.000000-pixel aperture,float64
+HSC-G_f_base_CircularApertureFlux_6_0_flux,,flux within 6.000000-pixel aperture,float64
+HSC-G_f_base_CircularApertureFlux_6_0_fluxErr,,flux within 6.000000-pixel aperture,float64
+HSC-G_f_base_CircularApertureFlux_9_0_mag,,mag within 9.000000-pixel aperture,float64
+HSC-G_f_base_CircularApertureFlux_9_0_magErr,,mag within 9.000000-pixel aperture,float64
+HSC-G_f_base_CircularApertureFlux_9_0_flux,,flux within 9.000000-pixel aperture,float64
+HSC-G_f_base_CircularApertureFlux_9_0_fluxErr,,flux within 9.000000-pixel aperture,float64
+HSC-G_f_base_CircularApertureFlux_12_0_mag,,mag within 12.000000-pixel aperture,float64
+HSC-G_f_base_CircularApertureFlux_12_0_magErr,,mag within 12.000000-pixel aperture,float64
+HSC-G_f_base_CircularApertureFlux_12_0_flux,,flux within 12.000000-pixel aperture,float64
+HSC-G_f_base_CircularApertureFlux_12_0_fluxErr,,flux within 12.000000-pixel aperture,float64
+HSC-G_f_base_CircularApertureFlux_17_0_mag,,mag within 17.000000-pixel aperture,float64
+HSC-G_f_base_CircularApertureFlux_17_0_magErr,,mag within 17.000000-pixel aperture,float64
+HSC-G_f_base_CircularApertureFlux_17_0_flux,,flux within 17.000000-pixel aperture,float64
+HSC-G_f_base_CircularApertureFlux_17_0_fluxErr,,flux within 17.000000-pixel aperture,float64
+HSC-G_f_base_CircularApertureFlux_25_0_mag,,mag within 25.000000-pixel aperture,float64
+HSC-G_f_base_CircularApertureFlux_25_0_magErr,,mag within 25.000000-pixel aperture,float64
+HSC-G_f_base_CircularApertureFlux_25_0_flux,,flux within 25.000000-pixel aperture,float64
+HSC-G_f_base_CircularApertureFlux_25_0_fluxErr,,flux within 25.000000-pixel aperture,float64
+HSC-G_f_base_CircularApertureFlux_35_0_mag,,mag within 35.000000-pixel aperture,float64
+HSC-G_f_base_CircularApertureFlux_35_0_magErr,,mag within 35.000000-pixel aperture,float64
+HSC-G_f_base_CircularApertureFlux_35_0_flux,,flux within 35.000000-pixel aperture,float64
+HSC-G_f_base_CircularApertureFlux_35_0_fluxErr,,flux within 35.000000-pixel aperture,float64
+HSC-G_f_base_CircularApertureFlux_50_0_mag,,mag within 50.000000-pixel aperture,float64
+HSC-G_f_base_CircularApertureFlux_50_0_magErr,,mag within 50.000000-pixel aperture,float64
+HSC-G_f_base_CircularApertureFlux_50_0_flux,,flux within 50.000000-pixel aperture,float64
+HSC-G_f_base_CircularApertureFlux_50_0_fluxErr,,flux within 50.000000-pixel aperture,float64
+HSC-G_f_base_CircularApertureFlux_70_0_mag,,mag within 70.000000-pixel aperture,float64
+HSC-G_f_base_CircularApertureFlux_70_0_magErr,,mag within 70.000000-pixel aperture,float64
+HSC-G_f_base_CircularApertureFlux_70_0_flux,,flux within 70.000000-pixel aperture,float64
+HSC-G_f_base_CircularApertureFlux_70_0_fluxErr,,flux within 70.000000-pixel aperture,float64
+HSC-G_f_base_GaussianFlux_mag,,mag from Gaussian Flux algorithm,float64
+HSC-G_f_base_GaussianFlux_magErr,,mag from Gaussian Flux algorithm,float64
+HSC-G_f_base_GaussianFlux_flux,,flux from Gaussian Flux algorithm,float64
+HSC-G_f_base_GaussianFlux_fluxErr,,flux from Gaussian Flux algorithm,float64
+HSC-G_f_base_LocalBackground_mag,,background in annulus around source,float64
+HSC-G_f_base_LocalBackground_magErr,,background in annulus around source,float64
+HSC-G_f_base_LocalBackground_flux,,background in annulus around source,float64
+HSC-G_f_base_LocalBackground_fluxErr,,background in annulus around source,float64
+HSC-G_f_base_PsfFlux_mag,,mag derived from linear least-squares fit of PSF model,float64
+HSC-G_f_base_PsfFlux_magErr,,mag derived from linear least-squares fit of PSF model,float64
+HSC-G_f_base_PsfFlux_flux,,flux derived from linear least-squares fit of PSF model,float64
+HSC-G_f_base_PsfFlux_fluxErr,,flux derived from linear least-squares fit of PSF model,float64
 HSC-R_m_coord_ra,position in ra/dec,rad,float64
 HSC-R_m_coord_dec,position in ra/dec,rad,float64
 HSC-R_m_parent,unique ID of parent source,None,int64
@@ -899,86 +899,86 @@ HSC-R_m_slot_PsfFlux_flag_apCorr,set if unable to aperture correct base_PsfFlux,
 HSC-R_m_base_ClassificationExtendedness_value,"Set to 1 for extended sources, 0 for point sources.",None,float64
 HSC-R_m_base_ClassificationExtendedness_flag,Set to 1 for any fatal failure.,None,bool
 HSC-R_m_base_FootprintArea_value,Number of pixels in the source''s detection footprint.,pix,int32
-HSC-R_m_base_SdssShape_mag,,mag,float64
-HSC-R_m_base_SdssShape_magErr,,mag,float64
-HSC-R_m_base_SdssShape_flux,,nJy,float64
-HSC-R_m_base_SdssShape_fluxErr,,nJy,float64
-HSC-R_m_slot_Shape_mag,,mag,float64
-HSC-R_m_slot_Shape_magErr,,mag,float64
-HSC-R_m_slot_Shape_flux,,nJy,float64
-HSC-R_m_slot_Shape_fluxErr,,nJy,float64
-HSC-R_m_base_CircularApertureFlux_3_0_mag,,mag,float64
-HSC-R_m_base_CircularApertureFlux_3_0_magErr,,mag,float64
-HSC-R_m_base_CircularApertureFlux_3_0_flux,,nJy,float64
-HSC-R_m_base_CircularApertureFlux_3_0_fluxErr,,nJy,float64
-HSC-R_m_base_CircularApertureFlux_4_5_mag,,mag,float64
-HSC-R_m_base_CircularApertureFlux_4_5_magErr,,mag,float64
-HSC-R_m_base_CircularApertureFlux_4_5_flux,,nJy,float64
-HSC-R_m_base_CircularApertureFlux_4_5_fluxErr,,nJy,float64
-HSC-R_m_base_CircularApertureFlux_6_0_mag,,mag,float64
-HSC-R_m_base_CircularApertureFlux_6_0_magErr,,mag,float64
-HSC-R_m_base_CircularApertureFlux_6_0_flux,,nJy,float64
-HSC-R_m_base_CircularApertureFlux_6_0_fluxErr,,nJy,float64
-HSC-R_m_base_CircularApertureFlux_9_0_mag,,mag,float64
-HSC-R_m_base_CircularApertureFlux_9_0_magErr,,mag,float64
-HSC-R_m_base_CircularApertureFlux_9_0_flux,,nJy,float64
-HSC-R_m_base_CircularApertureFlux_9_0_fluxErr,,nJy,float64
-HSC-R_m_base_CircularApertureFlux_12_0_mag,,mag,float64
-HSC-R_m_base_CircularApertureFlux_12_0_magErr,,mag,float64
-HSC-R_m_base_CircularApertureFlux_12_0_flux,,nJy,float64
-HSC-R_m_base_CircularApertureFlux_12_0_fluxErr,,nJy,float64
-HSC-R_m_slot_ApFlux_mag,,mag,float64
-HSC-R_m_slot_ApFlux_magErr,,mag,float64
-HSC-R_m_slot_ApFlux_flux,,nJy,float64
-HSC-R_m_slot_ApFlux_fluxErr,,nJy,float64
-HSC-R_m_slot_CalibFlux_mag,,mag,float64
-HSC-R_m_slot_CalibFlux_magErr,,mag,float64
-HSC-R_m_slot_CalibFlux_flux,,nJy,float64
-HSC-R_m_slot_CalibFlux_fluxErr,,nJy,float64
-HSC-R_m_base_CircularApertureFlux_17_0_mag,,mag,float64
-HSC-R_m_base_CircularApertureFlux_17_0_magErr,,mag,float64
-HSC-R_m_base_CircularApertureFlux_17_0_flux,,nJy,float64
-HSC-R_m_base_CircularApertureFlux_17_0_fluxErr,,nJy,float64
-HSC-R_m_base_CircularApertureFlux_25_0_mag,,mag,float64
-HSC-R_m_base_CircularApertureFlux_25_0_magErr,,mag,float64
-HSC-R_m_base_CircularApertureFlux_25_0_flux,,nJy,float64
-HSC-R_m_base_CircularApertureFlux_25_0_fluxErr,,nJy,float64
-HSC-R_m_base_CircularApertureFlux_35_0_mag,,mag,float64
-HSC-R_m_base_CircularApertureFlux_35_0_magErr,,mag,float64
-HSC-R_m_base_CircularApertureFlux_35_0_flux,,nJy,float64
-HSC-R_m_base_CircularApertureFlux_35_0_fluxErr,,nJy,float64
-HSC-R_m_base_CircularApertureFlux_50_0_mag,,mag,float64
-HSC-R_m_base_CircularApertureFlux_50_0_magErr,,mag,float64
-HSC-R_m_base_CircularApertureFlux_50_0_flux,,nJy,float64
-HSC-R_m_base_CircularApertureFlux_50_0_fluxErr,,nJy,float64
-HSC-R_m_base_CircularApertureFlux_70_0_mag,,mag,float64
-HSC-R_m_base_CircularApertureFlux_70_0_magErr,,mag,float64
-HSC-R_m_base_CircularApertureFlux_70_0_flux,,nJy,float64
-HSC-R_m_base_CircularApertureFlux_70_0_fluxErr,,nJy,float64
-HSC-R_m_base_GaussianFlux_mag,,mag,float64
-HSC-R_m_base_GaussianFlux_magErr,,mag,float64
-HSC-R_m_base_GaussianFlux_flux,,nJy,float64
-HSC-R_m_base_GaussianFlux_fluxErr,,nJy,float64
-HSC-R_m_slot_GaussianFlux_mag,,mag,float64
-HSC-R_m_slot_GaussianFlux_magErr,,mag,float64
-HSC-R_m_slot_GaussianFlux_flux,,nJy,float64
-HSC-R_m_slot_GaussianFlux_fluxErr,,nJy,float64
-HSC-R_m_slot_ModelFlux_mag,,mag,float64
-HSC-R_m_slot_ModelFlux_magErr,,mag,float64
-HSC-R_m_slot_ModelFlux_flux,,nJy,float64
-HSC-R_m_slot_ModelFlux_fluxErr,,nJy,float64
-HSC-R_m_base_LocalBackground_mag,,mag,float64
-HSC-R_m_base_LocalBackground_magErr,,mag,float64
-HSC-R_m_base_LocalBackground_flux,,nJy,float64
-HSC-R_m_base_LocalBackground_fluxErr,,nJy,float64
-HSC-R_m_base_PsfFlux_mag,,mag,float64
-HSC-R_m_base_PsfFlux_magErr,,mag,float64
-HSC-R_m_base_PsfFlux_flux,,nJy,float64
-HSC-R_m_base_PsfFlux_fluxErr,,nJy,float64
-HSC-R_m_slot_PsfFlux_mag,,mag,float64
-HSC-R_m_slot_PsfFlux_magErr,,mag,float64
-HSC-R_m_slot_PsfFlux_flux,,nJy,float64
-HSC-R_m_slot_PsfFlux_fluxErr,,nJy,float64
+HSC-R_m_base_SdssShape_mag,,elliptical Gaussian adaptive moments,float64
+HSC-R_m_base_SdssShape_magErr,,elliptical Gaussian adaptive moments,float64
+HSC-R_m_base_SdssShape_flux,,elliptical Gaussian adaptive moments,float64
+HSC-R_m_base_SdssShape_fluxErr,,elliptical Gaussian adaptive moments,float64
+HSC-R_m_slot_Shape_mag,,elliptical Gaussian adaptive moments,float64
+HSC-R_m_slot_Shape_magErr,,elliptical Gaussian adaptive moments,float64
+HSC-R_m_slot_Shape_flux,,elliptical Gaussian adaptive moments,float64
+HSC-R_m_slot_Shape_fluxErr,,elliptical Gaussian adaptive moments,float64
+HSC-R_m_base_CircularApertureFlux_3_0_mag,,mag within 3.000000-pixel aperture,float64
+HSC-R_m_base_CircularApertureFlux_3_0_magErr,,mag within 3.000000-pixel aperture,float64
+HSC-R_m_base_CircularApertureFlux_3_0_flux,,flux within 3.000000-pixel aperture,float64
+HSC-R_m_base_CircularApertureFlux_3_0_fluxErr,,flux within 3.000000-pixel aperture,float64
+HSC-R_m_base_CircularApertureFlux_4_5_mag,,mag within 4.500000-pixel aperture,float64
+HSC-R_m_base_CircularApertureFlux_4_5_magErr,,mag within 4.500000-pixel aperture,float64
+HSC-R_m_base_CircularApertureFlux_4_5_flux,,flux within 4.500000-pixel aperture,float64
+HSC-R_m_base_CircularApertureFlux_4_5_fluxErr,,flux within 4.500000-pixel aperture,float64
+HSC-R_m_base_CircularApertureFlux_6_0_mag,,mag within 6.000000-pixel aperture,float64
+HSC-R_m_base_CircularApertureFlux_6_0_magErr,,mag within 6.000000-pixel aperture,float64
+HSC-R_m_base_CircularApertureFlux_6_0_flux,,flux within 6.000000-pixel aperture,float64
+HSC-R_m_base_CircularApertureFlux_6_0_fluxErr,,flux within 6.000000-pixel aperture,float64
+HSC-R_m_base_CircularApertureFlux_9_0_mag,,mag within 9.000000-pixel aperture,float64
+HSC-R_m_base_CircularApertureFlux_9_0_magErr,,mag within 9.000000-pixel aperture,float64
+HSC-R_m_base_CircularApertureFlux_9_0_flux,,flux within 9.000000-pixel aperture,float64
+HSC-R_m_base_CircularApertureFlux_9_0_fluxErr,,flux within 9.000000-pixel aperture,float64
+HSC-R_m_base_CircularApertureFlux_12_0_mag,,mag within 12.000000-pixel aperture,float64
+HSC-R_m_base_CircularApertureFlux_12_0_magErr,,mag within 12.000000-pixel aperture,float64
+HSC-R_m_base_CircularApertureFlux_12_0_flux,,flux within 12.000000-pixel aperture,float64
+HSC-R_m_base_CircularApertureFlux_12_0_fluxErr,,flux within 12.000000-pixel aperture,float64
+HSC-R_m_slot_ApFlux_mag,,mag within 12.000000-pixel aperture,float64
+HSC-R_m_slot_ApFlux_magErr,,mag within 12.000000-pixel aperture,float64
+HSC-R_m_slot_ApFlux_flux,,flux within 12.000000-pixel aperture,float64
+HSC-R_m_slot_ApFlux_fluxErr,,flux within 12.000000-pixel aperture,float64
+HSC-R_m_slot_CalibFlux_mag,,mag within 12.000000-pixel aperture,float64
+HSC-R_m_slot_CalibFlux_magErr,,mag within 12.000000-pixel aperture,float64
+HSC-R_m_slot_CalibFlux_flux,,flux within 12.000000-pixel aperture,float64
+HSC-R_m_slot_CalibFlux_fluxErr,,flux within 12.000000-pixel aperture,float64
+HSC-R_m_base_CircularApertureFlux_17_0_mag,,mag within 17.000000-pixel aperture,float64
+HSC-R_m_base_CircularApertureFlux_17_0_magErr,,mag within 17.000000-pixel aperture,float64
+HSC-R_m_base_CircularApertureFlux_17_0_flux,,flux within 17.000000-pixel aperture,float64
+HSC-R_m_base_CircularApertureFlux_17_0_fluxErr,,flux within 17.000000-pixel aperture,float64
+HSC-R_m_base_CircularApertureFlux_25_0_mag,,mag within 25.000000-pixel aperture,float64
+HSC-R_m_base_CircularApertureFlux_25_0_magErr,,mag within 25.000000-pixel aperture,float64
+HSC-R_m_base_CircularApertureFlux_25_0_flux,,flux within 25.000000-pixel aperture,float64
+HSC-R_m_base_CircularApertureFlux_25_0_fluxErr,,flux within 25.000000-pixel aperture,float64
+HSC-R_m_base_CircularApertureFlux_35_0_mag,,mag within 35.000000-pixel aperture,float64
+HSC-R_m_base_CircularApertureFlux_35_0_magErr,,mag within 35.000000-pixel aperture,float64
+HSC-R_m_base_CircularApertureFlux_35_0_flux,,flux within 35.000000-pixel aperture,float64
+HSC-R_m_base_CircularApertureFlux_35_0_fluxErr,,flux within 35.000000-pixel aperture,float64
+HSC-R_m_base_CircularApertureFlux_50_0_mag,,mag within 50.000000-pixel aperture,float64
+HSC-R_m_base_CircularApertureFlux_50_0_magErr,,mag within 50.000000-pixel aperture,float64
+HSC-R_m_base_CircularApertureFlux_50_0_flux,,flux within 50.000000-pixel aperture,float64
+HSC-R_m_base_CircularApertureFlux_50_0_fluxErr,,flux within 50.000000-pixel aperture,float64
+HSC-R_m_base_CircularApertureFlux_70_0_mag,,mag within 70.000000-pixel aperture,float64
+HSC-R_m_base_CircularApertureFlux_70_0_magErr,,mag within 70.000000-pixel aperture,float64
+HSC-R_m_base_CircularApertureFlux_70_0_flux,,flux within 70.000000-pixel aperture,float64
+HSC-R_m_base_CircularApertureFlux_70_0_fluxErr,,flux within 70.000000-pixel aperture,float64
+HSC-R_m_base_GaussianFlux_mag,,mag from Gaussian Flux algorithm,float64
+HSC-R_m_base_GaussianFlux_magErr,,mag from Gaussian Flux algorithm,float64
+HSC-R_m_base_GaussianFlux_flux,,flux from Gaussian Flux algorithm,float64
+HSC-R_m_base_GaussianFlux_fluxErr,,flux from Gaussian Flux algorithm,float64
+HSC-R_m_slot_GaussianFlux_mag,,mag from Gaussian Flux algorithm,float64
+HSC-R_m_slot_GaussianFlux_magErr,,mag from Gaussian Flux algorithm,float64
+HSC-R_m_slot_GaussianFlux_flux,,flux from Gaussian Flux algorithm,float64
+HSC-R_m_slot_GaussianFlux_fluxErr,,flux from Gaussian Flux algorithm,float64
+HSC-R_m_slot_ModelFlux_mag,,mag from Gaussian Flux algorithm,float64
+HSC-R_m_slot_ModelFlux_magErr,,mag from Gaussian Flux algorithm,float64
+HSC-R_m_slot_ModelFlux_flux,,flux from Gaussian Flux algorithm,float64
+HSC-R_m_slot_ModelFlux_fluxErr,,flux from Gaussian Flux algorithm,float64
+HSC-R_m_base_LocalBackground_mag,,background in annulus around source,float64
+HSC-R_m_base_LocalBackground_magErr,,background in annulus around source,float64
+HSC-R_m_base_LocalBackground_flux,,background in annulus around source,float64
+HSC-R_m_base_LocalBackground_fluxErr,,background in annulus around source,float64
+HSC-R_m_base_PsfFlux_mag,,mag derived from linear least-squares fit of PSF model,float64
+HSC-R_m_base_PsfFlux_magErr,,mag derived from linear least-squares fit of PSF model,float64
+HSC-R_m_base_PsfFlux_flux,,flux derived from linear least-squares fit of PSF model,float64
+HSC-R_m_base_PsfFlux_fluxErr,,flux derived from linear least-squares fit of PSF model,float64
+HSC-R_m_slot_PsfFlux_mag,,mag derived from linear least-squares fit of PSF model,float64
+HSC-R_m_slot_PsfFlux_magErr,,mag derived from linear least-squares fit of PSF model,float64
+HSC-R_m_slot_PsfFlux_flux,,flux derived from linear least-squares fit of PSF model,float64
+HSC-R_m_slot_PsfFlux_fluxErr,,flux derived from linear least-squares fit of PSF model,float64
 HSC-R_f_coord_ra,position in ra/dec,rad,float64
 HSC-R_f_coord_dec,position in ra/dec,rad,float64
 HSC-R_f_parent,unique ID of parent source,None,int64
@@ -1132,62 +1132,62 @@ HSC-R_f_base_GaussianFlux_flag_apCorr,set if unable to aperture correct base_Gau
 HSC-R_f_base_PsfFlux_apCorr,aperture correction applied to base_PsfFlux,None,float64
 HSC-R_f_base_PsfFlux_apCorrErr,standard deviation of aperture correction applied to base_PsfFlux,None,float64
 HSC-R_f_base_PsfFlux_flag_apCorr,set if unable to aperture correct base_PsfFlux,None,bool
-HSC-R_f_base_SdssShape_mag,,mag,float64
-HSC-R_f_base_SdssShape_magErr,,mag,float64
-HSC-R_f_base_SdssShape_flux,,nJy,float64
-HSC-R_f_base_SdssShape_fluxErr,,nJy,float64
-HSC-R_f_base_CircularApertureFlux_3_0_mag,,mag,float64
-HSC-R_f_base_CircularApertureFlux_3_0_magErr,,mag,float64
-HSC-R_f_base_CircularApertureFlux_3_0_flux,,nJy,float64
-HSC-R_f_base_CircularApertureFlux_3_0_fluxErr,,nJy,float64
-HSC-R_f_base_CircularApertureFlux_4_5_mag,,mag,float64
-HSC-R_f_base_CircularApertureFlux_4_5_magErr,,mag,float64
-HSC-R_f_base_CircularApertureFlux_4_5_flux,,nJy,float64
-HSC-R_f_base_CircularApertureFlux_4_5_fluxErr,,nJy,float64
-HSC-R_f_base_CircularApertureFlux_6_0_mag,,mag,float64
-HSC-R_f_base_CircularApertureFlux_6_0_magErr,,mag,float64
-HSC-R_f_base_CircularApertureFlux_6_0_flux,,nJy,float64
-HSC-R_f_base_CircularApertureFlux_6_0_fluxErr,,nJy,float64
-HSC-R_f_base_CircularApertureFlux_9_0_mag,,mag,float64
-HSC-R_f_base_CircularApertureFlux_9_0_magErr,,mag,float64
-HSC-R_f_base_CircularApertureFlux_9_0_flux,,nJy,float64
-HSC-R_f_base_CircularApertureFlux_9_0_fluxErr,,nJy,float64
-HSC-R_f_base_CircularApertureFlux_12_0_mag,,mag,float64
-HSC-R_f_base_CircularApertureFlux_12_0_magErr,,mag,float64
-HSC-R_f_base_CircularApertureFlux_12_0_flux,,nJy,float64
-HSC-R_f_base_CircularApertureFlux_12_0_fluxErr,,nJy,float64
-HSC-R_f_base_CircularApertureFlux_17_0_mag,,mag,float64
-HSC-R_f_base_CircularApertureFlux_17_0_magErr,,mag,float64
-HSC-R_f_base_CircularApertureFlux_17_0_flux,,nJy,float64
-HSC-R_f_base_CircularApertureFlux_17_0_fluxErr,,nJy,float64
-HSC-R_f_base_CircularApertureFlux_25_0_mag,,mag,float64
-HSC-R_f_base_CircularApertureFlux_25_0_magErr,,mag,float64
-HSC-R_f_base_CircularApertureFlux_25_0_flux,,nJy,float64
-HSC-R_f_base_CircularApertureFlux_25_0_fluxErr,,nJy,float64
-HSC-R_f_base_CircularApertureFlux_35_0_mag,,mag,float64
-HSC-R_f_base_CircularApertureFlux_35_0_magErr,,mag,float64
-HSC-R_f_base_CircularApertureFlux_35_0_flux,,nJy,float64
-HSC-R_f_base_CircularApertureFlux_35_0_fluxErr,,nJy,float64
-HSC-R_f_base_CircularApertureFlux_50_0_mag,,mag,float64
-HSC-R_f_base_CircularApertureFlux_50_0_magErr,,mag,float64
-HSC-R_f_base_CircularApertureFlux_50_0_flux,,nJy,float64
-HSC-R_f_base_CircularApertureFlux_50_0_fluxErr,,nJy,float64
-HSC-R_f_base_CircularApertureFlux_70_0_mag,,mag,float64
-HSC-R_f_base_CircularApertureFlux_70_0_magErr,,mag,float64
-HSC-R_f_base_CircularApertureFlux_70_0_flux,,nJy,float64
-HSC-R_f_base_CircularApertureFlux_70_0_fluxErr,,nJy,float64
-HSC-R_f_base_GaussianFlux_mag,,mag,float64
-HSC-R_f_base_GaussianFlux_magErr,,mag,float64
-HSC-R_f_base_GaussianFlux_flux,,nJy,float64
-HSC-R_f_base_GaussianFlux_fluxErr,,nJy,float64
-HSC-R_f_base_LocalBackground_mag,,mag,float64
-HSC-R_f_base_LocalBackground_magErr,,mag,float64
-HSC-R_f_base_LocalBackground_flux,,nJy,float64
-HSC-R_f_base_LocalBackground_fluxErr,,nJy,float64
-HSC-R_f_base_PsfFlux_mag,,mag,float64
-HSC-R_f_base_PsfFlux_magErr,,mag,float64
-HSC-R_f_base_PsfFlux_flux,,nJy,float64
-HSC-R_f_base_PsfFlux_fluxErr,,nJy,float64
+HSC-R_f_base_SdssShape_mag,,elliptical Gaussian adaptive moments,float64
+HSC-R_f_base_SdssShape_magErr,,elliptical Gaussian adaptive moments,float64
+HSC-R_f_base_SdssShape_flux,,elliptical Gaussian adaptive moments,float64
+HSC-R_f_base_SdssShape_fluxErr,,elliptical Gaussian adaptive moments,float64
+HSC-R_f_base_CircularApertureFlux_3_0_mag,,mag within 3.000000-pixel aperture,float64
+HSC-R_f_base_CircularApertureFlux_3_0_magErr,,mag within 3.000000-pixel aperture,float64
+HSC-R_f_base_CircularApertureFlux_3_0_flux,,flux within 3.000000-pixel aperture,float64
+HSC-R_f_base_CircularApertureFlux_3_0_fluxErr,,flux within 3.000000-pixel aperture,float64
+HSC-R_f_base_CircularApertureFlux_4_5_mag,,mag within 4.500000-pixel aperture,float64
+HSC-R_f_base_CircularApertureFlux_4_5_magErr,,mag within 4.500000-pixel aperture,float64
+HSC-R_f_base_CircularApertureFlux_4_5_flux,,flux within 4.500000-pixel aperture,float64
+HSC-R_f_base_CircularApertureFlux_4_5_fluxErr,,flux within 4.500000-pixel aperture,float64
+HSC-R_f_base_CircularApertureFlux_6_0_mag,,mag within 6.000000-pixel aperture,float64
+HSC-R_f_base_CircularApertureFlux_6_0_magErr,,mag within 6.000000-pixel aperture,float64
+HSC-R_f_base_CircularApertureFlux_6_0_flux,,flux within 6.000000-pixel aperture,float64
+HSC-R_f_base_CircularApertureFlux_6_0_fluxErr,,flux within 6.000000-pixel aperture,float64
+HSC-R_f_base_CircularApertureFlux_9_0_mag,,mag within 9.000000-pixel aperture,float64
+HSC-R_f_base_CircularApertureFlux_9_0_magErr,,mag within 9.000000-pixel aperture,float64
+HSC-R_f_base_CircularApertureFlux_9_0_flux,,flux within 9.000000-pixel aperture,float64
+HSC-R_f_base_CircularApertureFlux_9_0_fluxErr,,flux within 9.000000-pixel aperture,float64
+HSC-R_f_base_CircularApertureFlux_12_0_mag,,mag within 12.000000-pixel aperture,float64
+HSC-R_f_base_CircularApertureFlux_12_0_magErr,,mag within 12.000000-pixel aperture,float64
+HSC-R_f_base_CircularApertureFlux_12_0_flux,,flux within 12.000000-pixel aperture,float64
+HSC-R_f_base_CircularApertureFlux_12_0_fluxErr,,flux within 12.000000-pixel aperture,float64
+HSC-R_f_base_CircularApertureFlux_17_0_mag,,mag within 17.000000-pixel aperture,float64
+HSC-R_f_base_CircularApertureFlux_17_0_magErr,,mag within 17.000000-pixel aperture,float64
+HSC-R_f_base_CircularApertureFlux_17_0_flux,,flux within 17.000000-pixel aperture,float64
+HSC-R_f_base_CircularApertureFlux_17_0_fluxErr,,flux within 17.000000-pixel aperture,float64
+HSC-R_f_base_CircularApertureFlux_25_0_mag,,mag within 25.000000-pixel aperture,float64
+HSC-R_f_base_CircularApertureFlux_25_0_magErr,,mag within 25.000000-pixel aperture,float64
+HSC-R_f_base_CircularApertureFlux_25_0_flux,,flux within 25.000000-pixel aperture,float64
+HSC-R_f_base_CircularApertureFlux_25_0_fluxErr,,flux within 25.000000-pixel aperture,float64
+HSC-R_f_base_CircularApertureFlux_35_0_mag,,mag within 35.000000-pixel aperture,float64
+HSC-R_f_base_CircularApertureFlux_35_0_magErr,,mag within 35.000000-pixel aperture,float64
+HSC-R_f_base_CircularApertureFlux_35_0_flux,,flux within 35.000000-pixel aperture,float64
+HSC-R_f_base_CircularApertureFlux_35_0_fluxErr,,flux within 35.000000-pixel aperture,float64
+HSC-R_f_base_CircularApertureFlux_50_0_mag,,mag within 50.000000-pixel aperture,float64
+HSC-R_f_base_CircularApertureFlux_50_0_magErr,,mag within 50.000000-pixel aperture,float64
+HSC-R_f_base_CircularApertureFlux_50_0_flux,,flux within 50.000000-pixel aperture,float64
+HSC-R_f_base_CircularApertureFlux_50_0_fluxErr,,flux within 50.000000-pixel aperture,float64
+HSC-R_f_base_CircularApertureFlux_70_0_mag,,mag within 70.000000-pixel aperture,float64
+HSC-R_f_base_CircularApertureFlux_70_0_magErr,,mag within 70.000000-pixel aperture,float64
+HSC-R_f_base_CircularApertureFlux_70_0_flux,,flux within 70.000000-pixel aperture,float64
+HSC-R_f_base_CircularApertureFlux_70_0_fluxErr,,flux within 70.000000-pixel aperture,float64
+HSC-R_f_base_GaussianFlux_mag,,mag from Gaussian Flux algorithm,float64
+HSC-R_f_base_GaussianFlux_magErr,,mag from Gaussian Flux algorithm,float64
+HSC-R_f_base_GaussianFlux_flux,,flux from Gaussian Flux algorithm,float64
+HSC-R_f_base_GaussianFlux_fluxErr,,flux from Gaussian Flux algorithm,float64
+HSC-R_f_base_LocalBackground_mag,,background in annulus around source,float64
+HSC-R_f_base_LocalBackground_magErr,,background in annulus around source,float64
+HSC-R_f_base_LocalBackground_flux,,background in annulus around source,float64
+HSC-R_f_base_LocalBackground_fluxErr,,background in annulus around source,float64
+HSC-R_f_base_PsfFlux_mag,,mag derived from linear least-squares fit of PSF model,float64
+HSC-R_f_base_PsfFlux_magErr,,mag derived from linear least-squares fit of PSF model,float64
+HSC-R_f_base_PsfFlux_flux,,flux derived from linear least-squares fit of PSF model,float64
+HSC-R_f_base_PsfFlux_fluxErr,,flux derived from linear least-squares fit of PSF model,float64
 HSC-I_m_coord_ra,position in ra/dec,rad,float64
 HSC-I_m_coord_dec,position in ra/dec,rad,float64
 HSC-I_m_parent,unique ID of parent source,None,int64
@@ -1493,86 +1493,86 @@ HSC-I_m_slot_PsfFlux_flag_apCorr,set if unable to aperture correct base_PsfFlux,
 HSC-I_m_base_ClassificationExtendedness_value,"Set to 1 for extended sources, 0 for point sources.",None,float64
 HSC-I_m_base_ClassificationExtendedness_flag,Set to 1 for any fatal failure.,None,bool
 HSC-I_m_base_FootprintArea_value,Number of pixels in the source''s detection footprint.,pix,int32
-HSC-I_m_base_SdssShape_mag,,mag,float64
-HSC-I_m_base_SdssShape_magErr,,mag,float64
-HSC-I_m_base_SdssShape_flux,,nJy,float64
-HSC-I_m_base_SdssShape_fluxErr,,nJy,float64
-HSC-I_m_slot_Shape_mag,,mag,float64
-HSC-I_m_slot_Shape_magErr,,mag,float64
-HSC-I_m_slot_Shape_flux,,nJy,float64
-HSC-I_m_slot_Shape_fluxErr,,nJy,float64
-HSC-I_m_base_CircularApertureFlux_3_0_mag,,mag,float64
-HSC-I_m_base_CircularApertureFlux_3_0_magErr,,mag,float64
-HSC-I_m_base_CircularApertureFlux_3_0_flux,,nJy,float64
-HSC-I_m_base_CircularApertureFlux_3_0_fluxErr,,nJy,float64
-HSC-I_m_base_CircularApertureFlux_4_5_mag,,mag,float64
-HSC-I_m_base_CircularApertureFlux_4_5_magErr,,mag,float64
-HSC-I_m_base_CircularApertureFlux_4_5_flux,,nJy,float64
-HSC-I_m_base_CircularApertureFlux_4_5_fluxErr,,nJy,float64
-HSC-I_m_base_CircularApertureFlux_6_0_mag,,mag,float64
-HSC-I_m_base_CircularApertureFlux_6_0_magErr,,mag,float64
-HSC-I_m_base_CircularApertureFlux_6_0_flux,,nJy,float64
-HSC-I_m_base_CircularApertureFlux_6_0_fluxErr,,nJy,float64
-HSC-I_m_base_CircularApertureFlux_9_0_mag,,mag,float64
-HSC-I_m_base_CircularApertureFlux_9_0_magErr,,mag,float64
-HSC-I_m_base_CircularApertureFlux_9_0_flux,,nJy,float64
-HSC-I_m_base_CircularApertureFlux_9_0_fluxErr,,nJy,float64
-HSC-I_m_base_CircularApertureFlux_12_0_mag,,mag,float64
-HSC-I_m_base_CircularApertureFlux_12_0_magErr,,mag,float64
-HSC-I_m_base_CircularApertureFlux_12_0_flux,,nJy,float64
-HSC-I_m_base_CircularApertureFlux_12_0_fluxErr,,nJy,float64
-HSC-I_m_slot_ApFlux_mag,,mag,float64
-HSC-I_m_slot_ApFlux_magErr,,mag,float64
-HSC-I_m_slot_ApFlux_flux,,nJy,float64
-HSC-I_m_slot_ApFlux_fluxErr,,nJy,float64
-HSC-I_m_slot_CalibFlux_mag,,mag,float64
-HSC-I_m_slot_CalibFlux_magErr,,mag,float64
-HSC-I_m_slot_CalibFlux_flux,,nJy,float64
-HSC-I_m_slot_CalibFlux_fluxErr,,nJy,float64
-HSC-I_m_base_CircularApertureFlux_17_0_mag,,mag,float64
-HSC-I_m_base_CircularApertureFlux_17_0_magErr,,mag,float64
-HSC-I_m_base_CircularApertureFlux_17_0_flux,,nJy,float64
-HSC-I_m_base_CircularApertureFlux_17_0_fluxErr,,nJy,float64
-HSC-I_m_base_CircularApertureFlux_25_0_mag,,mag,float64
-HSC-I_m_base_CircularApertureFlux_25_0_magErr,,mag,float64
-HSC-I_m_base_CircularApertureFlux_25_0_flux,,nJy,float64
-HSC-I_m_base_CircularApertureFlux_25_0_fluxErr,,nJy,float64
-HSC-I_m_base_CircularApertureFlux_35_0_mag,,mag,float64
-HSC-I_m_base_CircularApertureFlux_35_0_magErr,,mag,float64
-HSC-I_m_base_CircularApertureFlux_35_0_flux,,nJy,float64
-HSC-I_m_base_CircularApertureFlux_35_0_fluxErr,,nJy,float64
-HSC-I_m_base_CircularApertureFlux_50_0_mag,,mag,float64
-HSC-I_m_base_CircularApertureFlux_50_0_magErr,,mag,float64
-HSC-I_m_base_CircularApertureFlux_50_0_flux,,nJy,float64
-HSC-I_m_base_CircularApertureFlux_50_0_fluxErr,,nJy,float64
-HSC-I_m_base_CircularApertureFlux_70_0_mag,,mag,float64
-HSC-I_m_base_CircularApertureFlux_70_0_magErr,,mag,float64
-HSC-I_m_base_CircularApertureFlux_70_0_flux,,nJy,float64
-HSC-I_m_base_CircularApertureFlux_70_0_fluxErr,,nJy,float64
-HSC-I_m_base_GaussianFlux_mag,,mag,float64
-HSC-I_m_base_GaussianFlux_magErr,,mag,float64
-HSC-I_m_base_GaussianFlux_flux,,nJy,float64
-HSC-I_m_base_GaussianFlux_fluxErr,,nJy,float64
-HSC-I_m_slot_GaussianFlux_mag,,mag,float64
-HSC-I_m_slot_GaussianFlux_magErr,,mag,float64
-HSC-I_m_slot_GaussianFlux_flux,,nJy,float64
-HSC-I_m_slot_GaussianFlux_fluxErr,,nJy,float64
-HSC-I_m_slot_ModelFlux_mag,,mag,float64
-HSC-I_m_slot_ModelFlux_magErr,,mag,float64
-HSC-I_m_slot_ModelFlux_flux,,nJy,float64
-HSC-I_m_slot_ModelFlux_fluxErr,,nJy,float64
-HSC-I_m_base_LocalBackground_mag,,mag,float64
-HSC-I_m_base_LocalBackground_magErr,,mag,float64
-HSC-I_m_base_LocalBackground_flux,,nJy,float64
-HSC-I_m_base_LocalBackground_fluxErr,,nJy,float64
-HSC-I_m_base_PsfFlux_mag,,mag,float64
-HSC-I_m_base_PsfFlux_magErr,,mag,float64
-HSC-I_m_base_PsfFlux_flux,,nJy,float64
-HSC-I_m_base_PsfFlux_fluxErr,,nJy,float64
-HSC-I_m_slot_PsfFlux_mag,,mag,float64
-HSC-I_m_slot_PsfFlux_magErr,,mag,float64
-HSC-I_m_slot_PsfFlux_flux,,nJy,float64
-HSC-I_m_slot_PsfFlux_fluxErr,,nJy,float64
+HSC-I_m_base_SdssShape_mag,,elliptical Gaussian adaptive moments,float64
+HSC-I_m_base_SdssShape_magErr,,elliptical Gaussian adaptive moments,float64
+HSC-I_m_base_SdssShape_flux,,elliptical Gaussian adaptive moments,float64
+HSC-I_m_base_SdssShape_fluxErr,,elliptical Gaussian adaptive moments,float64
+HSC-I_m_slot_Shape_mag,,elliptical Gaussian adaptive moments,float64
+HSC-I_m_slot_Shape_magErr,,elliptical Gaussian adaptive moments,float64
+HSC-I_m_slot_Shape_flux,,elliptical Gaussian adaptive moments,float64
+HSC-I_m_slot_Shape_fluxErr,,elliptical Gaussian adaptive moments,float64
+HSC-I_m_base_CircularApertureFlux_3_0_mag,,mag within 3.000000-pixel aperture,float64
+HSC-I_m_base_CircularApertureFlux_3_0_magErr,,mag within 3.000000-pixel aperture,float64
+HSC-I_m_base_CircularApertureFlux_3_0_flux,,flux within 3.000000-pixel aperture,float64
+HSC-I_m_base_CircularApertureFlux_3_0_fluxErr,,flux within 3.000000-pixel aperture,float64
+HSC-I_m_base_CircularApertureFlux_4_5_mag,,mag within 4.500000-pixel aperture,float64
+HSC-I_m_base_CircularApertureFlux_4_5_magErr,,mag within 4.500000-pixel aperture,float64
+HSC-I_m_base_CircularApertureFlux_4_5_flux,,flux within 4.500000-pixel aperture,float64
+HSC-I_m_base_CircularApertureFlux_4_5_fluxErr,,flux within 4.500000-pixel aperture,float64
+HSC-I_m_base_CircularApertureFlux_6_0_mag,,mag within 6.000000-pixel aperture,float64
+HSC-I_m_base_CircularApertureFlux_6_0_magErr,,mag within 6.000000-pixel aperture,float64
+HSC-I_m_base_CircularApertureFlux_6_0_flux,,flux within 6.000000-pixel aperture,float64
+HSC-I_m_base_CircularApertureFlux_6_0_fluxErr,,flux within 6.000000-pixel aperture,float64
+HSC-I_m_base_CircularApertureFlux_9_0_mag,,mag within 9.000000-pixel aperture,float64
+HSC-I_m_base_CircularApertureFlux_9_0_magErr,,mag within 9.000000-pixel aperture,float64
+HSC-I_m_base_CircularApertureFlux_9_0_flux,,flux within 9.000000-pixel aperture,float64
+HSC-I_m_base_CircularApertureFlux_9_0_fluxErr,,flux within 9.000000-pixel aperture,float64
+HSC-I_m_base_CircularApertureFlux_12_0_mag,,mag within 12.000000-pixel aperture,float64
+HSC-I_m_base_CircularApertureFlux_12_0_magErr,,mag within 12.000000-pixel aperture,float64
+HSC-I_m_base_CircularApertureFlux_12_0_flux,,flux within 12.000000-pixel aperture,float64
+HSC-I_m_base_CircularApertureFlux_12_0_fluxErr,,flux within 12.000000-pixel aperture,float64
+HSC-I_m_slot_ApFlux_mag,,mag within 12.000000-pixel aperture,float64
+HSC-I_m_slot_ApFlux_magErr,,mag within 12.000000-pixel aperture,float64
+HSC-I_m_slot_ApFlux_flux,,flux within 12.000000-pixel aperture,float64
+HSC-I_m_slot_ApFlux_fluxErr,,flux within 12.000000-pixel aperture,float64
+HSC-I_m_slot_CalibFlux_mag,,mag within 12.000000-pixel aperture,float64
+HSC-I_m_slot_CalibFlux_magErr,,mag within 12.000000-pixel aperture,float64
+HSC-I_m_slot_CalibFlux_flux,,flux within 12.000000-pixel aperture,float64
+HSC-I_m_slot_CalibFlux_fluxErr,,flux within 12.000000-pixel aperture,float64
+HSC-I_m_base_CircularApertureFlux_17_0_mag,,mag within 17.000000-pixel aperture,float64
+HSC-I_m_base_CircularApertureFlux_17_0_magErr,,mag within 17.000000-pixel aperture,float64
+HSC-I_m_base_CircularApertureFlux_17_0_flux,,flux within 17.000000-pixel aperture,float64
+HSC-I_m_base_CircularApertureFlux_17_0_fluxErr,,flux within 17.000000-pixel aperture,float64
+HSC-I_m_base_CircularApertureFlux_25_0_mag,,mag within 25.000000-pixel aperture,float64
+HSC-I_m_base_CircularApertureFlux_25_0_magErr,,mag within 25.000000-pixel aperture,float64
+HSC-I_m_base_CircularApertureFlux_25_0_flux,,flux within 25.000000-pixel aperture,float64
+HSC-I_m_base_CircularApertureFlux_25_0_fluxErr,,flux within 25.000000-pixel aperture,float64
+HSC-I_m_base_CircularApertureFlux_35_0_mag,,mag within 35.000000-pixel aperture,float64
+HSC-I_m_base_CircularApertureFlux_35_0_magErr,,mag within 35.000000-pixel aperture,float64
+HSC-I_m_base_CircularApertureFlux_35_0_flux,,flux within 35.000000-pixel aperture,float64
+HSC-I_m_base_CircularApertureFlux_35_0_fluxErr,,flux within 35.000000-pixel aperture,float64
+HSC-I_m_base_CircularApertureFlux_50_0_mag,,mag within 50.000000-pixel aperture,float64
+HSC-I_m_base_CircularApertureFlux_50_0_magErr,,mag within 50.000000-pixel aperture,float64
+HSC-I_m_base_CircularApertureFlux_50_0_flux,,flux within 50.000000-pixel aperture,float64
+HSC-I_m_base_CircularApertureFlux_50_0_fluxErr,,flux within 50.000000-pixel aperture,float64
+HSC-I_m_base_CircularApertureFlux_70_0_mag,,mag within 70.000000-pixel aperture,float64
+HSC-I_m_base_CircularApertureFlux_70_0_magErr,,mag within 70.000000-pixel aperture,float64
+HSC-I_m_base_CircularApertureFlux_70_0_flux,,flux within 70.000000-pixel aperture,float64
+HSC-I_m_base_CircularApertureFlux_70_0_fluxErr,,flux within 70.000000-pixel aperture,float64
+HSC-I_m_base_GaussianFlux_mag,,mag from Gaussian Flux algorithm,float64
+HSC-I_m_base_GaussianFlux_magErr,,mag from Gaussian Flux algorithm,float64
+HSC-I_m_base_GaussianFlux_flux,,flux from Gaussian Flux algorithm,float64
+HSC-I_m_base_GaussianFlux_fluxErr,,flux from Gaussian Flux algorithm,float64
+HSC-I_m_slot_GaussianFlux_mag,,mag from Gaussian Flux algorithm,float64
+HSC-I_m_slot_GaussianFlux_magErr,,mag from Gaussian Flux algorithm,float64
+HSC-I_m_slot_GaussianFlux_flux,,flux from Gaussian Flux algorithm,float64
+HSC-I_m_slot_GaussianFlux_fluxErr,,flux from Gaussian Flux algorithm,float64
+HSC-I_m_slot_ModelFlux_mag,,mag from Gaussian Flux algorithm,float64
+HSC-I_m_slot_ModelFlux_magErr,,mag from Gaussian Flux algorithm,float64
+HSC-I_m_slot_ModelFlux_flux,,flux from Gaussian Flux algorithm,float64
+HSC-I_m_slot_ModelFlux_fluxErr,,flux from Gaussian Flux algorithm,float64
+HSC-I_m_base_LocalBackground_mag,,background in annulus around source,float64
+HSC-I_m_base_LocalBackground_magErr,,background in annulus around source,float64
+HSC-I_m_base_LocalBackground_flux,,background in annulus around source,float64
+HSC-I_m_base_LocalBackground_fluxErr,,background in annulus around source,float64
+HSC-I_m_base_PsfFlux_mag,,mag derived from linear least-squares fit of PSF model,float64
+HSC-I_m_base_PsfFlux_magErr,,mag derived from linear least-squares fit of PSF model,float64
+HSC-I_m_base_PsfFlux_flux,,flux derived from linear least-squares fit of PSF model,float64
+HSC-I_m_base_PsfFlux_fluxErr,,flux derived from linear least-squares fit of PSF model,float64
+HSC-I_m_slot_PsfFlux_mag,,mag derived from linear least-squares fit of PSF model,float64
+HSC-I_m_slot_PsfFlux_magErr,,mag derived from linear least-squares fit of PSF model,float64
+HSC-I_m_slot_PsfFlux_flux,,flux derived from linear least-squares fit of PSF model,float64
+HSC-I_m_slot_PsfFlux_fluxErr,,flux derived from linear least-squares fit of PSF model,float64
 HSC-I_f_coord_ra,position in ra/dec,rad,float64
 HSC-I_f_coord_dec,position in ra/dec,rad,float64
 HSC-I_f_parent,unique ID of parent source,None,int64
@@ -1726,62 +1726,62 @@ HSC-I_f_base_GaussianFlux_flag_apCorr,set if unable to aperture correct base_Gau
 HSC-I_f_base_PsfFlux_apCorr,aperture correction applied to base_PsfFlux,None,float64
 HSC-I_f_base_PsfFlux_apCorrErr,standard deviation of aperture correction applied to base_PsfFlux,None,float64
 HSC-I_f_base_PsfFlux_flag_apCorr,set if unable to aperture correct base_PsfFlux,None,bool
-HSC-I_f_base_SdssShape_mag,,mag,float64
-HSC-I_f_base_SdssShape_magErr,,mag,float64
-HSC-I_f_base_SdssShape_flux,,nJy,float64
-HSC-I_f_base_SdssShape_fluxErr,,nJy,float64
-HSC-I_f_base_CircularApertureFlux_3_0_mag,,mag,float64
-HSC-I_f_base_CircularApertureFlux_3_0_magErr,,mag,float64
-HSC-I_f_base_CircularApertureFlux_3_0_flux,,nJy,float64
-HSC-I_f_base_CircularApertureFlux_3_0_fluxErr,,nJy,float64
-HSC-I_f_base_CircularApertureFlux_4_5_mag,,mag,float64
-HSC-I_f_base_CircularApertureFlux_4_5_magErr,,mag,float64
-HSC-I_f_base_CircularApertureFlux_4_5_flux,,nJy,float64
-HSC-I_f_base_CircularApertureFlux_4_5_fluxErr,,nJy,float64
-HSC-I_f_base_CircularApertureFlux_6_0_mag,,mag,float64
-HSC-I_f_base_CircularApertureFlux_6_0_magErr,,mag,float64
-HSC-I_f_base_CircularApertureFlux_6_0_flux,,nJy,float64
-HSC-I_f_base_CircularApertureFlux_6_0_fluxErr,,nJy,float64
-HSC-I_f_base_CircularApertureFlux_9_0_mag,,mag,float64
-HSC-I_f_base_CircularApertureFlux_9_0_magErr,,mag,float64
-HSC-I_f_base_CircularApertureFlux_9_0_flux,,nJy,float64
-HSC-I_f_base_CircularApertureFlux_9_0_fluxErr,,nJy,float64
-HSC-I_f_base_CircularApertureFlux_12_0_mag,,mag,float64
-HSC-I_f_base_CircularApertureFlux_12_0_magErr,,mag,float64
-HSC-I_f_base_CircularApertureFlux_12_0_flux,,nJy,float64
-HSC-I_f_base_CircularApertureFlux_12_0_fluxErr,,nJy,float64
-HSC-I_f_base_CircularApertureFlux_17_0_mag,,mag,float64
-HSC-I_f_base_CircularApertureFlux_17_0_magErr,,mag,float64
-HSC-I_f_base_CircularApertureFlux_17_0_flux,,nJy,float64
-HSC-I_f_base_CircularApertureFlux_17_0_fluxErr,,nJy,float64
-HSC-I_f_base_CircularApertureFlux_25_0_mag,,mag,float64
-HSC-I_f_base_CircularApertureFlux_25_0_magErr,,mag,float64
-HSC-I_f_base_CircularApertureFlux_25_0_flux,,nJy,float64
-HSC-I_f_base_CircularApertureFlux_25_0_fluxErr,,nJy,float64
-HSC-I_f_base_CircularApertureFlux_35_0_mag,,mag,float64
-HSC-I_f_base_CircularApertureFlux_35_0_magErr,,mag,float64
-HSC-I_f_base_CircularApertureFlux_35_0_flux,,nJy,float64
-HSC-I_f_base_CircularApertureFlux_35_0_fluxErr,,nJy,float64
-HSC-I_f_base_CircularApertureFlux_50_0_mag,,mag,float64
-HSC-I_f_base_CircularApertureFlux_50_0_magErr,,mag,float64
-HSC-I_f_base_CircularApertureFlux_50_0_flux,,nJy,float64
-HSC-I_f_base_CircularApertureFlux_50_0_fluxErr,,nJy,float64
-HSC-I_f_base_CircularApertureFlux_70_0_mag,,mag,float64
-HSC-I_f_base_CircularApertureFlux_70_0_magErr,,mag,float64
-HSC-I_f_base_CircularApertureFlux_70_0_flux,,nJy,float64
-HSC-I_f_base_CircularApertureFlux_70_0_fluxErr,,nJy,float64
-HSC-I_f_base_GaussianFlux_mag,,mag,float64
-HSC-I_f_base_GaussianFlux_magErr,,mag,float64
-HSC-I_f_base_GaussianFlux_flux,,nJy,float64
-HSC-I_f_base_GaussianFlux_fluxErr,,nJy,float64
-HSC-I_f_base_LocalBackground_mag,,mag,float64
-HSC-I_f_base_LocalBackground_magErr,,mag,float64
-HSC-I_f_base_LocalBackground_flux,,nJy,float64
-HSC-I_f_base_LocalBackground_fluxErr,,nJy,float64
-HSC-I_f_base_PsfFlux_mag,,mag,float64
-HSC-I_f_base_PsfFlux_magErr,,mag,float64
-HSC-I_f_base_PsfFlux_flux,,nJy,float64
-HSC-I_f_base_PsfFlux_fluxErr,,nJy,float64
+HSC-I_f_base_SdssShape_mag,,elliptical Gaussian adaptive moments,float64
+HSC-I_f_base_SdssShape_magErr,,elliptical Gaussian adaptive moments,float64
+HSC-I_f_base_SdssShape_flux,,elliptical Gaussian adaptive moments,float64
+HSC-I_f_base_SdssShape_fluxErr,,elliptical Gaussian adaptive moments,float64
+HSC-I_f_base_CircularApertureFlux_3_0_mag,,mag within 3.000000-pixel aperture,float64
+HSC-I_f_base_CircularApertureFlux_3_0_magErr,,mag within 3.000000-pixel aperture,float64
+HSC-I_f_base_CircularApertureFlux_3_0_flux,,flux within 3.000000-pixel aperture,float64
+HSC-I_f_base_CircularApertureFlux_3_0_fluxErr,,flux within 3.000000-pixel aperture,float64
+HSC-I_f_base_CircularApertureFlux_4_5_mag,,mag within 4.500000-pixel aperture,float64
+HSC-I_f_base_CircularApertureFlux_4_5_magErr,,mag within 4.500000-pixel aperture,float64
+HSC-I_f_base_CircularApertureFlux_4_5_flux,,flux within 4.500000-pixel aperture,float64
+HSC-I_f_base_CircularApertureFlux_4_5_fluxErr,,flux within 4.500000-pixel aperture,float64
+HSC-I_f_base_CircularApertureFlux_6_0_mag,,mag within 6.000000-pixel aperture,float64
+HSC-I_f_base_CircularApertureFlux_6_0_magErr,,mag within 6.000000-pixel aperture,float64
+HSC-I_f_base_CircularApertureFlux_6_0_flux,,flux within 6.000000-pixel aperture,float64
+HSC-I_f_base_CircularApertureFlux_6_0_fluxErr,,flux within 6.000000-pixel aperture,float64
+HSC-I_f_base_CircularApertureFlux_9_0_mag,,mag within 9.000000-pixel aperture,float64
+HSC-I_f_base_CircularApertureFlux_9_0_magErr,,mag within 9.000000-pixel aperture,float64
+HSC-I_f_base_CircularApertureFlux_9_0_flux,,flux within 9.000000-pixel aperture,float64
+HSC-I_f_base_CircularApertureFlux_9_0_fluxErr,,flux within 9.000000-pixel aperture,float64
+HSC-I_f_base_CircularApertureFlux_12_0_mag,,mag within 12.000000-pixel aperture,float64
+HSC-I_f_base_CircularApertureFlux_12_0_magErr,,mag within 12.000000-pixel aperture,float64
+HSC-I_f_base_CircularApertureFlux_12_0_flux,,flux within 12.000000-pixel aperture,float64
+HSC-I_f_base_CircularApertureFlux_12_0_fluxErr,,flux within 12.000000-pixel aperture,float64
+HSC-I_f_base_CircularApertureFlux_17_0_mag,,mag within 17.000000-pixel aperture,float64
+HSC-I_f_base_CircularApertureFlux_17_0_magErr,,mag within 17.000000-pixel aperture,float64
+HSC-I_f_base_CircularApertureFlux_17_0_flux,,flux within 17.000000-pixel aperture,float64
+HSC-I_f_base_CircularApertureFlux_17_0_fluxErr,,flux within 17.000000-pixel aperture,float64
+HSC-I_f_base_CircularApertureFlux_25_0_mag,,mag within 25.000000-pixel aperture,float64
+HSC-I_f_base_CircularApertureFlux_25_0_magErr,,mag within 25.000000-pixel aperture,float64
+HSC-I_f_base_CircularApertureFlux_25_0_flux,,flux within 25.000000-pixel aperture,float64
+HSC-I_f_base_CircularApertureFlux_25_0_fluxErr,,flux within 25.000000-pixel aperture,float64
+HSC-I_f_base_CircularApertureFlux_35_0_mag,,mag within 35.000000-pixel aperture,float64
+HSC-I_f_base_CircularApertureFlux_35_0_magErr,,mag within 35.000000-pixel aperture,float64
+HSC-I_f_base_CircularApertureFlux_35_0_flux,,flux within 35.000000-pixel aperture,float64
+HSC-I_f_base_CircularApertureFlux_35_0_fluxErr,,flux within 35.000000-pixel aperture,float64
+HSC-I_f_base_CircularApertureFlux_50_0_mag,,mag within 50.000000-pixel aperture,float64
+HSC-I_f_base_CircularApertureFlux_50_0_magErr,,mag within 50.000000-pixel aperture,float64
+HSC-I_f_base_CircularApertureFlux_50_0_flux,,flux within 50.000000-pixel aperture,float64
+HSC-I_f_base_CircularApertureFlux_50_0_fluxErr,,flux within 50.000000-pixel aperture,float64
+HSC-I_f_base_CircularApertureFlux_70_0_mag,,mag within 70.000000-pixel aperture,float64
+HSC-I_f_base_CircularApertureFlux_70_0_magErr,,mag within 70.000000-pixel aperture,float64
+HSC-I_f_base_CircularApertureFlux_70_0_flux,,flux within 70.000000-pixel aperture,float64
+HSC-I_f_base_CircularApertureFlux_70_0_fluxErr,,flux within 70.000000-pixel aperture,float64
+HSC-I_f_base_GaussianFlux_mag,,mag from Gaussian Flux algorithm,float64
+HSC-I_f_base_GaussianFlux_magErr,,mag from Gaussian Flux algorithm,float64
+HSC-I_f_base_GaussianFlux_flux,,flux from Gaussian Flux algorithm,float64
+HSC-I_f_base_GaussianFlux_fluxErr,,flux from Gaussian Flux algorithm,float64
+HSC-I_f_base_LocalBackground_mag,,background in annulus around source,float64
+HSC-I_f_base_LocalBackground_magErr,,background in annulus around source,float64
+HSC-I_f_base_LocalBackground_flux,,background in annulus around source,float64
+HSC-I_f_base_LocalBackground_fluxErr,,background in annulus around source,float64
+HSC-I_f_base_PsfFlux_mag,,mag derived from linear least-squares fit of PSF model,float64
+HSC-I_f_base_PsfFlux_magErr,,mag derived from linear least-squares fit of PSF model,float64
+HSC-I_f_base_PsfFlux_flux,,flux derived from linear least-squares fit of PSF model,float64
+HSC-I_f_base_PsfFlux_fluxErr,,flux derived from linear least-squares fit of PSF model,float64
 HSC-Z_m_coord_ra,position in ra/dec,rad,float64
 HSC-Z_m_coord_dec,position in ra/dec,rad,float64
 HSC-Z_m_parent,unique ID of parent source,None,int64
@@ -2087,86 +2087,86 @@ HSC-Z_m_slot_PsfFlux_flag_apCorr,set if unable to aperture correct base_PsfFlux,
 HSC-Z_m_base_ClassificationExtendedness_value,"Set to 1 for extended sources, 0 for point sources.",None,float64
 HSC-Z_m_base_ClassificationExtendedness_flag,Set to 1 for any fatal failure.,None,bool
 HSC-Z_m_base_FootprintArea_value,Number of pixels in the source''s detection footprint.,pix,int32
-HSC-Z_m_base_SdssShape_mag,,mag,float64
-HSC-Z_m_base_SdssShape_magErr,,mag,float64
-HSC-Z_m_base_SdssShape_flux,,nJy,float64
-HSC-Z_m_base_SdssShape_fluxErr,,nJy,float64
-HSC-Z_m_slot_Shape_mag,,mag,float64
-HSC-Z_m_slot_Shape_magErr,,mag,float64
-HSC-Z_m_slot_Shape_flux,,nJy,float64
-HSC-Z_m_slot_Shape_fluxErr,,nJy,float64
-HSC-Z_m_base_CircularApertureFlux_3_0_mag,,mag,float64
-HSC-Z_m_base_CircularApertureFlux_3_0_magErr,,mag,float64
-HSC-Z_m_base_CircularApertureFlux_3_0_flux,,nJy,float64
-HSC-Z_m_base_CircularApertureFlux_3_0_fluxErr,,nJy,float64
-HSC-Z_m_base_CircularApertureFlux_4_5_mag,,mag,float64
-HSC-Z_m_base_CircularApertureFlux_4_5_magErr,,mag,float64
-HSC-Z_m_base_CircularApertureFlux_4_5_flux,,nJy,float64
-HSC-Z_m_base_CircularApertureFlux_4_5_fluxErr,,nJy,float64
-HSC-Z_m_base_CircularApertureFlux_6_0_mag,,mag,float64
-HSC-Z_m_base_CircularApertureFlux_6_0_magErr,,mag,float64
-HSC-Z_m_base_CircularApertureFlux_6_0_flux,,nJy,float64
-HSC-Z_m_base_CircularApertureFlux_6_0_fluxErr,,nJy,float64
-HSC-Z_m_base_CircularApertureFlux_9_0_mag,,mag,float64
-HSC-Z_m_base_CircularApertureFlux_9_0_magErr,,mag,float64
-HSC-Z_m_base_CircularApertureFlux_9_0_flux,,nJy,float64
-HSC-Z_m_base_CircularApertureFlux_9_0_fluxErr,,nJy,float64
-HSC-Z_m_base_CircularApertureFlux_12_0_mag,,mag,float64
-HSC-Z_m_base_CircularApertureFlux_12_0_magErr,,mag,float64
-HSC-Z_m_base_CircularApertureFlux_12_0_flux,,nJy,float64
-HSC-Z_m_base_CircularApertureFlux_12_0_fluxErr,,nJy,float64
-HSC-Z_m_slot_ApFlux_mag,,mag,float64
-HSC-Z_m_slot_ApFlux_magErr,,mag,float64
-HSC-Z_m_slot_ApFlux_flux,,nJy,float64
-HSC-Z_m_slot_ApFlux_fluxErr,,nJy,float64
-HSC-Z_m_slot_CalibFlux_mag,,mag,float64
-HSC-Z_m_slot_CalibFlux_magErr,,mag,float64
-HSC-Z_m_slot_CalibFlux_flux,,nJy,float64
-HSC-Z_m_slot_CalibFlux_fluxErr,,nJy,float64
-HSC-Z_m_base_CircularApertureFlux_17_0_mag,,mag,float64
-HSC-Z_m_base_CircularApertureFlux_17_0_magErr,,mag,float64
-HSC-Z_m_base_CircularApertureFlux_17_0_flux,,nJy,float64
-HSC-Z_m_base_CircularApertureFlux_17_0_fluxErr,,nJy,float64
-HSC-Z_m_base_CircularApertureFlux_25_0_mag,,mag,float64
-HSC-Z_m_base_CircularApertureFlux_25_0_magErr,,mag,float64
-HSC-Z_m_base_CircularApertureFlux_25_0_flux,,nJy,float64
-HSC-Z_m_base_CircularApertureFlux_25_0_fluxErr,,nJy,float64
-HSC-Z_m_base_CircularApertureFlux_35_0_mag,,mag,float64
-HSC-Z_m_base_CircularApertureFlux_35_0_magErr,,mag,float64
-HSC-Z_m_base_CircularApertureFlux_35_0_flux,,nJy,float64
-HSC-Z_m_base_CircularApertureFlux_35_0_fluxErr,,nJy,float64
-HSC-Z_m_base_CircularApertureFlux_50_0_mag,,mag,float64
-HSC-Z_m_base_CircularApertureFlux_50_0_magErr,,mag,float64
-HSC-Z_m_base_CircularApertureFlux_50_0_flux,,nJy,float64
-HSC-Z_m_base_CircularApertureFlux_50_0_fluxErr,,nJy,float64
-HSC-Z_m_base_CircularApertureFlux_70_0_mag,,mag,float64
-HSC-Z_m_base_CircularApertureFlux_70_0_magErr,,mag,float64
-HSC-Z_m_base_CircularApertureFlux_70_0_flux,,nJy,float64
-HSC-Z_m_base_CircularApertureFlux_70_0_fluxErr,,nJy,float64
-HSC-Z_m_base_GaussianFlux_mag,,mag,float64
-HSC-Z_m_base_GaussianFlux_magErr,,mag,float64
-HSC-Z_m_base_GaussianFlux_flux,,nJy,float64
-HSC-Z_m_base_GaussianFlux_fluxErr,,nJy,float64
-HSC-Z_m_slot_GaussianFlux_mag,,mag,float64
-HSC-Z_m_slot_GaussianFlux_magErr,,mag,float64
-HSC-Z_m_slot_GaussianFlux_flux,,nJy,float64
-HSC-Z_m_slot_GaussianFlux_fluxErr,,nJy,float64
-HSC-Z_m_slot_ModelFlux_mag,,mag,float64
-HSC-Z_m_slot_ModelFlux_magErr,,mag,float64
-HSC-Z_m_slot_ModelFlux_flux,,nJy,float64
-HSC-Z_m_slot_ModelFlux_fluxErr,,nJy,float64
-HSC-Z_m_base_LocalBackground_mag,,mag,float64
-HSC-Z_m_base_LocalBackground_magErr,,mag,float64
-HSC-Z_m_base_LocalBackground_flux,,nJy,float64
-HSC-Z_m_base_LocalBackground_fluxErr,,nJy,float64
-HSC-Z_m_base_PsfFlux_mag,,mag,float64
-HSC-Z_m_base_PsfFlux_magErr,,mag,float64
-HSC-Z_m_base_PsfFlux_flux,,nJy,float64
-HSC-Z_m_base_PsfFlux_fluxErr,,nJy,float64
-HSC-Z_m_slot_PsfFlux_mag,,mag,float64
-HSC-Z_m_slot_PsfFlux_magErr,,mag,float64
-HSC-Z_m_slot_PsfFlux_flux,,nJy,float64
-HSC-Z_m_slot_PsfFlux_fluxErr,,nJy,float64
+HSC-Z_m_base_SdssShape_mag,,elliptical Gaussian adaptive moments,float64
+HSC-Z_m_base_SdssShape_magErr,,elliptical Gaussian adaptive moments,float64
+HSC-Z_m_base_SdssShape_flux,,elliptical Gaussian adaptive moments,float64
+HSC-Z_m_base_SdssShape_fluxErr,,elliptical Gaussian adaptive moments,float64
+HSC-Z_m_slot_Shape_mag,,elliptical Gaussian adaptive moments,float64
+HSC-Z_m_slot_Shape_magErr,,elliptical Gaussian adaptive moments,float64
+HSC-Z_m_slot_Shape_flux,,elliptical Gaussian adaptive moments,float64
+HSC-Z_m_slot_Shape_fluxErr,,elliptical Gaussian adaptive moments,float64
+HSC-Z_m_base_CircularApertureFlux_3_0_mag,,mag within 3.000000-pixel aperture,float64
+HSC-Z_m_base_CircularApertureFlux_3_0_magErr,,mag within 3.000000-pixel aperture,float64
+HSC-Z_m_base_CircularApertureFlux_3_0_flux,,flux within 3.000000-pixel aperture,float64
+HSC-Z_m_base_CircularApertureFlux_3_0_fluxErr,,flux within 3.000000-pixel aperture,float64
+HSC-Z_m_base_CircularApertureFlux_4_5_mag,,mag within 4.500000-pixel aperture,float64
+HSC-Z_m_base_CircularApertureFlux_4_5_magErr,,mag within 4.500000-pixel aperture,float64
+HSC-Z_m_base_CircularApertureFlux_4_5_flux,,flux within 4.500000-pixel aperture,float64
+HSC-Z_m_base_CircularApertureFlux_4_5_fluxErr,,flux within 4.500000-pixel aperture,float64
+HSC-Z_m_base_CircularApertureFlux_6_0_mag,,mag within 6.000000-pixel aperture,float64
+HSC-Z_m_base_CircularApertureFlux_6_0_magErr,,mag within 6.000000-pixel aperture,float64
+HSC-Z_m_base_CircularApertureFlux_6_0_flux,,flux within 6.000000-pixel aperture,float64
+HSC-Z_m_base_CircularApertureFlux_6_0_fluxErr,,flux within 6.000000-pixel aperture,float64
+HSC-Z_m_base_CircularApertureFlux_9_0_mag,,mag within 9.000000-pixel aperture,float64
+HSC-Z_m_base_CircularApertureFlux_9_0_magErr,,mag within 9.000000-pixel aperture,float64
+HSC-Z_m_base_CircularApertureFlux_9_0_flux,,flux within 9.000000-pixel aperture,float64
+HSC-Z_m_base_CircularApertureFlux_9_0_fluxErr,,flux within 9.000000-pixel aperture,float64
+HSC-Z_m_base_CircularApertureFlux_12_0_mag,,mag within 12.000000-pixel aperture,float64
+HSC-Z_m_base_CircularApertureFlux_12_0_magErr,,mag within 12.000000-pixel aperture,float64
+HSC-Z_m_base_CircularApertureFlux_12_0_flux,,flux within 12.000000-pixel aperture,float64
+HSC-Z_m_base_CircularApertureFlux_12_0_fluxErr,,flux within 12.000000-pixel aperture,float64
+HSC-Z_m_slot_ApFlux_mag,,mag within 12.000000-pixel aperture,float64
+HSC-Z_m_slot_ApFlux_magErr,,mag within 12.000000-pixel aperture,float64
+HSC-Z_m_slot_ApFlux_flux,,flux within 12.000000-pixel aperture,float64
+HSC-Z_m_slot_ApFlux_fluxErr,,flux within 12.000000-pixel aperture,float64
+HSC-Z_m_slot_CalibFlux_mag,,mag within 12.000000-pixel aperture,float64
+HSC-Z_m_slot_CalibFlux_magErr,,mag within 12.000000-pixel aperture,float64
+HSC-Z_m_slot_CalibFlux_flux,,flux within 12.000000-pixel aperture,float64
+HSC-Z_m_slot_CalibFlux_fluxErr,,flux within 12.000000-pixel aperture,float64
+HSC-Z_m_base_CircularApertureFlux_17_0_mag,,mag within 17.000000-pixel aperture,float64
+HSC-Z_m_base_CircularApertureFlux_17_0_magErr,,mag within 17.000000-pixel aperture,float64
+HSC-Z_m_base_CircularApertureFlux_17_0_flux,,flux within 17.000000-pixel aperture,float64
+HSC-Z_m_base_CircularApertureFlux_17_0_fluxErr,,flux within 17.000000-pixel aperture,float64
+HSC-Z_m_base_CircularApertureFlux_25_0_mag,,mag within 25.000000-pixel aperture,float64
+HSC-Z_m_base_CircularApertureFlux_25_0_magErr,,mag within 25.000000-pixel aperture,float64
+HSC-Z_m_base_CircularApertureFlux_25_0_flux,,flux within 25.000000-pixel aperture,float64
+HSC-Z_m_base_CircularApertureFlux_25_0_fluxErr,,flux within 25.000000-pixel aperture,float64
+HSC-Z_m_base_CircularApertureFlux_35_0_mag,,mag within 35.000000-pixel aperture,float64
+HSC-Z_m_base_CircularApertureFlux_35_0_magErr,,mag within 35.000000-pixel aperture,float64
+HSC-Z_m_base_CircularApertureFlux_35_0_flux,,flux within 35.000000-pixel aperture,float64
+HSC-Z_m_base_CircularApertureFlux_35_0_fluxErr,,flux within 35.000000-pixel aperture,float64
+HSC-Z_m_base_CircularApertureFlux_50_0_mag,,mag within 50.000000-pixel aperture,float64
+HSC-Z_m_base_CircularApertureFlux_50_0_magErr,,mag within 50.000000-pixel aperture,float64
+HSC-Z_m_base_CircularApertureFlux_50_0_flux,,flux within 50.000000-pixel aperture,float64
+HSC-Z_m_base_CircularApertureFlux_50_0_fluxErr,,flux within 50.000000-pixel aperture,float64
+HSC-Z_m_base_CircularApertureFlux_70_0_mag,,mag within 70.000000-pixel aperture,float64
+HSC-Z_m_base_CircularApertureFlux_70_0_magErr,,mag within 70.000000-pixel aperture,float64
+HSC-Z_m_base_CircularApertureFlux_70_0_flux,,flux within 70.000000-pixel aperture,float64
+HSC-Z_m_base_CircularApertureFlux_70_0_fluxErr,,flux within 70.000000-pixel aperture,float64
+HSC-Z_m_base_GaussianFlux_mag,,mag from Gaussian Flux algorithm,float64
+HSC-Z_m_base_GaussianFlux_magErr,,mag from Gaussian Flux algorithm,float64
+HSC-Z_m_base_GaussianFlux_flux,,flux from Gaussian Flux algorithm,float64
+HSC-Z_m_base_GaussianFlux_fluxErr,,flux from Gaussian Flux algorithm,float64
+HSC-Z_m_slot_GaussianFlux_mag,,mag from Gaussian Flux algorithm,float64
+HSC-Z_m_slot_GaussianFlux_magErr,,mag from Gaussian Flux algorithm,float64
+HSC-Z_m_slot_GaussianFlux_flux,,flux from Gaussian Flux algorithm,float64
+HSC-Z_m_slot_GaussianFlux_fluxErr,,flux from Gaussian Flux algorithm,float64
+HSC-Z_m_slot_ModelFlux_mag,,mag from Gaussian Flux algorithm,float64
+HSC-Z_m_slot_ModelFlux_magErr,,mag from Gaussian Flux algorithm,float64
+HSC-Z_m_slot_ModelFlux_flux,,flux from Gaussian Flux algorithm,float64
+HSC-Z_m_slot_ModelFlux_fluxErr,,flux from Gaussian Flux algorithm,float64
+HSC-Z_m_base_LocalBackground_mag,,background in annulus around source,float64
+HSC-Z_m_base_LocalBackground_magErr,,background in annulus around source,float64
+HSC-Z_m_base_LocalBackground_flux,,background in annulus around source,float64
+HSC-Z_m_base_LocalBackground_fluxErr,,background in annulus around source,float64
+HSC-Z_m_base_PsfFlux_mag,,mag derived from linear least-squares fit of PSF model,float64
+HSC-Z_m_base_PsfFlux_magErr,,mag derived from linear least-squares fit of PSF model,float64
+HSC-Z_m_base_PsfFlux_flux,,flux derived from linear least-squares fit of PSF model,float64
+HSC-Z_m_base_PsfFlux_fluxErr,,flux derived from linear least-squares fit of PSF model,float64
+HSC-Z_m_slot_PsfFlux_mag,,mag derived from linear least-squares fit of PSF model,float64
+HSC-Z_m_slot_PsfFlux_magErr,,mag derived from linear least-squares fit of PSF model,float64
+HSC-Z_m_slot_PsfFlux_flux,,flux derived from linear least-squares fit of PSF model,float64
+HSC-Z_m_slot_PsfFlux_fluxErr,,flux derived from linear least-squares fit of PSF model,float64
 HSC-Z_f_coord_ra,position in ra/dec,rad,float64
 HSC-Z_f_coord_dec,position in ra/dec,rad,float64
 HSC-Z_f_parent,unique ID of parent source,None,int64
@@ -2320,62 +2320,62 @@ HSC-Z_f_base_GaussianFlux_flag_apCorr,set if unable to aperture correct base_Gau
 HSC-Z_f_base_PsfFlux_apCorr,aperture correction applied to base_PsfFlux,None,float64
 HSC-Z_f_base_PsfFlux_apCorrErr,standard deviation of aperture correction applied to base_PsfFlux,None,float64
 HSC-Z_f_base_PsfFlux_flag_apCorr,set if unable to aperture correct base_PsfFlux,None,bool
-HSC-Z_f_base_SdssShape_mag,,mag,float64
-HSC-Z_f_base_SdssShape_magErr,,mag,float64
-HSC-Z_f_base_SdssShape_flux,,nJy,float64
-HSC-Z_f_base_SdssShape_fluxErr,,nJy,float64
-HSC-Z_f_base_CircularApertureFlux_3_0_mag,,mag,float64
-HSC-Z_f_base_CircularApertureFlux_3_0_magErr,,mag,float64
-HSC-Z_f_base_CircularApertureFlux_3_0_flux,,nJy,float64
-HSC-Z_f_base_CircularApertureFlux_3_0_fluxErr,,nJy,float64
-HSC-Z_f_base_CircularApertureFlux_4_5_mag,,mag,float64
-HSC-Z_f_base_CircularApertureFlux_4_5_magErr,,mag,float64
-HSC-Z_f_base_CircularApertureFlux_4_5_flux,,nJy,float64
-HSC-Z_f_base_CircularApertureFlux_4_5_fluxErr,,nJy,float64
-HSC-Z_f_base_CircularApertureFlux_6_0_mag,,mag,float64
-HSC-Z_f_base_CircularApertureFlux_6_0_magErr,,mag,float64
-HSC-Z_f_base_CircularApertureFlux_6_0_flux,,nJy,float64
-HSC-Z_f_base_CircularApertureFlux_6_0_fluxErr,,nJy,float64
-HSC-Z_f_base_CircularApertureFlux_9_0_mag,,mag,float64
-HSC-Z_f_base_CircularApertureFlux_9_0_magErr,,mag,float64
-HSC-Z_f_base_CircularApertureFlux_9_0_flux,,nJy,float64
-HSC-Z_f_base_CircularApertureFlux_9_0_fluxErr,,nJy,float64
-HSC-Z_f_base_CircularApertureFlux_12_0_mag,,mag,float64
-HSC-Z_f_base_CircularApertureFlux_12_0_magErr,,mag,float64
-HSC-Z_f_base_CircularApertureFlux_12_0_flux,,nJy,float64
-HSC-Z_f_base_CircularApertureFlux_12_0_fluxErr,,nJy,float64
-HSC-Z_f_base_CircularApertureFlux_17_0_mag,,mag,float64
-HSC-Z_f_base_CircularApertureFlux_17_0_magErr,,mag,float64
-HSC-Z_f_base_CircularApertureFlux_17_0_flux,,nJy,float64
-HSC-Z_f_base_CircularApertureFlux_17_0_fluxErr,,nJy,float64
-HSC-Z_f_base_CircularApertureFlux_25_0_mag,,mag,float64
-HSC-Z_f_base_CircularApertureFlux_25_0_magErr,,mag,float64
-HSC-Z_f_base_CircularApertureFlux_25_0_flux,,nJy,float64
-HSC-Z_f_base_CircularApertureFlux_25_0_fluxErr,,nJy,float64
-HSC-Z_f_base_CircularApertureFlux_35_0_mag,,mag,float64
-HSC-Z_f_base_CircularApertureFlux_35_0_magErr,,mag,float64
-HSC-Z_f_base_CircularApertureFlux_35_0_flux,,nJy,float64
-HSC-Z_f_base_CircularApertureFlux_35_0_fluxErr,,nJy,float64
-HSC-Z_f_base_CircularApertureFlux_50_0_mag,,mag,float64
-HSC-Z_f_base_CircularApertureFlux_50_0_magErr,,mag,float64
-HSC-Z_f_base_CircularApertureFlux_50_0_flux,,nJy,float64
-HSC-Z_f_base_CircularApertureFlux_50_0_fluxErr,,nJy,float64
-HSC-Z_f_base_CircularApertureFlux_70_0_mag,,mag,float64
-HSC-Z_f_base_CircularApertureFlux_70_0_magErr,,mag,float64
-HSC-Z_f_base_CircularApertureFlux_70_0_flux,,nJy,float64
-HSC-Z_f_base_CircularApertureFlux_70_0_fluxErr,,nJy,float64
-HSC-Z_f_base_GaussianFlux_mag,,mag,float64
-HSC-Z_f_base_GaussianFlux_magErr,,mag,float64
-HSC-Z_f_base_GaussianFlux_flux,,nJy,float64
-HSC-Z_f_base_GaussianFlux_fluxErr,,nJy,float64
-HSC-Z_f_base_LocalBackground_mag,,mag,float64
-HSC-Z_f_base_LocalBackground_magErr,,mag,float64
-HSC-Z_f_base_LocalBackground_flux,,nJy,float64
-HSC-Z_f_base_LocalBackground_fluxErr,,nJy,float64
-HSC-Z_f_base_PsfFlux_mag,,mag,float64
-HSC-Z_f_base_PsfFlux_magErr,,mag,float64
-HSC-Z_f_base_PsfFlux_flux,,nJy,float64
-HSC-Z_f_base_PsfFlux_fluxErr,,nJy,float64
+HSC-Z_f_base_SdssShape_mag,,elliptical Gaussian adaptive moments,float64
+HSC-Z_f_base_SdssShape_magErr,,elliptical Gaussian adaptive moments,float64
+HSC-Z_f_base_SdssShape_flux,,elliptical Gaussian adaptive moments,float64
+HSC-Z_f_base_SdssShape_fluxErr,,elliptical Gaussian adaptive moments,float64
+HSC-Z_f_base_CircularApertureFlux_3_0_mag,,mag within 3.000000-pixel aperture,float64
+HSC-Z_f_base_CircularApertureFlux_3_0_magErr,,mag within 3.000000-pixel aperture,float64
+HSC-Z_f_base_CircularApertureFlux_3_0_flux,,flux within 3.000000-pixel aperture,float64
+HSC-Z_f_base_CircularApertureFlux_3_0_fluxErr,,flux within 3.000000-pixel aperture,float64
+HSC-Z_f_base_CircularApertureFlux_4_5_mag,,mag within 4.500000-pixel aperture,float64
+HSC-Z_f_base_CircularApertureFlux_4_5_magErr,,mag within 4.500000-pixel aperture,float64
+HSC-Z_f_base_CircularApertureFlux_4_5_flux,,flux within 4.500000-pixel aperture,float64
+HSC-Z_f_base_CircularApertureFlux_4_5_fluxErr,,flux within 4.500000-pixel aperture,float64
+HSC-Z_f_base_CircularApertureFlux_6_0_mag,,mag within 6.000000-pixel aperture,float64
+HSC-Z_f_base_CircularApertureFlux_6_0_magErr,,mag within 6.000000-pixel aperture,float64
+HSC-Z_f_base_CircularApertureFlux_6_0_flux,,flux within 6.000000-pixel aperture,float64
+HSC-Z_f_base_CircularApertureFlux_6_0_fluxErr,,flux within 6.000000-pixel aperture,float64
+HSC-Z_f_base_CircularApertureFlux_9_0_mag,,mag within 9.000000-pixel aperture,float64
+HSC-Z_f_base_CircularApertureFlux_9_0_magErr,,mag within 9.000000-pixel aperture,float64
+HSC-Z_f_base_CircularApertureFlux_9_0_flux,,flux within 9.000000-pixel aperture,float64
+HSC-Z_f_base_CircularApertureFlux_9_0_fluxErr,,flux within 9.000000-pixel aperture,float64
+HSC-Z_f_base_CircularApertureFlux_12_0_mag,,mag within 12.000000-pixel aperture,float64
+HSC-Z_f_base_CircularApertureFlux_12_0_magErr,,mag within 12.000000-pixel aperture,float64
+HSC-Z_f_base_CircularApertureFlux_12_0_flux,,flux within 12.000000-pixel aperture,float64
+HSC-Z_f_base_CircularApertureFlux_12_0_fluxErr,,flux within 12.000000-pixel aperture,float64
+HSC-Z_f_base_CircularApertureFlux_17_0_mag,,mag within 17.000000-pixel aperture,float64
+HSC-Z_f_base_CircularApertureFlux_17_0_magErr,,mag within 17.000000-pixel aperture,float64
+HSC-Z_f_base_CircularApertureFlux_17_0_flux,,flux within 17.000000-pixel aperture,float64
+HSC-Z_f_base_CircularApertureFlux_17_0_fluxErr,,flux within 17.000000-pixel aperture,float64
+HSC-Z_f_base_CircularApertureFlux_25_0_mag,,mag within 25.000000-pixel aperture,float64
+HSC-Z_f_base_CircularApertureFlux_25_0_magErr,,mag within 25.000000-pixel aperture,float64
+HSC-Z_f_base_CircularApertureFlux_25_0_flux,,flux within 25.000000-pixel aperture,float64
+HSC-Z_f_base_CircularApertureFlux_25_0_fluxErr,,flux within 25.000000-pixel aperture,float64
+HSC-Z_f_base_CircularApertureFlux_35_0_mag,,mag within 35.000000-pixel aperture,float64
+HSC-Z_f_base_CircularApertureFlux_35_0_magErr,,mag within 35.000000-pixel aperture,float64
+HSC-Z_f_base_CircularApertureFlux_35_0_flux,,flux within 35.000000-pixel aperture,float64
+HSC-Z_f_base_CircularApertureFlux_35_0_fluxErr,,flux within 35.000000-pixel aperture,float64
+HSC-Z_f_base_CircularApertureFlux_50_0_mag,,mag within 50.000000-pixel aperture,float64
+HSC-Z_f_base_CircularApertureFlux_50_0_magErr,,mag within 50.000000-pixel aperture,float64
+HSC-Z_f_base_CircularApertureFlux_50_0_flux,,flux within 50.000000-pixel aperture,float64
+HSC-Z_f_base_CircularApertureFlux_50_0_fluxErr,,flux within 50.000000-pixel aperture,float64
+HSC-Z_f_base_CircularApertureFlux_70_0_mag,,mag within 70.000000-pixel aperture,float64
+HSC-Z_f_base_CircularApertureFlux_70_0_magErr,,mag within 70.000000-pixel aperture,float64
+HSC-Z_f_base_CircularApertureFlux_70_0_flux,,flux within 70.000000-pixel aperture,float64
+HSC-Z_f_base_CircularApertureFlux_70_0_fluxErr,,flux within 70.000000-pixel aperture,float64
+HSC-Z_f_base_GaussianFlux_mag,,mag from Gaussian Flux algorithm,float64
+HSC-Z_f_base_GaussianFlux_magErr,,mag from Gaussian Flux algorithm,float64
+HSC-Z_f_base_GaussianFlux_flux,,flux from Gaussian Flux algorithm,float64
+HSC-Z_f_base_GaussianFlux_fluxErr,,flux from Gaussian Flux algorithm,float64
+HSC-Z_f_base_LocalBackground_mag,,background in annulus around source,float64
+HSC-Z_f_base_LocalBackground_magErr,,background in annulus around source,float64
+HSC-Z_f_base_LocalBackground_flux,,background in annulus around source,float64
+HSC-Z_f_base_LocalBackground_fluxErr,,background in annulus around source,float64
+HSC-Z_f_base_PsfFlux_mag,,mag derived from linear least-squares fit of PSF model,float64
+HSC-Z_f_base_PsfFlux_magErr,,mag derived from linear least-squares fit of PSF model,float64
+HSC-Z_f_base_PsfFlux_flux,,flux derived from linear least-squares fit of PSF model,float64
+HSC-Z_f_base_PsfFlux_fluxErr,,flux derived from linear least-squares fit of PSF model,float64
 HSC-Y_m_coord_ra,position in ra/dec,rad,float64
 HSC-Y_m_coord_dec,position in ra/dec,rad,float64
 HSC-Y_m_parent,unique ID of parent source,None,int64
@@ -2681,86 +2681,86 @@ HSC-Y_m_slot_PsfFlux_flag_apCorr,set if unable to aperture correct base_PsfFlux,
 HSC-Y_m_base_ClassificationExtendedness_value,"Set to 1 for extended sources, 0 for point sources.",None,float64
 HSC-Y_m_base_ClassificationExtendedness_flag,Set to 1 for any fatal failure.,None,bool
 HSC-Y_m_base_FootprintArea_value,Number of pixels in the source''s detection footprint.,pix,int32
-HSC-Y_m_base_SdssShape_mag,,mag,float64
-HSC-Y_m_base_SdssShape_magErr,,mag,float64
-HSC-Y_m_base_SdssShape_flux,,nJy,float64
-HSC-Y_m_base_SdssShape_fluxErr,,nJy,float64
-HSC-Y_m_slot_Shape_mag,,mag,float64
-HSC-Y_m_slot_Shape_magErr,,mag,float64
-HSC-Y_m_slot_Shape_flux,,nJy,float64
-HSC-Y_m_slot_Shape_fluxErr,,nJy,float64
-HSC-Y_m_base_CircularApertureFlux_3_0_mag,,mag,float64
-HSC-Y_m_base_CircularApertureFlux_3_0_magErr,,mag,float64
-HSC-Y_m_base_CircularApertureFlux_3_0_flux,,nJy,float64
-HSC-Y_m_base_CircularApertureFlux_3_0_fluxErr,,nJy,float64
-HSC-Y_m_base_CircularApertureFlux_4_5_mag,,mag,float64
-HSC-Y_m_base_CircularApertureFlux_4_5_magErr,,mag,float64
-HSC-Y_m_base_CircularApertureFlux_4_5_flux,,nJy,float64
-HSC-Y_m_base_CircularApertureFlux_4_5_fluxErr,,nJy,float64
-HSC-Y_m_base_CircularApertureFlux_6_0_mag,,mag,float64
-HSC-Y_m_base_CircularApertureFlux_6_0_magErr,,mag,float64
-HSC-Y_m_base_CircularApertureFlux_6_0_flux,,nJy,float64
-HSC-Y_m_base_CircularApertureFlux_6_0_fluxErr,,nJy,float64
-HSC-Y_m_base_CircularApertureFlux_9_0_mag,,mag,float64
-HSC-Y_m_base_CircularApertureFlux_9_0_magErr,,mag,float64
-HSC-Y_m_base_CircularApertureFlux_9_0_flux,,nJy,float64
-HSC-Y_m_base_CircularApertureFlux_9_0_fluxErr,,nJy,float64
-HSC-Y_m_base_CircularApertureFlux_12_0_mag,,mag,float64
-HSC-Y_m_base_CircularApertureFlux_12_0_magErr,,mag,float64
-HSC-Y_m_base_CircularApertureFlux_12_0_flux,,nJy,float64
-HSC-Y_m_base_CircularApertureFlux_12_0_fluxErr,,nJy,float64
-HSC-Y_m_slot_ApFlux_mag,,mag,float64
-HSC-Y_m_slot_ApFlux_magErr,,mag,float64
-HSC-Y_m_slot_ApFlux_flux,,nJy,float64
-HSC-Y_m_slot_ApFlux_fluxErr,,nJy,float64
-HSC-Y_m_slot_CalibFlux_mag,,mag,float64
-HSC-Y_m_slot_CalibFlux_magErr,,mag,float64
-HSC-Y_m_slot_CalibFlux_flux,,nJy,float64
-HSC-Y_m_slot_CalibFlux_fluxErr,,nJy,float64
-HSC-Y_m_base_CircularApertureFlux_17_0_mag,,mag,float64
-HSC-Y_m_base_CircularApertureFlux_17_0_magErr,,mag,float64
-HSC-Y_m_base_CircularApertureFlux_17_0_flux,,nJy,float64
-HSC-Y_m_base_CircularApertureFlux_17_0_fluxErr,,nJy,float64
-HSC-Y_m_base_CircularApertureFlux_25_0_mag,,mag,float64
-HSC-Y_m_base_CircularApertureFlux_25_0_magErr,,mag,float64
-HSC-Y_m_base_CircularApertureFlux_25_0_flux,,nJy,float64
-HSC-Y_m_base_CircularApertureFlux_25_0_fluxErr,,nJy,float64
-HSC-Y_m_base_CircularApertureFlux_35_0_mag,,mag,float64
-HSC-Y_m_base_CircularApertureFlux_35_0_magErr,,mag,float64
-HSC-Y_m_base_CircularApertureFlux_35_0_flux,,nJy,float64
-HSC-Y_m_base_CircularApertureFlux_35_0_fluxErr,,nJy,float64
-HSC-Y_m_base_CircularApertureFlux_50_0_mag,,mag,float64
-HSC-Y_m_base_CircularApertureFlux_50_0_magErr,,mag,float64
-HSC-Y_m_base_CircularApertureFlux_50_0_flux,,nJy,float64
-HSC-Y_m_base_CircularApertureFlux_50_0_fluxErr,,nJy,float64
-HSC-Y_m_base_CircularApertureFlux_70_0_mag,,mag,float64
-HSC-Y_m_base_CircularApertureFlux_70_0_magErr,,mag,float64
-HSC-Y_m_base_CircularApertureFlux_70_0_flux,,nJy,float64
-HSC-Y_m_base_CircularApertureFlux_70_0_fluxErr,,nJy,float64
-HSC-Y_m_base_GaussianFlux_mag,,mag,float64
-HSC-Y_m_base_GaussianFlux_magErr,,mag,float64
-HSC-Y_m_base_GaussianFlux_flux,,nJy,float64
-HSC-Y_m_base_GaussianFlux_fluxErr,,nJy,float64
-HSC-Y_m_slot_GaussianFlux_mag,,mag,float64
-HSC-Y_m_slot_GaussianFlux_magErr,,mag,float64
-HSC-Y_m_slot_GaussianFlux_flux,,nJy,float64
-HSC-Y_m_slot_GaussianFlux_fluxErr,,nJy,float64
-HSC-Y_m_slot_ModelFlux_mag,,mag,float64
-HSC-Y_m_slot_ModelFlux_magErr,,mag,float64
-HSC-Y_m_slot_ModelFlux_flux,,nJy,float64
-HSC-Y_m_slot_ModelFlux_fluxErr,,nJy,float64
-HSC-Y_m_base_LocalBackground_mag,,mag,float64
-HSC-Y_m_base_LocalBackground_magErr,,mag,float64
-HSC-Y_m_base_LocalBackground_flux,,nJy,float64
-HSC-Y_m_base_LocalBackground_fluxErr,,nJy,float64
-HSC-Y_m_base_PsfFlux_mag,,mag,float64
-HSC-Y_m_base_PsfFlux_magErr,,mag,float64
-HSC-Y_m_base_PsfFlux_flux,,nJy,float64
-HSC-Y_m_base_PsfFlux_fluxErr,,nJy,float64
-HSC-Y_m_slot_PsfFlux_mag,,mag,float64
-HSC-Y_m_slot_PsfFlux_magErr,,mag,float64
-HSC-Y_m_slot_PsfFlux_flux,,nJy,float64
-HSC-Y_m_slot_PsfFlux_fluxErr,,nJy,float64
+HSC-Y_m_base_SdssShape_mag,,elliptical Gaussian adaptive moments,float64
+HSC-Y_m_base_SdssShape_magErr,,elliptical Gaussian adaptive moments,float64
+HSC-Y_m_base_SdssShape_flux,,elliptical Gaussian adaptive moments,float64
+HSC-Y_m_base_SdssShape_fluxErr,,elliptical Gaussian adaptive moments,float64
+HSC-Y_m_slot_Shape_mag,,elliptical Gaussian adaptive moments,float64
+HSC-Y_m_slot_Shape_magErr,,elliptical Gaussian adaptive moments,float64
+HSC-Y_m_slot_Shape_flux,,elliptical Gaussian adaptive moments,float64
+HSC-Y_m_slot_Shape_fluxErr,,elliptical Gaussian adaptive moments,float64
+HSC-Y_m_base_CircularApertureFlux_3_0_mag,,mag within 3.000000-pixel aperture,float64
+HSC-Y_m_base_CircularApertureFlux_3_0_magErr,,mag within 3.000000-pixel aperture,float64
+HSC-Y_m_base_CircularApertureFlux_3_0_flux,,flux within 3.000000-pixel aperture,float64
+HSC-Y_m_base_CircularApertureFlux_3_0_fluxErr,,flux within 3.000000-pixel aperture,float64
+HSC-Y_m_base_CircularApertureFlux_4_5_mag,,mag within 4.500000-pixel aperture,float64
+HSC-Y_m_base_CircularApertureFlux_4_5_magErr,,mag within 4.500000-pixel aperture,float64
+HSC-Y_m_base_CircularApertureFlux_4_5_flux,,flux within 4.500000-pixel aperture,float64
+HSC-Y_m_base_CircularApertureFlux_4_5_fluxErr,,flux within 4.500000-pixel aperture,float64
+HSC-Y_m_base_CircularApertureFlux_6_0_mag,,mag within 6.000000-pixel aperture,float64
+HSC-Y_m_base_CircularApertureFlux_6_0_magErr,,mag within 6.000000-pixel aperture,float64
+HSC-Y_m_base_CircularApertureFlux_6_0_flux,,flux within 6.000000-pixel aperture,float64
+HSC-Y_m_base_CircularApertureFlux_6_0_fluxErr,,flux within 6.000000-pixel aperture,float64
+HSC-Y_m_base_CircularApertureFlux_9_0_mag,,mag within 9.000000-pixel aperture,float64
+HSC-Y_m_base_CircularApertureFlux_9_0_magErr,,mag within 9.000000-pixel aperture,float64
+HSC-Y_m_base_CircularApertureFlux_9_0_flux,,flux within 9.000000-pixel aperture,float64
+HSC-Y_m_base_CircularApertureFlux_9_0_fluxErr,,flux within 9.000000-pixel aperture,float64
+HSC-Y_m_base_CircularApertureFlux_12_0_mag,,mag within 12.000000-pixel aperture,float64
+HSC-Y_m_base_CircularApertureFlux_12_0_magErr,,mag within 12.000000-pixel aperture,float64
+HSC-Y_m_base_CircularApertureFlux_12_0_flux,,flux within 12.000000-pixel aperture,float64
+HSC-Y_m_base_CircularApertureFlux_12_0_fluxErr,,flux within 12.000000-pixel aperture,float64
+HSC-Y_m_slot_ApFlux_mag,,mag within 12.000000-pixel aperture,float64
+HSC-Y_m_slot_ApFlux_magErr,,mag within 12.000000-pixel aperture,float64
+HSC-Y_m_slot_ApFlux_flux,,flux within 12.000000-pixel aperture,float64
+HSC-Y_m_slot_ApFlux_fluxErr,,flux within 12.000000-pixel aperture,float64
+HSC-Y_m_slot_CalibFlux_mag,,mag within 12.000000-pixel aperture,float64
+HSC-Y_m_slot_CalibFlux_magErr,,mag within 12.000000-pixel aperture,float64
+HSC-Y_m_slot_CalibFlux_flux,,flux within 12.000000-pixel aperture,float64
+HSC-Y_m_slot_CalibFlux_fluxErr,,flux within 12.000000-pixel aperture,float64
+HSC-Y_m_base_CircularApertureFlux_17_0_mag,,mag within 17.000000-pixel aperture,float64
+HSC-Y_m_base_CircularApertureFlux_17_0_magErr,,mag within 17.000000-pixel aperture,float64
+HSC-Y_m_base_CircularApertureFlux_17_0_flux,,flux within 17.000000-pixel aperture,float64
+HSC-Y_m_base_CircularApertureFlux_17_0_fluxErr,,flux within 17.000000-pixel aperture,float64
+HSC-Y_m_base_CircularApertureFlux_25_0_mag,,mag within 25.000000-pixel aperture,float64
+HSC-Y_m_base_CircularApertureFlux_25_0_magErr,,mag within 25.000000-pixel aperture,float64
+HSC-Y_m_base_CircularApertureFlux_25_0_flux,,flux within 25.000000-pixel aperture,float64
+HSC-Y_m_base_CircularApertureFlux_25_0_fluxErr,,flux within 25.000000-pixel aperture,float64
+HSC-Y_m_base_CircularApertureFlux_35_0_mag,,mag within 35.000000-pixel aperture,float64
+HSC-Y_m_base_CircularApertureFlux_35_0_magErr,,mag within 35.000000-pixel aperture,float64
+HSC-Y_m_base_CircularApertureFlux_35_0_flux,,flux within 35.000000-pixel aperture,float64
+HSC-Y_m_base_CircularApertureFlux_35_0_fluxErr,,flux within 35.000000-pixel aperture,float64
+HSC-Y_m_base_CircularApertureFlux_50_0_mag,,mag within 50.000000-pixel aperture,float64
+HSC-Y_m_base_CircularApertureFlux_50_0_magErr,,mag within 50.000000-pixel aperture,float64
+HSC-Y_m_base_CircularApertureFlux_50_0_flux,,flux within 50.000000-pixel aperture,float64
+HSC-Y_m_base_CircularApertureFlux_50_0_fluxErr,,flux within 50.000000-pixel aperture,float64
+HSC-Y_m_base_CircularApertureFlux_70_0_mag,,mag within 70.000000-pixel aperture,float64
+HSC-Y_m_base_CircularApertureFlux_70_0_magErr,,mag within 70.000000-pixel aperture,float64
+HSC-Y_m_base_CircularApertureFlux_70_0_flux,,flux within 70.000000-pixel aperture,float64
+HSC-Y_m_base_CircularApertureFlux_70_0_fluxErr,,flux within 70.000000-pixel aperture,float64
+HSC-Y_m_base_GaussianFlux_mag,,mag from Gaussian Flux algorithm,float64
+HSC-Y_m_base_GaussianFlux_magErr,,mag from Gaussian Flux algorithm,float64
+HSC-Y_m_base_GaussianFlux_flux,,flux from Gaussian Flux algorithm,float64
+HSC-Y_m_base_GaussianFlux_fluxErr,,flux from Gaussian Flux algorithm,float64
+HSC-Y_m_slot_GaussianFlux_mag,,mag from Gaussian Flux algorithm,float64
+HSC-Y_m_slot_GaussianFlux_magErr,,mag from Gaussian Flux algorithm,float64
+HSC-Y_m_slot_GaussianFlux_flux,,flux from Gaussian Flux algorithm,float64
+HSC-Y_m_slot_GaussianFlux_fluxErr,,flux from Gaussian Flux algorithm,float64
+HSC-Y_m_slot_ModelFlux_mag,,mag from Gaussian Flux algorithm,float64
+HSC-Y_m_slot_ModelFlux_magErr,,mag from Gaussian Flux algorithm,float64
+HSC-Y_m_slot_ModelFlux_flux,,flux from Gaussian Flux algorithm,float64
+HSC-Y_m_slot_ModelFlux_fluxErr,,flux from Gaussian Flux algorithm,float64
+HSC-Y_m_base_LocalBackground_mag,,background in annulus around source,float64
+HSC-Y_m_base_LocalBackground_magErr,,background in annulus around source,float64
+HSC-Y_m_base_LocalBackground_flux,,background in annulus around source,float64
+HSC-Y_m_base_LocalBackground_fluxErr,,background in annulus around source,float64
+HSC-Y_m_base_PsfFlux_mag,,mag derived from linear least-squares fit of PSF model,float64
+HSC-Y_m_base_PsfFlux_magErr,,mag derived from linear least-squares fit of PSF model,float64
+HSC-Y_m_base_PsfFlux_flux,,flux derived from linear least-squares fit of PSF model,float64
+HSC-Y_m_base_PsfFlux_fluxErr,,flux derived from linear least-squares fit of PSF model,float64
+HSC-Y_m_slot_PsfFlux_mag,,mag derived from linear least-squares fit of PSF model,float64
+HSC-Y_m_slot_PsfFlux_magErr,,mag derived from linear least-squares fit of PSF model,float64
+HSC-Y_m_slot_PsfFlux_flux,,flux derived from linear least-squares fit of PSF model,float64
+HSC-Y_m_slot_PsfFlux_fluxErr,,flux derived from linear least-squares fit of PSF model,float64
 HSC-Y_f_coord_ra,position in ra/dec,rad,float64
 HSC-Y_f_coord_dec,position in ra/dec,rad,float64
 HSC-Y_f_parent,unique ID of parent source,None,int64
@@ -2914,62 +2914,62 @@ HSC-Y_f_base_GaussianFlux_flag_apCorr,set if unable to aperture correct base_Gau
 HSC-Y_f_base_PsfFlux_apCorr,aperture correction applied to base_PsfFlux,None,float64
 HSC-Y_f_base_PsfFlux_apCorrErr,standard deviation of aperture correction applied to base_PsfFlux,None,float64
 HSC-Y_f_base_PsfFlux_flag_apCorr,set if unable to aperture correct base_PsfFlux,None,bool
-HSC-Y_f_base_SdssShape_mag,,mag,float64
-HSC-Y_f_base_SdssShape_magErr,,mag,float64
-HSC-Y_f_base_SdssShape_flux,,nJy,float64
-HSC-Y_f_base_SdssShape_fluxErr,,nJy,float64
-HSC-Y_f_base_CircularApertureFlux_3_0_mag,,mag,float64
-HSC-Y_f_base_CircularApertureFlux_3_0_magErr,,mag,float64
-HSC-Y_f_base_CircularApertureFlux_3_0_flux,,nJy,float64
-HSC-Y_f_base_CircularApertureFlux_3_0_fluxErr,,nJy,float64
-HSC-Y_f_base_CircularApertureFlux_4_5_mag,,mag,float64
-HSC-Y_f_base_CircularApertureFlux_4_5_magErr,,mag,float64
-HSC-Y_f_base_CircularApertureFlux_4_5_flux,,nJy,float64
-HSC-Y_f_base_CircularApertureFlux_4_5_fluxErr,,nJy,float64
-HSC-Y_f_base_CircularApertureFlux_6_0_mag,,mag,float64
-HSC-Y_f_base_CircularApertureFlux_6_0_magErr,,mag,float64
-HSC-Y_f_base_CircularApertureFlux_6_0_flux,,nJy,float64
-HSC-Y_f_base_CircularApertureFlux_6_0_fluxErr,,nJy,float64
-HSC-Y_f_base_CircularApertureFlux_9_0_mag,,mag,float64
-HSC-Y_f_base_CircularApertureFlux_9_0_magErr,,mag,float64
-HSC-Y_f_base_CircularApertureFlux_9_0_flux,,nJy,float64
-HSC-Y_f_base_CircularApertureFlux_9_0_fluxErr,,nJy,float64
-HSC-Y_f_base_CircularApertureFlux_12_0_mag,,mag,float64
-HSC-Y_f_base_CircularApertureFlux_12_0_magErr,,mag,float64
-HSC-Y_f_base_CircularApertureFlux_12_0_flux,,nJy,float64
-HSC-Y_f_base_CircularApertureFlux_12_0_fluxErr,,nJy,float64
-HSC-Y_f_base_CircularApertureFlux_17_0_mag,,mag,float64
-HSC-Y_f_base_CircularApertureFlux_17_0_magErr,,mag,float64
-HSC-Y_f_base_CircularApertureFlux_17_0_flux,,nJy,float64
-HSC-Y_f_base_CircularApertureFlux_17_0_fluxErr,,nJy,float64
-HSC-Y_f_base_CircularApertureFlux_25_0_mag,,mag,float64
-HSC-Y_f_base_CircularApertureFlux_25_0_magErr,,mag,float64
-HSC-Y_f_base_CircularApertureFlux_25_0_flux,,nJy,float64
-HSC-Y_f_base_CircularApertureFlux_25_0_fluxErr,,nJy,float64
-HSC-Y_f_base_CircularApertureFlux_35_0_mag,,mag,float64
-HSC-Y_f_base_CircularApertureFlux_35_0_magErr,,mag,float64
-HSC-Y_f_base_CircularApertureFlux_35_0_flux,,nJy,float64
-HSC-Y_f_base_CircularApertureFlux_35_0_fluxErr,,nJy,float64
-HSC-Y_f_base_CircularApertureFlux_50_0_mag,,mag,float64
-HSC-Y_f_base_CircularApertureFlux_50_0_magErr,,mag,float64
-HSC-Y_f_base_CircularApertureFlux_50_0_flux,,nJy,float64
-HSC-Y_f_base_CircularApertureFlux_50_0_fluxErr,,nJy,float64
-HSC-Y_f_base_CircularApertureFlux_70_0_mag,,mag,float64
-HSC-Y_f_base_CircularApertureFlux_70_0_magErr,,mag,float64
-HSC-Y_f_base_CircularApertureFlux_70_0_flux,,nJy,float64
-HSC-Y_f_base_CircularApertureFlux_70_0_fluxErr,,nJy,float64
-HSC-Y_f_base_GaussianFlux_mag,,mag,float64
-HSC-Y_f_base_GaussianFlux_magErr,,mag,float64
-HSC-Y_f_base_GaussianFlux_flux,,nJy,float64
-HSC-Y_f_base_GaussianFlux_fluxErr,,nJy,float64
-HSC-Y_f_base_LocalBackground_mag,,mag,float64
-HSC-Y_f_base_LocalBackground_magErr,,mag,float64
-HSC-Y_f_base_LocalBackground_flux,,nJy,float64
-HSC-Y_f_base_LocalBackground_fluxErr,,nJy,float64
-HSC-Y_f_base_PsfFlux_mag,,mag,float64
-HSC-Y_f_base_PsfFlux_magErr,,mag,float64
-HSC-Y_f_base_PsfFlux_flux,,nJy,float64
-HSC-Y_f_base_PsfFlux_fluxErr,,nJy,float64
+HSC-Y_f_base_SdssShape_mag,,elliptical Gaussian adaptive moments,float64
+HSC-Y_f_base_SdssShape_magErr,,elliptical Gaussian adaptive moments,float64
+HSC-Y_f_base_SdssShape_flux,,elliptical Gaussian adaptive moments,float64
+HSC-Y_f_base_SdssShape_fluxErr,,elliptical Gaussian adaptive moments,float64
+HSC-Y_f_base_CircularApertureFlux_3_0_mag,,mag within 3.000000-pixel aperture,float64
+HSC-Y_f_base_CircularApertureFlux_3_0_magErr,,mag within 3.000000-pixel aperture,float64
+HSC-Y_f_base_CircularApertureFlux_3_0_flux,,flux within 3.000000-pixel aperture,float64
+HSC-Y_f_base_CircularApertureFlux_3_0_fluxErr,,flux within 3.000000-pixel aperture,float64
+HSC-Y_f_base_CircularApertureFlux_4_5_mag,,mag within 4.500000-pixel aperture,float64
+HSC-Y_f_base_CircularApertureFlux_4_5_magErr,,mag within 4.500000-pixel aperture,float64
+HSC-Y_f_base_CircularApertureFlux_4_5_flux,,flux within 4.500000-pixel aperture,float64
+HSC-Y_f_base_CircularApertureFlux_4_5_fluxErr,,flux within 4.500000-pixel aperture,float64
+HSC-Y_f_base_CircularApertureFlux_6_0_mag,,mag within 6.000000-pixel aperture,float64
+HSC-Y_f_base_CircularApertureFlux_6_0_magErr,,mag within 6.000000-pixel aperture,float64
+HSC-Y_f_base_CircularApertureFlux_6_0_flux,,flux within 6.000000-pixel aperture,float64
+HSC-Y_f_base_CircularApertureFlux_6_0_fluxErr,,flux within 6.000000-pixel aperture,float64
+HSC-Y_f_base_CircularApertureFlux_9_0_mag,,mag within 9.000000-pixel aperture,float64
+HSC-Y_f_base_CircularApertureFlux_9_0_magErr,,mag within 9.000000-pixel aperture,float64
+HSC-Y_f_base_CircularApertureFlux_9_0_flux,,flux within 9.000000-pixel aperture,float64
+HSC-Y_f_base_CircularApertureFlux_9_0_fluxErr,,flux within 9.000000-pixel aperture,float64
+HSC-Y_f_base_CircularApertureFlux_12_0_mag,,mag within 12.000000-pixel aperture,float64
+HSC-Y_f_base_CircularApertureFlux_12_0_magErr,,mag within 12.000000-pixel aperture,float64
+HSC-Y_f_base_CircularApertureFlux_12_0_flux,,flux within 12.000000-pixel aperture,float64
+HSC-Y_f_base_CircularApertureFlux_12_0_fluxErr,,flux within 12.000000-pixel aperture,float64
+HSC-Y_f_base_CircularApertureFlux_17_0_mag,,mag within 17.000000-pixel aperture,float64
+HSC-Y_f_base_CircularApertureFlux_17_0_magErr,,mag within 17.000000-pixel aperture,float64
+HSC-Y_f_base_CircularApertureFlux_17_0_flux,,flux within 17.000000-pixel aperture,float64
+HSC-Y_f_base_CircularApertureFlux_17_0_fluxErr,,flux within 17.000000-pixel aperture,float64
+HSC-Y_f_base_CircularApertureFlux_25_0_mag,,mag within 25.000000-pixel aperture,float64
+HSC-Y_f_base_CircularApertureFlux_25_0_magErr,,mag within 25.000000-pixel aperture,float64
+HSC-Y_f_base_CircularApertureFlux_25_0_flux,,flux within 25.000000-pixel aperture,float64
+HSC-Y_f_base_CircularApertureFlux_25_0_fluxErr,,flux within 25.000000-pixel aperture,float64
+HSC-Y_f_base_CircularApertureFlux_35_0_mag,,mag within 35.000000-pixel aperture,float64
+HSC-Y_f_base_CircularApertureFlux_35_0_magErr,,mag within 35.000000-pixel aperture,float64
+HSC-Y_f_base_CircularApertureFlux_35_0_flux,,flux within 35.000000-pixel aperture,float64
+HSC-Y_f_base_CircularApertureFlux_35_0_fluxErr,,flux within 35.000000-pixel aperture,float64
+HSC-Y_f_base_CircularApertureFlux_50_0_mag,,mag within 50.000000-pixel aperture,float64
+HSC-Y_f_base_CircularApertureFlux_50_0_magErr,,mag within 50.000000-pixel aperture,float64
+HSC-Y_f_base_CircularApertureFlux_50_0_flux,,flux within 50.000000-pixel aperture,float64
+HSC-Y_f_base_CircularApertureFlux_50_0_fluxErr,,flux within 50.000000-pixel aperture,float64
+HSC-Y_f_base_CircularApertureFlux_70_0_mag,,mag within 70.000000-pixel aperture,float64
+HSC-Y_f_base_CircularApertureFlux_70_0_magErr,,mag within 70.000000-pixel aperture,float64
+HSC-Y_f_base_CircularApertureFlux_70_0_flux,,flux within 70.000000-pixel aperture,float64
+HSC-Y_f_base_CircularApertureFlux_70_0_fluxErr,,flux within 70.000000-pixel aperture,float64
+HSC-Y_f_base_GaussianFlux_mag,,mag from Gaussian Flux algorithm,float64
+HSC-Y_f_base_GaussianFlux_magErr,,mag from Gaussian Flux algorithm,float64
+HSC-Y_f_base_GaussianFlux_flux,,flux from Gaussian Flux algorithm,float64
+HSC-Y_f_base_GaussianFlux_fluxErr,,flux from Gaussian Flux algorithm,float64
+HSC-Y_f_base_LocalBackground_mag,,background in annulus around source,float64
+HSC-Y_f_base_LocalBackground_magErr,,background in annulus around source,float64
+HSC-Y_f_base_LocalBackground_flux,,background in annulus around source,float64
+HSC-Y_f_base_LocalBackground_fluxErr,,background in annulus around source,float64
+HSC-Y_f_base_PsfFlux_mag,,mag derived from linear least-squares fit of PSF model,float64
+HSC-Y_f_base_PsfFlux_magErr,,mag derived from linear least-squares fit of PSF model,float64
+HSC-Y_f_base_PsfFlux_flux,,flux derived from linear least-squares fit of PSF model,float64
+HSC-Y_f_base_PsfFlux_fluxErr,,flux derived from linear least-squares fit of PSF model,float64
 VISTA-Y_m_coord_ra,position in ra/dec,rad,float64
 VISTA-Y_m_coord_dec,position in ra/dec,rad,float64
 VISTA-Y_m_parent,unique ID of parent source,None,int64
@@ -3275,86 +3275,86 @@ VISTA-Y_m_slot_PsfFlux_flag_apCorr,set if unable to aperture correct base_PsfFlu
 VISTA-Y_m_base_ClassificationExtendedness_value,"Set to 1 for extended sources, 0 for point sources.",None,float64
 VISTA-Y_m_base_ClassificationExtendedness_flag,Set to 1 for any fatal failure.,None,bool
 VISTA-Y_m_base_FootprintArea_value,Number of pixels in the source''s detection footprint.,pix,int32
-VISTA-Y_m_base_SdssShape_mag,,mag,float64
-VISTA-Y_m_base_SdssShape_magErr,,mag,float64
-VISTA-Y_m_base_SdssShape_flux,,nJy,float64
-VISTA-Y_m_base_SdssShape_fluxErr,,nJy,float64
-VISTA-Y_m_slot_Shape_mag,,mag,float64
-VISTA-Y_m_slot_Shape_magErr,,mag,float64
-VISTA-Y_m_slot_Shape_flux,,nJy,float64
-VISTA-Y_m_slot_Shape_fluxErr,,nJy,float64
-VISTA-Y_m_base_CircularApertureFlux_3_0_mag,,mag,float64
-VISTA-Y_m_base_CircularApertureFlux_3_0_magErr,,mag,float64
-VISTA-Y_m_base_CircularApertureFlux_3_0_flux,,nJy,float64
-VISTA-Y_m_base_CircularApertureFlux_3_0_fluxErr,,nJy,float64
-VISTA-Y_m_base_CircularApertureFlux_4_5_mag,,mag,float64
-VISTA-Y_m_base_CircularApertureFlux_4_5_magErr,,mag,float64
-VISTA-Y_m_base_CircularApertureFlux_4_5_flux,,nJy,float64
-VISTA-Y_m_base_CircularApertureFlux_4_5_fluxErr,,nJy,float64
-VISTA-Y_m_base_CircularApertureFlux_6_0_mag,,mag,float64
-VISTA-Y_m_base_CircularApertureFlux_6_0_magErr,,mag,float64
-VISTA-Y_m_base_CircularApertureFlux_6_0_flux,,nJy,float64
-VISTA-Y_m_base_CircularApertureFlux_6_0_fluxErr,,nJy,float64
-VISTA-Y_m_base_CircularApertureFlux_9_0_mag,,mag,float64
-VISTA-Y_m_base_CircularApertureFlux_9_0_magErr,,mag,float64
-VISTA-Y_m_base_CircularApertureFlux_9_0_flux,,nJy,float64
-VISTA-Y_m_base_CircularApertureFlux_9_0_fluxErr,,nJy,float64
-VISTA-Y_m_base_CircularApertureFlux_12_0_mag,,mag,float64
-VISTA-Y_m_base_CircularApertureFlux_12_0_magErr,,mag,float64
-VISTA-Y_m_base_CircularApertureFlux_12_0_flux,,nJy,float64
-VISTA-Y_m_base_CircularApertureFlux_12_0_fluxErr,,nJy,float64
-VISTA-Y_m_slot_ApFlux_mag,,mag,float64
-VISTA-Y_m_slot_ApFlux_magErr,,mag,float64
-VISTA-Y_m_slot_ApFlux_flux,,nJy,float64
-VISTA-Y_m_slot_ApFlux_fluxErr,,nJy,float64
-VISTA-Y_m_slot_CalibFlux_mag,,mag,float64
-VISTA-Y_m_slot_CalibFlux_magErr,,mag,float64
-VISTA-Y_m_slot_CalibFlux_flux,,nJy,float64
-VISTA-Y_m_slot_CalibFlux_fluxErr,,nJy,float64
-VISTA-Y_m_base_CircularApertureFlux_17_0_mag,,mag,float64
-VISTA-Y_m_base_CircularApertureFlux_17_0_magErr,,mag,float64
-VISTA-Y_m_base_CircularApertureFlux_17_0_flux,,nJy,float64
-VISTA-Y_m_base_CircularApertureFlux_17_0_fluxErr,,nJy,float64
-VISTA-Y_m_base_CircularApertureFlux_25_0_mag,,mag,float64
-VISTA-Y_m_base_CircularApertureFlux_25_0_magErr,,mag,float64
-VISTA-Y_m_base_CircularApertureFlux_25_0_flux,,nJy,float64
-VISTA-Y_m_base_CircularApertureFlux_25_0_fluxErr,,nJy,float64
-VISTA-Y_m_base_CircularApertureFlux_35_0_mag,,mag,float64
-VISTA-Y_m_base_CircularApertureFlux_35_0_magErr,,mag,float64
-VISTA-Y_m_base_CircularApertureFlux_35_0_flux,,nJy,float64
-VISTA-Y_m_base_CircularApertureFlux_35_0_fluxErr,,nJy,float64
-VISTA-Y_m_base_CircularApertureFlux_50_0_mag,,mag,float64
-VISTA-Y_m_base_CircularApertureFlux_50_0_magErr,,mag,float64
-VISTA-Y_m_base_CircularApertureFlux_50_0_flux,,nJy,float64
-VISTA-Y_m_base_CircularApertureFlux_50_0_fluxErr,,nJy,float64
-VISTA-Y_m_base_CircularApertureFlux_70_0_mag,,mag,float64
-VISTA-Y_m_base_CircularApertureFlux_70_0_magErr,,mag,float64
-VISTA-Y_m_base_CircularApertureFlux_70_0_flux,,nJy,float64
-VISTA-Y_m_base_CircularApertureFlux_70_0_fluxErr,,nJy,float64
-VISTA-Y_m_base_GaussianFlux_mag,,mag,float64
-VISTA-Y_m_base_GaussianFlux_magErr,,mag,float64
-VISTA-Y_m_base_GaussianFlux_flux,,nJy,float64
-VISTA-Y_m_base_GaussianFlux_fluxErr,,nJy,float64
-VISTA-Y_m_slot_GaussianFlux_mag,,mag,float64
-VISTA-Y_m_slot_GaussianFlux_magErr,,mag,float64
-VISTA-Y_m_slot_GaussianFlux_flux,,nJy,float64
-VISTA-Y_m_slot_GaussianFlux_fluxErr,,nJy,float64
-VISTA-Y_m_slot_ModelFlux_mag,,mag,float64
-VISTA-Y_m_slot_ModelFlux_magErr,,mag,float64
-VISTA-Y_m_slot_ModelFlux_flux,,nJy,float64
-VISTA-Y_m_slot_ModelFlux_fluxErr,,nJy,float64
-VISTA-Y_m_base_LocalBackground_mag,,mag,float64
-VISTA-Y_m_base_LocalBackground_magErr,,mag,float64
-VISTA-Y_m_base_LocalBackground_flux,,nJy,float64
-VISTA-Y_m_base_LocalBackground_fluxErr,,nJy,float64
-VISTA-Y_m_base_PsfFlux_mag,,mag,float64
-VISTA-Y_m_base_PsfFlux_magErr,,mag,float64
-VISTA-Y_m_base_PsfFlux_flux,,nJy,float64
-VISTA-Y_m_base_PsfFlux_fluxErr,,nJy,float64
-VISTA-Y_m_slot_PsfFlux_mag,,mag,float64
-VISTA-Y_m_slot_PsfFlux_magErr,,mag,float64
-VISTA-Y_m_slot_PsfFlux_flux,,nJy,float64
-VISTA-Y_m_slot_PsfFlux_fluxErr,,nJy,float64
+VISTA-Y_m_base_SdssShape_mag,,elliptical Gaussian adaptive moments,float64
+VISTA-Y_m_base_SdssShape_magErr,,elliptical Gaussian adaptive moments,float64
+VISTA-Y_m_base_SdssShape_flux,,elliptical Gaussian adaptive moments,float64
+VISTA-Y_m_base_SdssShape_fluxErr,,elliptical Gaussian adaptive moments,float64
+VISTA-Y_m_slot_Shape_mag,,elliptical Gaussian adaptive moments,float64
+VISTA-Y_m_slot_Shape_magErr,,elliptical Gaussian adaptive moments,float64
+VISTA-Y_m_slot_Shape_flux,,elliptical Gaussian adaptive moments,float64
+VISTA-Y_m_slot_Shape_fluxErr,,elliptical Gaussian adaptive moments,float64
+VISTA-Y_m_base_CircularApertureFlux_3_0_mag,,mag within 3.000000-pixel aperture,float64
+VISTA-Y_m_base_CircularApertureFlux_3_0_magErr,,mag within 3.000000-pixel aperture,float64
+VISTA-Y_m_base_CircularApertureFlux_3_0_flux,,flux within 3.000000-pixel aperture,float64
+VISTA-Y_m_base_CircularApertureFlux_3_0_fluxErr,,flux within 3.000000-pixel aperture,float64
+VISTA-Y_m_base_CircularApertureFlux_4_5_mag,,mag within 4.500000-pixel aperture,float64
+VISTA-Y_m_base_CircularApertureFlux_4_5_magErr,,mag within 4.500000-pixel aperture,float64
+VISTA-Y_m_base_CircularApertureFlux_4_5_flux,,flux within 4.500000-pixel aperture,float64
+VISTA-Y_m_base_CircularApertureFlux_4_5_fluxErr,,flux within 4.500000-pixel aperture,float64
+VISTA-Y_m_base_CircularApertureFlux_6_0_mag,,mag within 6.000000-pixel aperture,float64
+VISTA-Y_m_base_CircularApertureFlux_6_0_magErr,,mag within 6.000000-pixel aperture,float64
+VISTA-Y_m_base_CircularApertureFlux_6_0_flux,,flux within 6.000000-pixel aperture,float64
+VISTA-Y_m_base_CircularApertureFlux_6_0_fluxErr,,flux within 6.000000-pixel aperture,float64
+VISTA-Y_m_base_CircularApertureFlux_9_0_mag,,mag within 9.000000-pixel aperture,float64
+VISTA-Y_m_base_CircularApertureFlux_9_0_magErr,,mag within 9.000000-pixel aperture,float64
+VISTA-Y_m_base_CircularApertureFlux_9_0_flux,,flux within 9.000000-pixel aperture,float64
+VISTA-Y_m_base_CircularApertureFlux_9_0_fluxErr,,flux within 9.000000-pixel aperture,float64
+VISTA-Y_m_base_CircularApertureFlux_12_0_mag,,mag within 12.000000-pixel aperture,float64
+VISTA-Y_m_base_CircularApertureFlux_12_0_magErr,,mag within 12.000000-pixel aperture,float64
+VISTA-Y_m_base_CircularApertureFlux_12_0_flux,,flux within 12.000000-pixel aperture,float64
+VISTA-Y_m_base_CircularApertureFlux_12_0_fluxErr,,flux within 12.000000-pixel aperture,float64
+VISTA-Y_m_slot_ApFlux_mag,,mag within 12.000000-pixel aperture,float64
+VISTA-Y_m_slot_ApFlux_magErr,,mag within 12.000000-pixel aperture,float64
+VISTA-Y_m_slot_ApFlux_flux,,flux within 12.000000-pixel aperture,float64
+VISTA-Y_m_slot_ApFlux_fluxErr,,flux within 12.000000-pixel aperture,float64
+VISTA-Y_m_slot_CalibFlux_mag,,mag within 12.000000-pixel aperture,float64
+VISTA-Y_m_slot_CalibFlux_magErr,,mag within 12.000000-pixel aperture,float64
+VISTA-Y_m_slot_CalibFlux_flux,,flux within 12.000000-pixel aperture,float64
+VISTA-Y_m_slot_CalibFlux_fluxErr,,flux within 12.000000-pixel aperture,float64
+VISTA-Y_m_base_CircularApertureFlux_17_0_mag,,mag within 17.000000-pixel aperture,float64
+VISTA-Y_m_base_CircularApertureFlux_17_0_magErr,,mag within 17.000000-pixel aperture,float64
+VISTA-Y_m_base_CircularApertureFlux_17_0_flux,,flux within 17.000000-pixel aperture,float64
+VISTA-Y_m_base_CircularApertureFlux_17_0_fluxErr,,flux within 17.000000-pixel aperture,float64
+VISTA-Y_m_base_CircularApertureFlux_25_0_mag,,mag within 25.000000-pixel aperture,float64
+VISTA-Y_m_base_CircularApertureFlux_25_0_magErr,,mag within 25.000000-pixel aperture,float64
+VISTA-Y_m_base_CircularApertureFlux_25_0_flux,,flux within 25.000000-pixel aperture,float64
+VISTA-Y_m_base_CircularApertureFlux_25_0_fluxErr,,flux within 25.000000-pixel aperture,float64
+VISTA-Y_m_base_CircularApertureFlux_35_0_mag,,mag within 35.000000-pixel aperture,float64
+VISTA-Y_m_base_CircularApertureFlux_35_0_magErr,,mag within 35.000000-pixel aperture,float64
+VISTA-Y_m_base_CircularApertureFlux_35_0_flux,,flux within 35.000000-pixel aperture,float64
+VISTA-Y_m_base_CircularApertureFlux_35_0_fluxErr,,flux within 35.000000-pixel aperture,float64
+VISTA-Y_m_base_CircularApertureFlux_50_0_mag,,mag within 50.000000-pixel aperture,float64
+VISTA-Y_m_base_CircularApertureFlux_50_0_magErr,,mag within 50.000000-pixel aperture,float64
+VISTA-Y_m_base_CircularApertureFlux_50_0_flux,,flux within 50.000000-pixel aperture,float64
+VISTA-Y_m_base_CircularApertureFlux_50_0_fluxErr,,flux within 50.000000-pixel aperture,float64
+VISTA-Y_m_base_CircularApertureFlux_70_0_mag,,mag within 70.000000-pixel aperture,float64
+VISTA-Y_m_base_CircularApertureFlux_70_0_magErr,,mag within 70.000000-pixel aperture,float64
+VISTA-Y_m_base_CircularApertureFlux_70_0_flux,,flux within 70.000000-pixel aperture,float64
+VISTA-Y_m_base_CircularApertureFlux_70_0_fluxErr,,flux within 70.000000-pixel aperture,float64
+VISTA-Y_m_base_GaussianFlux_mag,,mag from Gaussian Flux algorithm,float64
+VISTA-Y_m_base_GaussianFlux_magErr,,mag from Gaussian Flux algorithm,float64
+VISTA-Y_m_base_GaussianFlux_flux,,flux from Gaussian Flux algorithm,float64
+VISTA-Y_m_base_GaussianFlux_fluxErr,,flux from Gaussian Flux algorithm,float64
+VISTA-Y_m_slot_GaussianFlux_mag,,mag from Gaussian Flux algorithm,float64
+VISTA-Y_m_slot_GaussianFlux_magErr,,mag from Gaussian Flux algorithm,float64
+VISTA-Y_m_slot_GaussianFlux_flux,,flux from Gaussian Flux algorithm,float64
+VISTA-Y_m_slot_GaussianFlux_fluxErr,,flux from Gaussian Flux algorithm,float64
+VISTA-Y_m_slot_ModelFlux_mag,,mag from Gaussian Flux algorithm,float64
+VISTA-Y_m_slot_ModelFlux_magErr,,mag from Gaussian Flux algorithm,float64
+VISTA-Y_m_slot_ModelFlux_flux,,flux from Gaussian Flux algorithm,float64
+VISTA-Y_m_slot_ModelFlux_fluxErr,,flux from Gaussian Flux algorithm,float64
+VISTA-Y_m_base_LocalBackground_mag,,background in annulus around source,float64
+VISTA-Y_m_base_LocalBackground_magErr,,background in annulus around source,float64
+VISTA-Y_m_base_LocalBackground_flux,,background in annulus around source,float64
+VISTA-Y_m_base_LocalBackground_fluxErr,,background in annulus around source,float64
+VISTA-Y_m_base_PsfFlux_mag,,mag derived from linear least-squares fit of PSF model,float64
+VISTA-Y_m_base_PsfFlux_magErr,,mag derived from linear least-squares fit of PSF model,float64
+VISTA-Y_m_base_PsfFlux_flux,,flux derived from linear least-squares fit of PSF model,float64
+VISTA-Y_m_base_PsfFlux_fluxErr,,flux derived from linear least-squares fit of PSF model,float64
+VISTA-Y_m_slot_PsfFlux_mag,,mag derived from linear least-squares fit of PSF model,float64
+VISTA-Y_m_slot_PsfFlux_magErr,,mag derived from linear least-squares fit of PSF model,float64
+VISTA-Y_m_slot_PsfFlux_flux,,flux derived from linear least-squares fit of PSF model,float64
+VISTA-Y_m_slot_PsfFlux_fluxErr,,flux derived from linear least-squares fit of PSF model,float64
 VISTA-Y_f_coord_ra,position in ra/dec,rad,float64
 VISTA-Y_f_coord_dec,position in ra/dec,rad,float64
 VISTA-Y_f_parent,unique ID of parent source,None,int64
@@ -3508,62 +3508,62 @@ VISTA-Y_f_base_GaussianFlux_flag_apCorr,set if unable to aperture correct base_G
 VISTA-Y_f_base_PsfFlux_apCorr,aperture correction applied to base_PsfFlux,None,float64
 VISTA-Y_f_base_PsfFlux_apCorrErr,standard deviation of aperture correction applied to base_PsfFlux,None,float64
 VISTA-Y_f_base_PsfFlux_flag_apCorr,set if unable to aperture correct base_PsfFlux,None,bool
-VISTA-Y_f_base_SdssShape_mag,,mag,float64
-VISTA-Y_f_base_SdssShape_magErr,,mag,float64
-VISTA-Y_f_base_SdssShape_flux,,nJy,float64
-VISTA-Y_f_base_SdssShape_fluxErr,,nJy,float64
-VISTA-Y_f_base_CircularApertureFlux_3_0_mag,,mag,float64
-VISTA-Y_f_base_CircularApertureFlux_3_0_magErr,,mag,float64
-VISTA-Y_f_base_CircularApertureFlux_3_0_flux,,nJy,float64
-VISTA-Y_f_base_CircularApertureFlux_3_0_fluxErr,,nJy,float64
-VISTA-Y_f_base_CircularApertureFlux_4_5_mag,,mag,float64
-VISTA-Y_f_base_CircularApertureFlux_4_5_magErr,,mag,float64
-VISTA-Y_f_base_CircularApertureFlux_4_5_flux,,nJy,float64
-VISTA-Y_f_base_CircularApertureFlux_4_5_fluxErr,,nJy,float64
-VISTA-Y_f_base_CircularApertureFlux_6_0_mag,,mag,float64
-VISTA-Y_f_base_CircularApertureFlux_6_0_magErr,,mag,float64
-VISTA-Y_f_base_CircularApertureFlux_6_0_flux,,nJy,float64
-VISTA-Y_f_base_CircularApertureFlux_6_0_fluxErr,,nJy,float64
-VISTA-Y_f_base_CircularApertureFlux_9_0_mag,,mag,float64
-VISTA-Y_f_base_CircularApertureFlux_9_0_magErr,,mag,float64
-VISTA-Y_f_base_CircularApertureFlux_9_0_flux,,nJy,float64
-VISTA-Y_f_base_CircularApertureFlux_9_0_fluxErr,,nJy,float64
-VISTA-Y_f_base_CircularApertureFlux_12_0_mag,,mag,float64
-VISTA-Y_f_base_CircularApertureFlux_12_0_magErr,,mag,float64
-VISTA-Y_f_base_CircularApertureFlux_12_0_flux,,nJy,float64
-VISTA-Y_f_base_CircularApertureFlux_12_0_fluxErr,,nJy,float64
-VISTA-Y_f_base_CircularApertureFlux_17_0_mag,,mag,float64
-VISTA-Y_f_base_CircularApertureFlux_17_0_magErr,,mag,float64
-VISTA-Y_f_base_CircularApertureFlux_17_0_flux,,nJy,float64
-VISTA-Y_f_base_CircularApertureFlux_17_0_fluxErr,,nJy,float64
-VISTA-Y_f_base_CircularApertureFlux_25_0_mag,,mag,float64
-VISTA-Y_f_base_CircularApertureFlux_25_0_magErr,,mag,float64
-VISTA-Y_f_base_CircularApertureFlux_25_0_flux,,nJy,float64
-VISTA-Y_f_base_CircularApertureFlux_25_0_fluxErr,,nJy,float64
-VISTA-Y_f_base_CircularApertureFlux_35_0_mag,,mag,float64
-VISTA-Y_f_base_CircularApertureFlux_35_0_magErr,,mag,float64
-VISTA-Y_f_base_CircularApertureFlux_35_0_flux,,nJy,float64
-VISTA-Y_f_base_CircularApertureFlux_35_0_fluxErr,,nJy,float64
-VISTA-Y_f_base_CircularApertureFlux_50_0_mag,,mag,float64
-VISTA-Y_f_base_CircularApertureFlux_50_0_magErr,,mag,float64
-VISTA-Y_f_base_CircularApertureFlux_50_0_flux,,nJy,float64
-VISTA-Y_f_base_CircularApertureFlux_50_0_fluxErr,,nJy,float64
-VISTA-Y_f_base_CircularApertureFlux_70_0_mag,,mag,float64
-VISTA-Y_f_base_CircularApertureFlux_70_0_magErr,,mag,float64
-VISTA-Y_f_base_CircularApertureFlux_70_0_flux,,nJy,float64
-VISTA-Y_f_base_CircularApertureFlux_70_0_fluxErr,,nJy,float64
-VISTA-Y_f_base_GaussianFlux_mag,,mag,float64
-VISTA-Y_f_base_GaussianFlux_magErr,,mag,float64
-VISTA-Y_f_base_GaussianFlux_flux,,nJy,float64
-VISTA-Y_f_base_GaussianFlux_fluxErr,,nJy,float64
-VISTA-Y_f_base_LocalBackground_mag,,mag,float64
-VISTA-Y_f_base_LocalBackground_magErr,,mag,float64
-VISTA-Y_f_base_LocalBackground_flux,,nJy,float64
-VISTA-Y_f_base_LocalBackground_fluxErr,,nJy,float64
-VISTA-Y_f_base_PsfFlux_mag,,mag,float64
-VISTA-Y_f_base_PsfFlux_magErr,,mag,float64
-VISTA-Y_f_base_PsfFlux_flux,,nJy,float64
-VISTA-Y_f_base_PsfFlux_fluxErr,,nJy,float64
+VISTA-Y_f_base_SdssShape_mag,,elliptical Gaussian adaptive moments,float64
+VISTA-Y_f_base_SdssShape_magErr,,elliptical Gaussian adaptive moments,float64
+VISTA-Y_f_base_SdssShape_flux,,elliptical Gaussian adaptive moments,float64
+VISTA-Y_f_base_SdssShape_fluxErr,,elliptical Gaussian adaptive moments,float64
+VISTA-Y_f_base_CircularApertureFlux_3_0_mag,,mag within 3.000000-pixel aperture,float64
+VISTA-Y_f_base_CircularApertureFlux_3_0_magErr,,mag within 3.000000-pixel aperture,float64
+VISTA-Y_f_base_CircularApertureFlux_3_0_flux,,flux within 3.000000-pixel aperture,float64
+VISTA-Y_f_base_CircularApertureFlux_3_0_fluxErr,,flux within 3.000000-pixel aperture,float64
+VISTA-Y_f_base_CircularApertureFlux_4_5_mag,,mag within 4.500000-pixel aperture,float64
+VISTA-Y_f_base_CircularApertureFlux_4_5_magErr,,mag within 4.500000-pixel aperture,float64
+VISTA-Y_f_base_CircularApertureFlux_4_5_flux,,flux within 4.500000-pixel aperture,float64
+VISTA-Y_f_base_CircularApertureFlux_4_5_fluxErr,,flux within 4.500000-pixel aperture,float64
+VISTA-Y_f_base_CircularApertureFlux_6_0_mag,,mag within 6.000000-pixel aperture,float64
+VISTA-Y_f_base_CircularApertureFlux_6_0_magErr,,mag within 6.000000-pixel aperture,float64
+VISTA-Y_f_base_CircularApertureFlux_6_0_flux,,flux within 6.000000-pixel aperture,float64
+VISTA-Y_f_base_CircularApertureFlux_6_0_fluxErr,,flux within 6.000000-pixel aperture,float64
+VISTA-Y_f_base_CircularApertureFlux_9_0_mag,,mag within 9.000000-pixel aperture,float64
+VISTA-Y_f_base_CircularApertureFlux_9_0_magErr,,mag within 9.000000-pixel aperture,float64
+VISTA-Y_f_base_CircularApertureFlux_9_0_flux,,flux within 9.000000-pixel aperture,float64
+VISTA-Y_f_base_CircularApertureFlux_9_0_fluxErr,,flux within 9.000000-pixel aperture,float64
+VISTA-Y_f_base_CircularApertureFlux_12_0_mag,,mag within 12.000000-pixel aperture,float64
+VISTA-Y_f_base_CircularApertureFlux_12_0_magErr,,mag within 12.000000-pixel aperture,float64
+VISTA-Y_f_base_CircularApertureFlux_12_0_flux,,flux within 12.000000-pixel aperture,float64
+VISTA-Y_f_base_CircularApertureFlux_12_0_fluxErr,,flux within 12.000000-pixel aperture,float64
+VISTA-Y_f_base_CircularApertureFlux_17_0_mag,,mag within 17.000000-pixel aperture,float64
+VISTA-Y_f_base_CircularApertureFlux_17_0_magErr,,mag within 17.000000-pixel aperture,float64
+VISTA-Y_f_base_CircularApertureFlux_17_0_flux,,flux within 17.000000-pixel aperture,float64
+VISTA-Y_f_base_CircularApertureFlux_17_0_fluxErr,,flux within 17.000000-pixel aperture,float64
+VISTA-Y_f_base_CircularApertureFlux_25_0_mag,,mag within 25.000000-pixel aperture,float64
+VISTA-Y_f_base_CircularApertureFlux_25_0_magErr,,mag within 25.000000-pixel aperture,float64
+VISTA-Y_f_base_CircularApertureFlux_25_0_flux,,flux within 25.000000-pixel aperture,float64
+VISTA-Y_f_base_CircularApertureFlux_25_0_fluxErr,,flux within 25.000000-pixel aperture,float64
+VISTA-Y_f_base_CircularApertureFlux_35_0_mag,,mag within 35.000000-pixel aperture,float64
+VISTA-Y_f_base_CircularApertureFlux_35_0_magErr,,mag within 35.000000-pixel aperture,float64
+VISTA-Y_f_base_CircularApertureFlux_35_0_flux,,flux within 35.000000-pixel aperture,float64
+VISTA-Y_f_base_CircularApertureFlux_35_0_fluxErr,,flux within 35.000000-pixel aperture,float64
+VISTA-Y_f_base_CircularApertureFlux_50_0_mag,,mag within 50.000000-pixel aperture,float64
+VISTA-Y_f_base_CircularApertureFlux_50_0_magErr,,mag within 50.000000-pixel aperture,float64
+VISTA-Y_f_base_CircularApertureFlux_50_0_flux,,flux within 50.000000-pixel aperture,float64
+VISTA-Y_f_base_CircularApertureFlux_50_0_fluxErr,,flux within 50.000000-pixel aperture,float64
+VISTA-Y_f_base_CircularApertureFlux_70_0_mag,,mag within 70.000000-pixel aperture,float64
+VISTA-Y_f_base_CircularApertureFlux_70_0_magErr,,mag within 70.000000-pixel aperture,float64
+VISTA-Y_f_base_CircularApertureFlux_70_0_flux,,flux within 70.000000-pixel aperture,float64
+VISTA-Y_f_base_CircularApertureFlux_70_0_fluxErr,,flux within 70.000000-pixel aperture,float64
+VISTA-Y_f_base_GaussianFlux_mag,,mag from Gaussian Flux algorithm,float64
+VISTA-Y_f_base_GaussianFlux_magErr,,mag from Gaussian Flux algorithm,float64
+VISTA-Y_f_base_GaussianFlux_flux,,flux from Gaussian Flux algorithm,float64
+VISTA-Y_f_base_GaussianFlux_fluxErr,,flux from Gaussian Flux algorithm,float64
+VISTA-Y_f_base_LocalBackground_mag,,background in annulus around source,float64
+VISTA-Y_f_base_LocalBackground_magErr,,background in annulus around source,float64
+VISTA-Y_f_base_LocalBackground_flux,,background in annulus around source,float64
+VISTA-Y_f_base_LocalBackground_fluxErr,,background in annulus around source,float64
+VISTA-Y_f_base_PsfFlux_mag,,mag derived from linear least-squares fit of PSF model,float64
+VISTA-Y_f_base_PsfFlux_magErr,,mag derived from linear least-squares fit of PSF model,float64
+VISTA-Y_f_base_PsfFlux_flux,,flux derived from linear least-squares fit of PSF model,float64
+VISTA-Y_f_base_PsfFlux_fluxErr,,flux derived from linear least-squares fit of PSF model,float64
 VISTA-J_m_coord_ra,position in ra/dec,rad,float64
 VISTA-J_m_coord_dec,position in ra/dec,rad,float64
 VISTA-J_m_parent,unique ID of parent source,None,int64
@@ -3869,86 +3869,86 @@ VISTA-J_m_slot_PsfFlux_flag_apCorr,set if unable to aperture correct base_PsfFlu
 VISTA-J_m_base_ClassificationExtendedness_value,"Set to 1 for extended sources, 0 for point sources.",None,float64
 VISTA-J_m_base_ClassificationExtendedness_flag,Set to 1 for any fatal failure.,None,bool
 VISTA-J_m_base_FootprintArea_value,Number of pixels in the source''s detection footprint.,pix,int32
-VISTA-J_m_base_SdssShape_mag,,mag,float64
-VISTA-J_m_base_SdssShape_magErr,,mag,float64
-VISTA-J_m_base_SdssShape_flux,,nJy,float64
-VISTA-J_m_base_SdssShape_fluxErr,,nJy,float64
-VISTA-J_m_slot_Shape_mag,,mag,float64
-VISTA-J_m_slot_Shape_magErr,,mag,float64
-VISTA-J_m_slot_Shape_flux,,nJy,float64
-VISTA-J_m_slot_Shape_fluxErr,,nJy,float64
-VISTA-J_m_base_CircularApertureFlux_3_0_mag,,mag,float64
-VISTA-J_m_base_CircularApertureFlux_3_0_magErr,,mag,float64
-VISTA-J_m_base_CircularApertureFlux_3_0_flux,,nJy,float64
-VISTA-J_m_base_CircularApertureFlux_3_0_fluxErr,,nJy,float64
-VISTA-J_m_base_CircularApertureFlux_4_5_mag,,mag,float64
-VISTA-J_m_base_CircularApertureFlux_4_5_magErr,,mag,float64
-VISTA-J_m_base_CircularApertureFlux_4_5_flux,,nJy,float64
-VISTA-J_m_base_CircularApertureFlux_4_5_fluxErr,,nJy,float64
-VISTA-J_m_base_CircularApertureFlux_6_0_mag,,mag,float64
-VISTA-J_m_base_CircularApertureFlux_6_0_magErr,,mag,float64
-VISTA-J_m_base_CircularApertureFlux_6_0_flux,,nJy,float64
-VISTA-J_m_base_CircularApertureFlux_6_0_fluxErr,,nJy,float64
-VISTA-J_m_base_CircularApertureFlux_9_0_mag,,mag,float64
-VISTA-J_m_base_CircularApertureFlux_9_0_magErr,,mag,float64
-VISTA-J_m_base_CircularApertureFlux_9_0_flux,,nJy,float64
-VISTA-J_m_base_CircularApertureFlux_9_0_fluxErr,,nJy,float64
-VISTA-J_m_base_CircularApertureFlux_12_0_mag,,mag,float64
-VISTA-J_m_base_CircularApertureFlux_12_0_magErr,,mag,float64
-VISTA-J_m_base_CircularApertureFlux_12_0_flux,,nJy,float64
-VISTA-J_m_base_CircularApertureFlux_12_0_fluxErr,,nJy,float64
-VISTA-J_m_slot_ApFlux_mag,,mag,float64
-VISTA-J_m_slot_ApFlux_magErr,,mag,float64
-VISTA-J_m_slot_ApFlux_flux,,nJy,float64
-VISTA-J_m_slot_ApFlux_fluxErr,,nJy,float64
-VISTA-J_m_slot_CalibFlux_mag,,mag,float64
-VISTA-J_m_slot_CalibFlux_magErr,,mag,float64
-VISTA-J_m_slot_CalibFlux_flux,,nJy,float64
-VISTA-J_m_slot_CalibFlux_fluxErr,,nJy,float64
-VISTA-J_m_base_CircularApertureFlux_17_0_mag,,mag,float64
-VISTA-J_m_base_CircularApertureFlux_17_0_magErr,,mag,float64
-VISTA-J_m_base_CircularApertureFlux_17_0_flux,,nJy,float64
-VISTA-J_m_base_CircularApertureFlux_17_0_fluxErr,,nJy,float64
-VISTA-J_m_base_CircularApertureFlux_25_0_mag,,mag,float64
-VISTA-J_m_base_CircularApertureFlux_25_0_magErr,,mag,float64
-VISTA-J_m_base_CircularApertureFlux_25_0_flux,,nJy,float64
-VISTA-J_m_base_CircularApertureFlux_25_0_fluxErr,,nJy,float64
-VISTA-J_m_base_CircularApertureFlux_35_0_mag,,mag,float64
-VISTA-J_m_base_CircularApertureFlux_35_0_magErr,,mag,float64
-VISTA-J_m_base_CircularApertureFlux_35_0_flux,,nJy,float64
-VISTA-J_m_base_CircularApertureFlux_35_0_fluxErr,,nJy,float64
-VISTA-J_m_base_CircularApertureFlux_50_0_mag,,mag,float64
-VISTA-J_m_base_CircularApertureFlux_50_0_magErr,,mag,float64
-VISTA-J_m_base_CircularApertureFlux_50_0_flux,,nJy,float64
-VISTA-J_m_base_CircularApertureFlux_50_0_fluxErr,,nJy,float64
-VISTA-J_m_base_CircularApertureFlux_70_0_mag,,mag,float64
-VISTA-J_m_base_CircularApertureFlux_70_0_magErr,,mag,float64
-VISTA-J_m_base_CircularApertureFlux_70_0_flux,,nJy,float64
-VISTA-J_m_base_CircularApertureFlux_70_0_fluxErr,,nJy,float64
-VISTA-J_m_base_GaussianFlux_mag,,mag,float64
-VISTA-J_m_base_GaussianFlux_magErr,,mag,float64
-VISTA-J_m_base_GaussianFlux_flux,,nJy,float64
-VISTA-J_m_base_GaussianFlux_fluxErr,,nJy,float64
-VISTA-J_m_slot_GaussianFlux_mag,,mag,float64
-VISTA-J_m_slot_GaussianFlux_magErr,,mag,float64
-VISTA-J_m_slot_GaussianFlux_flux,,nJy,float64
-VISTA-J_m_slot_GaussianFlux_fluxErr,,nJy,float64
-VISTA-J_m_slot_ModelFlux_mag,,mag,float64
-VISTA-J_m_slot_ModelFlux_magErr,,mag,float64
-VISTA-J_m_slot_ModelFlux_flux,,nJy,float64
-VISTA-J_m_slot_ModelFlux_fluxErr,,nJy,float64
-VISTA-J_m_base_LocalBackground_mag,,mag,float64
-VISTA-J_m_base_LocalBackground_magErr,,mag,float64
-VISTA-J_m_base_LocalBackground_flux,,nJy,float64
-VISTA-J_m_base_LocalBackground_fluxErr,,nJy,float64
-VISTA-J_m_base_PsfFlux_mag,,mag,float64
-VISTA-J_m_base_PsfFlux_magErr,,mag,float64
-VISTA-J_m_base_PsfFlux_flux,,nJy,float64
-VISTA-J_m_base_PsfFlux_fluxErr,,nJy,float64
-VISTA-J_m_slot_PsfFlux_mag,,mag,float64
-VISTA-J_m_slot_PsfFlux_magErr,,mag,float64
-VISTA-J_m_slot_PsfFlux_flux,,nJy,float64
-VISTA-J_m_slot_PsfFlux_fluxErr,,nJy,float64
+VISTA-J_m_base_SdssShape_mag,,elliptical Gaussian adaptive moments,float64
+VISTA-J_m_base_SdssShape_magErr,,elliptical Gaussian adaptive moments,float64
+VISTA-J_m_base_SdssShape_flux,,elliptical Gaussian adaptive moments,float64
+VISTA-J_m_base_SdssShape_fluxErr,,elliptical Gaussian adaptive moments,float64
+VISTA-J_m_slot_Shape_mag,,elliptical Gaussian adaptive moments,float64
+VISTA-J_m_slot_Shape_magErr,,elliptical Gaussian adaptive moments,float64
+VISTA-J_m_slot_Shape_flux,,elliptical Gaussian adaptive moments,float64
+VISTA-J_m_slot_Shape_fluxErr,,elliptical Gaussian adaptive moments,float64
+VISTA-J_m_base_CircularApertureFlux_3_0_mag,,mag within 3.000000-pixel aperture,float64
+VISTA-J_m_base_CircularApertureFlux_3_0_magErr,,mag within 3.000000-pixel aperture,float64
+VISTA-J_m_base_CircularApertureFlux_3_0_flux,,flux within 3.000000-pixel aperture,float64
+VISTA-J_m_base_CircularApertureFlux_3_0_fluxErr,,flux within 3.000000-pixel aperture,float64
+VISTA-J_m_base_CircularApertureFlux_4_5_mag,,mag within 4.500000-pixel aperture,float64
+VISTA-J_m_base_CircularApertureFlux_4_5_magErr,,mag within 4.500000-pixel aperture,float64
+VISTA-J_m_base_CircularApertureFlux_4_5_flux,,flux within 4.500000-pixel aperture,float64
+VISTA-J_m_base_CircularApertureFlux_4_5_fluxErr,,flux within 4.500000-pixel aperture,float64
+VISTA-J_m_base_CircularApertureFlux_6_0_mag,,mag within 6.000000-pixel aperture,float64
+VISTA-J_m_base_CircularApertureFlux_6_0_magErr,,mag within 6.000000-pixel aperture,float64
+VISTA-J_m_base_CircularApertureFlux_6_0_flux,,flux within 6.000000-pixel aperture,float64
+VISTA-J_m_base_CircularApertureFlux_6_0_fluxErr,,flux within 6.000000-pixel aperture,float64
+VISTA-J_m_base_CircularApertureFlux_9_0_mag,,mag within 9.000000-pixel aperture,float64
+VISTA-J_m_base_CircularApertureFlux_9_0_magErr,,mag within 9.000000-pixel aperture,float64
+VISTA-J_m_base_CircularApertureFlux_9_0_flux,,flux within 9.000000-pixel aperture,float64
+VISTA-J_m_base_CircularApertureFlux_9_0_fluxErr,,flux within 9.000000-pixel aperture,float64
+VISTA-J_m_base_CircularApertureFlux_12_0_mag,,mag within 12.000000-pixel aperture,float64
+VISTA-J_m_base_CircularApertureFlux_12_0_magErr,,mag within 12.000000-pixel aperture,float64
+VISTA-J_m_base_CircularApertureFlux_12_0_flux,,flux within 12.000000-pixel aperture,float64
+VISTA-J_m_base_CircularApertureFlux_12_0_fluxErr,,flux within 12.000000-pixel aperture,float64
+VISTA-J_m_slot_ApFlux_mag,,mag within 12.000000-pixel aperture,float64
+VISTA-J_m_slot_ApFlux_magErr,,mag within 12.000000-pixel aperture,float64
+VISTA-J_m_slot_ApFlux_flux,,flux within 12.000000-pixel aperture,float64
+VISTA-J_m_slot_ApFlux_fluxErr,,flux within 12.000000-pixel aperture,float64
+VISTA-J_m_slot_CalibFlux_mag,,mag within 12.000000-pixel aperture,float64
+VISTA-J_m_slot_CalibFlux_magErr,,mag within 12.000000-pixel aperture,float64
+VISTA-J_m_slot_CalibFlux_flux,,flux within 12.000000-pixel aperture,float64
+VISTA-J_m_slot_CalibFlux_fluxErr,,flux within 12.000000-pixel aperture,float64
+VISTA-J_m_base_CircularApertureFlux_17_0_mag,,mag within 17.000000-pixel aperture,float64
+VISTA-J_m_base_CircularApertureFlux_17_0_magErr,,mag within 17.000000-pixel aperture,float64
+VISTA-J_m_base_CircularApertureFlux_17_0_flux,,flux within 17.000000-pixel aperture,float64
+VISTA-J_m_base_CircularApertureFlux_17_0_fluxErr,,flux within 17.000000-pixel aperture,float64
+VISTA-J_m_base_CircularApertureFlux_25_0_mag,,mag within 25.000000-pixel aperture,float64
+VISTA-J_m_base_CircularApertureFlux_25_0_magErr,,mag within 25.000000-pixel aperture,float64
+VISTA-J_m_base_CircularApertureFlux_25_0_flux,,flux within 25.000000-pixel aperture,float64
+VISTA-J_m_base_CircularApertureFlux_25_0_fluxErr,,flux within 25.000000-pixel aperture,float64
+VISTA-J_m_base_CircularApertureFlux_35_0_mag,,mag within 35.000000-pixel aperture,float64
+VISTA-J_m_base_CircularApertureFlux_35_0_magErr,,mag within 35.000000-pixel aperture,float64
+VISTA-J_m_base_CircularApertureFlux_35_0_flux,,flux within 35.000000-pixel aperture,float64
+VISTA-J_m_base_CircularApertureFlux_35_0_fluxErr,,flux within 35.000000-pixel aperture,float64
+VISTA-J_m_base_CircularApertureFlux_50_0_mag,,mag within 50.000000-pixel aperture,float64
+VISTA-J_m_base_CircularApertureFlux_50_0_magErr,,mag within 50.000000-pixel aperture,float64
+VISTA-J_m_base_CircularApertureFlux_50_0_flux,,flux within 50.000000-pixel aperture,float64
+VISTA-J_m_base_CircularApertureFlux_50_0_fluxErr,,flux within 50.000000-pixel aperture,float64
+VISTA-J_m_base_CircularApertureFlux_70_0_mag,,mag within 70.000000-pixel aperture,float64
+VISTA-J_m_base_CircularApertureFlux_70_0_magErr,,mag within 70.000000-pixel aperture,float64
+VISTA-J_m_base_CircularApertureFlux_70_0_flux,,flux within 70.000000-pixel aperture,float64
+VISTA-J_m_base_CircularApertureFlux_70_0_fluxErr,,flux within 70.000000-pixel aperture,float64
+VISTA-J_m_base_GaussianFlux_mag,,mag from Gaussian Flux algorithm,float64
+VISTA-J_m_base_GaussianFlux_magErr,,mag from Gaussian Flux algorithm,float64
+VISTA-J_m_base_GaussianFlux_flux,,flux from Gaussian Flux algorithm,float64
+VISTA-J_m_base_GaussianFlux_fluxErr,,flux from Gaussian Flux algorithm,float64
+VISTA-J_m_slot_GaussianFlux_mag,,mag from Gaussian Flux algorithm,float64
+VISTA-J_m_slot_GaussianFlux_magErr,,mag from Gaussian Flux algorithm,float64
+VISTA-J_m_slot_GaussianFlux_flux,,flux from Gaussian Flux algorithm,float64
+VISTA-J_m_slot_GaussianFlux_fluxErr,,flux from Gaussian Flux algorithm,float64
+VISTA-J_m_slot_ModelFlux_mag,,mag from Gaussian Flux algorithm,float64
+VISTA-J_m_slot_ModelFlux_magErr,,mag from Gaussian Flux algorithm,float64
+VISTA-J_m_slot_ModelFlux_flux,,flux from Gaussian Flux algorithm,float64
+VISTA-J_m_slot_ModelFlux_fluxErr,,flux from Gaussian Flux algorithm,float64
+VISTA-J_m_base_LocalBackground_mag,,background in annulus around source,float64
+VISTA-J_m_base_LocalBackground_magErr,,background in annulus around source,float64
+VISTA-J_m_base_LocalBackground_flux,,background in annulus around source,float64
+VISTA-J_m_base_LocalBackground_fluxErr,,background in annulus around source,float64
+VISTA-J_m_base_PsfFlux_mag,,mag derived from linear least-squares fit of PSF model,float64
+VISTA-J_m_base_PsfFlux_magErr,,mag derived from linear least-squares fit of PSF model,float64
+VISTA-J_m_base_PsfFlux_flux,,flux derived from linear least-squares fit of PSF model,float64
+VISTA-J_m_base_PsfFlux_fluxErr,,flux derived from linear least-squares fit of PSF model,float64
+VISTA-J_m_slot_PsfFlux_mag,,mag derived from linear least-squares fit of PSF model,float64
+VISTA-J_m_slot_PsfFlux_magErr,,mag derived from linear least-squares fit of PSF model,float64
+VISTA-J_m_slot_PsfFlux_flux,,flux derived from linear least-squares fit of PSF model,float64
+VISTA-J_m_slot_PsfFlux_fluxErr,,flux derived from linear least-squares fit of PSF model,float64
 VISTA-J_f_coord_ra,position in ra/dec,rad,float64
 VISTA-J_f_coord_dec,position in ra/dec,rad,float64
 VISTA-J_f_parent,unique ID of parent source,None,int64
@@ -4102,62 +4102,62 @@ VISTA-J_f_base_GaussianFlux_flag_apCorr,set if unable to aperture correct base_G
 VISTA-J_f_base_PsfFlux_apCorr,aperture correction applied to base_PsfFlux,None,float64
 VISTA-J_f_base_PsfFlux_apCorrErr,standard deviation of aperture correction applied to base_PsfFlux,None,float64
 VISTA-J_f_base_PsfFlux_flag_apCorr,set if unable to aperture correct base_PsfFlux,None,bool
-VISTA-J_f_base_SdssShape_mag,,mag,float64
-VISTA-J_f_base_SdssShape_magErr,,mag,float64
-VISTA-J_f_base_SdssShape_flux,,nJy,float64
-VISTA-J_f_base_SdssShape_fluxErr,,nJy,float64
-VISTA-J_f_base_CircularApertureFlux_3_0_mag,,mag,float64
-VISTA-J_f_base_CircularApertureFlux_3_0_magErr,,mag,float64
-VISTA-J_f_base_CircularApertureFlux_3_0_flux,,nJy,float64
-VISTA-J_f_base_CircularApertureFlux_3_0_fluxErr,,nJy,float64
-VISTA-J_f_base_CircularApertureFlux_4_5_mag,,mag,float64
-VISTA-J_f_base_CircularApertureFlux_4_5_magErr,,mag,float64
-VISTA-J_f_base_CircularApertureFlux_4_5_flux,,nJy,float64
-VISTA-J_f_base_CircularApertureFlux_4_5_fluxErr,,nJy,float64
-VISTA-J_f_base_CircularApertureFlux_6_0_mag,,mag,float64
-VISTA-J_f_base_CircularApertureFlux_6_0_magErr,,mag,float64
-VISTA-J_f_base_CircularApertureFlux_6_0_flux,,nJy,float64
-VISTA-J_f_base_CircularApertureFlux_6_0_fluxErr,,nJy,float64
-VISTA-J_f_base_CircularApertureFlux_9_0_mag,,mag,float64
-VISTA-J_f_base_CircularApertureFlux_9_0_magErr,,mag,float64
-VISTA-J_f_base_CircularApertureFlux_9_0_flux,,nJy,float64
-VISTA-J_f_base_CircularApertureFlux_9_0_fluxErr,,nJy,float64
-VISTA-J_f_base_CircularApertureFlux_12_0_mag,,mag,float64
-VISTA-J_f_base_CircularApertureFlux_12_0_magErr,,mag,float64
-VISTA-J_f_base_CircularApertureFlux_12_0_flux,,nJy,float64
-VISTA-J_f_base_CircularApertureFlux_12_0_fluxErr,,nJy,float64
-VISTA-J_f_base_CircularApertureFlux_17_0_mag,,mag,float64
-VISTA-J_f_base_CircularApertureFlux_17_0_magErr,,mag,float64
-VISTA-J_f_base_CircularApertureFlux_17_0_flux,,nJy,float64
-VISTA-J_f_base_CircularApertureFlux_17_0_fluxErr,,nJy,float64
-VISTA-J_f_base_CircularApertureFlux_25_0_mag,,mag,float64
-VISTA-J_f_base_CircularApertureFlux_25_0_magErr,,mag,float64
-VISTA-J_f_base_CircularApertureFlux_25_0_flux,,nJy,float64
-VISTA-J_f_base_CircularApertureFlux_25_0_fluxErr,,nJy,float64
-VISTA-J_f_base_CircularApertureFlux_35_0_mag,,mag,float64
-VISTA-J_f_base_CircularApertureFlux_35_0_magErr,,mag,float64
-VISTA-J_f_base_CircularApertureFlux_35_0_flux,,nJy,float64
-VISTA-J_f_base_CircularApertureFlux_35_0_fluxErr,,nJy,float64
-VISTA-J_f_base_CircularApertureFlux_50_0_mag,,mag,float64
-VISTA-J_f_base_CircularApertureFlux_50_0_magErr,,mag,float64
-VISTA-J_f_base_CircularApertureFlux_50_0_flux,,nJy,float64
-VISTA-J_f_base_CircularApertureFlux_50_0_fluxErr,,nJy,float64
-VISTA-J_f_base_CircularApertureFlux_70_0_mag,,mag,float64
-VISTA-J_f_base_CircularApertureFlux_70_0_magErr,,mag,float64
-VISTA-J_f_base_CircularApertureFlux_70_0_flux,,nJy,float64
-VISTA-J_f_base_CircularApertureFlux_70_0_fluxErr,,nJy,float64
-VISTA-J_f_base_GaussianFlux_mag,,mag,float64
-VISTA-J_f_base_GaussianFlux_magErr,,mag,float64
-VISTA-J_f_base_GaussianFlux_flux,,nJy,float64
-VISTA-J_f_base_GaussianFlux_fluxErr,,nJy,float64
-VISTA-J_f_base_LocalBackground_mag,,mag,float64
-VISTA-J_f_base_LocalBackground_magErr,,mag,float64
-VISTA-J_f_base_LocalBackground_flux,,nJy,float64
-VISTA-J_f_base_LocalBackground_fluxErr,,nJy,float64
-VISTA-J_f_base_PsfFlux_mag,,mag,float64
-VISTA-J_f_base_PsfFlux_magErr,,mag,float64
-VISTA-J_f_base_PsfFlux_flux,,nJy,float64
-VISTA-J_f_base_PsfFlux_fluxErr,,nJy,float64
+VISTA-J_f_base_SdssShape_mag,,elliptical Gaussian adaptive moments,float64
+VISTA-J_f_base_SdssShape_magErr,,elliptical Gaussian adaptive moments,float64
+VISTA-J_f_base_SdssShape_flux,,elliptical Gaussian adaptive moments,float64
+VISTA-J_f_base_SdssShape_fluxErr,,elliptical Gaussian adaptive moments,float64
+VISTA-J_f_base_CircularApertureFlux_3_0_mag,,mag within 3.000000-pixel aperture,float64
+VISTA-J_f_base_CircularApertureFlux_3_0_magErr,,mag within 3.000000-pixel aperture,float64
+VISTA-J_f_base_CircularApertureFlux_3_0_flux,,flux within 3.000000-pixel aperture,float64
+VISTA-J_f_base_CircularApertureFlux_3_0_fluxErr,,flux within 3.000000-pixel aperture,float64
+VISTA-J_f_base_CircularApertureFlux_4_5_mag,,mag within 4.500000-pixel aperture,float64
+VISTA-J_f_base_CircularApertureFlux_4_5_magErr,,mag within 4.500000-pixel aperture,float64
+VISTA-J_f_base_CircularApertureFlux_4_5_flux,,flux within 4.500000-pixel aperture,float64
+VISTA-J_f_base_CircularApertureFlux_4_5_fluxErr,,flux within 4.500000-pixel aperture,float64
+VISTA-J_f_base_CircularApertureFlux_6_0_mag,,mag within 6.000000-pixel aperture,float64
+VISTA-J_f_base_CircularApertureFlux_6_0_magErr,,mag within 6.000000-pixel aperture,float64
+VISTA-J_f_base_CircularApertureFlux_6_0_flux,,flux within 6.000000-pixel aperture,float64
+VISTA-J_f_base_CircularApertureFlux_6_0_fluxErr,,flux within 6.000000-pixel aperture,float64
+VISTA-J_f_base_CircularApertureFlux_9_0_mag,,mag within 9.000000-pixel aperture,float64
+VISTA-J_f_base_CircularApertureFlux_9_0_magErr,,mag within 9.000000-pixel aperture,float64
+VISTA-J_f_base_CircularApertureFlux_9_0_flux,,flux within 9.000000-pixel aperture,float64
+VISTA-J_f_base_CircularApertureFlux_9_0_fluxErr,,flux within 9.000000-pixel aperture,float64
+VISTA-J_f_base_CircularApertureFlux_12_0_mag,,mag within 12.000000-pixel aperture,float64
+VISTA-J_f_base_CircularApertureFlux_12_0_magErr,,mag within 12.000000-pixel aperture,float64
+VISTA-J_f_base_CircularApertureFlux_12_0_flux,,flux within 12.000000-pixel aperture,float64
+VISTA-J_f_base_CircularApertureFlux_12_0_fluxErr,,flux within 12.000000-pixel aperture,float64
+VISTA-J_f_base_CircularApertureFlux_17_0_mag,,mag within 17.000000-pixel aperture,float64
+VISTA-J_f_base_CircularApertureFlux_17_0_magErr,,mag within 17.000000-pixel aperture,float64
+VISTA-J_f_base_CircularApertureFlux_17_0_flux,,flux within 17.000000-pixel aperture,float64
+VISTA-J_f_base_CircularApertureFlux_17_0_fluxErr,,flux within 17.000000-pixel aperture,float64
+VISTA-J_f_base_CircularApertureFlux_25_0_mag,,mag within 25.000000-pixel aperture,float64
+VISTA-J_f_base_CircularApertureFlux_25_0_magErr,,mag within 25.000000-pixel aperture,float64
+VISTA-J_f_base_CircularApertureFlux_25_0_flux,,flux within 25.000000-pixel aperture,float64
+VISTA-J_f_base_CircularApertureFlux_25_0_fluxErr,,flux within 25.000000-pixel aperture,float64
+VISTA-J_f_base_CircularApertureFlux_35_0_mag,,mag within 35.000000-pixel aperture,float64
+VISTA-J_f_base_CircularApertureFlux_35_0_magErr,,mag within 35.000000-pixel aperture,float64
+VISTA-J_f_base_CircularApertureFlux_35_0_flux,,flux within 35.000000-pixel aperture,float64
+VISTA-J_f_base_CircularApertureFlux_35_0_fluxErr,,flux within 35.000000-pixel aperture,float64
+VISTA-J_f_base_CircularApertureFlux_50_0_mag,,mag within 50.000000-pixel aperture,float64
+VISTA-J_f_base_CircularApertureFlux_50_0_magErr,,mag within 50.000000-pixel aperture,float64
+VISTA-J_f_base_CircularApertureFlux_50_0_flux,,flux within 50.000000-pixel aperture,float64
+VISTA-J_f_base_CircularApertureFlux_50_0_fluxErr,,flux within 50.000000-pixel aperture,float64
+VISTA-J_f_base_CircularApertureFlux_70_0_mag,,mag within 70.000000-pixel aperture,float64
+VISTA-J_f_base_CircularApertureFlux_70_0_magErr,,mag within 70.000000-pixel aperture,float64
+VISTA-J_f_base_CircularApertureFlux_70_0_flux,,flux within 70.000000-pixel aperture,float64
+VISTA-J_f_base_CircularApertureFlux_70_0_fluxErr,,flux within 70.000000-pixel aperture,float64
+VISTA-J_f_base_GaussianFlux_mag,,mag from Gaussian Flux algorithm,float64
+VISTA-J_f_base_GaussianFlux_magErr,,mag from Gaussian Flux algorithm,float64
+VISTA-J_f_base_GaussianFlux_flux,,flux from Gaussian Flux algorithm,float64
+VISTA-J_f_base_GaussianFlux_fluxErr,,flux from Gaussian Flux algorithm,float64
+VISTA-J_f_base_LocalBackground_mag,,background in annulus around source,float64
+VISTA-J_f_base_LocalBackground_magErr,,background in annulus around source,float64
+VISTA-J_f_base_LocalBackground_flux,,background in annulus around source,float64
+VISTA-J_f_base_LocalBackground_fluxErr,,background in annulus around source,float64
+VISTA-J_f_base_PsfFlux_mag,,mag derived from linear least-squares fit of PSF model,float64
+VISTA-J_f_base_PsfFlux_magErr,,mag derived from linear least-squares fit of PSF model,float64
+VISTA-J_f_base_PsfFlux_flux,,flux derived from linear least-squares fit of PSF model,float64
+VISTA-J_f_base_PsfFlux_fluxErr,,flux derived from linear least-squares fit of PSF model,float64
 VISTA-H_m_coord_ra,position in ra/dec,rad,float64
 VISTA-H_m_coord_dec,position in ra/dec,rad,float64
 VISTA-H_m_parent,unique ID of parent source,None,int64
@@ -4463,86 +4463,86 @@ VISTA-H_m_slot_PsfFlux_flag_apCorr,set if unable to aperture correct base_PsfFlu
 VISTA-H_m_base_ClassificationExtendedness_value,"Set to 1 for extended sources, 0 for point sources.",None,float64
 VISTA-H_m_base_ClassificationExtendedness_flag,Set to 1 for any fatal failure.,None,bool
 VISTA-H_m_base_FootprintArea_value,Number of pixels in the source''s detection footprint.,pix,int32
-VISTA-H_m_base_SdssShape_mag,,mag,float64
-VISTA-H_m_base_SdssShape_magErr,,mag,float64
-VISTA-H_m_base_SdssShape_flux,,nJy,float64
-VISTA-H_m_base_SdssShape_fluxErr,,nJy,float64
-VISTA-H_m_slot_Shape_mag,,mag,float64
-VISTA-H_m_slot_Shape_magErr,,mag,float64
-VISTA-H_m_slot_Shape_flux,,nJy,float64
-VISTA-H_m_slot_Shape_fluxErr,,nJy,float64
-VISTA-H_m_base_CircularApertureFlux_3_0_mag,,mag,float64
-VISTA-H_m_base_CircularApertureFlux_3_0_magErr,,mag,float64
-VISTA-H_m_base_CircularApertureFlux_3_0_flux,,nJy,float64
-VISTA-H_m_base_CircularApertureFlux_3_0_fluxErr,,nJy,float64
-VISTA-H_m_base_CircularApertureFlux_4_5_mag,,mag,float64
-VISTA-H_m_base_CircularApertureFlux_4_5_magErr,,mag,float64
-VISTA-H_m_base_CircularApertureFlux_4_5_flux,,nJy,float64
-VISTA-H_m_base_CircularApertureFlux_4_5_fluxErr,,nJy,float64
-VISTA-H_m_base_CircularApertureFlux_6_0_mag,,mag,float64
-VISTA-H_m_base_CircularApertureFlux_6_0_magErr,,mag,float64
-VISTA-H_m_base_CircularApertureFlux_6_0_flux,,nJy,float64
-VISTA-H_m_base_CircularApertureFlux_6_0_fluxErr,,nJy,float64
-VISTA-H_m_base_CircularApertureFlux_9_0_mag,,mag,float64
-VISTA-H_m_base_CircularApertureFlux_9_0_magErr,,mag,float64
-VISTA-H_m_base_CircularApertureFlux_9_0_flux,,nJy,float64
-VISTA-H_m_base_CircularApertureFlux_9_0_fluxErr,,nJy,float64
-VISTA-H_m_base_CircularApertureFlux_12_0_mag,,mag,float64
-VISTA-H_m_base_CircularApertureFlux_12_0_magErr,,mag,float64
-VISTA-H_m_base_CircularApertureFlux_12_0_flux,,nJy,float64
-VISTA-H_m_base_CircularApertureFlux_12_0_fluxErr,,nJy,float64
-VISTA-H_m_slot_ApFlux_mag,,mag,float64
-VISTA-H_m_slot_ApFlux_magErr,,mag,float64
-VISTA-H_m_slot_ApFlux_flux,,nJy,float64
-VISTA-H_m_slot_ApFlux_fluxErr,,nJy,float64
-VISTA-H_m_slot_CalibFlux_mag,,mag,float64
-VISTA-H_m_slot_CalibFlux_magErr,,mag,float64
-VISTA-H_m_slot_CalibFlux_flux,,nJy,float64
-VISTA-H_m_slot_CalibFlux_fluxErr,,nJy,float64
-VISTA-H_m_base_CircularApertureFlux_17_0_mag,,mag,float64
-VISTA-H_m_base_CircularApertureFlux_17_0_magErr,,mag,float64
-VISTA-H_m_base_CircularApertureFlux_17_0_flux,,nJy,float64
-VISTA-H_m_base_CircularApertureFlux_17_0_fluxErr,,nJy,float64
-VISTA-H_m_base_CircularApertureFlux_25_0_mag,,mag,float64
-VISTA-H_m_base_CircularApertureFlux_25_0_magErr,,mag,float64
-VISTA-H_m_base_CircularApertureFlux_25_0_flux,,nJy,float64
-VISTA-H_m_base_CircularApertureFlux_25_0_fluxErr,,nJy,float64
-VISTA-H_m_base_CircularApertureFlux_35_0_mag,,mag,float64
-VISTA-H_m_base_CircularApertureFlux_35_0_magErr,,mag,float64
-VISTA-H_m_base_CircularApertureFlux_35_0_flux,,nJy,float64
-VISTA-H_m_base_CircularApertureFlux_35_0_fluxErr,,nJy,float64
-VISTA-H_m_base_CircularApertureFlux_50_0_mag,,mag,float64
-VISTA-H_m_base_CircularApertureFlux_50_0_magErr,,mag,float64
-VISTA-H_m_base_CircularApertureFlux_50_0_flux,,nJy,float64
-VISTA-H_m_base_CircularApertureFlux_50_0_fluxErr,,nJy,float64
-VISTA-H_m_base_CircularApertureFlux_70_0_mag,,mag,float64
-VISTA-H_m_base_CircularApertureFlux_70_0_magErr,,mag,float64
-VISTA-H_m_base_CircularApertureFlux_70_0_flux,,nJy,float64
-VISTA-H_m_base_CircularApertureFlux_70_0_fluxErr,,nJy,float64
-VISTA-H_m_base_GaussianFlux_mag,,mag,float64
-VISTA-H_m_base_GaussianFlux_magErr,,mag,float64
-VISTA-H_m_base_GaussianFlux_flux,,nJy,float64
-VISTA-H_m_base_GaussianFlux_fluxErr,,nJy,float64
-VISTA-H_m_slot_GaussianFlux_mag,,mag,float64
-VISTA-H_m_slot_GaussianFlux_magErr,,mag,float64
-VISTA-H_m_slot_GaussianFlux_flux,,nJy,float64
-VISTA-H_m_slot_GaussianFlux_fluxErr,,nJy,float64
-VISTA-H_m_slot_ModelFlux_mag,,mag,float64
-VISTA-H_m_slot_ModelFlux_magErr,,mag,float64
-VISTA-H_m_slot_ModelFlux_flux,,nJy,float64
-VISTA-H_m_slot_ModelFlux_fluxErr,,nJy,float64
-VISTA-H_m_base_LocalBackground_mag,,mag,float64
-VISTA-H_m_base_LocalBackground_magErr,,mag,float64
-VISTA-H_m_base_LocalBackground_flux,,nJy,float64
-VISTA-H_m_base_LocalBackground_fluxErr,,nJy,float64
-VISTA-H_m_base_PsfFlux_mag,,mag,float64
-VISTA-H_m_base_PsfFlux_magErr,,mag,float64
-VISTA-H_m_base_PsfFlux_flux,,nJy,float64
-VISTA-H_m_base_PsfFlux_fluxErr,,nJy,float64
-VISTA-H_m_slot_PsfFlux_mag,,mag,float64
-VISTA-H_m_slot_PsfFlux_magErr,,mag,float64
-VISTA-H_m_slot_PsfFlux_flux,,nJy,float64
-VISTA-H_m_slot_PsfFlux_fluxErr,,nJy,float64
+VISTA-H_m_base_SdssShape_mag,,elliptical Gaussian adaptive moments,float64
+VISTA-H_m_base_SdssShape_magErr,,elliptical Gaussian adaptive moments,float64
+VISTA-H_m_base_SdssShape_flux,,elliptical Gaussian adaptive moments,float64
+VISTA-H_m_base_SdssShape_fluxErr,,elliptical Gaussian adaptive moments,float64
+VISTA-H_m_slot_Shape_mag,,elliptical Gaussian adaptive moments,float64
+VISTA-H_m_slot_Shape_magErr,,elliptical Gaussian adaptive moments,float64
+VISTA-H_m_slot_Shape_flux,,elliptical Gaussian adaptive moments,float64
+VISTA-H_m_slot_Shape_fluxErr,,elliptical Gaussian adaptive moments,float64
+VISTA-H_m_base_CircularApertureFlux_3_0_mag,,mag within 3.000000-pixel aperture,float64
+VISTA-H_m_base_CircularApertureFlux_3_0_magErr,,mag within 3.000000-pixel aperture,float64
+VISTA-H_m_base_CircularApertureFlux_3_0_flux,,flux within 3.000000-pixel aperture,float64
+VISTA-H_m_base_CircularApertureFlux_3_0_fluxErr,,flux within 3.000000-pixel aperture,float64
+VISTA-H_m_base_CircularApertureFlux_4_5_mag,,mag within 4.500000-pixel aperture,float64
+VISTA-H_m_base_CircularApertureFlux_4_5_magErr,,mag within 4.500000-pixel aperture,float64
+VISTA-H_m_base_CircularApertureFlux_4_5_flux,,flux within 4.500000-pixel aperture,float64
+VISTA-H_m_base_CircularApertureFlux_4_5_fluxErr,,flux within 4.500000-pixel aperture,float64
+VISTA-H_m_base_CircularApertureFlux_6_0_mag,,mag within 6.000000-pixel aperture,float64
+VISTA-H_m_base_CircularApertureFlux_6_0_magErr,,mag within 6.000000-pixel aperture,float64
+VISTA-H_m_base_CircularApertureFlux_6_0_flux,,flux within 6.000000-pixel aperture,float64
+VISTA-H_m_base_CircularApertureFlux_6_0_fluxErr,,flux within 6.000000-pixel aperture,float64
+VISTA-H_m_base_CircularApertureFlux_9_0_mag,,mag within 9.000000-pixel aperture,float64
+VISTA-H_m_base_CircularApertureFlux_9_0_magErr,,mag within 9.000000-pixel aperture,float64
+VISTA-H_m_base_CircularApertureFlux_9_0_flux,,flux within 9.000000-pixel aperture,float64
+VISTA-H_m_base_CircularApertureFlux_9_0_fluxErr,,flux within 9.000000-pixel aperture,float64
+VISTA-H_m_base_CircularApertureFlux_12_0_mag,,mag within 12.000000-pixel aperture,float64
+VISTA-H_m_base_CircularApertureFlux_12_0_magErr,,mag within 12.000000-pixel aperture,float64
+VISTA-H_m_base_CircularApertureFlux_12_0_flux,,flux within 12.000000-pixel aperture,float64
+VISTA-H_m_base_CircularApertureFlux_12_0_fluxErr,,flux within 12.000000-pixel aperture,float64
+VISTA-H_m_slot_ApFlux_mag,,mag within 12.000000-pixel aperture,float64
+VISTA-H_m_slot_ApFlux_magErr,,mag within 12.000000-pixel aperture,float64
+VISTA-H_m_slot_ApFlux_flux,,flux within 12.000000-pixel aperture,float64
+VISTA-H_m_slot_ApFlux_fluxErr,,flux within 12.000000-pixel aperture,float64
+VISTA-H_m_slot_CalibFlux_mag,,mag within 12.000000-pixel aperture,float64
+VISTA-H_m_slot_CalibFlux_magErr,,mag within 12.000000-pixel aperture,float64
+VISTA-H_m_slot_CalibFlux_flux,,flux within 12.000000-pixel aperture,float64
+VISTA-H_m_slot_CalibFlux_fluxErr,,flux within 12.000000-pixel aperture,float64
+VISTA-H_m_base_CircularApertureFlux_17_0_mag,,mag within 17.000000-pixel aperture,float64
+VISTA-H_m_base_CircularApertureFlux_17_0_magErr,,mag within 17.000000-pixel aperture,float64
+VISTA-H_m_base_CircularApertureFlux_17_0_flux,,flux within 17.000000-pixel aperture,float64
+VISTA-H_m_base_CircularApertureFlux_17_0_fluxErr,,flux within 17.000000-pixel aperture,float64
+VISTA-H_m_base_CircularApertureFlux_25_0_mag,,mag within 25.000000-pixel aperture,float64
+VISTA-H_m_base_CircularApertureFlux_25_0_magErr,,mag within 25.000000-pixel aperture,float64
+VISTA-H_m_base_CircularApertureFlux_25_0_flux,,flux within 25.000000-pixel aperture,float64
+VISTA-H_m_base_CircularApertureFlux_25_0_fluxErr,,flux within 25.000000-pixel aperture,float64
+VISTA-H_m_base_CircularApertureFlux_35_0_mag,,mag within 35.000000-pixel aperture,float64
+VISTA-H_m_base_CircularApertureFlux_35_0_magErr,,mag within 35.000000-pixel aperture,float64
+VISTA-H_m_base_CircularApertureFlux_35_0_flux,,flux within 35.000000-pixel aperture,float64
+VISTA-H_m_base_CircularApertureFlux_35_0_fluxErr,,flux within 35.000000-pixel aperture,float64
+VISTA-H_m_base_CircularApertureFlux_50_0_mag,,mag within 50.000000-pixel aperture,float64
+VISTA-H_m_base_CircularApertureFlux_50_0_magErr,,mag within 50.000000-pixel aperture,float64
+VISTA-H_m_base_CircularApertureFlux_50_0_flux,,flux within 50.000000-pixel aperture,float64
+VISTA-H_m_base_CircularApertureFlux_50_0_fluxErr,,flux within 50.000000-pixel aperture,float64
+VISTA-H_m_base_CircularApertureFlux_70_0_mag,,mag within 70.000000-pixel aperture,float64
+VISTA-H_m_base_CircularApertureFlux_70_0_magErr,,mag within 70.000000-pixel aperture,float64
+VISTA-H_m_base_CircularApertureFlux_70_0_flux,,flux within 70.000000-pixel aperture,float64
+VISTA-H_m_base_CircularApertureFlux_70_0_fluxErr,,flux within 70.000000-pixel aperture,float64
+VISTA-H_m_base_GaussianFlux_mag,,mag from Gaussian Flux algorithm,float64
+VISTA-H_m_base_GaussianFlux_magErr,,mag from Gaussian Flux algorithm,float64
+VISTA-H_m_base_GaussianFlux_flux,,flux from Gaussian Flux algorithm,float64
+VISTA-H_m_base_GaussianFlux_fluxErr,,flux from Gaussian Flux algorithm,float64
+VISTA-H_m_slot_GaussianFlux_mag,,mag from Gaussian Flux algorithm,float64
+VISTA-H_m_slot_GaussianFlux_magErr,,mag from Gaussian Flux algorithm,float64
+VISTA-H_m_slot_GaussianFlux_flux,,flux from Gaussian Flux algorithm,float64
+VISTA-H_m_slot_GaussianFlux_fluxErr,,flux from Gaussian Flux algorithm,float64
+VISTA-H_m_slot_ModelFlux_mag,,mag from Gaussian Flux algorithm,float64
+VISTA-H_m_slot_ModelFlux_magErr,,mag from Gaussian Flux algorithm,float64
+VISTA-H_m_slot_ModelFlux_flux,,flux from Gaussian Flux algorithm,float64
+VISTA-H_m_slot_ModelFlux_fluxErr,,flux from Gaussian Flux algorithm,float64
+VISTA-H_m_base_LocalBackground_mag,,background in annulus around source,float64
+VISTA-H_m_base_LocalBackground_magErr,,background in annulus around source,float64
+VISTA-H_m_base_LocalBackground_flux,,background in annulus around source,float64
+VISTA-H_m_base_LocalBackground_fluxErr,,background in annulus around source,float64
+VISTA-H_m_base_PsfFlux_mag,,mag derived from linear least-squares fit of PSF model,float64
+VISTA-H_m_base_PsfFlux_magErr,,mag derived from linear least-squares fit of PSF model,float64
+VISTA-H_m_base_PsfFlux_flux,,flux derived from linear least-squares fit of PSF model,float64
+VISTA-H_m_base_PsfFlux_fluxErr,,flux derived from linear least-squares fit of PSF model,float64
+VISTA-H_m_slot_PsfFlux_mag,,mag derived from linear least-squares fit of PSF model,float64
+VISTA-H_m_slot_PsfFlux_magErr,,mag derived from linear least-squares fit of PSF model,float64
+VISTA-H_m_slot_PsfFlux_flux,,flux derived from linear least-squares fit of PSF model,float64
+VISTA-H_m_slot_PsfFlux_fluxErr,,flux derived from linear least-squares fit of PSF model,float64
 VISTA-H_f_coord_ra,position in ra/dec,rad,float64
 VISTA-H_f_coord_dec,position in ra/dec,rad,float64
 VISTA-H_f_parent,unique ID of parent source,None,int64
@@ -4696,62 +4696,62 @@ VISTA-H_f_base_GaussianFlux_flag_apCorr,set if unable to aperture correct base_G
 VISTA-H_f_base_PsfFlux_apCorr,aperture correction applied to base_PsfFlux,None,float64
 VISTA-H_f_base_PsfFlux_apCorrErr,standard deviation of aperture correction applied to base_PsfFlux,None,float64
 VISTA-H_f_base_PsfFlux_flag_apCorr,set if unable to aperture correct base_PsfFlux,None,bool
-VISTA-H_f_base_SdssShape_mag,,mag,float64
-VISTA-H_f_base_SdssShape_magErr,,mag,float64
-VISTA-H_f_base_SdssShape_flux,,nJy,float64
-VISTA-H_f_base_SdssShape_fluxErr,,nJy,float64
-VISTA-H_f_base_CircularApertureFlux_3_0_mag,,mag,float64
-VISTA-H_f_base_CircularApertureFlux_3_0_magErr,,mag,float64
-VISTA-H_f_base_CircularApertureFlux_3_0_flux,,nJy,float64
-VISTA-H_f_base_CircularApertureFlux_3_0_fluxErr,,nJy,float64
-VISTA-H_f_base_CircularApertureFlux_4_5_mag,,mag,float64
-VISTA-H_f_base_CircularApertureFlux_4_5_magErr,,mag,float64
-VISTA-H_f_base_CircularApertureFlux_4_5_flux,,nJy,float64
-VISTA-H_f_base_CircularApertureFlux_4_5_fluxErr,,nJy,float64
-VISTA-H_f_base_CircularApertureFlux_6_0_mag,,mag,float64
-VISTA-H_f_base_CircularApertureFlux_6_0_magErr,,mag,float64
-VISTA-H_f_base_CircularApertureFlux_6_0_flux,,nJy,float64
-VISTA-H_f_base_CircularApertureFlux_6_0_fluxErr,,nJy,float64
-VISTA-H_f_base_CircularApertureFlux_9_0_mag,,mag,float64
-VISTA-H_f_base_CircularApertureFlux_9_0_magErr,,mag,float64
-VISTA-H_f_base_CircularApertureFlux_9_0_flux,,nJy,float64
-VISTA-H_f_base_CircularApertureFlux_9_0_fluxErr,,nJy,float64
-VISTA-H_f_base_CircularApertureFlux_12_0_mag,,mag,float64
-VISTA-H_f_base_CircularApertureFlux_12_0_magErr,,mag,float64
-VISTA-H_f_base_CircularApertureFlux_12_0_flux,,nJy,float64
-VISTA-H_f_base_CircularApertureFlux_12_0_fluxErr,,nJy,float64
-VISTA-H_f_base_CircularApertureFlux_17_0_mag,,mag,float64
-VISTA-H_f_base_CircularApertureFlux_17_0_magErr,,mag,float64
-VISTA-H_f_base_CircularApertureFlux_17_0_flux,,nJy,float64
-VISTA-H_f_base_CircularApertureFlux_17_0_fluxErr,,nJy,float64
-VISTA-H_f_base_CircularApertureFlux_25_0_mag,,mag,float64
-VISTA-H_f_base_CircularApertureFlux_25_0_magErr,,mag,float64
-VISTA-H_f_base_CircularApertureFlux_25_0_flux,,nJy,float64
-VISTA-H_f_base_CircularApertureFlux_25_0_fluxErr,,nJy,float64
-VISTA-H_f_base_CircularApertureFlux_35_0_mag,,mag,float64
-VISTA-H_f_base_CircularApertureFlux_35_0_magErr,,mag,float64
-VISTA-H_f_base_CircularApertureFlux_35_0_flux,,nJy,float64
-VISTA-H_f_base_CircularApertureFlux_35_0_fluxErr,,nJy,float64
-VISTA-H_f_base_CircularApertureFlux_50_0_mag,,mag,float64
-VISTA-H_f_base_CircularApertureFlux_50_0_magErr,,mag,float64
-VISTA-H_f_base_CircularApertureFlux_50_0_flux,,nJy,float64
-VISTA-H_f_base_CircularApertureFlux_50_0_fluxErr,,nJy,float64
-VISTA-H_f_base_CircularApertureFlux_70_0_mag,,mag,float64
-VISTA-H_f_base_CircularApertureFlux_70_0_magErr,,mag,float64
-VISTA-H_f_base_CircularApertureFlux_70_0_flux,,nJy,float64
-VISTA-H_f_base_CircularApertureFlux_70_0_fluxErr,,nJy,float64
-VISTA-H_f_base_GaussianFlux_mag,,mag,float64
-VISTA-H_f_base_GaussianFlux_magErr,,mag,float64
-VISTA-H_f_base_GaussianFlux_flux,,nJy,float64
-VISTA-H_f_base_GaussianFlux_fluxErr,,nJy,float64
-VISTA-H_f_base_LocalBackground_mag,,mag,float64
-VISTA-H_f_base_LocalBackground_magErr,,mag,float64
-VISTA-H_f_base_LocalBackground_flux,,nJy,float64
-VISTA-H_f_base_LocalBackground_fluxErr,,nJy,float64
-VISTA-H_f_base_PsfFlux_mag,,mag,float64
-VISTA-H_f_base_PsfFlux_magErr,,mag,float64
-VISTA-H_f_base_PsfFlux_flux,,nJy,float64
-VISTA-H_f_base_PsfFlux_fluxErr,,nJy,float64
+VISTA-H_f_base_SdssShape_mag,,elliptical Gaussian adaptive moments,float64
+VISTA-H_f_base_SdssShape_magErr,,elliptical Gaussian adaptive moments,float64
+VISTA-H_f_base_SdssShape_flux,,elliptical Gaussian adaptive moments,float64
+VISTA-H_f_base_SdssShape_fluxErr,,elliptical Gaussian adaptive moments,float64
+VISTA-H_f_base_CircularApertureFlux_3_0_mag,,mag within 3.000000-pixel aperture,float64
+VISTA-H_f_base_CircularApertureFlux_3_0_magErr,,mag within 3.000000-pixel aperture,float64
+VISTA-H_f_base_CircularApertureFlux_3_0_flux,,flux within 3.000000-pixel aperture,float64
+VISTA-H_f_base_CircularApertureFlux_3_0_fluxErr,,flux within 3.000000-pixel aperture,float64
+VISTA-H_f_base_CircularApertureFlux_4_5_mag,,mag within 4.500000-pixel aperture,float64
+VISTA-H_f_base_CircularApertureFlux_4_5_magErr,,mag within 4.500000-pixel aperture,float64
+VISTA-H_f_base_CircularApertureFlux_4_5_flux,,flux within 4.500000-pixel aperture,float64
+VISTA-H_f_base_CircularApertureFlux_4_5_fluxErr,,flux within 4.500000-pixel aperture,float64
+VISTA-H_f_base_CircularApertureFlux_6_0_mag,,mag within 6.000000-pixel aperture,float64
+VISTA-H_f_base_CircularApertureFlux_6_0_magErr,,mag within 6.000000-pixel aperture,float64
+VISTA-H_f_base_CircularApertureFlux_6_0_flux,,flux within 6.000000-pixel aperture,float64
+VISTA-H_f_base_CircularApertureFlux_6_0_fluxErr,,flux within 6.000000-pixel aperture,float64
+VISTA-H_f_base_CircularApertureFlux_9_0_mag,,mag within 9.000000-pixel aperture,float64
+VISTA-H_f_base_CircularApertureFlux_9_0_magErr,,mag within 9.000000-pixel aperture,float64
+VISTA-H_f_base_CircularApertureFlux_9_0_flux,,flux within 9.000000-pixel aperture,float64
+VISTA-H_f_base_CircularApertureFlux_9_0_fluxErr,,flux within 9.000000-pixel aperture,float64
+VISTA-H_f_base_CircularApertureFlux_12_0_mag,,mag within 12.000000-pixel aperture,float64
+VISTA-H_f_base_CircularApertureFlux_12_0_magErr,,mag within 12.000000-pixel aperture,float64
+VISTA-H_f_base_CircularApertureFlux_12_0_flux,,flux within 12.000000-pixel aperture,float64
+VISTA-H_f_base_CircularApertureFlux_12_0_fluxErr,,flux within 12.000000-pixel aperture,float64
+VISTA-H_f_base_CircularApertureFlux_17_0_mag,,mag within 17.000000-pixel aperture,float64
+VISTA-H_f_base_CircularApertureFlux_17_0_magErr,,mag within 17.000000-pixel aperture,float64
+VISTA-H_f_base_CircularApertureFlux_17_0_flux,,flux within 17.000000-pixel aperture,float64
+VISTA-H_f_base_CircularApertureFlux_17_0_fluxErr,,flux within 17.000000-pixel aperture,float64
+VISTA-H_f_base_CircularApertureFlux_25_0_mag,,mag within 25.000000-pixel aperture,float64
+VISTA-H_f_base_CircularApertureFlux_25_0_magErr,,mag within 25.000000-pixel aperture,float64
+VISTA-H_f_base_CircularApertureFlux_25_0_flux,,flux within 25.000000-pixel aperture,float64
+VISTA-H_f_base_CircularApertureFlux_25_0_fluxErr,,flux within 25.000000-pixel aperture,float64
+VISTA-H_f_base_CircularApertureFlux_35_0_mag,,mag within 35.000000-pixel aperture,float64
+VISTA-H_f_base_CircularApertureFlux_35_0_magErr,,mag within 35.000000-pixel aperture,float64
+VISTA-H_f_base_CircularApertureFlux_35_0_flux,,flux within 35.000000-pixel aperture,float64
+VISTA-H_f_base_CircularApertureFlux_35_0_fluxErr,,flux within 35.000000-pixel aperture,float64
+VISTA-H_f_base_CircularApertureFlux_50_0_mag,,mag within 50.000000-pixel aperture,float64
+VISTA-H_f_base_CircularApertureFlux_50_0_magErr,,mag within 50.000000-pixel aperture,float64
+VISTA-H_f_base_CircularApertureFlux_50_0_flux,,flux within 50.000000-pixel aperture,float64
+VISTA-H_f_base_CircularApertureFlux_50_0_fluxErr,,flux within 50.000000-pixel aperture,float64
+VISTA-H_f_base_CircularApertureFlux_70_0_mag,,mag within 70.000000-pixel aperture,float64
+VISTA-H_f_base_CircularApertureFlux_70_0_magErr,,mag within 70.000000-pixel aperture,float64
+VISTA-H_f_base_CircularApertureFlux_70_0_flux,,flux within 70.000000-pixel aperture,float64
+VISTA-H_f_base_CircularApertureFlux_70_0_fluxErr,,flux within 70.000000-pixel aperture,float64
+VISTA-H_f_base_GaussianFlux_mag,,mag from Gaussian Flux algorithm,float64
+VISTA-H_f_base_GaussianFlux_magErr,,mag from Gaussian Flux algorithm,float64
+VISTA-H_f_base_GaussianFlux_flux,,flux from Gaussian Flux algorithm,float64
+VISTA-H_f_base_GaussianFlux_fluxErr,,flux from Gaussian Flux algorithm,float64
+VISTA-H_f_base_LocalBackground_mag,,background in annulus around source,float64
+VISTA-H_f_base_LocalBackground_magErr,,background in annulus around source,float64
+VISTA-H_f_base_LocalBackground_flux,,background in annulus around source,float64
+VISTA-H_f_base_LocalBackground_fluxErr,,background in annulus around source,float64
+VISTA-H_f_base_PsfFlux_mag,,mag derived from linear least-squares fit of PSF model,float64
+VISTA-H_f_base_PsfFlux_magErr,,mag derived from linear least-squares fit of PSF model,float64
+VISTA-H_f_base_PsfFlux_flux,,flux derived from linear least-squares fit of PSF model,float64
+VISTA-H_f_base_PsfFlux_fluxErr,,flux derived from linear least-squares fit of PSF model,float64
 VISTA-Ks_m_coord_ra,position in ra/dec,rad,float64
 VISTA-Ks_m_coord_dec,position in ra/dec,rad,float64
 VISTA-Ks_m_parent,unique ID of parent source,None,int64
@@ -5057,86 +5057,86 @@ VISTA-Ks_m_slot_PsfFlux_flag_apCorr,set if unable to aperture correct base_PsfFl
 VISTA-Ks_m_base_ClassificationExtendedness_value,"Set to 1 for extended sources, 0 for point sources.",None,float64
 VISTA-Ks_m_base_ClassificationExtendedness_flag,Set to 1 for any fatal failure.,None,bool
 VISTA-Ks_m_base_FootprintArea_value,Number of pixels in the source''s detection footprint.,pix,int32
-VISTA-Ks_m_base_SdssShape_mag,,mag,float64
-VISTA-Ks_m_base_SdssShape_magErr,,mag,float64
-VISTA-Ks_m_base_SdssShape_flux,,nJy,float64
-VISTA-Ks_m_base_SdssShape_fluxErr,,nJy,float64
-VISTA-Ks_m_slot_Shape_mag,,mag,float64
-VISTA-Ks_m_slot_Shape_magErr,,mag,float64
-VISTA-Ks_m_slot_Shape_flux,,nJy,float64
-VISTA-Ks_m_slot_Shape_fluxErr,,nJy,float64
-VISTA-Ks_m_base_CircularApertureFlux_3_0_mag,,mag,float64
-VISTA-Ks_m_base_CircularApertureFlux_3_0_magErr,,mag,float64
-VISTA-Ks_m_base_CircularApertureFlux_3_0_flux,,nJy,float64
-VISTA-Ks_m_base_CircularApertureFlux_3_0_fluxErr,,nJy,float64
-VISTA-Ks_m_base_CircularApertureFlux_4_5_mag,,mag,float64
-VISTA-Ks_m_base_CircularApertureFlux_4_5_magErr,,mag,float64
-VISTA-Ks_m_base_CircularApertureFlux_4_5_flux,,nJy,float64
-VISTA-Ks_m_base_CircularApertureFlux_4_5_fluxErr,,nJy,float64
-VISTA-Ks_m_base_CircularApertureFlux_6_0_mag,,mag,float64
-VISTA-Ks_m_base_CircularApertureFlux_6_0_magErr,,mag,float64
-VISTA-Ks_m_base_CircularApertureFlux_6_0_flux,,nJy,float64
-VISTA-Ks_m_base_CircularApertureFlux_6_0_fluxErr,,nJy,float64
-VISTA-Ks_m_base_CircularApertureFlux_9_0_mag,,mag,float64
-VISTA-Ks_m_base_CircularApertureFlux_9_0_magErr,,mag,float64
-VISTA-Ks_m_base_CircularApertureFlux_9_0_flux,,nJy,float64
-VISTA-Ks_m_base_CircularApertureFlux_9_0_fluxErr,,nJy,float64
-VISTA-Ks_m_base_CircularApertureFlux_12_0_mag,,mag,float64
-VISTA-Ks_m_base_CircularApertureFlux_12_0_magErr,,mag,float64
-VISTA-Ks_m_base_CircularApertureFlux_12_0_flux,,nJy,float64
-VISTA-Ks_m_base_CircularApertureFlux_12_0_fluxErr,,nJy,float64
-VISTA-Ks_m_slot_ApFlux_mag,,mag,float64
-VISTA-Ks_m_slot_ApFlux_magErr,,mag,float64
-VISTA-Ks_m_slot_ApFlux_flux,,nJy,float64
-VISTA-Ks_m_slot_ApFlux_fluxErr,,nJy,float64
-VISTA-Ks_m_slot_CalibFlux_mag,,mag,float64
-VISTA-Ks_m_slot_CalibFlux_magErr,,mag,float64
-VISTA-Ks_m_slot_CalibFlux_flux,,nJy,float64
-VISTA-Ks_m_slot_CalibFlux_fluxErr,,nJy,float64
-VISTA-Ks_m_base_CircularApertureFlux_17_0_mag,,mag,float64
-VISTA-Ks_m_base_CircularApertureFlux_17_0_magErr,,mag,float64
-VISTA-Ks_m_base_CircularApertureFlux_17_0_flux,,nJy,float64
-VISTA-Ks_m_base_CircularApertureFlux_17_0_fluxErr,,nJy,float64
-VISTA-Ks_m_base_CircularApertureFlux_25_0_mag,,mag,float64
-VISTA-Ks_m_base_CircularApertureFlux_25_0_magErr,,mag,float64
-VISTA-Ks_m_base_CircularApertureFlux_25_0_flux,,nJy,float64
-VISTA-Ks_m_base_CircularApertureFlux_25_0_fluxErr,,nJy,float64
-VISTA-Ks_m_base_CircularApertureFlux_35_0_mag,,mag,float64
-VISTA-Ks_m_base_CircularApertureFlux_35_0_magErr,,mag,float64
-VISTA-Ks_m_base_CircularApertureFlux_35_0_flux,,nJy,float64
-VISTA-Ks_m_base_CircularApertureFlux_35_0_fluxErr,,nJy,float64
-VISTA-Ks_m_base_CircularApertureFlux_50_0_mag,,mag,float64
-VISTA-Ks_m_base_CircularApertureFlux_50_0_magErr,,mag,float64
-VISTA-Ks_m_base_CircularApertureFlux_50_0_flux,,nJy,float64
-VISTA-Ks_m_base_CircularApertureFlux_50_0_fluxErr,,nJy,float64
-VISTA-Ks_m_base_CircularApertureFlux_70_0_mag,,mag,float64
-VISTA-Ks_m_base_CircularApertureFlux_70_0_magErr,,mag,float64
-VISTA-Ks_m_base_CircularApertureFlux_70_0_flux,,nJy,float64
-VISTA-Ks_m_base_CircularApertureFlux_70_0_fluxErr,,nJy,float64
-VISTA-Ks_m_base_GaussianFlux_mag,,mag,float64
-VISTA-Ks_m_base_GaussianFlux_magErr,,mag,float64
-VISTA-Ks_m_base_GaussianFlux_flux,,nJy,float64
-VISTA-Ks_m_base_GaussianFlux_fluxErr,,nJy,float64
-VISTA-Ks_m_slot_GaussianFlux_mag,,mag,float64
-VISTA-Ks_m_slot_GaussianFlux_magErr,,mag,float64
-VISTA-Ks_m_slot_GaussianFlux_flux,,nJy,float64
-VISTA-Ks_m_slot_GaussianFlux_fluxErr,,nJy,float64
-VISTA-Ks_m_slot_ModelFlux_mag,,mag,float64
-VISTA-Ks_m_slot_ModelFlux_magErr,,mag,float64
-VISTA-Ks_m_slot_ModelFlux_flux,,nJy,float64
-VISTA-Ks_m_slot_ModelFlux_fluxErr,,nJy,float64
-VISTA-Ks_m_base_LocalBackground_mag,,mag,float64
-VISTA-Ks_m_base_LocalBackground_magErr,,mag,float64
-VISTA-Ks_m_base_LocalBackground_flux,,nJy,float64
-VISTA-Ks_m_base_LocalBackground_fluxErr,,nJy,float64
-VISTA-Ks_m_base_PsfFlux_mag,,mag,float64
-VISTA-Ks_m_base_PsfFlux_magErr,,mag,float64
-VISTA-Ks_m_base_PsfFlux_flux,,nJy,float64
-VISTA-Ks_m_base_PsfFlux_fluxErr,,nJy,float64
-VISTA-Ks_m_slot_PsfFlux_mag,,mag,float64
-VISTA-Ks_m_slot_PsfFlux_magErr,,mag,float64
-VISTA-Ks_m_slot_PsfFlux_flux,,nJy,float64
-VISTA-Ks_m_slot_PsfFlux_fluxErr,,nJy,float64
+VISTA-Ks_m_base_SdssShape_mag,,elliptical Gaussian adaptive moments,float64
+VISTA-Ks_m_base_SdssShape_magErr,,elliptical Gaussian adaptive moments,float64
+VISTA-Ks_m_base_SdssShape_flux,,elliptical Gaussian adaptive moments,float64
+VISTA-Ks_m_base_SdssShape_fluxErr,,elliptical Gaussian adaptive moments,float64
+VISTA-Ks_m_slot_Shape_mag,,elliptical Gaussian adaptive moments,float64
+VISTA-Ks_m_slot_Shape_magErr,,elliptical Gaussian adaptive moments,float64
+VISTA-Ks_m_slot_Shape_flux,,elliptical Gaussian adaptive moments,float64
+VISTA-Ks_m_slot_Shape_fluxErr,,elliptical Gaussian adaptive moments,float64
+VISTA-Ks_m_base_CircularApertureFlux_3_0_mag,,mag within 3.000000-pixel aperture,float64
+VISTA-Ks_m_base_CircularApertureFlux_3_0_magErr,,mag within 3.000000-pixel aperture,float64
+VISTA-Ks_m_base_CircularApertureFlux_3_0_flux,,flux within 3.000000-pixel aperture,float64
+VISTA-Ks_m_base_CircularApertureFlux_3_0_fluxErr,,flux within 3.000000-pixel aperture,float64
+VISTA-Ks_m_base_CircularApertureFlux_4_5_mag,,mag within 4.500000-pixel aperture,float64
+VISTA-Ks_m_base_CircularApertureFlux_4_5_magErr,,mag within 4.500000-pixel aperture,float64
+VISTA-Ks_m_base_CircularApertureFlux_4_5_flux,,flux within 4.500000-pixel aperture,float64
+VISTA-Ks_m_base_CircularApertureFlux_4_5_fluxErr,,flux within 4.500000-pixel aperture,float64
+VISTA-Ks_m_base_CircularApertureFlux_6_0_mag,,mag within 6.000000-pixel aperture,float64
+VISTA-Ks_m_base_CircularApertureFlux_6_0_magErr,,mag within 6.000000-pixel aperture,float64
+VISTA-Ks_m_base_CircularApertureFlux_6_0_flux,,flux within 6.000000-pixel aperture,float64
+VISTA-Ks_m_base_CircularApertureFlux_6_0_fluxErr,,flux within 6.000000-pixel aperture,float64
+VISTA-Ks_m_base_CircularApertureFlux_9_0_mag,,mag within 9.000000-pixel aperture,float64
+VISTA-Ks_m_base_CircularApertureFlux_9_0_magErr,,mag within 9.000000-pixel aperture,float64
+VISTA-Ks_m_base_CircularApertureFlux_9_0_flux,,flux within 9.000000-pixel aperture,float64
+VISTA-Ks_m_base_CircularApertureFlux_9_0_fluxErr,,flux within 9.000000-pixel aperture,float64
+VISTA-Ks_m_base_CircularApertureFlux_12_0_mag,,mag within 12.000000-pixel aperture,float64
+VISTA-Ks_m_base_CircularApertureFlux_12_0_magErr,,mag within 12.000000-pixel aperture,float64
+VISTA-Ks_m_base_CircularApertureFlux_12_0_flux,,flux within 12.000000-pixel aperture,float64
+VISTA-Ks_m_base_CircularApertureFlux_12_0_fluxErr,,flux within 12.000000-pixel aperture,float64
+VISTA-Ks_m_slot_ApFlux_mag,,mag within 12.000000-pixel aperture,float64
+VISTA-Ks_m_slot_ApFlux_magErr,,mag within 12.000000-pixel aperture,float64
+VISTA-Ks_m_slot_ApFlux_flux,,flux within 12.000000-pixel aperture,float64
+VISTA-Ks_m_slot_ApFlux_fluxErr,,flux within 12.000000-pixel aperture,float64
+VISTA-Ks_m_slot_CalibFlux_mag,,mag within 12.000000-pixel aperture,float64
+VISTA-Ks_m_slot_CalibFlux_magErr,,mag within 12.000000-pixel aperture,float64
+VISTA-Ks_m_slot_CalibFlux_flux,,flux within 12.000000-pixel aperture,float64
+VISTA-Ks_m_slot_CalibFlux_fluxErr,,flux within 12.000000-pixel aperture,float64
+VISTA-Ks_m_base_CircularApertureFlux_17_0_mag,,mag within 17.000000-pixel aperture,float64
+VISTA-Ks_m_base_CircularApertureFlux_17_0_magErr,,mag within 17.000000-pixel aperture,float64
+VISTA-Ks_m_base_CircularApertureFlux_17_0_flux,,flux within 17.000000-pixel aperture,float64
+VISTA-Ks_m_base_CircularApertureFlux_17_0_fluxErr,,flux within 17.000000-pixel aperture,float64
+VISTA-Ks_m_base_CircularApertureFlux_25_0_mag,,mag within 25.000000-pixel aperture,float64
+VISTA-Ks_m_base_CircularApertureFlux_25_0_magErr,,mag within 25.000000-pixel aperture,float64
+VISTA-Ks_m_base_CircularApertureFlux_25_0_flux,,flux within 25.000000-pixel aperture,float64
+VISTA-Ks_m_base_CircularApertureFlux_25_0_fluxErr,,flux within 25.000000-pixel aperture,float64
+VISTA-Ks_m_base_CircularApertureFlux_35_0_mag,,mag within 35.000000-pixel aperture,float64
+VISTA-Ks_m_base_CircularApertureFlux_35_0_magErr,,mag within 35.000000-pixel aperture,float64
+VISTA-Ks_m_base_CircularApertureFlux_35_0_flux,,flux within 35.000000-pixel aperture,float64
+VISTA-Ks_m_base_CircularApertureFlux_35_0_fluxErr,,flux within 35.000000-pixel aperture,float64
+VISTA-Ks_m_base_CircularApertureFlux_50_0_mag,,mag within 50.000000-pixel aperture,float64
+VISTA-Ks_m_base_CircularApertureFlux_50_0_magErr,,mag within 50.000000-pixel aperture,float64
+VISTA-Ks_m_base_CircularApertureFlux_50_0_flux,,flux within 50.000000-pixel aperture,float64
+VISTA-Ks_m_base_CircularApertureFlux_50_0_fluxErr,,flux within 50.000000-pixel aperture,float64
+VISTA-Ks_m_base_CircularApertureFlux_70_0_mag,,mag within 70.000000-pixel aperture,float64
+VISTA-Ks_m_base_CircularApertureFlux_70_0_magErr,,mag within 70.000000-pixel aperture,float64
+VISTA-Ks_m_base_CircularApertureFlux_70_0_flux,,flux within 70.000000-pixel aperture,float64
+VISTA-Ks_m_base_CircularApertureFlux_70_0_fluxErr,,flux within 70.000000-pixel aperture,float64
+VISTA-Ks_m_base_GaussianFlux_mag,,mag from Gaussian Flux algorithm,float64
+VISTA-Ks_m_base_GaussianFlux_magErr,,mag from Gaussian Flux algorithm,float64
+VISTA-Ks_m_base_GaussianFlux_flux,,flux from Gaussian Flux algorithm,float64
+VISTA-Ks_m_base_GaussianFlux_fluxErr,,flux from Gaussian Flux algorithm,float64
+VISTA-Ks_m_slot_GaussianFlux_mag,,mag from Gaussian Flux algorithm,float64
+VISTA-Ks_m_slot_GaussianFlux_magErr,,mag from Gaussian Flux algorithm,float64
+VISTA-Ks_m_slot_GaussianFlux_flux,,flux from Gaussian Flux algorithm,float64
+VISTA-Ks_m_slot_GaussianFlux_fluxErr,,flux from Gaussian Flux algorithm,float64
+VISTA-Ks_m_slot_ModelFlux_mag,,mag from Gaussian Flux algorithm,float64
+VISTA-Ks_m_slot_ModelFlux_magErr,,mag from Gaussian Flux algorithm,float64
+VISTA-Ks_m_slot_ModelFlux_flux,,flux from Gaussian Flux algorithm,float64
+VISTA-Ks_m_slot_ModelFlux_fluxErr,,flux from Gaussian Flux algorithm,float64
+VISTA-Ks_m_base_LocalBackground_mag,,background in annulus around source,float64
+VISTA-Ks_m_base_LocalBackground_magErr,,background in annulus around source,float64
+VISTA-Ks_m_base_LocalBackground_flux,,background in annulus around source,float64
+VISTA-Ks_m_base_LocalBackground_fluxErr,,background in annulus around source,float64
+VISTA-Ks_m_base_PsfFlux_mag,,mag derived from linear least-squares fit of PSF model,float64
+VISTA-Ks_m_base_PsfFlux_magErr,,mag derived from linear least-squares fit of PSF model,float64
+VISTA-Ks_m_base_PsfFlux_flux,,flux derived from linear least-squares fit of PSF model,float64
+VISTA-Ks_m_base_PsfFlux_fluxErr,,flux derived from linear least-squares fit of PSF model,float64
+VISTA-Ks_m_slot_PsfFlux_mag,,mag derived from linear least-squares fit of PSF model,float64
+VISTA-Ks_m_slot_PsfFlux_magErr,,mag derived from linear least-squares fit of PSF model,float64
+VISTA-Ks_m_slot_PsfFlux_flux,,flux derived from linear least-squares fit of PSF model,float64
+VISTA-Ks_m_slot_PsfFlux_fluxErr,,flux derived from linear least-squares fit of PSF model,float64
 VISTA-Ks_f_coord_ra,position in ra/dec,rad,float64
 VISTA-Ks_f_coord_dec,position in ra/dec,rad,float64
 VISTA-Ks_f_parent,unique ID of parent source,None,int64
@@ -5290,59 +5290,59 @@ VISTA-Ks_f_base_GaussianFlux_flag_apCorr,set if unable to aperture correct base_
 VISTA-Ks_f_base_PsfFlux_apCorr,aperture correction applied to base_PsfFlux,None,float64
 VISTA-Ks_f_base_PsfFlux_apCorrErr,standard deviation of aperture correction applied to base_PsfFlux,None,float64
 VISTA-Ks_f_base_PsfFlux_flag_apCorr,set if unable to aperture correct base_PsfFlux,None,bool
-VISTA-Ks_f_base_SdssShape_mag,,mag,float64
-VISTA-Ks_f_base_SdssShape_magErr,,mag,float64
-VISTA-Ks_f_base_SdssShape_flux,,nJy,float64
-VISTA-Ks_f_base_SdssShape_fluxErr,,nJy,float64
-VISTA-Ks_f_base_CircularApertureFlux_3_0_mag,,mag,float64
-VISTA-Ks_f_base_CircularApertureFlux_3_0_magErr,,mag,float64
-VISTA-Ks_f_base_CircularApertureFlux_3_0_flux,,nJy,float64
-VISTA-Ks_f_base_CircularApertureFlux_3_0_fluxErr,,nJy,float64
-VISTA-Ks_f_base_CircularApertureFlux_4_5_mag,,mag,float64
-VISTA-Ks_f_base_CircularApertureFlux_4_5_magErr,,mag,float64
-VISTA-Ks_f_base_CircularApertureFlux_4_5_flux,,nJy,float64
-VISTA-Ks_f_base_CircularApertureFlux_4_5_fluxErr,,nJy,float64
-VISTA-Ks_f_base_CircularApertureFlux_6_0_mag,,mag,float64
-VISTA-Ks_f_base_CircularApertureFlux_6_0_magErr,,mag,float64
-VISTA-Ks_f_base_CircularApertureFlux_6_0_flux,,nJy,float64
-VISTA-Ks_f_base_CircularApertureFlux_6_0_fluxErr,,nJy,float64
-VISTA-Ks_f_base_CircularApertureFlux_9_0_mag,,mag,float64
-VISTA-Ks_f_base_CircularApertureFlux_9_0_magErr,,mag,float64
-VISTA-Ks_f_base_CircularApertureFlux_9_0_flux,,nJy,float64
-VISTA-Ks_f_base_CircularApertureFlux_9_0_fluxErr,,nJy,float64
-VISTA-Ks_f_base_CircularApertureFlux_12_0_mag,,mag,float64
-VISTA-Ks_f_base_CircularApertureFlux_12_0_magErr,,mag,float64
-VISTA-Ks_f_base_CircularApertureFlux_12_0_flux,,nJy,float64
-VISTA-Ks_f_base_CircularApertureFlux_12_0_fluxErr,,nJy,float64
-VISTA-Ks_f_base_CircularApertureFlux_17_0_mag,,mag,float64
-VISTA-Ks_f_base_CircularApertureFlux_17_0_magErr,,mag,float64
-VISTA-Ks_f_base_CircularApertureFlux_17_0_flux,,nJy,float64
-VISTA-Ks_f_base_CircularApertureFlux_17_0_fluxErr,,nJy,float64
-VISTA-Ks_f_base_CircularApertureFlux_25_0_mag,,mag,float64
-VISTA-Ks_f_base_CircularApertureFlux_25_0_magErr,,mag,float64
-VISTA-Ks_f_base_CircularApertureFlux_25_0_flux,,nJy,float64
-VISTA-Ks_f_base_CircularApertureFlux_25_0_fluxErr,,nJy,float64
-VISTA-Ks_f_base_CircularApertureFlux_35_0_mag,,mag,float64
-VISTA-Ks_f_base_CircularApertureFlux_35_0_magErr,,mag,float64
-VISTA-Ks_f_base_CircularApertureFlux_35_0_flux,,nJy,float64
-VISTA-Ks_f_base_CircularApertureFlux_35_0_fluxErr,,nJy,float64
-VISTA-Ks_f_base_CircularApertureFlux_50_0_mag,,mag,float64
-VISTA-Ks_f_base_CircularApertureFlux_50_0_magErr,,mag,float64
-VISTA-Ks_f_base_CircularApertureFlux_50_0_flux,,nJy,float64
-VISTA-Ks_f_base_CircularApertureFlux_50_0_fluxErr,,nJy,float64
-VISTA-Ks_f_base_CircularApertureFlux_70_0_mag,,mag,float64
-VISTA-Ks_f_base_CircularApertureFlux_70_0_magErr,,mag,float64
-VISTA-Ks_f_base_CircularApertureFlux_70_0_flux,,nJy,float64
-VISTA-Ks_f_base_CircularApertureFlux_70_0_fluxErr,,nJy,float64
-VISTA-Ks_f_base_GaussianFlux_mag,,mag,float64
-VISTA-Ks_f_base_GaussianFlux_magErr,,mag,float64
-VISTA-Ks_f_base_GaussianFlux_flux,,nJy,float64
-VISTA-Ks_f_base_GaussianFlux_fluxErr,,nJy,float64
-VISTA-Ks_f_base_LocalBackground_mag,,mag,float64
-VISTA-Ks_f_base_LocalBackground_magErr,,mag,float64
-VISTA-Ks_f_base_LocalBackground_flux,,nJy,float64
-VISTA-Ks_f_base_LocalBackground_fluxErr,,nJy,float64
-VISTA-Ks_f_base_PsfFlux_mag,,mag,float64
-VISTA-Ks_f_base_PsfFlux_magErr,,mag,float64
-VISTA-Ks_f_base_PsfFlux_flux,,nJy,float64
-VISTA-Ks_f_base_PsfFlux_fluxErr,,nJy,float64
+VISTA-Ks_f_base_SdssShape_mag,,elliptical Gaussian adaptive moments,float64
+VISTA-Ks_f_base_SdssShape_magErr,,elliptical Gaussian adaptive moments,float64
+VISTA-Ks_f_base_SdssShape_flux,,elliptical Gaussian adaptive moments,float64
+VISTA-Ks_f_base_SdssShape_fluxErr,,elliptical Gaussian adaptive moments,float64
+VISTA-Ks_f_base_CircularApertureFlux_3_0_mag,,mag within 3.000000-pixel aperture,float64
+VISTA-Ks_f_base_CircularApertureFlux_3_0_magErr,,mag within 3.000000-pixel aperture,float64
+VISTA-Ks_f_base_CircularApertureFlux_3_0_flux,,flux within 3.000000-pixel aperture,float64
+VISTA-Ks_f_base_CircularApertureFlux_3_0_fluxErr,,flux within 3.000000-pixel aperture,float64
+VISTA-Ks_f_base_CircularApertureFlux_4_5_mag,,mag within 4.500000-pixel aperture,float64
+VISTA-Ks_f_base_CircularApertureFlux_4_5_magErr,,mag within 4.500000-pixel aperture,float64
+VISTA-Ks_f_base_CircularApertureFlux_4_5_flux,,flux within 4.500000-pixel aperture,float64
+VISTA-Ks_f_base_CircularApertureFlux_4_5_fluxErr,,flux within 4.500000-pixel aperture,float64
+VISTA-Ks_f_base_CircularApertureFlux_6_0_mag,,mag within 6.000000-pixel aperture,float64
+VISTA-Ks_f_base_CircularApertureFlux_6_0_magErr,,mag within 6.000000-pixel aperture,float64
+VISTA-Ks_f_base_CircularApertureFlux_6_0_flux,,flux within 6.000000-pixel aperture,float64
+VISTA-Ks_f_base_CircularApertureFlux_6_0_fluxErr,,flux within 6.000000-pixel aperture,float64
+VISTA-Ks_f_base_CircularApertureFlux_9_0_mag,,mag within 9.000000-pixel aperture,float64
+VISTA-Ks_f_base_CircularApertureFlux_9_0_magErr,,mag within 9.000000-pixel aperture,float64
+VISTA-Ks_f_base_CircularApertureFlux_9_0_flux,,flux within 9.000000-pixel aperture,float64
+VISTA-Ks_f_base_CircularApertureFlux_9_0_fluxErr,,flux within 9.000000-pixel aperture,float64
+VISTA-Ks_f_base_CircularApertureFlux_12_0_mag,,mag within 12.000000-pixel aperture,float64
+VISTA-Ks_f_base_CircularApertureFlux_12_0_magErr,,mag within 12.000000-pixel aperture,float64
+VISTA-Ks_f_base_CircularApertureFlux_12_0_flux,,flux within 12.000000-pixel aperture,float64
+VISTA-Ks_f_base_CircularApertureFlux_12_0_fluxErr,,flux within 12.000000-pixel aperture,float64
+VISTA-Ks_f_base_CircularApertureFlux_17_0_mag,,mag within 17.000000-pixel aperture,float64
+VISTA-Ks_f_base_CircularApertureFlux_17_0_magErr,,mag within 17.000000-pixel aperture,float64
+VISTA-Ks_f_base_CircularApertureFlux_17_0_flux,,flux within 17.000000-pixel aperture,float64
+VISTA-Ks_f_base_CircularApertureFlux_17_0_fluxErr,,flux within 17.000000-pixel aperture,float64
+VISTA-Ks_f_base_CircularApertureFlux_25_0_mag,,mag within 25.000000-pixel aperture,float64
+VISTA-Ks_f_base_CircularApertureFlux_25_0_magErr,,mag within 25.000000-pixel aperture,float64
+VISTA-Ks_f_base_CircularApertureFlux_25_0_flux,,flux within 25.000000-pixel aperture,float64
+VISTA-Ks_f_base_CircularApertureFlux_25_0_fluxErr,,flux within 25.000000-pixel aperture,float64
+VISTA-Ks_f_base_CircularApertureFlux_35_0_mag,,mag within 35.000000-pixel aperture,float64
+VISTA-Ks_f_base_CircularApertureFlux_35_0_magErr,,mag within 35.000000-pixel aperture,float64
+VISTA-Ks_f_base_CircularApertureFlux_35_0_flux,,flux within 35.000000-pixel aperture,float64
+VISTA-Ks_f_base_CircularApertureFlux_35_0_fluxErr,,flux within 35.000000-pixel aperture,float64
+VISTA-Ks_f_base_CircularApertureFlux_50_0_mag,,mag within 50.000000-pixel aperture,float64
+VISTA-Ks_f_base_CircularApertureFlux_50_0_magErr,,mag within 50.000000-pixel aperture,float64
+VISTA-Ks_f_base_CircularApertureFlux_50_0_flux,,flux within 50.000000-pixel aperture,float64
+VISTA-Ks_f_base_CircularApertureFlux_50_0_fluxErr,,flux within 50.000000-pixel aperture,float64
+VISTA-Ks_f_base_CircularApertureFlux_70_0_mag,,mag within 70.000000-pixel aperture,float64
+VISTA-Ks_f_base_CircularApertureFlux_70_0_magErr,,mag within 70.000000-pixel aperture,float64
+VISTA-Ks_f_base_CircularApertureFlux_70_0_flux,,flux within 70.000000-pixel aperture,float64
+VISTA-Ks_f_base_CircularApertureFlux_70_0_fluxErr,,flux within 70.000000-pixel aperture,float64
+VISTA-Ks_f_base_GaussianFlux_mag,,mag from Gaussian Flux algorithm,float64
+VISTA-Ks_f_base_GaussianFlux_magErr,,mag from Gaussian Flux algorithm,float64
+VISTA-Ks_f_base_GaussianFlux_flux,,flux from Gaussian Flux algorithm,float64
+VISTA-Ks_f_base_GaussianFlux_fluxErr,,flux from Gaussian Flux algorithm,float64
+VISTA-Ks_f_base_LocalBackground_mag,,background in annulus around source,float64
+VISTA-Ks_f_base_LocalBackground_magErr,,background in annulus around source,float64
+VISTA-Ks_f_base_LocalBackground_flux,,background in annulus around source,float64
+VISTA-Ks_f_base_LocalBackground_fluxErr,,background in annulus around source,float64
+VISTA-Ks_f_base_PsfFlux_mag,,mag derived from linear least-squares fit of PSF model,float64
+VISTA-Ks_f_base_PsfFlux_magErr,,mag derived from linear least-squares fit of PSF model,float64
+VISTA-Ks_f_base_PsfFlux_flux,,flux derived from linear least-squares fit of PSF model,float64
+VISTA-Ks_f_base_PsfFlux_fluxErr,,flux derived from linear least-squares fit of PSF model,float64
