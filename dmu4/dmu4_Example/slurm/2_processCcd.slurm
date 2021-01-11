@@ -2,7 +2,7 @@
 #! This line is a comment
 #! Make sure you only have comments and #SBATCH directives between here and the end of the #SBATCH directives, or things will break
 #! Name of the job:
-#SBATCH -J processCcd
+#SBATCH -J Ex_processCcd
 #! Account name for group, use SL2 for paying queue:
 #SBATCH -A IRIS-IP005-CPU
 #! Output filename:
@@ -25,7 +25,7 @@
 #! coadding VIDEO needs ~ 5 cpus worth of memory SBATCH --mem=5980mb
 #! Submit a job array with index values between 0 and 31
 #! NOTE: This must be a range, not a single number (i.e. specifying '32' here would only run one job, with index 32)
-#SBATCH --array=0-2226
+#SBATCH --array=0-47
 
 #! This is the partition name.
 #SBATCH -p skylake
