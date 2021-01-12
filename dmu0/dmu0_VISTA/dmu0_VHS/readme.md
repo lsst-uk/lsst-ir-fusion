@@ -16,11 +16,14 @@ As our reference catalogue we use the VHS public catalogues on the VSA. These ca
 SELECT * from vhsSource WHERE ra > 14 AND ra < 24 AND dec > -3 AND dec < 3
 #W02 XMM:
 SELECT * from vhsSource WHERE ra > 28 AND ra < 41 AND dec > -8 AND dec < 3
-#W03 GAMA09
-SELECT * from vhsSource WHERE ra > 125 AND ra < 156 AND dec > -3 AND dec < 3
+#W03 GAMA09 - needs two queries to get round row limits
+SELECT * from vhsSource WHERE ra > 125 AND ra < 140 AND dec > -3 AND dec < 3
+SELECT * from vhsSource WHERE ra >= 140 AND ra < 156 AND dec > -3 AND dec < 3
 #W04 GAMA12 and 15
 SELECT * from vhsSource WHERE ra > 160 AND ra < 230 AND dec > -3 AND dec < 3
 #W05 VVDS
-SELECT * from vhsSource WHERE ra > 125 AND ra < 156 AND dec > -3 AND dec < 3
+SELECT * from vhsSource WHERE ra > 328 AND ra < 345 AND dec > -3 AND dec < 3
+SELECT * from vhsSource WHERE ra >= 345 AND ra < 355 AND dec > -3 AND dec < 3
+SELECT * from vhsSource WHERE ra >= 355 AND ra < 370 AND dec > -3 AND dec < 3
 #W06 and W07 in northern hemisphere.
 ```
