@@ -143,7 +143,8 @@ patch = job_dict[str(job_id)][1]
 cat = makeCat(tract, patch, BUTLER_LOC)
 
 intersect_red_cols =list(set(reduced_cols).intersection(set(cat.colnames)) )
-        
-cat[sorted(intersect_red_cols, reverse=True)].write(
+cat = cat[sorted(intersect_red_cols, reverse=True)]     
+cat.meta = None
+cat.write(
     DATA+'/reduced_cat_{}_{}.fits'.format(tract,patch), overwrite=True
 )
