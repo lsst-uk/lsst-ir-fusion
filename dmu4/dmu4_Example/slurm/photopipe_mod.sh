@@ -50,8 +50,8 @@ detectCoaddSources.py ../data --rerun coadd:coaddPhot --id filter=VISTA-Ks tract
 
 
 
-#mergeCoaddDetections.py ../data --rerun coaddPhot --id filter=VISTA-Y^VISTA-J^VISTA-H^VISTA-Ks^HSC-G^HSC-R^HSC-I^HSC-Z^HSC-Y tract=$tract patch=$patch
-mergeCoaddDetections.py ../data --rerun coaddPhot --id filter=VISTA-Ks tract=$tract patch=$patch
+mergeCoaddDetections.py ../data --rerun coaddPhot --id filter=VISTA-Y^VISTA-J^VISTA-H^VISTA-Ks^HSC-G^HSC-R^HSC-I^HSC-Z^HSC-Y tract=$tract patch=$patch
+#mergeCoaddDetections.py ../data --rerun coaddPhot --id filter=VISTA-Ks tract=$tract patch=$patch
 
 deblendCoaddSources.py ../data --rerun coaddPhot --id filter=VISTA-Z tract=$tract patch=$patch
 deblendCoaddSources.py ../data --rerun coaddPhot --id filter=VISTA-Y tract=$tract patch=$patch
@@ -64,26 +64,26 @@ deblendCoaddSources.py ../data --rerun coaddPhot --id filter=HSC-I tract=$tract 
 deblendCoaddSources.py ../data --rerun coaddPhot --id filter=HSC-Z tract=$tract patch=$patch
 deblendCoaddSources.py ../data --rerun coaddPhot --id filter=HSC-Y tract=$tract patch=$patch
 
-measureCoaddSources.py ../data --rerun coaddPhot --id filter=VISTA-Z tract=$tract patch=$patch --clobber-config 
-measureCoaddSources.py ../data --rerun coaddPhot --id filter=VISTA-Y tract=$tract patch=$patch --clobber-config  
-measureCoaddSources.py ../data --rerun coaddPhot --id filter=VISTA-J tract=$tract patch=$patch --clobber-config 
-measureCoaddSources.py ../data --rerun coaddPhot --id filter=VISTA-H tract=$tract patch=$patch --clobber-config 
-measureCoaddSources.py ../data --rerun coaddPhot --id filter=VISTA-Ks tract=$tract patch=$patch --clobber-config 
-measureCoaddSources.py ../data --rerun coaddPhot --id filter=HSC-G tract=$tract patch=$patch --clobber-config 
-measureCoaddSources.py ../data --rerun coaddPhot --id filter=HSC-R tract=$tract patch=$patch --clobber-config 
-measureCoaddSources.py ../data --rerun coaddPhot --id filter=HSC-I tract=$tract patch=$patch --clobber-config 
-measureCoaddSources.py ../data --rerun coaddPhot --id filter=HSC-Z tract=$tract patch=$patch --clobber-config 
-measureCoaddSources.py ../data --rerun coaddPhot --id filter=HSC-Y tract=$tract patch=$patch --clobber-config 
+measureCoaddSources.py ../data --rerun coaddPhot --id filter=VISTA-Z tract=$tract patch=$patch --clobber-config --configfile ../config/measureCoaddSources.py
+measureCoaddSources.py ../data --rerun coaddPhot --id filter=VISTA-Y tract=$tract patch=$patch --clobber-config --configfile ../config/measureCoaddSources.py
+measureCoaddSources.py ../data --rerun coaddPhot --id filter=VISTA-J tract=$tract patch=$patch --clobber-config --configfile ../config/measureCoaddSources.py
+measureCoaddSources.py ../data --rerun coaddPhot --id filter=VISTA-H tract=$tract patch=$patch --clobber-config --configfile ../config/measureCoaddSources.py
+measureCoaddSources.py ../data --rerun coaddPhot --id filter=VISTA-Ks tract=$tract patch=$patch --clobber-config --configfile ../config/measureCoaddSources.py
+measureCoaddSources.py ../data --rerun coaddPhot --id filter=HSC-G tract=$tract patch=$patch --clobber-config --configfile ../config/measureCoaddSources.py
+measureCoaddSources.py ../data --rerun coaddPhot --id filter=HSC-R tract=$tract patch=$patch --clobber-config --configfile ../config/measureCoaddSources.py
+measureCoaddSources.py ../data --rerun coaddPhot --id filter=HSC-I tract=$tract patch=$patch --clobber-config --configfile ../config/measureCoaddSources.py
+measureCoaddSources.py ../data --rerun coaddPhot --id filter=HSC-Z tract=$tract patch=$patch --clobber-config --configfile ../config/measureCoaddSources.py
+measureCoaddSources.py ../data --rerun coaddPhot --id filter=HSC-Y tract=$tract patch=$patch --clobber-config --configfile ../config/measureCoaddSources.py
 
 mergeCoaddMeasurements.py ../data --rerun coaddPhot --id filter=VISTA-Y^VISTA-J^VISTA-H^VISTA-Ks^HSC-G^HSC-R^HSC-I^HSC-Z^HSC-Y tract=$tract patch=$patch
 
-forcedPhotCoadd.py ../data --rerun coaddPhot:coaddForcedPhot --id filter=VISTA-Z tract=$tract patch=$patch
-forcedPhotCoadd.py ../data --rerun coaddForcedPhot --id filter=VISTA-Y tract=$tract patch=$patch
-forcedPhotCoadd.py ../data --rerun coaddForcedPhot --id filter=VISTA-J tract=$tract patch=$patch
-forcedPhotCoadd.py ../data --rerun coaddForcedPhot --id filter=VISTA-H tract=$tract patch=$patch
-forcedPhotCoadd.py ../data --rerun coaddForcedPhot --id filter=VISTA-Ks tract=$tract patch=$patch
-forcedPhotCoadd.py ../data --rerun coaddForcedPhot --id filter=HSC-G tract=$tract patch=$patch
-forcedPhotCoadd.py ../data --rerun coaddForcedPhot --id filter=HSC-R tract=$tract patch=$patch
-forcedPhotCoadd.py ../data --rerun coaddForcedPhot --id filter=HSC-I tract=$tract patch=$patch
-forcedPhotCoadd.py ../data --rerun coaddForcedPhot --id filter=HSC-Z tract=$tract patch=$patch
-forcedPhotCoadd.py ../data --rerun coaddForcedPhot --id filter=HSC-Y tract=$tract patch=$patch
+forcedPhotCoadd.py ../data --rerun coaddPhot:coaddForcedPhot --id filter=VISTA-Z tract=$tract patch=$patch --clobber-config --configfile ../config/forcedPhotCoadd.py
+forcedPhotCoadd.py ../data --rerun coaddForcedPhot --id filter=VISTA-Y tract=$tract patch=$patch --clobber-config --configfile ../config/forcedPhotCoadd.py
+forcedPhotCoadd.py ../data --rerun coaddForcedPhot --id filter=VISTA-J tract=$tract patch=$patch --clobber-config --configfile ../config/forcedPhotCoadd.py
+forcedPhotCoadd.py ../data --rerun coaddForcedPhot --id filter=VISTA-H tract=$tract patch=$patch --clobber-config --configfile ../config/forcedPhotCoadd.py
+forcedPhotCoadd.py ../data --rerun coaddForcedPhot --id filter=VISTA-Ks tract=$tract patch=$patch --clobber-config --configfile ../config/forcedPhotCoadd.py
+forcedPhotCoadd.py ../data --rerun coaddForcedPhot --id filter=HSC-G tract=$tract patch=$patch --clobber-config --configfile ../config/forcedPhotCoadd.py
+forcedPhotCoadd.py ../data --rerun coaddForcedPhot --id filter=HSC-R tract=$tract patch=$patch --clobber-config --configfile ../config/forcedPhotCoadd.py
+forcedPhotCoadd.py ../data --rerun coaddForcedPhot --id filter=HSC-I tract=$tract patch=$patch --clobber-config --configfile ../config/forcedPhotCoadd.py
+forcedPhotCoadd.py ../data --rerun coaddForcedPhot --id filter=HSC-Z tract=$tract patch=$patch --clobber-config --configfile ../config/forcedPhotCoadd.py
+forcedPhotCoadd.py ../data --rerun coaddForcedPhot --id filter=HSC-Y tract=$tract patch=$patch --clobber-config --configfile ../config/forcedPhotCoadd.py

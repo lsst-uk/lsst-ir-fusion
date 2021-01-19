@@ -2,7 +2,7 @@
 #! This line is a comment
 #! Make sure you only have comments and #SBATCH directives between here and the end of the #SBATCH directives, or things will break
 #! Name of the job:
-#SBATCH -J Ex_processCcd
+#SBATCH -J Std_processCcd
 #! Account name for group, use SL2 for paying queue:
 #SBATCH -A IRIS-IP005-CPU
 #! Output filename:
