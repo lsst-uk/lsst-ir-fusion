@@ -2970,6 +2970,600 @@ HSC-Y_f_base_PsfFlux_mag,mag derived from linear least-squares fit of PSF model,
 HSC-Y_f_base_PsfFlux_magErr,mag derived from linear least-squares fit of PSF model,mag,float64
 HSC-Y_f_base_PsfFlux_flux,flux derived from linear least-squares fit of PSF model,nJy,float64
 HSC-Y_f_base_PsfFlux_fluxErr,flux derived from linear least-squares fit of PSF model,nJy,float64
+VISTA-Z_m_coord_ra,position in ra/dec,rad,float64
+VISTA-Z_m_coord_dec,position in ra/dec,rad,float64
+VISTA-Z_m_parent,unique ID of parent source,None,int64
+VISTA-Z_m_merge_footprint_HSC-G,Detection footprint overlapped with a detection from filter HSC-G,None,bool
+VISTA-Z_m_merge_footprint_HSC-R,Detection footprint overlapped with a detection from filter HSC-R,None,bool
+VISTA-Z_m_merge_footprint_HSC-I,Detection footprint overlapped with a detection from filter HSC-I,None,bool
+VISTA-Z_m_merge_footprint_HSC-Z,Detection footprint overlapped with a detection from filter HSC-Z,None,bool
+VISTA-Z_m_merge_footprint_HSC-Y,Detection footprint overlapped with a detection from filter HSC-Y,None,bool
+VISTA-Z_m_merge_footprint_VISTA-z,Detection footprint overlapped with a detection from filter VISTA-z,None,bool
+VISTA-Z_m_merge_footprint_VISTA-Y,Detection footprint overlapped with a detection from filter VISTA-Y,None,bool
+VISTA-Z_m_merge_footprint_VISTA-J,Detection footprint overlapped with a detection from filter VISTA-J,None,bool
+VISTA-Z_m_merge_footprint_VISTA-H,Detection footprint overlapped with a detection from filter VISTA-H,None,bool
+VISTA-Z_m_merge_footprint_VISTA-Ks,Detection footprint overlapped with a detection from filter VISTA-Ks,None,bool
+VISTA-Z_m_merge_footprint_sky,Detection footprint overlapped with a detection from filter sky,None,bool
+VISTA-Z_m_merge_peak_HSC-G,Peak detected in filter HSC-G,None,bool
+VISTA-Z_m_merge_peak_HSC-R,Peak detected in filter HSC-R,None,bool
+VISTA-Z_m_merge_peak_HSC-I,Peak detected in filter HSC-I,None,bool
+VISTA-Z_m_merge_peak_HSC-Z,Peak detected in filter HSC-Z,None,bool
+VISTA-Z_m_merge_peak_HSC-Y,Peak detected in filter HSC-Y,None,bool
+VISTA-Z_m_merge_peak_VISTA-z,Peak detected in filter VISTA-z,None,bool
+VISTA-Z_m_merge_peak_VISTA-Y,Peak detected in filter VISTA-Y,None,bool
+VISTA-Z_m_merge_peak_VISTA-J,Peak detected in filter VISTA-J,None,bool
+VISTA-Z_m_merge_peak_VISTA-H,Peak detected in filter VISTA-H,None,bool
+VISTA-Z_m_merge_peak_VISTA-Ks,Peak detected in filter VISTA-Ks,None,bool
+VISTA-Z_m_merge_peak_sky,Peak detected in filter sky,None,bool
+VISTA-Z_m_deblend_nChild,Number of children this object has (defaults to 0),None,int32
+VISTA-Z_m_deblend_deblendedAsPsf,Deblender thought this source looked like a PSF,None,bool
+VISTA-Z_m_deblend_psfCenter_x,"If deblended-as-psf, the PSF centroid",pix,float64
+VISTA-Z_m_deblend_psfCenter_y,"If deblended-as-psf, the PSF centroid",pix,float64
+VISTA-Z_m_deblend_psf_instFlux,"If deblended-as-psf, the instrumental PSF flux",ct,float64
+VISTA-Z_m_deblend_tooManyPeaks,Source had too many peaks; only the brightest were included,None,bool
+VISTA-Z_m_deblend_parentTooBig,Parent footprint covered too many pixels,None,bool
+VISTA-Z_m_deblend_masked,Parent footprint was predominantly masked,None,bool
+VISTA-Z_m_deblend_skipped,Deblender skipped this source,None,bool
+VISTA-Z_m_deblend_rampedTemplate,"This source was near an image edge and the deblender used ""ramp"" edge-handling.",None,bool
+VISTA-Z_m_deblend_patchedTemplate,"This source was near an image edge and the deblender used ""patched"" edge-handling.",None,bool
+VISTA-Z_m_deblend_hasStrayFlux,This source was assigned some stray flux,None,bool
+VISTA-Z_m_base_NaiveCentroid_x,centroid from Naive Centroid algorithm,pix,float64
+VISTA-Z_m_base_NaiveCentroid_y,centroid from Naive Centroid algorithm,pix,float64
+VISTA-Z_m_base_NaiveCentroid_flag,General Failure Flag,None,bool
+VISTA-Z_m_base_NaiveCentroid_flag_noCounts,Object to be centroided has no counts,None,bool
+VISTA-Z_m_base_NaiveCentroid_flag_edge,Object too close to edge,None,bool
+VISTA-Z_m_base_NaiveCentroid_flag_resetToPeak,set if CentroidChecker reset the centroid,None,bool
+VISTA-Z_m_base_SdssCentroid_x,centroid from Sdss Centroid algorithm,pix,float64
+VISTA-Z_m_slot_Centroid_x,centroid from Sdss Centroid algorithm,pix,float64
+VISTA-Z_m_base_SdssCentroid_y,centroid from Sdss Centroid algorithm,pix,float64
+VISTA-Z_m_slot_Centroid_y,centroid from Sdss Centroid algorithm,pix,float64
+VISTA-Z_m_base_SdssCentroid_xErr,1-sigma uncertainty on x position,pix,float32
+VISTA-Z_m_slot_Centroid_xErr,1-sigma uncertainty on x position,pix,float32
+VISTA-Z_m_base_SdssCentroid_yErr,1-sigma uncertainty on y position,pix,float32
+VISTA-Z_m_slot_Centroid_yErr,1-sigma uncertainty on y position,pix,float32
+VISTA-Z_m_base_SdssCentroid_flag,General Failure Flag,None,bool
+VISTA-Z_m_base_CircularApertureFlux_flag_BC,General Failure Flag,None,bool
+VISTA-Z_m_base_GaussianFlux_flag_BC,General Failure Flag,None,bool
+VISTA-Z_m_base_InputCount_flag_BC,General Failure Flag,None,bool
+VISTA-Z_m_base_LocalBackground_flag_BC,General Failure Flag,None,bool
+VISTA-Z_m_base_NaiveCentroid_flag_BIC,General Failure Flag,None,bool
+VISTA-Z_m_base_PsfFlux_flag_BC,General Failure Flag,None,bool
+VISTA-Z_m_base_SdssShape_flag_BC,General Failure Flag,None,bool
+VISTA-Z_m_base_Variance_flag_BC,General Failure Flag,None,bool
+VISTA-Z_m_slot_Centroid_flag,General Failure Flag,None,bool
+VISTA-Z_m_base_SdssCentroid_flag_edge,Object too close to edge,None,bool
+VISTA-Z_m_base_CircularApertureFlux_flag_BC_edge,Object too close to edge,None,bool
+VISTA-Z_m_base_GaussianFlux_flag_BC_edge,Object too close to edge,None,bool
+VISTA-Z_m_base_InputCount_flag_BC_edge,Object too close to edge,None,bool
+VISTA-Z_m_base_LocalBackground_flag_BC_edge,Object too close to edge,None,bool
+VISTA-Z_m_base_NaiveCentroid_flag_BIC_edge,Object too close to edge,None,bool
+VISTA-Z_m_base_PsfFlux_flag_BC_edge,Object too close to edge,None,bool
+VISTA-Z_m_base_SdssShape_flag_BC_edge,Object too close to edge,None,bool
+VISTA-Z_m_base_Variance_flag_BC_edge,Object too close to edge,None,bool
+VISTA-Z_m_slot_Centroid_flag_edge,Object too close to edge,None,bool
+VISTA-Z_m_base_SdssCentroid_flag_noSD,Vanishing second derivative,None,bool
+VISTA-Z_m_base_CircularApertureFlux_flag_BC_noSD,Vanishing second derivative,None,bool
+VISTA-Z_m_base_GaussianFlux_flag_BC_noSD,Vanishing second derivative,None,bool
+VISTA-Z_m_base_InputCount_flag_BC_noSD,Vanishing second derivative,None,bool
+VISTA-Z_m_base_LocalBackground_flag_BC_noSD,Vanishing second derivative,None,bool
+VISTA-Z_m_base_NaiveCentroid_flag_BIC_noSD,Vanishing second derivative,None,bool
+VISTA-Z_m_base_PsfFlux_flag_BC_noSD,Vanishing second derivative,None,bool
+VISTA-Z_m_base_SdssShape_flag_BC_noSD,Vanishing second derivative,None,bool
+VISTA-Z_m_base_Variance_flag_BC_noSD,Vanishing second derivative,None,bool
+VISTA-Z_m_slot_Centroid_flag_noSD,Vanishing second derivative,None,bool
+VISTA-Z_m_base_SdssCentroid_flag_almostNoSD,Almost vanishing second derivative,None,bool
+VISTA-Z_m_base_CircularApertureFlux_flag_BC_almostNoSD,Almost vanishing second derivative,None,bool
+VISTA-Z_m_base_GaussianFlux_flag_BC_almostNoSD,Almost vanishing second derivative,None,bool
+VISTA-Z_m_base_InputCount_flag_BC_almostNoSD,Almost vanishing second derivative,None,bool
+VISTA-Z_m_base_LocalBackground_flag_BC_almostNoSD,Almost vanishing second derivative,None,bool
+VISTA-Z_m_base_NaiveCentroid_flag_BIC_almostNoSD,Almost vanishing second derivative,None,bool
+VISTA-Z_m_base_PsfFlux_flag_BC_almostNoSD,Almost vanishing second derivative,None,bool
+VISTA-Z_m_base_SdssShape_flag_BC_almostNoSD,Almost vanishing second derivative,None,bool
+VISTA-Z_m_base_Variance_flag_BC_almostNoSD,Almost vanishing second derivative,None,bool
+VISTA-Z_m_slot_Centroid_flag_almostNoSD,Almost vanishing second derivative,None,bool
+VISTA-Z_m_base_SdssCentroid_flag_notAtMaximum,Object is not at a maximum,None,bool
+VISTA-Z_m_base_CircularApertureFlux_flag_BC_notAtMaximum,Object is not at a maximum,None,bool
+VISTA-Z_m_base_GaussianFlux_flag_BC_notAtMaximum,Object is not at a maximum,None,bool
+VISTA-Z_m_base_InputCount_flag_BC_notAtMaximum,Object is not at a maximum,None,bool
+VISTA-Z_m_base_LocalBackground_flag_BC_notAtMaximum,Object is not at a maximum,None,bool
+VISTA-Z_m_base_NaiveCentroid_flag_BIC_notAtMaximum,Object is not at a maximum,None,bool
+VISTA-Z_m_base_PsfFlux_flag_BC_notAtMaximum,Object is not at a maximum,None,bool
+VISTA-Z_m_base_SdssShape_flag_BC_notAtMaximum,Object is not at a maximum,None,bool
+VISTA-Z_m_base_Variance_flag_BC_notAtMaximum,Object is not at a maximum,None,bool
+VISTA-Z_m_slot_Centroid_flag_notAtMaximum,Object is not at a maximum,None,bool
+VISTA-Z_m_base_SdssCentroid_flag_resetToPeak,set if CentroidChecker reset the centroid,None,bool
+VISTA-Z_m_base_CircularApertureFlux_flag_BC_resetToPeak,set if CentroidChecker reset the centroid,None,bool
+VISTA-Z_m_base_GaussianFlux_flag_BC_resetToPeak,set if CentroidChecker reset the centroid,None,bool
+VISTA-Z_m_base_InputCount_flag_BC_resetToPeak,set if CentroidChecker reset the centroid,None,bool
+VISTA-Z_m_base_LocalBackground_flag_BC_resetToPeak,set if CentroidChecker reset the centroid,None,bool
+VISTA-Z_m_base_NaiveCentroid_flag_BIC_resetToPeak,set if CentroidChecker reset the centroid,None,bool
+VISTA-Z_m_base_PsfFlux_flag_BC_resetToPeak,set if CentroidChecker reset the centroid,None,bool
+VISTA-Z_m_base_SdssShape_flag_BC_resetToPeak,set if CentroidChecker reset the centroid,None,bool
+VISTA-Z_m_base_Variance_flag_BC_resetToPeak,set if CentroidChecker reset the centroid,None,bool
+VISTA-Z_m_slot_Centroid_flag_resetToPeak,set if CentroidChecker reset the centroid,None,bool
+VISTA-Z_m_base_SdssCentroid_flag_badError,Error on x and/or y position is NaN,None,bool
+VISTA-Z_m_base_CircularApertureFlux_flag_BC_badError,Error on x and/or y position is NaN,None,bool
+VISTA-Z_m_base_GaussianFlux_flag_BC_badError,Error on x and/or y position is NaN,None,bool
+VISTA-Z_m_base_InputCount_flag_BC_badError,Error on x and/or y position is NaN,None,bool
+VISTA-Z_m_base_LocalBackground_flag_BC_badError,Error on x and/or y position is NaN,None,bool
+VISTA-Z_m_base_NaiveCentroid_flag_BIC_badError,Error on x and/or y position is NaN,None,bool
+VISTA-Z_m_base_PsfFlux_flag_BC_badError,Error on x and/or y position is NaN,None,bool
+VISTA-Z_m_base_SdssShape_flag_BC_badError,Error on x and/or y position is NaN,None,bool
+VISTA-Z_m_base_Variance_flag_BC_badError,Error on x and/or y position is NaN,None,bool
+VISTA-Z_m_slot_Centroid_flag_badError,Error on x and/or y position is NaN,None,bool
+VISTA-Z_m_base_InputCount_flag,Set for any fatal failure,None,bool
+VISTA-Z_m_base_InputCount_value,"Number of images contributing at center, not including anyclipping",None,int32
+VISTA-Z_m_base_InputCount_flag_noInputs,No coadd inputs available,None,bool
+VISTA-Z_m_base_SdssShape_xx,elliptical Gaussian adaptive moments,pix2,float64
+VISTA-Z_m_slot_Shape_xx,elliptical Gaussian adaptive moments,pix2,float64
+VISTA-Z_m_base_SdssShape_yy,elliptical Gaussian adaptive moments,pix2,float64
+VISTA-Z_m_slot_Shape_yy,elliptical Gaussian adaptive moments,pix2,float64
+VISTA-Z_m_base_SdssShape_xy,elliptical Gaussian adaptive moments,pix2,float64
+VISTA-Z_m_slot_Shape_xy,elliptical Gaussian adaptive moments,pix2,float64
+VISTA-Z_m_base_SdssShape_xxErr,Standard deviation of xx moment,pix2,float32
+VISTA-Z_m_slot_Shape_xxErr,Standard deviation of xx moment,pix2,float32
+VISTA-Z_m_base_SdssShape_yyErr,Standard deviation of yy moment,pix2,float32
+VISTA-Z_m_slot_Shape_yyErr,Standard deviation of yy moment,pix2,float32
+VISTA-Z_m_base_SdssShape_xyErr,Standard deviation of xy moment,pix2,float32
+VISTA-Z_m_slot_Shape_xyErr,Standard deviation of xy moment,pix2,float32
+VISTA-Z_m_base_SdssShape_x,elliptical Gaussian adaptive moments,pix,float64
+VISTA-Z_m_slot_Shape_x,elliptical Gaussian adaptive moments,pix,float64
+VISTA-Z_m_base_SdssShape_y,elliptical Gaussian adaptive moments,pix,float64
+VISTA-Z_m_slot_Shape_y,elliptical Gaussian adaptive moments,pix,float64
+VISTA-Z_m_base_SdssShape_instFlux,elliptical Gaussian adaptive moments,ct,float64
+VISTA-Z_m_slot_Shape_instFlux,elliptical Gaussian adaptive moments,ct,float64
+VISTA-Z_m_base_SdssShape_instFluxErr,1-sigma instFlux uncertainty,ct,float64
+VISTA-Z_m_slot_Shape_instFluxErr,1-sigma instFlux uncertainty,ct,float64
+VISTA-Z_m_base_SdssShape_psf_xx,adaptive moments of the PSF model at the object position,pix2,float64
+VISTA-Z_m_slot_PsfShape_xx,adaptive moments of the PSF model at the object position,pix2,float64
+VISTA-Z_m_slot_Shape_psf_xx,adaptive moments of the PSF model at the object position,pix2,float64
+VISTA-Z_m_base_SdssShape_psf_yy,adaptive moments of the PSF model at the object position,pix2,float64
+VISTA-Z_m_slot_PsfShape_yy,adaptive moments of the PSF model at the object position,pix2,float64
+VISTA-Z_m_slot_Shape_psf_yy,adaptive moments of the PSF model at the object position,pix2,float64
+VISTA-Z_m_base_SdssShape_psf_xy,adaptive moments of the PSF model at the object position,pix2,float64
+VISTA-Z_m_slot_PsfShape_xy,adaptive moments of the PSF model at the object position,pix2,float64
+VISTA-Z_m_slot_Shape_psf_xy,adaptive moments of the PSF model at the object position,pix2,float64
+VISTA-Z_m_base_SdssShape_instFlux_xx_Cov,uncertainty covariance between base_SdssShape_instFlux and base_SdssShape_xx,ct pix2,float32
+VISTA-Z_m_slot_Shape_instFlux_xx_Cov,uncertainty covariance between base_SdssShape_instFlux and base_SdssShape_xx,ct pix2,float32
+VISTA-Z_m_base_SdssShape_instFlux_yy_Cov,uncertainty covariance between base_SdssShape_instFlux and base_SdssShape_yy,ct pix2,float32
+VISTA-Z_m_slot_Shape_instFlux_yy_Cov,uncertainty covariance between base_SdssShape_instFlux and base_SdssShape_yy,ct pix2,float32
+VISTA-Z_m_base_SdssShape_instFlux_xy_Cov,uncertainty covariance between base_SdssShape_instFlux and base_SdssShape_xy,ct pix2,float32
+VISTA-Z_m_slot_Shape_instFlux_xy_Cov,uncertainty covariance between base_SdssShape_instFlux and base_SdssShape_xy,ct pix2,float32
+VISTA-Z_m_base_SdssShape_flag,General Failure Flag,None,bool
+VISTA-Z_m_base_GaussianFlux_flag_badShape,General Failure Flag,None,bool
+VISTA-Z_m_slot_Shape_flag,General Failure Flag,None,bool
+VISTA-Z_m_base_SdssShape_flag_unweightedBad,Both weighted and unweighted moments were invalid,None,bool
+VISTA-Z_m_base_GaussianFlux_flag_badShape_unweightedBad,Both weighted and unweighted moments were invalid,None,bool
+VISTA-Z_m_slot_Shape_flag_unweightedBad,Both weighted and unweighted moments were invalid,None,bool
+VISTA-Z_m_base_SdssShape_flag_unweighted,Weighted moments converged to an invalid value; using unweighted moments,None,bool
+VISTA-Z_m_base_GaussianFlux_flag_badShape_unweighted,Weighted moments converged to an invalid value; using unweighted moments,None,bool
+VISTA-Z_m_slot_Shape_flag_unweighted,Weighted moments converged to an invalid value; using unweighted moments,None,bool
+VISTA-Z_m_base_SdssShape_flag_shift,centroid shifted by more than the maximum allowed amount,None,bool
+VISTA-Z_m_base_GaussianFlux_flag_badShape_shift,centroid shifted by more than the maximum allowed amount,None,bool
+VISTA-Z_m_slot_Shape_flag_shift,centroid shifted by more than the maximum allowed amount,None,bool
+VISTA-Z_m_base_SdssShape_flag_maxIter,Too many iterations in adaptive moments,None,bool
+VISTA-Z_m_base_GaussianFlux_flag_badShape_maxIter,Too many iterations in adaptive moments,None,bool
+VISTA-Z_m_slot_Shape_flag_maxIter,Too many iterations in adaptive moments,None,bool
+VISTA-Z_m_base_SdssShape_flag_psf,Failure in measuring PSF model shape,None,bool
+VISTA-Z_m_base_GaussianFlux_flag_badShape_psf,Failure in measuring PSF model shape,None,bool
+VISTA-Z_m_slot_Shape_flag_psf,Failure in measuring PSF model shape,None,bool
+VISTA-Z_m_base_CircularApertureFlux_3_0_instFlux,instFlux within 3.000000-pixel aperture,ct,float64
+VISTA-Z_m_base_CircularApertureFlux_3_0_instFluxErr,1-sigma instFlux uncertainty,ct,float64
+VISTA-Z_m_base_CircularApertureFlux_3_0_flag,General Failure Flag,None,bool
+VISTA-Z_m_base_CircularApertureFlux_3_0_flag_apertureTruncated,aperture did not fit within measurement image,None,bool
+VISTA-Z_m_base_CircularApertureFlux_3_0_flag_sincCoeffsTruncated,full sinc coefficient image did not fit within measurement image,None,bool
+VISTA-Z_m_base_CircularApertureFlux_4_5_instFlux,instFlux within 4.500000-pixel aperture,ct,float64
+VISTA-Z_m_base_CircularApertureFlux_4_5_instFluxErr,1-sigma instFlux uncertainty,ct,float64
+VISTA-Z_m_base_CircularApertureFlux_4_5_flag,General Failure Flag,None,bool
+VISTA-Z_m_base_CircularApertureFlux_4_5_flag_apertureTruncated,aperture did not fit within measurement image,None,bool
+VISTA-Z_m_base_CircularApertureFlux_4_5_flag_sincCoeffsTruncated,full sinc coefficient image did not fit within measurement image,None,bool
+VISTA-Z_m_base_CircularApertureFlux_6_0_instFlux,instFlux within 6.000000-pixel aperture,ct,float64
+VISTA-Z_m_base_CircularApertureFlux_6_0_instFluxErr,1-sigma instFlux uncertainty,ct,float64
+VISTA-Z_m_base_CircularApertureFlux_6_0_flag,General Failure Flag,None,bool
+VISTA-Z_m_base_CircularApertureFlux_6_0_flag_apertureTruncated,aperture did not fit within measurement image,None,bool
+VISTA-Z_m_base_CircularApertureFlux_6_0_flag_sincCoeffsTruncated,full sinc coefficient image did not fit within measurement image,None,bool
+VISTA-Z_m_base_CircularApertureFlux_9_0_instFlux,instFlux within 9.000000-pixel aperture,ct,float64
+VISTA-Z_m_base_CircularApertureFlux_9_0_instFluxErr,1-sigma instFlux uncertainty,ct,float64
+VISTA-Z_m_base_CircularApertureFlux_9_0_flag,General Failure Flag,None,bool
+VISTA-Z_m_base_CircularApertureFlux_9_0_flag_apertureTruncated,aperture did not fit within measurement image,None,bool
+VISTA-Z_m_base_CircularApertureFlux_9_0_flag_sincCoeffsTruncated,full sinc coefficient image did not fit within measurement image,None,bool
+VISTA-Z_m_base_CircularApertureFlux_12_0_instFlux,instFlux within 12.000000-pixel aperture,ct,float64
+VISTA-Z_m_slot_ApFlux_instFlux,instFlux within 12.000000-pixel aperture,ct,float64
+VISTA-Z_m_slot_CalibFlux_instFlux,instFlux within 12.000000-pixel aperture,ct,float64
+VISTA-Z_m_base_CircularApertureFlux_12_0_instFluxErr,1-sigma instFlux uncertainty,ct,float64
+VISTA-Z_m_slot_ApFlux_instFluxErr,1-sigma instFlux uncertainty,ct,float64
+VISTA-Z_m_slot_CalibFlux_instFluxErr,1-sigma instFlux uncertainty,ct,float64
+VISTA-Z_m_base_CircularApertureFlux_12_0_flag,General Failure Flag,None,bool
+VISTA-Z_m_slot_ApFlux_flag,General Failure Flag,None,bool
+VISTA-Z_m_slot_CalibFlux_flag,General Failure Flag,None,bool
+VISTA-Z_m_base_CircularApertureFlux_12_0_flag_apertureTruncated,aperture did not fit within measurement image,None,bool
+VISTA-Z_m_slot_ApFlux_flag_apertureTruncated,aperture did not fit within measurement image,None,bool
+VISTA-Z_m_slot_CalibFlux_flag_apertureTruncated,aperture did not fit within measurement image,None,bool
+VISTA-Z_m_base_CircularApertureFlux_17_0_instFlux,instFlux within 17.000000-pixel aperture,ct,float64
+VISTA-Z_m_base_CircularApertureFlux_17_0_instFluxErr,1-sigma instFlux uncertainty,ct,float64
+VISTA-Z_m_base_CircularApertureFlux_17_0_flag,General Failure Flag,None,bool
+VISTA-Z_m_base_CircularApertureFlux_17_0_flag_apertureTruncated,aperture did not fit within measurement image,None,bool
+VISTA-Z_m_base_CircularApertureFlux_25_0_instFlux,instFlux within 25.000000-pixel aperture,ct,float64
+VISTA-Z_m_base_CircularApertureFlux_25_0_instFluxErr,1-sigma instFlux uncertainty,ct,float64
+VISTA-Z_m_base_CircularApertureFlux_25_0_flag,General Failure Flag,None,bool
+VISTA-Z_m_base_CircularApertureFlux_25_0_flag_apertureTruncated,aperture did not fit within measurement image,None,bool
+VISTA-Z_m_base_CircularApertureFlux_35_0_instFlux,instFlux within 35.000000-pixel aperture,ct,float64
+VISTA-Z_m_base_CircularApertureFlux_35_0_instFluxErr,1-sigma instFlux uncertainty,ct,float64
+VISTA-Z_m_base_CircularApertureFlux_35_0_flag,General Failure Flag,None,bool
+VISTA-Z_m_base_CircularApertureFlux_35_0_flag_apertureTruncated,aperture did not fit within measurement image,None,bool
+VISTA-Z_m_base_CircularApertureFlux_50_0_instFlux,instFlux within 50.000000-pixel aperture,ct,float64
+VISTA-Z_m_base_CircularApertureFlux_50_0_instFluxErr,1-sigma instFlux uncertainty,ct,float64
+VISTA-Z_m_base_CircularApertureFlux_50_0_flag,General Failure Flag,None,bool
+VISTA-Z_m_base_CircularApertureFlux_50_0_flag_apertureTruncated,aperture did not fit within measurement image,None,bool
+VISTA-Z_m_base_CircularApertureFlux_70_0_instFlux,instFlux within 70.000000-pixel aperture,ct,float64
+VISTA-Z_m_base_CircularApertureFlux_70_0_instFluxErr,1-sigma instFlux uncertainty,ct,float64
+VISTA-Z_m_base_CircularApertureFlux_70_0_flag,General Failure Flag,None,bool
+VISTA-Z_m_base_CircularApertureFlux_70_0_flag_apertureTruncated,aperture did not fit within measurement image,None,bool
+VISTA-Z_m_base_GaussianFlux_instFlux,instFlux from Gaussian Flux algorithm,ct,float64
+VISTA-Z_m_slot_GaussianFlux_instFlux,instFlux from Gaussian Flux algorithm,ct,float64
+VISTA-Z_m_slot_ModelFlux_instFlux,instFlux from Gaussian Flux algorithm,ct,float64
+VISTA-Z_m_base_GaussianFlux_instFluxErr,1-sigma instFlux uncertainty,ct,float64
+VISTA-Z_m_slot_GaussianFlux_instFluxErr,1-sigma instFlux uncertainty,ct,float64
+VISTA-Z_m_slot_ModelFlux_instFluxErr,1-sigma instFlux uncertainty,ct,float64
+VISTA-Z_m_base_GaussianFlux_flag,General Failure Flag,None,bool
+VISTA-Z_m_slot_GaussianFlux_flag,General Failure Flag,None,bool
+VISTA-Z_m_slot_ModelFlux_flag,General Failure Flag,None,bool
+VISTA-Z_m_base_LocalBackground_instFlux,background in annulus around source,ct,float64
+VISTA-Z_m_base_LocalBackground_instFluxErr,1-sigma instFlux uncertainty,ct,float64
+VISTA-Z_m_base_LocalBackground_flag,General Failure Flag,None,bool
+VISTA-Z_m_base_LocalBackground_flag_noGoodPixels,no good pixels in the annulus,None,bool
+VISTA-Z_m_base_LocalBackground_flag_noPsf,no PSF provided,None,bool
+VISTA-Z_m_base_LocalPhotoCalib_flag,Set for any fatal failure,None,bool
+VISTA-Z_m_base_LocalPhotoCalib,Local approximation of the PhotoCalib calibration factor at the location of the src.,None,float64
+VISTA-Z_m_base_LocalPhotoCalibErr,Error on the local approximation of the PhotoCalib calibration factor at the location of the src.,None,float64
+VISTA-Z_m_base_LocalWcs_flag,Set for any fatal failure,None,bool
+VISTA-Z_m_base_LocalWcs_CDMatrix_1_1,"(1, 1) element of the CDMatrix for the linear approximation of the WCS at the src location. Gives units in radians.",None,float64
+VISTA-Z_m_base_LocalWcs_CDMatrix_1_2,"(1, 2) element of the CDMatrix for the linear approximation of the WCS at the src location. Gives units in radians.",None,float64
+VISTA-Z_m_base_LocalWcs_CDMatrix_2_1,"(2, 1) element of the CDMatrix for the linear approximation of the WCS at the src location. Gives units in radians.",None,float64
+VISTA-Z_m_base_LocalWcs_CDMatrix_2_2,"(2, 2) element of the CDMatrix for the linear approximation of the WCS at the src location. Gives units in radians.",None,float64
+VISTA-Z_m_base_PixelFlags_flag,"General failure flag, set if anything went wrong",None,bool
+VISTA-Z_m_base_PixelFlags_flag_offimage,Source center is off image,None,bool
+VISTA-Z_m_base_PixelFlags_flag_edge,Source is outside usable exposure region (masked EDGE or NO_DATA),None,bool
+VISTA-Z_m_base_PixelFlags_flag_interpolated,Interpolated pixel in the Source footprint,None,bool
+VISTA-Z_m_base_PixelFlags_flag_saturated,Saturated pixel in the Source footprint,None,bool
+VISTA-Z_m_base_PixelFlags_flag_cr,Cosmic ray in the Source footprint,None,bool
+VISTA-Z_m_base_PixelFlags_flag_bad,Bad pixel in the Source footprint,None,bool
+VISTA-Z_m_base_PixelFlags_flag_suspect,Source''s footprint includes suspect pixels,None,bool
+VISTA-Z_m_base_PixelFlags_flag_interpolatedCenter,Interpolated pixel in the Source center,None,bool
+VISTA-Z_m_base_PixelFlags_flag_saturatedCenter,Saturated pixel in the Source center,None,bool
+VISTA-Z_m_base_PixelFlags_flag_crCenter,Cosmic ray in the Source center,None,bool
+VISTA-Z_m_base_PixelFlags_flag_suspectCenter,Source''s center is close to suspect pixels,None,bool
+VISTA-Z_m_base_PixelFlags_flag_clippedCenter,Source center is close to CLIPPED pixels,None,bool
+VISTA-Z_m_base_PixelFlags_flag_sensor_edgeCenter,Source center is close to SENSOR_EDGE pixels,None,bool
+VISTA-Z_m_base_PixelFlags_flag_inexact_psfCenter,Source center is close to INEXACT_PSF pixels,None,bool
+VISTA-Z_m_base_PixelFlags_flag_clipped,Source footprint includes CLIPPED pixels,None,bool
+VISTA-Z_m_base_PixelFlags_flag_sensor_edge,Source footprint includes SENSOR_EDGE pixels,None,bool
+VISTA-Z_m_base_PixelFlags_flag_inexact_psf,Source footprint includes INEXACT_PSF pixels,None,bool
+VISTA-Z_m_base_PsfFlux_instFlux,instFlux derived from linear least-squares fit of PSF model,ct,float64
+VISTA-Z_m_slot_PsfFlux_instFlux,instFlux derived from linear least-squares fit of PSF model,ct,float64
+VISTA-Z_m_base_PsfFlux_instFluxErr,1-sigma instFlux uncertainty,ct,float64
+VISTA-Z_m_slot_PsfFlux_instFluxErr,1-sigma instFlux uncertainty,ct,float64
+VISTA-Z_m_base_PsfFlux_area,effective area of PSF,pix,float32
+VISTA-Z_m_slot_PsfFlux_area,effective area of PSF,pix,float32
+VISTA-Z_m_base_PsfFlux_flag,General Failure Flag,None,bool
+VISTA-Z_m_slot_PsfFlux_flag,General Failure Flag,None,bool
+VISTA-Z_m_base_PsfFlux_flag_noGoodPixels,not enough non-rejected pixels in data to attempt the fit,None,bool
+VISTA-Z_m_slot_PsfFlux_flag_noGoodPixels,not enough non-rejected pixels in data to attempt the fit,None,bool
+VISTA-Z_m_base_PsfFlux_flag_edge,object was too close to the edge of the image to use the full PSF model,None,bool
+VISTA-Z_m_slot_PsfFlux_flag_edge,object was too close to the edge of the image to use the full PSF model,None,bool
+VISTA-Z_m_base_Variance_flag,Set for any fatal failure,None,bool
+VISTA-Z_m_base_Variance_value,Variance at object position,None,float64
+VISTA-Z_m_base_Variance_flag_emptyFootprint,Set to True when the footprint has no usable pixels,None,bool
+VISTA-Z_m_detect_isPatchInner,true if source is in the inner region of a coadd patch,None,bool
+VISTA-Z_m_detect_isTractInner,true if source is in the inner region of a coadd tract,None,bool
+VISTA-Z_m_detect_isPrimary,"true if source has no children and is in the inner region of a coadd patch and is in the inner region of a coadd tract and is not ""detected"" in a pseudo-filter (see config.pseudoFilterList)",None,bool
+VISTA-Z_m_base_GaussianFlux_apCorr,aperture correction applied to base_GaussianFlux,None,float64
+VISTA-Z_m_slot_GaussianFlux_apCorr,aperture correction applied to base_GaussianFlux,None,float64
+VISTA-Z_m_slot_ModelFlux_apCorr,aperture correction applied to base_GaussianFlux,None,float64
+VISTA-Z_m_base_GaussianFlux_apCorrErr,standard deviation of aperture correction applied to base_GaussianFlux,None,float64
+VISTA-Z_m_slot_GaussianFlux_apCorrErr,standard deviation of aperture correction applied to base_GaussianFlux,None,float64
+VISTA-Z_m_slot_ModelFlux_apCorrErr,standard deviation of aperture correction applied to base_GaussianFlux,None,float64
+VISTA-Z_m_base_GaussianFlux_flag_apCorr,set if unable to aperture correct base_GaussianFlux,None,bool
+VISTA-Z_m_slot_GaussianFlux_flag_apCorr,set if unable to aperture correct base_GaussianFlux,None,bool
+VISTA-Z_m_slot_ModelFlux_flag_apCorr,set if unable to aperture correct base_GaussianFlux,None,bool
+VISTA-Z_m_base_PsfFlux_apCorr,aperture correction applied to base_PsfFlux,None,float64
+VISTA-Z_m_slot_PsfFlux_apCorr,aperture correction applied to base_PsfFlux,None,float64
+VISTA-Z_m_base_PsfFlux_apCorrErr,standard deviation of aperture correction applied to base_PsfFlux,None,float64
+VISTA-Z_m_slot_PsfFlux_apCorrErr,standard deviation of aperture correction applied to base_PsfFlux,None,float64
+VISTA-Z_m_base_PsfFlux_flag_apCorr,set if unable to aperture correct base_PsfFlux,None,bool
+VISTA-Z_m_slot_PsfFlux_flag_apCorr,set if unable to aperture correct base_PsfFlux,None,bool
+VISTA-Z_m_base_ClassificationExtendedness_value,"Set to 1 for extended sources, 0 for point sources.",None,float64
+VISTA-Z_m_base_ClassificationExtendedness_flag,Set to 1 for any fatal failure.,None,bool
+VISTA-Z_m_base_FootprintArea_value,Number of pixels in the source''s detection footprint.,pix,int32
+VISTA-Z_m_base_SdssShape_mag,elliptical Gaussian adaptive moments,mag,float64
+VISTA-Z_m_base_SdssShape_magErr,elliptical Gaussian adaptive moments,mag,float64
+VISTA-Z_m_base_SdssShape_flux,elliptical Gaussian adaptive moments,nJy,float64
+VISTA-Z_m_base_SdssShape_fluxErr,elliptical Gaussian adaptive moments,nJy,float64
+VISTA-Z_m_slot_Shape_mag,elliptical Gaussian adaptive moments,mag,float64
+VISTA-Z_m_slot_Shape_magErr,elliptical Gaussian adaptive moments,mag,float64
+VISTA-Z_m_slot_Shape_flux,elliptical Gaussian adaptive moments,nJy,float64
+VISTA-Z_m_slot_Shape_fluxErr,elliptical Gaussian adaptive moments,nJy,float64
+VISTA-Z_m_base_CircularApertureFlux_3_0_mag,mag within 3.000000-pixel aperture,mag,float64
+VISTA-Z_m_base_CircularApertureFlux_3_0_magErr,mag within 3.000000-pixel aperture,mag,float64
+VISTA-Z_m_base_CircularApertureFlux_3_0_flux,flux within 3.000000-pixel aperture,nJy,float64
+VISTA-Z_m_base_CircularApertureFlux_3_0_fluxErr,flux within 3.000000-pixel aperture,nJy,float64
+VISTA-Z_m_base_CircularApertureFlux_4_5_mag,mag within 4.500000-pixel aperture,mag,float64
+VISTA-Z_m_base_CircularApertureFlux_4_5_magErr,mag within 4.500000-pixel aperture,mag,float64
+VISTA-Z_m_base_CircularApertureFlux_4_5_flux,flux within 4.500000-pixel aperture,nJy,float64
+VISTA-Z_m_base_CircularApertureFlux_4_5_fluxErr,flux within 4.500000-pixel aperture,nJy,float64
+VISTA-Z_m_base_CircularApertureFlux_6_0_mag,mag within 6.000000-pixel aperture,mag,float64
+VISTA-Z_m_base_CircularApertureFlux_6_0_magErr,mag within 6.000000-pixel aperture,mag,float64
+VISTA-Z_m_base_CircularApertureFlux_6_0_flux,flux within 6.000000-pixel aperture,nJy,float64
+VISTA-Z_m_base_CircularApertureFlux_6_0_fluxErr,flux within 6.000000-pixel aperture,nJy,float64
+VISTA-Z_m_base_CircularApertureFlux_9_0_mag,mag within 9.000000-pixel aperture,mag,float64
+VISTA-Z_m_base_CircularApertureFlux_9_0_magErr,mag within 9.000000-pixel aperture,mag,float64
+VISTA-Z_m_base_CircularApertureFlux_9_0_flux,flux within 9.000000-pixel aperture,nJy,float64
+VISTA-Z_m_base_CircularApertureFlux_9_0_fluxErr,flux within 9.000000-pixel aperture,nJy,float64
+VISTA-Z_m_base_CircularApertureFlux_12_0_mag,mag within 12.000000-pixel aperture,mag,float64
+VISTA-Z_m_base_CircularApertureFlux_12_0_magErr,mag within 12.000000-pixel aperture,mag,float64
+VISTA-Z_m_base_CircularApertureFlux_12_0_flux,flux within 12.000000-pixel aperture,nJy,float64
+VISTA-Z_m_base_CircularApertureFlux_12_0_fluxErr,flux within 12.000000-pixel aperture,nJy,float64
+VISTA-Z_m_slot_ApFlux_mag,mag within 12.000000-pixel aperture,mag,float64
+VISTA-Z_m_slot_ApFlux_magErr,mag within 12.000000-pixel aperture,mag,float64
+VISTA-Z_m_slot_ApFlux_flux,flux within 12.000000-pixel aperture,nJy,float64
+VISTA-Z_m_slot_ApFlux_fluxErr,flux within 12.000000-pixel aperture,nJy,float64
+VISTA-Z_m_slot_CalibFlux_mag,mag within 12.000000-pixel aperture,mag,float64
+VISTA-Z_m_slot_CalibFlux_magErr,mag within 12.000000-pixel aperture,mag,float64
+VISTA-Z_m_slot_CalibFlux_flux,flux within 12.000000-pixel aperture,nJy,float64
+VISTA-Z_m_slot_CalibFlux_fluxErr,flux within 12.000000-pixel aperture,nJy,float64
+VISTA-Z_m_base_CircularApertureFlux_17_0_mag,mag within 17.000000-pixel aperture,mag,float64
+VISTA-Z_m_base_CircularApertureFlux_17_0_magErr,mag within 17.000000-pixel aperture,mag,float64
+VISTA-Z_m_base_CircularApertureFlux_17_0_flux,flux within 17.000000-pixel aperture,nJy,float64
+VISTA-Z_m_base_CircularApertureFlux_17_0_fluxErr,flux within 17.000000-pixel aperture,nJy,float64
+VISTA-Z_m_base_CircularApertureFlux_25_0_mag,mag within 25.000000-pixel aperture,mag,float64
+VISTA-Z_m_base_CircularApertureFlux_25_0_magErr,mag within 25.000000-pixel aperture,mag,float64
+VISTA-Z_m_base_CircularApertureFlux_25_0_flux,flux within 25.000000-pixel aperture,nJy,float64
+VISTA-Z_m_base_CircularApertureFlux_25_0_fluxErr,flux within 25.000000-pixel aperture,nJy,float64
+VISTA-Z_m_base_CircularApertureFlux_35_0_mag,mag within 35.000000-pixel aperture,mag,float64
+VISTA-Z_m_base_CircularApertureFlux_35_0_magErr,mag within 35.000000-pixel aperture,mag,float64
+VISTA-Z_m_base_CircularApertureFlux_35_0_flux,flux within 35.000000-pixel aperture,nJy,float64
+VISTA-Z_m_base_CircularApertureFlux_35_0_fluxErr,flux within 35.000000-pixel aperture,nJy,float64
+VISTA-Z_m_base_CircularApertureFlux_50_0_mag,mag within 50.000000-pixel aperture,mag,float64
+VISTA-Z_m_base_CircularApertureFlux_50_0_magErr,mag within 50.000000-pixel aperture,mag,float64
+VISTA-Z_m_base_CircularApertureFlux_50_0_flux,flux within 50.000000-pixel aperture,nJy,float64
+VISTA-Z_m_base_CircularApertureFlux_50_0_fluxErr,flux within 50.000000-pixel aperture,nJy,float64
+VISTA-Z_m_base_CircularApertureFlux_70_0_mag,mag within 70.000000-pixel aperture,mag,float64
+VISTA-Z_m_base_CircularApertureFlux_70_0_magErr,mag within 70.000000-pixel aperture,mag,float64
+VISTA-Z_m_base_CircularApertureFlux_70_0_flux,flux within 70.000000-pixel aperture,nJy,float64
+VISTA-Z_m_base_CircularApertureFlux_70_0_fluxErr,flux within 70.000000-pixel aperture,nJy,float64
+VISTA-Z_m_base_GaussianFlux_mag,mag from Gaussian Flux algorithm,mag,float64
+VISTA-Z_m_base_GaussianFlux_magErr,mag from Gaussian Flux algorithm,mag,float64
+VISTA-Z_m_base_GaussianFlux_flux,flux from Gaussian Flux algorithm,nJy,float64
+VISTA-Z_m_base_GaussianFlux_fluxErr,flux from Gaussian Flux algorithm,nJy,float64
+VISTA-Z_m_slot_GaussianFlux_mag,mag from Gaussian Flux algorithm,mag,float64
+VISTA-Z_m_slot_GaussianFlux_magErr,mag from Gaussian Flux algorithm,mag,float64
+VISTA-Z_m_slot_GaussianFlux_flux,flux from Gaussian Flux algorithm,nJy,float64
+VISTA-Z_m_slot_GaussianFlux_fluxErr,flux from Gaussian Flux algorithm,nJy,float64
+VISTA-Z_m_slot_ModelFlux_mag,mag from Gaussian Flux algorithm,mag,float64
+VISTA-Z_m_slot_ModelFlux_magErr,mag from Gaussian Flux algorithm,mag,float64
+VISTA-Z_m_slot_ModelFlux_flux,flux from Gaussian Flux algorithm,nJy,float64
+VISTA-Z_m_slot_ModelFlux_fluxErr,flux from Gaussian Flux algorithm,nJy,float64
+VISTA-Z_m_base_LocalBackground_mag,background in annulus around source,mag,float64
+VISTA-Z_m_base_LocalBackground_magErr,background in annulus around source,mag,float64
+VISTA-Z_m_base_LocalBackground_flux,background in annulus around source,nJy,float64
+VISTA-Z_m_base_LocalBackground_fluxErr,background in annulus around source,nJy,float64
+VISTA-Z_m_base_PsfFlux_mag,mag derived from linear least-squares fit of PSF model,mag,float64
+VISTA-Z_m_base_PsfFlux_magErr,mag derived from linear least-squares fit of PSF model,mag,float64
+VISTA-Z_m_base_PsfFlux_flux,flux derived from linear least-squares fit of PSF model,nJy,float64
+VISTA-Z_m_base_PsfFlux_fluxErr,flux derived from linear least-squares fit of PSF model,nJy,float64
+VISTA-Z_m_slot_PsfFlux_mag,mag derived from linear least-squares fit of PSF model,mag,float64
+VISTA-Z_m_slot_PsfFlux_magErr,mag derived from linear least-squares fit of PSF model,mag,float64
+VISTA-Z_m_slot_PsfFlux_flux,flux derived from linear least-squares fit of PSF model,nJy,float64
+VISTA-Z_m_slot_PsfFlux_fluxErr,flux derived from linear least-squares fit of PSF model,nJy,float64
+VISTA-Z_f_coord_ra,position in ra/dec,rad,float64
+VISTA-Z_f_coord_dec,position in ra/dec,rad,float64
+VISTA-Z_f_parent,unique ID of parent source,None,int64
+VISTA-Z_f_deblend_nChild,Number of children this object has (defaults to 0),None,int32
+VISTA-Z_f_base_SdssCentroid_x,centroid from Sdss Centroid algorithm,pix,float64
+VISTA-Z_f_base_SdssCentroid_y,centroid from Sdss Centroid algorithm,pix,float64
+VISTA-Z_f_base_SdssCentroid_xErr,1-sigma uncertainty on x position,pix,float32
+VISTA-Z_f_base_SdssCentroid_yErr,1-sigma uncertainty on y position,pix,float32
+VISTA-Z_f_base_SdssCentroid_flag,General Failure Flag,None,bool
+VISTA-Z_f_base_SdssCentroid_flag_edge,Object too close to edge,None,bool
+VISTA-Z_f_base_SdssCentroid_flag_noSD,Vanishing second derivative,None,bool
+VISTA-Z_f_base_SdssCentroid_flag_almostNoSD,Almost vanishing second derivative,None,bool
+VISTA-Z_f_base_SdssCentroid_flag_notAtMaximum,Object is not at a maximum,None,bool
+VISTA-Z_f_base_SdssCentroid_flag_resetToPeak,set if CentroidChecker reset the centroid,None,bool
+VISTA-Z_f_base_SdssCentroid_flag_badError,Error on x and/or y position is NaN,None,bool
+VISTA-Z_f_base_TransformedCentroid_x,transformed reference centroid column,pix,float64
+VISTA-Z_f_slot_Centroid_x,transformed reference centroid column,pix,float64
+VISTA-Z_f_base_TransformedCentroid_y,transformed reference centroid row,pix,float64
+VISTA-Z_f_slot_Centroid_y,transformed reference centroid row,pix,float64
+VISTA-Z_f_base_TransformedCentroid_flag,whether the reference centroid is marked as bad,None,bool
+VISTA-Z_f_base_CircularApertureFlux_flag_BC,whether the reference centroid is marked as bad,None,bool
+VISTA-Z_f_base_GaussianFlux_flag_BC,whether the reference centroid is marked as bad,None,bool
+VISTA-Z_f_base_InputCount_flag_BC,whether the reference centroid is marked as bad,None,bool
+VISTA-Z_f_base_LocalBackground_flag_BC,whether the reference centroid is marked as bad,None,bool
+VISTA-Z_f_base_PsfFlux_flag_BC,whether the reference centroid is marked as bad,None,bool
+VISTA-Z_f_base_SdssCentroid_flag_BIC,whether the reference centroid is marked as bad,None,bool
+VISTA-Z_f_base_SdssShape_flag_BC,whether the reference centroid is marked as bad,None,bool
+VISTA-Z_f_base_Variance_flag_BC,whether the reference centroid is marked as bad,None,bool
+VISTA-Z_f_slot_Centroid_flag,whether the reference centroid is marked as bad,None,bool
+VISTA-Z_f_base_InputCount_flag,Set for any fatal failure,None,bool
+VISTA-Z_f_base_InputCount_value,"Number of images contributing at center, not including anyclipping",None,int32
+VISTA-Z_f_base_InputCount_flag_noInputs,No coadd inputs available,None,bool
+VISTA-Z_f_base_SdssShape_xx,elliptical Gaussian adaptive moments,pix2,float64
+VISTA-Z_f_base_SdssShape_yy,elliptical Gaussian adaptive moments,pix2,float64
+VISTA-Z_f_base_SdssShape_xy,elliptical Gaussian adaptive moments,pix2,float64
+VISTA-Z_f_base_SdssShape_xxErr,Standard deviation of xx moment,pix2,float32
+VISTA-Z_f_base_SdssShape_yyErr,Standard deviation of yy moment,pix2,float32
+VISTA-Z_f_base_SdssShape_xyErr,Standard deviation of xy moment,pix2,float32
+VISTA-Z_f_base_SdssShape_x,elliptical Gaussian adaptive moments,pix,float64
+VISTA-Z_f_base_SdssShape_y,elliptical Gaussian adaptive moments,pix,float64
+VISTA-Z_f_base_SdssShape_instFlux,elliptical Gaussian adaptive moments,ct,float64
+VISTA-Z_f_base_SdssShape_instFluxErr,1-sigma instFlux uncertainty,ct,float64
+VISTA-Z_f_base_SdssShape_psf_xx,adaptive moments of the PSF model at the object position,pix2,float64
+VISTA-Z_f_slot_PsfShape_xx,adaptive moments of the PSF model at the object position,pix2,float64
+VISTA-Z_f_base_SdssShape_psf_yy,adaptive moments of the PSF model at the object position,pix2,float64
+VISTA-Z_f_slot_PsfShape_yy,adaptive moments of the PSF model at the object position,pix2,float64
+VISTA-Z_f_base_SdssShape_psf_xy,adaptive moments of the PSF model at the object position,pix2,float64
+VISTA-Z_f_slot_PsfShape_xy,adaptive moments of the PSF model at the object position,pix2,float64
+VISTA-Z_f_base_SdssShape_instFlux_xx_Cov,uncertainty covariance between base_SdssShape_instFlux and base_SdssShape_xx,ct pix2,float32
+VISTA-Z_f_base_SdssShape_instFlux_yy_Cov,uncertainty covariance between base_SdssShape_instFlux and base_SdssShape_yy,ct pix2,float32
+VISTA-Z_f_base_SdssShape_instFlux_xy_Cov,uncertainty covariance between base_SdssShape_instFlux and base_SdssShape_xy,ct pix2,float32
+VISTA-Z_f_base_SdssShape_flag,General Failure Flag,None,bool
+VISTA-Z_f_base_SdssShape_flag_unweightedBad,Both weighted and unweighted moments were invalid,None,bool
+VISTA-Z_f_base_SdssShape_flag_unweighted,Weighted moments converged to an invalid value; using unweighted moments,None,bool
+VISTA-Z_f_base_SdssShape_flag_shift,centroid shifted by more than the maximum allowed amount,None,bool
+VISTA-Z_f_base_SdssShape_flag_maxIter,Too many iterations in adaptive moments,None,bool
+VISTA-Z_f_base_SdssShape_flag_psf,Failure in measuring PSF model shape,None,bool
+VISTA-Z_f_base_TransformedShape_xx,transformed reference shape x^2 moment,pix2,float64
+VISTA-Z_f_slot_Shape_xx,transformed reference shape x^2 moment,pix2,float64
+VISTA-Z_f_base_TransformedShape_yy,transformed reference shape y^2 moment,pix2,float64
+VISTA-Z_f_slot_Shape_yy,transformed reference shape y^2 moment,pix2,float64
+VISTA-Z_f_base_TransformedShape_xy,transformed reference shape xy moment,pix2,float64
+VISTA-Z_f_slot_Shape_xy,transformed reference shape xy moment,pix2,float64
+VISTA-Z_f_base_TransformedShape_flag,whether the reference shape is marked as bad,None,bool
+VISTA-Z_f_base_GaussianFlux_flag_badShape,whether the reference shape is marked as bad,None,bool
+VISTA-Z_f_slot_Shape_flag,whether the reference shape is marked as bad,None,bool
+VISTA-Z_f_base_CircularApertureFlux_3_0_instFlux,instFlux within 3.000000-pixel aperture,ct,float64
+VISTA-Z_f_base_CircularApertureFlux_3_0_instFluxErr,1-sigma instFlux uncertainty,ct,float64
+VISTA-Z_f_base_CircularApertureFlux_3_0_flag,General Failure Flag,None,bool
+VISTA-Z_f_base_CircularApertureFlux_3_0_flag_apertureTruncated,aperture did not fit within measurement image,None,bool
+VISTA-Z_f_base_CircularApertureFlux_3_0_flag_sincCoeffsTruncated,full sinc coefficient image did not fit within measurement image,None,bool
+VISTA-Z_f_base_CircularApertureFlux_4_5_instFlux,instFlux within 4.500000-pixel aperture,ct,float64
+VISTA-Z_f_base_CircularApertureFlux_4_5_instFluxErr,1-sigma instFlux uncertainty,ct,float64
+VISTA-Z_f_base_CircularApertureFlux_4_5_flag,General Failure Flag,None,bool
+VISTA-Z_f_base_CircularApertureFlux_4_5_flag_apertureTruncated,aperture did not fit within measurement image,None,bool
+VISTA-Z_f_base_CircularApertureFlux_4_5_flag_sincCoeffsTruncated,full sinc coefficient image did not fit within measurement image,None,bool
+VISTA-Z_f_base_CircularApertureFlux_6_0_instFlux,instFlux within 6.000000-pixel aperture,ct,float64
+VISTA-Z_f_base_CircularApertureFlux_6_0_instFluxErr,1-sigma instFlux uncertainty,ct,float64
+VISTA-Z_f_base_CircularApertureFlux_6_0_flag,General Failure Flag,None,bool
+VISTA-Z_f_base_CircularApertureFlux_6_0_flag_apertureTruncated,aperture did not fit within measurement image,None,bool
+VISTA-Z_f_base_CircularApertureFlux_6_0_flag_sincCoeffsTruncated,full sinc coefficient image did not fit within measurement image,None,bool
+VISTA-Z_f_base_CircularApertureFlux_9_0_instFlux,instFlux within 9.000000-pixel aperture,ct,float64
+VISTA-Z_f_base_CircularApertureFlux_9_0_instFluxErr,1-sigma instFlux uncertainty,ct,float64
+VISTA-Z_f_base_CircularApertureFlux_9_0_flag,General Failure Flag,None,bool
+VISTA-Z_f_base_CircularApertureFlux_9_0_flag_apertureTruncated,aperture did not fit within measurement image,None,bool
+VISTA-Z_f_base_CircularApertureFlux_9_0_flag_sincCoeffsTruncated,full sinc coefficient image did not fit within measurement image,None,bool
+VISTA-Z_f_base_CircularApertureFlux_12_0_instFlux,instFlux within 12.000000-pixel aperture,ct,float64
+VISTA-Z_f_base_CircularApertureFlux_12_0_instFluxErr,1-sigma instFlux uncertainty,ct,float64
+VISTA-Z_f_base_CircularApertureFlux_12_0_flag,General Failure Flag,None,bool
+VISTA-Z_f_base_CircularApertureFlux_12_0_flag_apertureTruncated,aperture did not fit within measurement image,None,bool
+VISTA-Z_f_base_CircularApertureFlux_17_0_instFlux,instFlux within 17.000000-pixel aperture,ct,float64
+VISTA-Z_f_base_CircularApertureFlux_17_0_instFluxErr,1-sigma instFlux uncertainty,ct,float64
+VISTA-Z_f_base_CircularApertureFlux_17_0_flag,General Failure Flag,None,bool
+VISTA-Z_f_base_CircularApertureFlux_17_0_flag_apertureTruncated,aperture did not fit within measurement image,None,bool
+VISTA-Z_f_base_CircularApertureFlux_25_0_instFlux,instFlux within 25.000000-pixel aperture,ct,float64
+VISTA-Z_f_base_CircularApertureFlux_25_0_instFluxErr,1-sigma instFlux uncertainty,ct,float64
+VISTA-Z_f_base_CircularApertureFlux_25_0_flag,General Failure Flag,None,bool
+VISTA-Z_f_base_CircularApertureFlux_25_0_flag_apertureTruncated,aperture did not fit within measurement image,None,bool
+VISTA-Z_f_base_CircularApertureFlux_35_0_instFlux,instFlux within 35.000000-pixel aperture,ct,float64
+VISTA-Z_f_base_CircularApertureFlux_35_0_instFluxErr,1-sigma instFlux uncertainty,ct,float64
+VISTA-Z_f_base_CircularApertureFlux_35_0_flag,General Failure Flag,None,bool
+VISTA-Z_f_base_CircularApertureFlux_35_0_flag_apertureTruncated,aperture did not fit within measurement image,None,bool
+VISTA-Z_f_base_CircularApertureFlux_50_0_instFlux,instFlux within 50.000000-pixel aperture,ct,float64
+VISTA-Z_f_base_CircularApertureFlux_50_0_instFluxErr,1-sigma instFlux uncertainty,ct,float64
+VISTA-Z_f_base_CircularApertureFlux_50_0_flag,General Failure Flag,None,bool
+VISTA-Z_f_base_CircularApertureFlux_50_0_flag_apertureTruncated,aperture did not fit within measurement image,None,bool
+VISTA-Z_f_base_CircularApertureFlux_70_0_instFlux,instFlux within 70.000000-pixel aperture,ct,float64
+VISTA-Z_f_base_CircularApertureFlux_70_0_instFluxErr,1-sigma instFlux uncertainty,ct,float64
+VISTA-Z_f_base_CircularApertureFlux_70_0_flag,General Failure Flag,None,bool
+VISTA-Z_f_base_CircularApertureFlux_70_0_flag_apertureTruncated,aperture did not fit within measurement image,None,bool
+VISTA-Z_f_base_GaussianFlux_instFlux,instFlux from Gaussian Flux algorithm,ct,float64
+VISTA-Z_f_base_GaussianFlux_instFluxErr,1-sigma instFlux uncertainty,ct,float64
+VISTA-Z_f_base_GaussianFlux_flag,General Failure Flag,None,bool
+VISTA-Z_f_base_LocalBackground_instFlux,background in annulus around source,ct,float64
+VISTA-Z_f_base_LocalBackground_instFluxErr,1-sigma instFlux uncertainty,ct,float64
+VISTA-Z_f_base_LocalBackground_flag,General Failure Flag,None,bool
+VISTA-Z_f_base_LocalBackground_flag_noGoodPixels,no good pixels in the annulus,None,bool
+VISTA-Z_f_base_LocalBackground_flag_noPsf,no PSF provided,None,bool
+VISTA-Z_f_base_PixelFlags_flag,"General failure flag, set if anything went wrong",None,bool
+VISTA-Z_f_base_PixelFlags_flag_offimage,Source center is off image,None,bool
+VISTA-Z_f_base_PixelFlags_flag_edge,Source is outside usable exposure region (masked EDGE or NO_DATA),None,bool
+VISTA-Z_f_base_PixelFlags_flag_interpolated,Interpolated pixel in the Source footprint,None,bool
+VISTA-Z_f_base_PixelFlags_flag_saturated,Saturated pixel in the Source footprint,None,bool
+VISTA-Z_f_base_PixelFlags_flag_cr,Cosmic ray in the Source footprint,None,bool
+VISTA-Z_f_base_PixelFlags_flag_bad,Bad pixel in the Source footprint,None,bool
+VISTA-Z_f_base_PixelFlags_flag_suspect,Source''s footprint includes suspect pixels,None,bool
+VISTA-Z_f_base_PixelFlags_flag_interpolatedCenter,Interpolated pixel in the Source center,None,bool
+VISTA-Z_f_base_PixelFlags_flag_saturatedCenter,Saturated pixel in the Source center,None,bool
+VISTA-Z_f_base_PixelFlags_flag_crCenter,Cosmic ray in the Source center,None,bool
+VISTA-Z_f_base_PixelFlags_flag_suspectCenter,Source''s center is close to suspect pixels,None,bool
+VISTA-Z_f_base_PixelFlags_flag_clippedCenter,Source center is close to CLIPPED pixels,None,bool
+VISTA-Z_f_base_PixelFlags_flag_sensor_edgeCenter,Source center is close to SENSOR_EDGE pixels,None,bool
+VISTA-Z_f_base_PixelFlags_flag_rejectedCenter,Source center is close to REJECTED pixels,None,bool
+VISTA-Z_f_base_PixelFlags_flag_inexact_psfCenter,Source center is close to INEXACT_PSF pixels,None,bool
+VISTA-Z_f_base_PixelFlags_flag_clipped,Source footprint includes CLIPPED pixels,None,bool
+VISTA-Z_f_base_PixelFlags_flag_sensor_edge,Source footprint includes SENSOR_EDGE pixels,None,bool
+VISTA-Z_f_base_PixelFlags_flag_rejected,Source footprint includes REJECTED pixels,None,bool
+VISTA-Z_f_base_PixelFlags_flag_inexact_psf,Source footprint includes INEXACT_PSF pixels,None,bool
+VISTA-Z_f_base_PsfFlux_instFlux,instFlux derived from linear least-squares fit of PSF model,ct,float64
+VISTA-Z_f_base_PsfFlux_instFluxErr,1-sigma instFlux uncertainty,ct,float64
+VISTA-Z_f_base_PsfFlux_area,effective area of PSF,pix,float32
+VISTA-Z_f_base_PsfFlux_flag,General Failure Flag,None,bool
+VISTA-Z_f_base_PsfFlux_flag_noGoodPixels,not enough non-rejected pixels in data to attempt the fit,None,bool
+VISTA-Z_f_base_PsfFlux_flag_edge,object was too close to the edge of the image to use the full PSF model,None,bool
+VISTA-Z_f_base_Variance_flag,Set for any fatal failure,None,bool
+VISTA-Z_f_base_Variance_value,Variance at object position,None,float64
+VISTA-Z_f_base_Variance_flag_emptyFootprint,Set to True when the footprint has no usable pixels,None,bool
+VISTA-Z_f_base_GaussianFlux_apCorr,aperture correction applied to base_GaussianFlux,None,float64
+VISTA-Z_f_base_GaussianFlux_apCorrErr,standard deviation of aperture correction applied to base_GaussianFlux,None,float64
+VISTA-Z_f_base_GaussianFlux_flag_apCorr,set if unable to aperture correct base_GaussianFlux,None,bool
+VISTA-Z_f_base_PsfFlux_apCorr,aperture correction applied to base_PsfFlux,None,float64
+VISTA-Z_f_base_PsfFlux_apCorrErr,standard deviation of aperture correction applied to base_PsfFlux,None,float64
+VISTA-Z_f_base_PsfFlux_flag_apCorr,set if unable to aperture correct base_PsfFlux,None,bool
+VISTA-Z_f_base_SdssShape_mag,elliptical Gaussian adaptive moments,mag,float64
+VISTA-Z_f_base_SdssShape_magErr,elliptical Gaussian adaptive moments,mag,float64
+VISTA-Z_f_base_SdssShape_flux,elliptical Gaussian adaptive moments,nJy,float64
+VISTA-Z_f_base_SdssShape_fluxErr,elliptical Gaussian adaptive moments,nJy,float64
+VISTA-Z_f_base_CircularApertureFlux_3_0_mag,mag within 3.000000-pixel aperture,mag,float64
+VISTA-Z_f_base_CircularApertureFlux_3_0_magErr,mag within 3.000000-pixel aperture,mag,float64
+VISTA-Z_f_base_CircularApertureFlux_3_0_flux,flux within 3.000000-pixel aperture,nJy,float64
+VISTA-Z_f_base_CircularApertureFlux_3_0_fluxErr,flux within 3.000000-pixel aperture,nJy,float64
+VISTA-Z_f_base_CircularApertureFlux_4_5_mag,mag within 4.500000-pixel aperture,mag,float64
+VISTA-Z_f_base_CircularApertureFlux_4_5_magErr,mag within 4.500000-pixel aperture,mag,float64
+VISTA-Z_f_base_CircularApertureFlux_4_5_flux,flux within 4.500000-pixel aperture,nJy,float64
+VISTA-Z_f_base_CircularApertureFlux_4_5_fluxErr,flux within 4.500000-pixel aperture,nJy,float64
+VISTA-Z_f_base_CircularApertureFlux_6_0_mag,mag within 6.000000-pixel aperture,mag,float64
+VISTA-Z_f_base_CircularApertureFlux_6_0_magErr,mag within 6.000000-pixel aperture,mag,float64
+VISTA-Z_f_base_CircularApertureFlux_6_0_flux,flux within 6.000000-pixel aperture,nJy,float64
+VISTA-Z_f_base_CircularApertureFlux_6_0_fluxErr,flux within 6.000000-pixel aperture,nJy,float64
+VISTA-Z_f_base_CircularApertureFlux_9_0_mag,mag within 9.000000-pixel aperture,mag,float64
+VISTA-Z_f_base_CircularApertureFlux_9_0_magErr,mag within 9.000000-pixel aperture,mag,float64
+VISTA-Z_f_base_CircularApertureFlux_9_0_flux,flux within 9.000000-pixel aperture,nJy,float64
+VISTA-Z_f_base_CircularApertureFlux_9_0_fluxErr,flux within 9.000000-pixel aperture,nJy,float64
+VISTA-Z_f_base_CircularApertureFlux_12_0_mag,mag within 12.000000-pixel aperture,mag,float64
+VISTA-Z_f_base_CircularApertureFlux_12_0_magErr,mag within 12.000000-pixel aperture,mag,float64
+VISTA-Z_f_base_CircularApertureFlux_12_0_flux,flux within 12.000000-pixel aperture,nJy,float64
+VISTA-Z_f_base_CircularApertureFlux_12_0_fluxErr,flux within 12.000000-pixel aperture,nJy,float64
+VISTA-Z_f_base_CircularApertureFlux_17_0_mag,mag within 17.000000-pixel aperture,mag,float64
+VISTA-Z_f_base_CircularApertureFlux_17_0_magErr,mag within 17.000000-pixel aperture,mag,float64
+VISTA-Z_f_base_CircularApertureFlux_17_0_flux,flux within 17.000000-pixel aperture,nJy,float64
+VISTA-Z_f_base_CircularApertureFlux_17_0_fluxErr,flux within 17.000000-pixel aperture,nJy,float64
+VISTA-Z_f_base_CircularApertureFlux_25_0_mag,mag within 25.000000-pixel aperture,mag,float64
+VISTA-Z_f_base_CircularApertureFlux_25_0_magErr,mag within 25.000000-pixel aperture,mag,float64
+VISTA-Z_f_base_CircularApertureFlux_25_0_flux,flux within 25.000000-pixel aperture,nJy,float64
+VISTA-Z_f_base_CircularApertureFlux_25_0_fluxErr,flux within 25.000000-pixel aperture,nJy,float64
+VISTA-Z_f_base_CircularApertureFlux_35_0_mag,mag within 35.000000-pixel aperture,mag,float64
+VISTA-Z_f_base_CircularApertureFlux_35_0_magErr,mag within 35.000000-pixel aperture,mag,float64
+VISTA-Z_f_base_CircularApertureFlux_35_0_flux,flux within 35.000000-pixel aperture,nJy,float64
+VISTA-Z_f_base_CircularApertureFlux_35_0_fluxErr,flux within 35.000000-pixel aperture,nJy,float64
+VISTA-Z_f_base_CircularApertureFlux_50_0_mag,mag within 50.000000-pixel aperture,mag,float64
+VISTA-Z_f_base_CircularApertureFlux_50_0_magErr,mag within 50.000000-pixel aperture,mag,float64
+VISTA-Z_f_base_CircularApertureFlux_50_0_flux,flux within 50.000000-pixel aperture,nJy,float64
+VISTA-Z_f_base_CircularApertureFlux_50_0_fluxErr,flux within 50.000000-pixel aperture,nJy,float64
+VISTA-Z_f_base_CircularApertureFlux_70_0_mag,mag within 70.000000-pixel aperture,mag,float64
+VISTA-Z_f_base_CircularApertureFlux_70_0_magErr,mag within 70.000000-pixel aperture,mag,float64
+VISTA-Z_f_base_CircularApertureFlux_70_0_flux,flux within 70.000000-pixel aperture,nJy,float64
+VISTA-Z_f_base_CircularApertureFlux_70_0_fluxErr,flux within 70.000000-pixel aperture,nJy,float64
+VISTA-Z_f_base_GaussianFlux_mag,mag from Gaussian Flux algorithm,mag,float64
+VISTA-Z_f_base_GaussianFlux_magErr,mag from Gaussian Flux algorithm,mag,float64
+VISTA-Z_f_base_GaussianFlux_flux,flux from Gaussian Flux algorithm,nJy,float64
+VISTA-Z_f_base_GaussianFlux_fluxErr,flux from Gaussian Flux algorithm,nJy,float64
+VISTA-Z_f_base_LocalBackground_mag,background in annulus around source,mag,float64
+VISTA-Z_f_base_LocalBackground_magErr,background in annulus around source,mag,float64
+VISTA-Z_f_base_LocalBackground_flux,background in annulus around source,nJy,float64
+VISTA-Z_f_base_LocalBackground_fluxErr,background in annulus around source,nJy,float64
+VISTA-Z_f_base_PsfFlux_mag,mag derived from linear least-squares fit of PSF model,mag,float64
+VISTA-Z_f_base_PsfFlux_magErr,mag derived from linear least-squares fit of PSF model,mag,float64
+VISTA-Z_f_base_PsfFlux_flux,flux derived from linear least-squares fit of PSF model,nJy,float64
+VISTA-Z_f_base_PsfFlux_fluxErr,flux derived from linear least-squares fit of PSF model,nJy,float64
 VISTA-Y_m_coord_ra,position in ra/dec,rad,float64
 VISTA-Y_m_coord_dec,position in ra/dec,rad,float64
 VISTA-Y_m_parent,unique ID of parent source,None,int64
@@ -4812,7 +5406,6 @@ VISTA-Ks_m_base_NaiveCentroid_flag_BIC,General Failure Flag,None,bool
 VISTA-Ks_m_base_PsfFlux_flag_BC,General Failure Flag,None,bool
 VISTA-Ks_m_base_SdssShape_flag_BC,General Failure Flag,None,bool
 VISTA-Ks_m_base_Variance_flag_BC,General Failure Flag,None,bool
-VISTA-Ks_m_modelfit_DSPsfApprox_flag_BC,General Failure Flag,None,bool
 VISTA-Ks_m_slot_Centroid_flag,General Failure Flag,None,bool
 VISTA-Ks_m_base_SdssCentroid_flag_edge,Object too close to edge,None,bool
 VISTA-Ks_m_base_CircularApertureFlux_flag_BC_edge,Object too close to edge,None,bool
@@ -4823,7 +5416,6 @@ VISTA-Ks_m_base_NaiveCentroid_flag_BIC_edge,Object too close to edge,None,bool
 VISTA-Ks_m_base_PsfFlux_flag_BC_edge,Object too close to edge,None,bool
 VISTA-Ks_m_base_SdssShape_flag_BC_edge,Object too close to edge,None,bool
 VISTA-Ks_m_base_Variance_flag_BC_edge,Object too close to edge,None,bool
-VISTA-Ks_m_modelfit_DSPsfApprox_flag_BC_edge,Object too close to edge,None,bool
 VISTA-Ks_m_slot_Centroid_flag_edge,Object too close to edge,None,bool
 VISTA-Ks_m_base_SdssCentroid_flag_noSD,Vanishing second derivative,None,bool
 VISTA-Ks_m_base_CircularApertureFlux_flag_BC_noSD,Vanishing second derivative,None,bool
@@ -4834,7 +5426,6 @@ VISTA-Ks_m_base_NaiveCentroid_flag_BIC_noSD,Vanishing second derivative,None,boo
 VISTA-Ks_m_base_PsfFlux_flag_BC_noSD,Vanishing second derivative,None,bool
 VISTA-Ks_m_base_SdssShape_flag_BC_noSD,Vanishing second derivative,None,bool
 VISTA-Ks_m_base_Variance_flag_BC_noSD,Vanishing second derivative,None,bool
-VISTA-Ks_m_modelfit_DSPsfApprox_flag_BC_noSD,Vanishing second derivative,None,bool
 VISTA-Ks_m_slot_Centroid_flag_noSD,Vanishing second derivative,None,bool
 VISTA-Ks_m_base_SdssCentroid_flag_almostNoSD,Almost vanishing second derivative,None,bool
 VISTA-Ks_m_base_CircularApertureFlux_flag_BC_almostNoSD,Almost vanishing second derivative,None,bool
@@ -4845,7 +5436,6 @@ VISTA-Ks_m_base_NaiveCentroid_flag_BIC_almostNoSD,Almost vanishing second deriva
 VISTA-Ks_m_base_PsfFlux_flag_BC_almostNoSD,Almost vanishing second derivative,None,bool
 VISTA-Ks_m_base_SdssShape_flag_BC_almostNoSD,Almost vanishing second derivative,None,bool
 VISTA-Ks_m_base_Variance_flag_BC_almostNoSD,Almost vanishing second derivative,None,bool
-VISTA-Ks_m_modelfit_DSPsfApprox_flag_BC_almostNoSD,Almost vanishing second derivative,None,bool
 VISTA-Ks_m_slot_Centroid_flag_almostNoSD,Almost vanishing second derivative,None,bool
 VISTA-Ks_m_base_SdssCentroid_flag_notAtMaximum,Object is not at a maximum,None,bool
 VISTA-Ks_m_base_CircularApertureFlux_flag_BC_notAtMaximum,Object is not at a maximum,None,bool
@@ -4856,7 +5446,6 @@ VISTA-Ks_m_base_NaiveCentroid_flag_BIC_notAtMaximum,Object is not at a maximum,N
 VISTA-Ks_m_base_PsfFlux_flag_BC_notAtMaximum,Object is not at a maximum,None,bool
 VISTA-Ks_m_base_SdssShape_flag_BC_notAtMaximum,Object is not at a maximum,None,bool
 VISTA-Ks_m_base_Variance_flag_BC_notAtMaximum,Object is not at a maximum,None,bool
-VISTA-Ks_m_modelfit_DSPsfApprox_flag_BC_notAtMaximum,Object is not at a maximum,None,bool
 VISTA-Ks_m_slot_Centroid_flag_notAtMaximum,Object is not at a maximum,None,bool
 VISTA-Ks_m_base_SdssCentroid_flag_resetToPeak,set if CentroidChecker reset the centroid,None,bool
 VISTA-Ks_m_base_CircularApertureFlux_flag_BC_resetToPeak,set if CentroidChecker reset the centroid,None,bool
@@ -4867,7 +5456,6 @@ VISTA-Ks_m_base_NaiveCentroid_flag_BIC_resetToPeak,set if CentroidChecker reset 
 VISTA-Ks_m_base_PsfFlux_flag_BC_resetToPeak,set if CentroidChecker reset the centroid,None,bool
 VISTA-Ks_m_base_SdssShape_flag_BC_resetToPeak,set if CentroidChecker reset the centroid,None,bool
 VISTA-Ks_m_base_Variance_flag_BC_resetToPeak,set if CentroidChecker reset the centroid,None,bool
-VISTA-Ks_m_modelfit_DSPsfApprox_flag_BC_resetToPeak,set if CentroidChecker reset the centroid,None,bool
 VISTA-Ks_m_slot_Centroid_flag_resetToPeak,set if CentroidChecker reset the centroid,None,bool
 VISTA-Ks_m_base_SdssCentroid_flag_badError,Error on x and/or y position is NaN,None,bool
 VISTA-Ks_m_base_CircularApertureFlux_flag_BC_badError,Error on x and/or y position is NaN,None,bool
@@ -4878,7 +5466,6 @@ VISTA-Ks_m_base_NaiveCentroid_flag_BIC_badError,Error on x and/or y position is 
 VISTA-Ks_m_base_PsfFlux_flag_BC_badError,Error on x and/or y position is NaN,None,bool
 VISTA-Ks_m_base_SdssShape_flag_BC_badError,Error on x and/or y position is NaN,None,bool
 VISTA-Ks_m_base_Variance_flag_BC_badError,Error on x and/or y position is NaN,None,bool
-VISTA-Ks_m_modelfit_DSPsfApprox_flag_BC_badError,Error on x and/or y position is NaN,None,bool
 VISTA-Ks_m_slot_Centroid_flag_badError,Error on x and/or y position is NaN,None,bool
 VISTA-Ks_m_base_InputCount_flag,Set for any fatal failure,None,bool
 VISTA-Ks_m_base_InputCount_value,"Number of images contributing at center, not including anyclipping",None,int32
@@ -4936,29 +5523,6 @@ VISTA-Ks_m_slot_Shape_flag_maxIter,Too many iterations in adaptive moments,None,
 VISTA-Ks_m_base_SdssShape_flag_psf,Failure in measuring PSF model shape,None,bool
 VISTA-Ks_m_base_GaussianFlux_flag_badShape_psf,Failure in measuring PSF model shape,None,bool
 VISTA-Ks_m_slot_Shape_flag_psf,Failure in measuring PSF model shape,None,bool
-VISTA-Ks_m_modelfit_DSPsfApprox_0_xx,Double-Shapelet approximation to the PSF model at the position of this source,pix2,float64
-VISTA-Ks_m_modelfit_DSPsfApprox_0_yy,Double-Shapelet approximation to the PSF model at the position of this source,pix2,float64
-VISTA-Ks_m_modelfit_DSPsfApprox_0_xy,Double-Shapelet approximation to the PSF model at the position of this source,pix2,float64
-VISTA-Ks_m_modelfit_DSPsfApprox_0_x,Double-Shapelet approximation to the PSF model at the position of this source,pix,float64
-VISTA-Ks_m_modelfit_DSPsfApprox_0_y,Double-Shapelet approximation to the PSF model at the position of this source,pix,float64
-VISTA-Ks_m_modelfit_DSPsfApprox_0_0,Double-Shapelet approximation to the PSF model at the position of this source,None,float64
-VISTA-Ks_m_modelfit_DSPsfApprox_0_1,Double-Shapelet approximation to the PSF model at the position of this source,None,float64
-VISTA-Ks_m_modelfit_DSPsfApprox_0_2,Double-Shapelet approximation to the PSF model at the position of this source,None,float64
-VISTA-Ks_m_modelfit_DSPsfApprox_0_3,Double-Shapelet approximation to the PSF model at the position of this source,None,float64
-VISTA-Ks_m_modelfit_DSPsfApprox_0_4,Double-Shapelet approximation to the PSF model at the position of this source,None,float64
-VISTA-Ks_m_modelfit_DSPsfApprox_0_5,Double-Shapelet approximation to the PSF model at the position of this source,None,float64
-VISTA-Ks_m_modelfit_DSPsfApprox_1_xx,Double-Shapelet approximation to the PSF model at the position of this source,pix2,float64
-VISTA-Ks_m_modelfit_DSPsfApprox_1_yy,Double-Shapelet approximation to the PSF model at the position of this source,pix2,float64
-VISTA-Ks_m_modelfit_DSPsfApprox_1_xy,Double-Shapelet approximation to the PSF model at the position of this source,pix2,float64
-VISTA-Ks_m_modelfit_DSPsfApprox_1_x,Double-Shapelet approximation to the PSF model at the position of this source,pix,float64
-VISTA-Ks_m_modelfit_DSPsfApprox_1_y,Double-Shapelet approximation to the PSF model at the position of this source,pix,float64
-VISTA-Ks_m_modelfit_DSPsfApprox_1_0,Double-Shapelet approximation to the PSF model at the position of this source,None,float64
-VISTA-Ks_m_modelfit_DSPsfApprox_1_1,Double-Shapelet approximation to the PSF model at the position of this source,None,float64
-VISTA-Ks_m_modelfit_DSPsfApprox_1_2,Double-Shapelet approximation to the PSF model at the position of this source,None,float64
-VISTA-Ks_m_modelfit_DSPsfApprox_flag,General Failure Flag,None,bool
-VISTA-Ks_m_modelfit_DSPsfApprox_flag_invalidPointForPsf,PSF model could not be evaluated at the source position,None,bool
-VISTA-Ks_m_modelfit_DSPsfApprox_flag_invalidMoments,Moments of the PSF model were not a valid ellipse,None,bool
-VISTA-Ks_m_modelfit_DSPsfApprox_flag_maxIterations,optimizer exceeded the maximum number (inner or outer) iterations,None,bool
 VISTA-Ks_m_base_CircularApertureFlux_3_0_instFlux,instFlux within 3.000000-pixel aperture,ct,float64
 VISTA-Ks_m_base_CircularApertureFlux_3_0_instFluxErr,1-sigma instFlux uncertainty,ct,float64
 VISTA-Ks_m_base_CircularApertureFlux_3_0_flag,General Failure Flag,None,bool
@@ -5013,10 +5577,13 @@ VISTA-Ks_m_base_CircularApertureFlux_70_0_flag,General Failure Flag,None,bool
 VISTA-Ks_m_base_CircularApertureFlux_70_0_flag_apertureTruncated,aperture did not fit within measurement image,None,bool
 VISTA-Ks_m_base_GaussianFlux_instFlux,instFlux from Gaussian Flux algorithm,ct,float64
 VISTA-Ks_m_slot_GaussianFlux_instFlux,instFlux from Gaussian Flux algorithm,ct,float64
+VISTA-Ks_m_slot_ModelFlux_instFlux,instFlux from Gaussian Flux algorithm,ct,float64
 VISTA-Ks_m_base_GaussianFlux_instFluxErr,1-sigma instFlux uncertainty,ct,float64
 VISTA-Ks_m_slot_GaussianFlux_instFluxErr,1-sigma instFlux uncertainty,ct,float64
+VISTA-Ks_m_slot_ModelFlux_instFluxErr,1-sigma instFlux uncertainty,ct,float64
 VISTA-Ks_m_base_GaussianFlux_flag,General Failure Flag,None,bool
 VISTA-Ks_m_slot_GaussianFlux_flag,General Failure Flag,None,bool
+VISTA-Ks_m_slot_ModelFlux_flag,General Failure Flag,None,bool
 VISTA-Ks_m_base_LocalBackground_instFlux,background in annulus around source,ct,float64
 VISTA-Ks_m_base_LocalBackground_instFluxErr,1-sigma instFlux uncertainty,ct,float64
 VISTA-Ks_m_base_LocalBackground_flag,General Failure Flag,None,bool
@@ -5063,211 +5630,24 @@ VISTA-Ks_m_slot_PsfFlux_flag_edge,object was too close to the edge of the image 
 VISTA-Ks_m_base_Variance_flag,Set for any fatal failure,None,bool
 VISTA-Ks_m_base_Variance_value,Variance at object position,None,float64
 VISTA-Ks_m_base_Variance_flag_emptyFootprint,Set to True when the footprint has no usable pixels,None,bool
-VISTA-Ks_m_modelfit_CModel_initial_instFlux,flux from the initial fit,ct,float64
-VISTA-Ks_m_slot_ModelFlux_initial_instFlux,flux from the initial fit,ct,float64
-VISTA-Ks_m_modelfit_CModel_initial_instFluxErr,flux uncertainty from the initial fit,ct,float64
-VISTA-Ks_m_slot_ModelFlux_initial_instFluxErr,flux uncertainty from the initial fit,ct,float64
-VISTA-Ks_m_modelfit_CModel_initial_flag,flag set when the flux for the initial flux failed,None,bool
-VISTA-Ks_m_slot_ModelFlux_initial_flag,flag set when the flux for the initial flux failed,None,bool
-VISTA-Ks_m_modelfit_CModel_initial_instFlux_inner,"flux within the fit region, with no extrapolation",ct,float64
-VISTA-Ks_m_slot_ModelFlux_initial_instFlux_inner,"flux within the fit region, with no extrapolation",ct,float64
-VISTA-Ks_m_modelfit_CModel_initial_ellipse_xx,half-light ellipse of the initial fit,pix2,float64
-VISTA-Ks_m_slot_ModelFlux_initial_ellipse_xx,half-light ellipse of the initial fit,pix2,float64
-VISTA-Ks_m_modelfit_CModel_initial_ellipse_yy,half-light ellipse of the initial fit,pix2,float64
-VISTA-Ks_m_slot_ModelFlux_initial_ellipse_yy,half-light ellipse of the initial fit,pix2,float64
-VISTA-Ks_m_modelfit_CModel_initial_ellipse_xy,half-light ellipse of the initial fit,pix2,float64
-VISTA-Ks_m_slot_ModelFlux_initial_ellipse_xy,half-light ellipse of the initial fit,pix2,float64
-VISTA-Ks_m_modelfit_CModel_initial_objective,-ln(likelihood*prior) at best-fit point for the initial fit,None,float64
-VISTA-Ks_m_slot_ModelFlux_initial_objective,-ln(likelihood*prior) at best-fit point for the initial fit,None,float64
-VISTA-Ks_m_modelfit_CModel_initial_nonlinear_0,nonlinear parameters for the initial fit,None,float64
-VISTA-Ks_m_slot_ModelFlux_initial_nonlinear_0,nonlinear parameters for the initial fit,None,float64
-VISTA-Ks_m_modelfit_CModel_initial_nonlinear_1,nonlinear parameters for the initial fit,None,float64
-VISTA-Ks_m_slot_ModelFlux_initial_nonlinear_1,nonlinear parameters for the initial fit,None,float64
-VISTA-Ks_m_modelfit_CModel_initial_nonlinear_2,nonlinear parameters for the initial fit,None,float64
-VISTA-Ks_m_slot_ModelFlux_initial_nonlinear_2,nonlinear parameters for the initial fit,None,float64
-VISTA-Ks_m_modelfit_CModel_initial_fixed_0,fixed parameters for the initial fit,None,float64
-VISTA-Ks_m_slot_ModelFlux_initial_fixed_0,fixed parameters for the initial fit,None,float64
-VISTA-Ks_m_modelfit_CModel_initial_fixed_1,fixed parameters for the initial fit,None,float64
-VISTA-Ks_m_slot_ModelFlux_initial_fixed_1,fixed parameters for the initial fit,None,float64
-VISTA-Ks_m_modelfit_CModel_initial_flag_trSmall,"the optimizer converged because the trust radius became too small; this is a less-secure result than when the gradient is below the threshold, but usually not a problem",None,bool
-VISTA-Ks_m_slot_ModelFlux_initial_flag_trSmall,"the optimizer converged because the trust radius became too small; this is a less-secure result than when the gradient is below the threshold, but usually not a problem",None,bool
-VISTA-Ks_m_modelfit_CModel_initial_flag_maxIter,the optimizer hit the maximum number of iterations and did not converge,None,bool
-VISTA-Ks_m_slot_ModelFlux_initial_flag_maxIter,the optimizer hit the maximum number of iterations and did not converge,None,bool
-VISTA-Ks_m_modelfit_CModel_initial_nIter,Number of total iterations in stage,None,int32
-VISTA-Ks_m_slot_ModelFlux_initial_nIter,Number of total iterations in stage,None,int32
-VISTA-Ks_m_modelfit_CModel_initial_time,Time spent in stage,s,float64
-VISTA-Ks_m_slot_ModelFlux_initial_time,Time spent in stage,s,float64
-VISTA-Ks_m_modelfit_CModel_initial_flag_numericError,"numerical underflow or overflow in model evaluation; usually this means the prior was insufficient to regularize the fit, or all pixel values were zero.",None,bool
-VISTA-Ks_m_slot_ModelFlux_initial_flag_numericError,"numerical underflow or overflow in model evaluation; usually this means the prior was insufficient to regularize the fit, or all pixel values were zero.",None,bool
-VISTA-Ks_m_modelfit_CModel_initial_flag_noFlux,no flux was measured on the image; this means the error will be non-finite.,None,bool
-VISTA-Ks_m_slot_ModelFlux_initial_flag_noFlux,no flux was measured on the image; this means the error will be non-finite.,None,bool
-VISTA-Ks_m_modelfit_CModel_exp_instFlux,flux from the exponential fit,ct,float64
-VISTA-Ks_m_slot_ModelFlux_exp_instFlux,flux from the exponential fit,ct,float64
-VISTA-Ks_m_modelfit_CModel_exp_instFluxErr,flux uncertainty from the exponential fit,ct,float64
-VISTA-Ks_m_slot_ModelFlux_exp_instFluxErr,flux uncertainty from the exponential fit,ct,float64
-VISTA-Ks_m_modelfit_CModel_exp_flag,flag set when the flux for the exponential flux failed,None,bool
-VISTA-Ks_m_slot_ModelFlux_exp_flag,flag set when the flux for the exponential flux failed,None,bool
-VISTA-Ks_m_modelfit_CModel_exp_instFlux_inner,"flux within the fit region, with no extrapolation",ct,float64
-VISTA-Ks_m_slot_ModelFlux_exp_instFlux_inner,"flux within the fit region, with no extrapolation",ct,float64
-VISTA-Ks_m_modelfit_CModel_exp_ellipse_xx,half-light ellipse of the exponential fit,pix2,float64
-VISTA-Ks_m_slot_ModelFlux_exp_ellipse_xx,half-light ellipse of the exponential fit,pix2,float64
-VISTA-Ks_m_modelfit_CModel_exp_ellipse_yy,half-light ellipse of the exponential fit,pix2,float64
-VISTA-Ks_m_slot_ModelFlux_exp_ellipse_yy,half-light ellipse of the exponential fit,pix2,float64
-VISTA-Ks_m_modelfit_CModel_exp_ellipse_xy,half-light ellipse of the exponential fit,pix2,float64
-VISTA-Ks_m_slot_ModelFlux_exp_ellipse_xy,half-light ellipse of the exponential fit,pix2,float64
-VISTA-Ks_m_modelfit_CModel_exp_objective,-ln(likelihood*prior) at best-fit point for the exponential fit,None,float64
-VISTA-Ks_m_slot_ModelFlux_exp_objective,-ln(likelihood*prior) at best-fit point for the exponential fit,None,float64
-VISTA-Ks_m_modelfit_CModel_exp_nonlinear_0,nonlinear parameters for the exponential fit,None,float64
-VISTA-Ks_m_slot_ModelFlux_exp_nonlinear_0,nonlinear parameters for the exponential fit,None,float64
-VISTA-Ks_m_modelfit_CModel_exp_nonlinear_1,nonlinear parameters for the exponential fit,None,float64
-VISTA-Ks_m_slot_ModelFlux_exp_nonlinear_1,nonlinear parameters for the exponential fit,None,float64
-VISTA-Ks_m_modelfit_CModel_exp_nonlinear_2,nonlinear parameters for the exponential fit,None,float64
-VISTA-Ks_m_slot_ModelFlux_exp_nonlinear_2,nonlinear parameters for the exponential fit,None,float64
-VISTA-Ks_m_modelfit_CModel_exp_fixed_0,fixed parameters for the exponential fit,None,float64
-VISTA-Ks_m_slot_ModelFlux_exp_fixed_0,fixed parameters for the exponential fit,None,float64
-VISTA-Ks_m_modelfit_CModel_exp_fixed_1,fixed parameters for the exponential fit,None,float64
-VISTA-Ks_m_slot_ModelFlux_exp_fixed_1,fixed parameters for the exponential fit,None,float64
-VISTA-Ks_m_modelfit_CModel_exp_flag_trSmall,"the optimizer converged because the trust radius became too small; this is a less-secure result than when the gradient is below the threshold, but usually not a problem",None,bool
-VISTA-Ks_m_slot_ModelFlux_exp_flag_trSmall,"the optimizer converged because the trust radius became too small; this is a less-secure result than when the gradient is below the threshold, but usually not a problem",None,bool
-VISTA-Ks_m_modelfit_CModel_exp_flag_maxIter,the optimizer hit the maximum number of iterations and did not converge,None,bool
-VISTA-Ks_m_slot_ModelFlux_exp_flag_maxIter,the optimizer hit the maximum number of iterations and did not converge,None,bool
-VISTA-Ks_m_modelfit_CModel_exp_nIter,Number of total iterations in stage,None,int32
-VISTA-Ks_m_slot_ModelFlux_exp_nIter,Number of total iterations in stage,None,int32
-VISTA-Ks_m_modelfit_CModel_exp_time,Time spent in stage,s,float64
-VISTA-Ks_m_slot_ModelFlux_exp_time,Time spent in stage,s,float64
-VISTA-Ks_m_modelfit_CModel_exp_flag_numericError,"numerical underflow or overflow in model evaluation; usually this means the prior was insufficient to regularize the fit, or all pixel values were zero.",None,bool
-VISTA-Ks_m_slot_ModelFlux_exp_flag_numericError,"numerical underflow or overflow in model evaluation; usually this means the prior was insufficient to regularize the fit, or all pixel values were zero.",None,bool
-VISTA-Ks_m_modelfit_CModel_exp_flag_noFlux,no flux was measured on the image; this means the error will be non-finite.,None,bool
-VISTA-Ks_m_slot_ModelFlux_exp_flag_noFlux,no flux was measured on the image; this means the error will be non-finite.,None,bool
-VISTA-Ks_m_modelfit_CModel_dev_instFlux,flux from the de Vaucouleur fit,ct,float64
-VISTA-Ks_m_slot_ModelFlux_dev_instFlux,flux from the de Vaucouleur fit,ct,float64
-VISTA-Ks_m_modelfit_CModel_dev_instFluxErr,flux uncertainty from the de Vaucouleur fit,ct,float64
-VISTA-Ks_m_slot_ModelFlux_dev_instFluxErr,flux uncertainty from the de Vaucouleur fit,ct,float64
-VISTA-Ks_m_modelfit_CModel_dev_flag,flag set when the flux for the de Vaucouleur flux failed,None,bool
-VISTA-Ks_m_slot_ModelFlux_dev_flag,flag set when the flux for the de Vaucouleur flux failed,None,bool
-VISTA-Ks_m_modelfit_CModel_dev_instFlux_inner,"flux within the fit region, with no extrapolation",ct,float64
-VISTA-Ks_m_slot_ModelFlux_dev_instFlux_inner,"flux within the fit region, with no extrapolation",ct,float64
-VISTA-Ks_m_modelfit_CModel_dev_ellipse_xx,half-light ellipse of the de Vaucouleur fit,pix2,float64
-VISTA-Ks_m_slot_ModelFlux_dev_ellipse_xx,half-light ellipse of the de Vaucouleur fit,pix2,float64
-VISTA-Ks_m_modelfit_CModel_dev_ellipse_yy,half-light ellipse of the de Vaucouleur fit,pix2,float64
-VISTA-Ks_m_slot_ModelFlux_dev_ellipse_yy,half-light ellipse of the de Vaucouleur fit,pix2,float64
-VISTA-Ks_m_modelfit_CModel_dev_ellipse_xy,half-light ellipse of the de Vaucouleur fit,pix2,float64
-VISTA-Ks_m_slot_ModelFlux_dev_ellipse_xy,half-light ellipse of the de Vaucouleur fit,pix2,float64
-VISTA-Ks_m_modelfit_CModel_dev_objective,-ln(likelihood*prior) at best-fit point for the de Vaucouleur fit,None,float64
-VISTA-Ks_m_slot_ModelFlux_dev_objective,-ln(likelihood*prior) at best-fit point for the de Vaucouleur fit,None,float64
-VISTA-Ks_m_modelfit_CModel_dev_nonlinear_0,nonlinear parameters for the de Vaucouleur fit,None,float64
-VISTA-Ks_m_slot_ModelFlux_dev_nonlinear_0,nonlinear parameters for the de Vaucouleur fit,None,float64
-VISTA-Ks_m_modelfit_CModel_dev_nonlinear_1,nonlinear parameters for the de Vaucouleur fit,None,float64
-VISTA-Ks_m_slot_ModelFlux_dev_nonlinear_1,nonlinear parameters for the de Vaucouleur fit,None,float64
-VISTA-Ks_m_modelfit_CModel_dev_nonlinear_2,nonlinear parameters for the de Vaucouleur fit,None,float64
-VISTA-Ks_m_slot_ModelFlux_dev_nonlinear_2,nonlinear parameters for the de Vaucouleur fit,None,float64
-VISTA-Ks_m_modelfit_CModel_dev_fixed_0,fixed parameters for the de Vaucouleur fit,None,float64
-VISTA-Ks_m_slot_ModelFlux_dev_fixed_0,fixed parameters for the de Vaucouleur fit,None,float64
-VISTA-Ks_m_modelfit_CModel_dev_fixed_1,fixed parameters for the de Vaucouleur fit,None,float64
-VISTA-Ks_m_slot_ModelFlux_dev_fixed_1,fixed parameters for the de Vaucouleur fit,None,float64
-VISTA-Ks_m_modelfit_CModel_dev_flag_trSmall,"the optimizer converged because the trust radius became too small; this is a less-secure result than when the gradient is below the threshold, but usually not a problem",None,bool
-VISTA-Ks_m_slot_ModelFlux_dev_flag_trSmall,"the optimizer converged because the trust radius became too small; this is a less-secure result than when the gradient is below the threshold, but usually not a problem",None,bool
-VISTA-Ks_m_modelfit_CModel_dev_flag_maxIter,the optimizer hit the maximum number of iterations and did not converge,None,bool
-VISTA-Ks_m_slot_ModelFlux_dev_flag_maxIter,the optimizer hit the maximum number of iterations and did not converge,None,bool
-VISTA-Ks_m_modelfit_CModel_dev_nIter,Number of total iterations in stage,None,int32
-VISTA-Ks_m_slot_ModelFlux_dev_nIter,Number of total iterations in stage,None,int32
-VISTA-Ks_m_modelfit_CModel_dev_time,Time spent in stage,s,float64
-VISTA-Ks_m_slot_ModelFlux_dev_time,Time spent in stage,s,float64
-VISTA-Ks_m_modelfit_CModel_dev_flag_numericError,"numerical underflow or overflow in model evaluation; usually this means the prior was insufficient to regularize the fit, or all pixel values were zero.",None,bool
-VISTA-Ks_m_slot_ModelFlux_dev_flag_numericError,"numerical underflow or overflow in model evaluation; usually this means the prior was insufficient to regularize the fit, or all pixel values were zero.",None,bool
-VISTA-Ks_m_modelfit_CModel_dev_flag_noFlux,no flux was measured on the image; this means the error will be non-finite.,None,bool
-VISTA-Ks_m_slot_ModelFlux_dev_flag_noFlux,no flux was measured on the image; this means the error will be non-finite.,None,bool
-VISTA-Ks_m_modelfit_CModel_instFlux,flux from the final cmodel fit,ct,float64
-VISTA-Ks_m_slot_ModelFlux_instFlux,flux from the final cmodel fit,ct,float64
-VISTA-Ks_m_modelfit_CModel_instFluxErr,flux uncertainty from the final cmodel fit,ct,float64
-VISTA-Ks_m_slot_ModelFlux_instFluxErr,flux uncertainty from the final cmodel fit,ct,float64
-VISTA-Ks_m_modelfit_CModel_flag,flag set if the final cmodel fit (or any previous fit) failed,None,bool
-VISTA-Ks_m_slot_ModelFlux_flag,flag set if the final cmodel fit (or any previous fit) failed,None,bool
-VISTA-Ks_m_modelfit_CModel_instFlux_inner,"flux within the fit region, with no extrapolation",ct,float64
-VISTA-Ks_m_slot_ModelFlux_instFlux_inner,"flux within the fit region, with no extrapolation",ct,float64
-VISTA-Ks_m_modelfit_CModel_fracDev,fraction of flux in de Vaucouleur component,None,float64
-VISTA-Ks_m_slot_ModelFlux_fracDev,fraction of flux in de Vaucouleur component,None,float64
-VISTA-Ks_m_modelfit_CModel_objective,-ln(likelihood) (chi^2) in cmodel fit,None,float64
-VISTA-Ks_m_slot_ModelFlux_objective,-ln(likelihood) (chi^2) in cmodel fit,None,float64
-VISTA-Ks_m_modelfit_CModel_flag_region_maxArea,number of pixels in fit region exceeded the region.maxArea value,None,bool
-VISTA-Ks_m_slot_ModelFlux_flag_region_maxArea,number of pixels in fit region exceeded the region.maxArea value,None,bool
-VISTA-Ks_m_modelfit_CModel_flag_region_maxBadPixelFraction,the fraction of bad/clipped pixels in the fit region exceeded region.maxBadPixelFraction,None,bool
-VISTA-Ks_m_slot_ModelFlux_flag_region_maxBadPixelFraction,the fraction of bad/clipped pixels in the fit region exceeded region.maxBadPixelFraction,None,bool
-VISTA-Ks_m_modelfit_CModel_flags_region_usedFootprintArea,the pixel region for the initial fit was defined by the area of the Footprint,None,bool
-VISTA-Ks_m_slot_ModelFlux_flags_region_usedFootprintArea,the pixel region for the initial fit was defined by the area of the Footprint,None,bool
-VISTA-Ks_m_modelfit_CModel_flags_region_usedPsfArea,the pixel region for the initial fit was set to a fixed factor of the PSF area,None,bool
-VISTA-Ks_m_slot_ModelFlux_flags_region_usedPsfArea,the pixel region for the initial fit was set to a fixed factor of the PSF area,None,bool
-VISTA-Ks_m_modelfit_CModel_flags_region_usedInitialEllipseMin,the pixel region for the final fit was set to the lower bound defined by the initial fit,None,bool
-VISTA-Ks_m_slot_ModelFlux_flags_region_usedInitialEllipseMin,the pixel region for the final fit was set to the lower bound defined by the initial fit,None,bool
-VISTA-Ks_m_modelfit_CModel_flags_region_usedInitialEllipseMax,the pixel region for the final fit was set to the upper bound defined by the initial fit,None,bool
-VISTA-Ks_m_slot_ModelFlux_flags_region_usedInitialEllipseMax,the pixel region for the final fit was set to the upper bound defined by the initial fit,None,bool
-VISTA-Ks_m_modelfit_CModel_flag_noShape,the shape slot needed to initialize the parameters failed or was not defined,None,bool
-VISTA-Ks_m_slot_ModelFlux_flag_noShape,the shape slot needed to initialize the parameters failed or was not defined,None,bool
-VISTA-Ks_m_modelfit_CModel_flags_smallShape,initial parameter guess resulted in negative radius; used minimum of 0.100000 pixels instead.,None,bool
-VISTA-Ks_m_slot_ModelFlux_flags_smallShape,initial parameter guess resulted in negative radius; used minimum of 0.100000 pixels instead.,None,bool
-VISTA-Ks_m_modelfit_CModel_ellipse_xx,fracDev-weighted average of exp.ellipse and dev.ellipse,pix2,float64
-VISTA-Ks_m_slot_ModelFlux_ellipse_xx,fracDev-weighted average of exp.ellipse and dev.ellipse,pix2,float64
-VISTA-Ks_m_modelfit_CModel_ellipse_yy,fracDev-weighted average of exp.ellipse and dev.ellipse,pix2,float64
-VISTA-Ks_m_slot_ModelFlux_ellipse_yy,fracDev-weighted average of exp.ellipse and dev.ellipse,pix2,float64
-VISTA-Ks_m_modelfit_CModel_ellipse_xy,fracDev-weighted average of exp.ellipse and dev.ellipse,pix2,float64
-VISTA-Ks_m_slot_ModelFlux_ellipse_xy,fracDev-weighted average of exp.ellipse and dev.ellipse,pix2,float64
-VISTA-Ks_m_modelfit_CModel_region_initial_ellipse_xx,ellipse used to set the pixel region for the initial fit (before applying bad pixel mask),pix2,float64
-VISTA-Ks_m_slot_ModelFlux_region_initial_ellipse_xx,ellipse used to set the pixel region for the initial fit (before applying bad pixel mask),pix2,float64
-VISTA-Ks_m_modelfit_CModel_region_initial_ellipse_yy,ellipse used to set the pixel region for the initial fit (before applying bad pixel mask),pix2,float64
-VISTA-Ks_m_slot_ModelFlux_region_initial_ellipse_yy,ellipse used to set the pixel region for the initial fit (before applying bad pixel mask),pix2,float64
-VISTA-Ks_m_modelfit_CModel_region_initial_ellipse_xy,ellipse used to set the pixel region for the initial fit (before applying bad pixel mask),pix2,float64
-VISTA-Ks_m_slot_ModelFlux_region_initial_ellipse_xy,ellipse used to set the pixel region for the initial fit (before applying bad pixel mask),pix2,float64
-VISTA-Ks_m_modelfit_CModel_region_final_ellipse_xx,ellipse used to set the pixel region for the final fit (before applying bad pixel mask),pix2,float64
-VISTA-Ks_m_slot_ModelFlux_region_final_ellipse_xx,ellipse used to set the pixel region for the final fit (before applying bad pixel mask),pix2,float64
-VISTA-Ks_m_modelfit_CModel_region_final_ellipse_yy,ellipse used to set the pixel region for the final fit (before applying bad pixel mask),pix2,float64
-VISTA-Ks_m_slot_ModelFlux_region_final_ellipse_yy,ellipse used to set the pixel region for the final fit (before applying bad pixel mask),pix2,float64
-VISTA-Ks_m_modelfit_CModel_region_final_ellipse_xy,ellipse used to set the pixel region for the final fit (before applying bad pixel mask),pix2,float64
-VISTA-Ks_m_slot_ModelFlux_region_final_ellipse_xy,ellipse used to set the pixel region for the final fit (before applying bad pixel mask),pix2,float64
-VISTA-Ks_m_modelfit_CModel_flag_noShapeletPsf,the multishapelet fit to the PSF model did not succeed,None,bool
-VISTA-Ks_m_slot_ModelFlux_flag_noShapeletPsf,the multishapelet fit to the PSF model did not succeed,None,bool
-VISTA-Ks_m_modelfit_CModel_flag_BC,input centroid was not within the fit region (probably because it''s not within the Footprint),None,bool
-VISTA-Ks_m_slot_ModelFlux_flag_BC,input centroid was not within the fit region (probably because it''s not within the Footprint),None,bool
-VISTA-Ks_m_modelfit_CModel_flag_noFlux,no flux was measured on the image; this means the error will be non-finite.,None,bool
-VISTA-Ks_m_slot_ModelFlux_flag_noFlux,no flux was measured on the image; this means the error will be non-finite.,None,bool
 VISTA-Ks_m_detect_isPatchInner,true if source is in the inner region of a coadd patch,None,bool
 VISTA-Ks_m_detect_isTractInner,true if source is in the inner region of a coadd tract,None,bool
 VISTA-Ks_m_detect_isPrimary,"true if source has no children and is in the inner region of a coadd patch and is in the inner region of a coadd tract and is not ""detected"" in a pseudo-filter (see config.pseudoFilterList)",None,bool
 VISTA-Ks_m_base_GaussianFlux_apCorr,aperture correction applied to base_GaussianFlux,None,float64
 VISTA-Ks_m_slot_GaussianFlux_apCorr,aperture correction applied to base_GaussianFlux,None,float64
+VISTA-Ks_m_slot_ModelFlux_apCorr,aperture correction applied to base_GaussianFlux,None,float64
 VISTA-Ks_m_base_GaussianFlux_apCorrErr,standard deviation of aperture correction applied to base_GaussianFlux,None,float64
 VISTA-Ks_m_slot_GaussianFlux_apCorrErr,standard deviation of aperture correction applied to base_GaussianFlux,None,float64
+VISTA-Ks_m_slot_ModelFlux_apCorrErr,standard deviation of aperture correction applied to base_GaussianFlux,None,float64
 VISTA-Ks_m_base_GaussianFlux_flag_apCorr,set if unable to aperture correct base_GaussianFlux,None,bool
 VISTA-Ks_m_slot_GaussianFlux_flag_apCorr,set if unable to aperture correct base_GaussianFlux,None,bool
+VISTA-Ks_m_slot_ModelFlux_flag_apCorr,set if unable to aperture correct base_GaussianFlux,None,bool
 VISTA-Ks_m_base_PsfFlux_apCorr,aperture correction applied to base_PsfFlux,None,float64
 VISTA-Ks_m_slot_PsfFlux_apCorr,aperture correction applied to base_PsfFlux,None,float64
 VISTA-Ks_m_base_PsfFlux_apCorrErr,standard deviation of aperture correction applied to base_PsfFlux,None,float64
 VISTA-Ks_m_slot_PsfFlux_apCorrErr,standard deviation of aperture correction applied to base_PsfFlux,None,float64
 VISTA-Ks_m_base_PsfFlux_flag_apCorr,set if unable to aperture correct base_PsfFlux,None,bool
 VISTA-Ks_m_slot_PsfFlux_flag_apCorr,set if unable to aperture correct base_PsfFlux,None,bool
-VISTA-Ks_m_modelfit_CModel_apCorr,aperture correction applied to modelfit_CModel,None,float64
-VISTA-Ks_m_slot_ModelFlux_apCorr,aperture correction applied to modelfit_CModel,None,float64
-VISTA-Ks_m_modelfit_CModel_apCorrErr,standard deviation of aperture correction applied to modelfit_CModel,None,float64
-VISTA-Ks_m_slot_ModelFlux_apCorrErr,standard deviation of aperture correction applied to modelfit_CModel,None,float64
-VISTA-Ks_m_modelfit_CModel_flag_apCorr,set if unable to aperture correct modelfit_CModel,None,bool
-VISTA-Ks_m_slot_ModelFlux_flag_apCorr,set if unable to aperture correct modelfit_CModel,None,bool
-VISTA-Ks_m_modelfit_CModel_dev_apCorr,aperture correction applied to modelfit_CModel_dev,None,float64
-VISTA-Ks_m_slot_ModelFlux_dev_apCorr,aperture correction applied to modelfit_CModel_dev,None,float64
-VISTA-Ks_m_modelfit_CModel_dev_apCorrErr,standard deviation of aperture correction applied to modelfit_CModel_dev,None,float64
-VISTA-Ks_m_slot_ModelFlux_dev_apCorrErr,standard deviation of aperture correction applied to modelfit_CModel_dev,None,float64
-VISTA-Ks_m_modelfit_CModel_dev_flag_apCorr,set if unable to aperture correct modelfit_CModel_dev,None,bool
-VISTA-Ks_m_slot_ModelFlux_dev_flag_apCorr,set if unable to aperture correct modelfit_CModel_dev,None,bool
-VISTA-Ks_m_modelfit_CModel_exp_apCorr,aperture correction applied to modelfit_CModel_exp,None,float64
-VISTA-Ks_m_slot_ModelFlux_exp_apCorr,aperture correction applied to modelfit_CModel_exp,None,float64
-VISTA-Ks_m_modelfit_CModel_exp_apCorrErr,standard deviation of aperture correction applied to modelfit_CModel_exp,None,float64
-VISTA-Ks_m_slot_ModelFlux_exp_apCorrErr,standard deviation of aperture correction applied to modelfit_CModel_exp,None,float64
-VISTA-Ks_m_modelfit_CModel_exp_flag_apCorr,set if unable to aperture correct modelfit_CModel_exp,None,bool
-VISTA-Ks_m_slot_ModelFlux_exp_flag_apCorr,set if unable to aperture correct modelfit_CModel_exp,None,bool
-VISTA-Ks_m_modelfit_CModel_initial_apCorr,aperture correction applied to modelfit_CModel_initial,None,float64
-VISTA-Ks_m_slot_ModelFlux_initial_apCorr,aperture correction applied to modelfit_CModel_initial,None,float64
-VISTA-Ks_m_modelfit_CModel_initial_apCorrErr,standard deviation of aperture correction applied to modelfit_CModel_initial,None,float64
-VISTA-Ks_m_slot_ModelFlux_initial_apCorrErr,standard deviation of aperture correction applied to modelfit_CModel_initial,None,float64
-VISTA-Ks_m_modelfit_CModel_initial_flag_apCorr,set if unable to aperture correct modelfit_CModel_initial,None,bool
-VISTA-Ks_m_slot_ModelFlux_initial_flag_apCorr,set if unable to aperture correct modelfit_CModel_initial,None,bool
 VISTA-Ks_m_base_ClassificationExtendedness_value,"Set to 1 for extended sources, 0 for point sources.",None,float64
 VISTA-Ks_m_base_ClassificationExtendedness_flag,Set to 1 for any fatal failure.,None,bool
 VISTA-Ks_m_base_FootprintArea_value,Number of pixels in the source''s detection footprint.,pix,int32
@@ -5335,6 +5715,10 @@ VISTA-Ks_m_slot_GaussianFlux_mag,mag from Gaussian Flux algorithm,mag,float64
 VISTA-Ks_m_slot_GaussianFlux_magErr,mag from Gaussian Flux algorithm,mag,float64
 VISTA-Ks_m_slot_GaussianFlux_flux,flux from Gaussian Flux algorithm,nJy,float64
 VISTA-Ks_m_slot_GaussianFlux_fluxErr,flux from Gaussian Flux algorithm,nJy,float64
+VISTA-Ks_m_slot_ModelFlux_mag,mag from Gaussian Flux algorithm,mag,float64
+VISTA-Ks_m_slot_ModelFlux_magErr,mag from Gaussian Flux algorithm,mag,float64
+VISTA-Ks_m_slot_ModelFlux_flux,flux from Gaussian Flux algorithm,nJy,float64
+VISTA-Ks_m_slot_ModelFlux_fluxErr,flux from Gaussian Flux algorithm,nJy,float64
 VISTA-Ks_m_base_LocalBackground_mag,background in annulus around source,mag,float64
 VISTA-Ks_m_base_LocalBackground_magErr,background in annulus around source,mag,float64
 VISTA-Ks_m_base_LocalBackground_flux,background in annulus around source,nJy,float64
@@ -5347,38 +5731,6 @@ VISTA-Ks_m_slot_PsfFlux_mag,mag derived from linear least-squares fit of PSF mod
 VISTA-Ks_m_slot_PsfFlux_magErr,mag derived from linear least-squares fit of PSF model,mag,float64
 VISTA-Ks_m_slot_PsfFlux_flux,flux derived from linear least-squares fit of PSF model,nJy,float64
 VISTA-Ks_m_slot_PsfFlux_fluxErr,flux derived from linear least-squares fit of PSF model,nJy,float64
-VISTA-Ks_m_modelfit_CModel_initial_mag,flux from the initial fit,mag,float64
-VISTA-Ks_m_modelfit_CModel_initial_magErr,flux from the initial fit,mag,float64
-VISTA-Ks_m_modelfit_CModel_initial_flux,flux from the initial fit,nJy,float64
-VISTA-Ks_m_modelfit_CModel_initial_fluxErr,flux from the initial fit,nJy,float64
-VISTA-Ks_m_slot_ModelFlux_initial_mag,flux from the initial fit,mag,float64
-VISTA-Ks_m_slot_ModelFlux_initial_magErr,flux from the initial fit,mag,float64
-VISTA-Ks_m_slot_ModelFlux_initial_flux,flux from the initial fit,nJy,float64
-VISTA-Ks_m_slot_ModelFlux_initial_fluxErr,flux from the initial fit,nJy,float64
-VISTA-Ks_m_modelfit_CModel_exp_mag,flux from the exponential fit,mag,float64
-VISTA-Ks_m_modelfit_CModel_exp_magErr,flux from the exponential fit,mag,float64
-VISTA-Ks_m_modelfit_CModel_exp_flux,flux from the exponential fit,nJy,float64
-VISTA-Ks_m_modelfit_CModel_exp_fluxErr,flux from the exponential fit,nJy,float64
-VISTA-Ks_m_slot_ModelFlux_exp_mag,flux from the exponential fit,mag,float64
-VISTA-Ks_m_slot_ModelFlux_exp_magErr,flux from the exponential fit,mag,float64
-VISTA-Ks_m_slot_ModelFlux_exp_flux,flux from the exponential fit,nJy,float64
-VISTA-Ks_m_slot_ModelFlux_exp_fluxErr,flux from the exponential fit,nJy,float64
-VISTA-Ks_m_modelfit_CModel_dev_mag,flux from the de Vaucouleur fit,mag,float64
-VISTA-Ks_m_modelfit_CModel_dev_magErr,flux from the de Vaucouleur fit,mag,float64
-VISTA-Ks_m_modelfit_CModel_dev_flux,flux from the de Vaucouleur fit,nJy,float64
-VISTA-Ks_m_modelfit_CModel_dev_fluxErr,flux from the de Vaucouleur fit,nJy,float64
-VISTA-Ks_m_slot_ModelFlux_dev_mag,flux from the de Vaucouleur fit,mag,float64
-VISTA-Ks_m_slot_ModelFlux_dev_magErr,flux from the de Vaucouleur fit,mag,float64
-VISTA-Ks_m_slot_ModelFlux_dev_flux,flux from the de Vaucouleur fit,nJy,float64
-VISTA-Ks_m_slot_ModelFlux_dev_fluxErr,flux from the de Vaucouleur fit,nJy,float64
-VISTA-Ks_m_modelfit_CModel_mag,flux from the final cmodel fit,mag,float64
-VISTA-Ks_m_modelfit_CModel_magErr,flux from the final cmodel fit,mag,float64
-VISTA-Ks_m_modelfit_CModel_flux,flux from the final cmodel fit,nJy,float64
-VISTA-Ks_m_modelfit_CModel_fluxErr,flux from the final cmodel fit,nJy,float64
-VISTA-Ks_m_slot_ModelFlux_mag,flux from the final cmodel fit,mag,float64
-VISTA-Ks_m_slot_ModelFlux_magErr,flux from the final cmodel fit,mag,float64
-VISTA-Ks_m_slot_ModelFlux_flux,flux from the final cmodel fit,nJy,float64
-VISTA-Ks_m_slot_ModelFlux_fluxErr,flux from the final cmodel fit,nJy,float64
 VISTA-Ks_f_coord_ra,position in ra/dec,rad,float64
 VISTA-Ks_f_coord_dec,position in ra/dec,rad,float64
 VISTA-Ks_f_parent,unique ID of parent source,None,int64

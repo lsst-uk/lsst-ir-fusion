@@ -28,7 +28,7 @@
 #SBATCH --array=0-8
 
 #! This is the partition name.
-#SBATCH -p skylake-himem
+#SBATCH -p skylake
 
 #! mail alert at start, end and abortion of execution
 #! emails will default to going to your email address
