@@ -3,7 +3,8 @@ Override the default characterise config parameters by putting them in here.
 e.g.:
 config.doWrite = False
 '''
-
+import os
+ObsConfigDir = os.path.dirname(__file__)
 #Too many CR pixels error
 #Fix by upping this from 10000
 #Why is it so high? 2k * 2k = 4 m total pixels. 100*100 bad pixels in a ccd?
