@@ -34,6 +34,8 @@ config.measureApCorr.allowFailure=[
     'base_Blendedness'
 ] #??
 
+
+
 # Activate calibration of measurements: required for aperture corrections
 config.load(os.path.join(ObsConfigDir, "cmodel.py"))
 config.measurement.load(os.path.join(ObsConfigDir, "apertures.py"))
@@ -44,6 +46,11 @@ if "ext_shapeHSM_HsmShapeRegauss" in config.measurement.plugins:
     # no deblending has been done
     config.measurement.plugins["ext_shapeHSM_HsmShapeRegauss"].deblendNChild = ""
 
+
+# Convolved fluxes can fail for small target seeing if the observation seeing is larger
+if "ext_convolved_ConvolvedFlux" in config.measurement.plugins:
+    names = config.measurement.plugins["ext_convolved_ConvolvedFlux"].getAllResultNames()
+    config.measureApCorr.allowFailure += names
 
 #Reduce contraints to try to get more psf candidates
 config.measurePsf.starSelector['objectSize'].doFluxLimit=True
