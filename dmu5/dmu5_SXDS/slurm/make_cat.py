@@ -120,18 +120,18 @@ def makeCat(tract, patch, BUTLER_LOC,DATA=DATA,writeBandCats=True):
 
 reduced_cols = [ 
     'id', 
-    'VISTA-Ks_m_coord_ra', 
-    'VISTA-Ks_m_coord_dec',
-    'VISTA-Ks_m_detect_isPatchInner',
-    'VISTA-Ks_m_detect_isTractInner'
+    'VISTA-Ks_f_coord_ra', 
+    'VISTA-Ks_f_coord_dec',
+    'VISTA-Ks_f_detect_isPatchInner',
+    'VISTA-Ks_f_detect_isTractInner'
 ]
 for aper in ['6', '9', '12', '17']:
-    reduced_cols += ['{}_m_base_CircularApertureFlux_{}_0_mag'.format(b,aper) for b in allBands]
-    reduced_cols += ['{}_m_base_CircularApertureFlux_{}_0_magErr'.format(b,aper) for b in allBands]
-    reduced_cols += ['{}_m_base_CircularApertureFlux_{}_0_flag'.format(b,aper) for b in allBands]
+    reduced_cols += ['{}_f_base_CircularApertureFlux_{}_0_mag'.format(b,aper) for b in allBands]
+    reduced_cols += ['{}_f_base_CircularApertureFlux_{}_0_magErr'.format(b,aper) for b in allBands]
+    #reduced_cols += ['{}_f_base_CircularApertureFlux_{}_0_flag'.format(b,aper) for b in allBands]
     
-reduced_cols += ['{}_m_base_PsfFlux_apCorr'.format(b) for b in allBands]
-
+reduced_cols += ['{}_f_base_PsfFlux_mag'.format(b) for b in allBands]
+reduced_cols += ['{}_f_base_PsfFlux_magErr'.format(b) for b in allBands]
 
 #Run the patch:
 
