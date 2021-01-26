@@ -16,8 +16,8 @@ I have arranged config overides by the errors they were introduced to fix
 '''
 
 #Grab the path to this config directory:
-configDir = os.path.join(getPackageDir("obs_vista"), "config")
-
+ObsConfigDir = os.path.join(getPackageDir("obs_vista"), "config")
+configDir = os.path.dirname(__file__)
 
 
 #PSF candidates error 
