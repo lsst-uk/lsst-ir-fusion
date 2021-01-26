@@ -16,7 +16,7 @@ full_cat = Table()
 for r in red_cats:
     try:
         t= Table.read(r)
-        mask = t['VISTA-Ks_m_detect_isPatchInner'] & t['VISTA-Ks_m_detect_isTractInner']
+        mask = t['VISTA-Ks_f_detect_isPatchInner'] & t['VISTA-Ks_f_detect_isTractInner']
         full_cat=vstack([full_cat,t[mask]])
     except:
         print(r,' failed')
