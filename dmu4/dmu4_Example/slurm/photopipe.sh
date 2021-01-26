@@ -14,10 +14,10 @@ echo "Photopipe job info:"
 echo $tract
 echo $patch
 
-credArray="$(python credentials.py)"
-credArray=($credArray)
-user=${credArray[0]}
-password=${credArray[1]}
+#credArray="$(python credentials.py)"
+#credArray=($credArray)
+#user=${credArray[0]}
+#password=${credArray[1]}
 
 
 detectCoaddSources.py ../data --rerun coadd:coaddPhot --id filter=VISTA-Z tract=$tract patch=$patch
@@ -50,8 +50,8 @@ detectCoaddSources.py ../data --rerun coadd:coaddPhot --id filter=VISTA-Ks tract
 
 
 
-#mergeCoaddDetections.py ../data --rerun coaddPhot --id filter=VISTA-Y^VISTA-J^VISTA-H^VISTA-Ks^HSC-G^HSC-R^HSC-I^HSC-Z^HSC-Y tract=$tract patch=$patch
-mergeCoaddDetections.py ../data --rerun coaddPhot --id filter=VISTA-Ks tract=$tract patch=$patch
+mergeCoaddDetections.py ../data --rerun coaddPhot --id filter=VISTA-Z^VISTA-Y^VISTA-J^VISTA-H^VISTA-Ks^HSC-G^HSC-R^HSC-I^HSC-Z^HSC-Y tract=$tract patch=$patch
+#mergeCoaddDetections.py ../data --rerun coaddPhot --id filter=VISTA-Ks tract=$tract patch=$patch
 
 deblendCoaddSources.py ../data --rerun coaddPhot --id filter=VISTA-Z tract=$tract patch=$patch
 deblendCoaddSources.py ../data --rerun coaddPhot --id filter=VISTA-Y tract=$tract patch=$patch
