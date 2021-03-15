@@ -15,6 +15,7 @@ The 2MASS catalogues are described in the associated readme [../dmu0/dmu0_2MASS/
 The catalogues must be provided in the LSST format. The format has changed. For instance it now requires degrees for right ascension and declination and magnitudes instead of fluxes. It must also be ingested into the repo with:
 
 ```Shell
+echo lsst.obs.test.TestMapper > data/_mapper
 ingestReferenceCatalog.py data ./data/ref_cats_vhs/*.fits --output data/ref_cats_vhs_ingested/ --configfile indexReferenceCatalogOverride.py
 ```
 
