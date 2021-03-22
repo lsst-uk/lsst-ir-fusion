@@ -7,6 +7,7 @@ http://horus.roe.ac.uk:8080/vdfs/VSQL_form.jsp
 We use the following queries to get around row limits:
 
 ```Shell
+#W03 and W04 GAMA fields
 SELECT * from vikingSource WHERE ra > 120 AND ra < 130 AND dec > -30 AND pStar >= 0.9
 SELECT * from vikingSource WHERE ra >= 130 AND ra < 140 AND dec > -30 AND pStar >= 0.9
 SELECT * from vikingSource WHERE ra >= 140 AND ra < 150 AND dec > -30 AND pStar >= 0.9
@@ -19,6 +20,8 @@ SELECT * from vikingSource WHERE ra >= 200 AND ra < 210 AND dec > -30 AND pStar 
 SELECT * from vikingSource WHERE ra >= 210 AND ra < 220 AND dec > -30 AND pStar >= 0.9
 SELECT * from vikingSource WHERE ra >= 220 AND ra < 230 AND dec > -30 AND pStar >= 0.9
 SELECT * from vikingSource WHERE ra >= 230 AND ra < 240 AND dec > -30 AND pStar >= 0.9
+#W02 SXDS/XMM region
+SELECT * from vikingSource WHERE ra > 32 AND ra < 38 AND dec > -8 AND pStar >= 0.9
 ```
 
 
