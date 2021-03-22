@@ -50,6 +50,9 @@ We merge the PanSTARRS and 2MASS catalogues using a positional cross match and w
 
 This stage consists of many steps which are documented in DMU4. In the final DMU4 folder there are numerous repositories for various different data sets and fields. These repositories should follow the structure of the public HSC/LSST data releases as far as possible. This should allow them to incorporated with other data sets created with the LSST stack using the same procedure.
 
+### 5. Produce the large area catalogues by merging the bands and patches into a single catalogues in DMU5
+
+For many purposes we would like to have a single catalogue. We merge bands and patches together and conduct all field diagnostics in DMU5.
 
 
 
