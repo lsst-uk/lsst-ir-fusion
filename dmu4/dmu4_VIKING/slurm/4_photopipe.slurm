@@ -45,4 +45,4 @@
 echo "This is job" $SLURM_ARRAY_TASK_ID
 
 #! Command line that we want to run:
-/home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/dmu4/dmu4_XMM/slurm/photopipe.sh $SLURM_ARRAY_TASK_ID
+/home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/dmu4/dmu4_VIKING/slurm/photopipe.sh $SLURM_ARRAY_TASK_ID
