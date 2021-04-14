@@ -57,7 +57,7 @@ module load rhel7/default-peta4            # REQUIRED - loads the basic environm
 #! Insert additional module load commands after this line if needed:
 
 #! Full path to application executable: 
-application="/home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/dmu4/dmu4_XMM/slurm/ingest.sh"
+application="/home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/dmu4/dmu4_VIKING/slurm/ingest.sh"
 
 #! Run options for the application:
 options=""
