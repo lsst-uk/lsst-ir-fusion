@@ -10,7 +10,7 @@
 
 #! sbatch directives begin here ###############################
 #! Name of the job:
-#SBATCH -J XMM_INGEST
+#SBATCH -J VIK_INGEST
 #! Which project should be charged:
 #SBATCH -A IRIS-IP005-CPU
 #! How many whole nodes should be allocated?
