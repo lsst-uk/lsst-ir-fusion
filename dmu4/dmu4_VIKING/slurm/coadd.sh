@@ -4,7 +4,7 @@ setup lsst_distrib
 setup obs_vista
 eups admin clearLocks
 
-varArray="$(python jobDict.py $1 w02_patch_job_dict_386.json)"
+varArray="$(python jobDict.py $1 $2)"
 varArray=($varArray)
 tract=${varArray[0]}
 patch=${varArray[1]}
