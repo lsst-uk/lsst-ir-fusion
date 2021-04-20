@@ -26,20 +26,12 @@ mkdir -p $repo/rerun/coaddPhot/deepCoadd-results/HSC-R/$tract
 mkdir -p $repo/rerun/coaddPhot/deepCoadd-results/HSC-I/$tract
 mkdir -p $repo/rerun/coaddPhot/deepCoadd-results/HSC-Z/$tract
 mkdir -p $repo/rerun/coaddPhot/deepCoadd-results/HSC-Y/$tract
-<<<<<<< HEAD
+
 cp -r ../../../dmu0/dmu0_HSC/data/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_wide/deepCoadd-results/HSC-G/$tract/$patch $repo/rerun/coaddPhot/deepCoadd-results/HSC-G/$tract/
 cp -r ../../../dmu0/dmu0_HSC/data/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_wide/deepCoadd-results/HSC-R/$tract/$patch $repo/rerun/coaddPhot/deepCoadd-results/HSC-R/$tract/
 cp -r ../../../dmu0/dmu0_HSC/data/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_wide/deepCoadd-results/HSC-I/$tract/$patch $repo/rerun/coaddPhot/deepCoadd-results/HSC-I/$tract/
 cp -r ../../../dmu0/dmu0_HSC/data/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_wide/deepCoadd-results/HSC-Z/$tract/$patch $repo/rerun/coaddPhot/deepCoadd-results/HSC-Z/$tract/
 cp -r ../../../dmu0/dmu0_HSC/data/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_wide/deepCoadd-results/HSC-Y/$tract/$patch $repo/rerun/coaddPhot/deepCoadd-results/HSC-Y/$tract/
-=======
-cp -r ../../dmu0/dmu0_HSC/data/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_dud/deepCoadd-results/HSC-G/$tract/$patch $repo/rerun/coaddPhot/deepCoadd-results/HSC-G/$tract/
-cp -r ../../dmu0/dmu0_HSC/data/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_dud/deepCoadd-results/HSC-R/$tract/$patch $repo/rerun/coaddPhot/deepCoadd-results/HSC-R/$tract/
-cp -r ../../dmu0/dmu0_HSC/data/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_dud/deepCoadd-results/HSC-I/$tract/$patch $repo/rerun/coaddPhot/deepCoadd-results/HSC-I/$tract/
-cp -r ../../dmu0/dmu0_HSC/data/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_dud/deepCoadd-results/HSC-Z/$tract/$patch $repo/rerun/coaddPhot/deepCoadd-results/HSC-Z/$tract/
-cp -r ../../dmu0/dmu0_HSC/data/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_dud/deepCoadd-results/HSC-Y/$tract/$patch $repo/rerun/coaddPhot/deepCoadd-results/HSC-Y/$tract/
-
->>>>>>> b95477ef63c0d8977ae93f1b811d5c8bb9723588
 
 mergeCoaddDetections.py $repo --rerun coaddPhot --id filter=VISTA-Z^VISTA-Y^VISTA-J^VISTA-H^VISTA-Ks^HSC-G^HSC-R^HSC-I^HSC-Z^HSC-Y tract=$tract patch=$patch
 
