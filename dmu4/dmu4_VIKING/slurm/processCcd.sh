@@ -1,10 +1,10 @@
 #!/bin/bash
-source /rfs/project/rfs-L33A9wsNuJk/shared/lsst_stack/loadLSST.bash
+source /rfs/project/rfs-L33A9wsNuJk/shared/lsst_stack_v21/loadLSST.bash
 setup lsst_distrib
 setup obs_vista
 eups admin clearLocks
 
-varArray="$(python jobDict.py $1 processCcd_job_dict.json)"
+varArray="$(python jobDict.py $1 w02_images_job_dict_306.json)"
 varArray=($varArray)
 dateObs=${varArray[0]}
 numObs=${varArray[1]}
@@ -21,5 +21,5 @@ echo $filename
 
 #Ingestion is currently done separately
 #ingestImages.py ../data $filename --ignore-ingested --clobber-config
-#processCcd.py ../data --rerun processCcdOutputs --id dateObs=$dateObs numObs=$numObs --clobber-config
-makeCoaddTempExp.py ../data --rerun coadd --selectId dateObs=$dateObs numObs=$numObs filter=$filter --id filter=$filter tract=$tracts  --clobber-config
+processCcd.py ../data --rerun processCcdOutputs --id dateObs=$dateObs numObs=$numObs
+makeCoaddTempExp.py ../data --rerun coadd --selectId dateObs=$dateObs numObs=$numObs filter=$filter --id filter=$filter tract=$tracts
