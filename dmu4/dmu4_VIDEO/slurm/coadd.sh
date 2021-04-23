@@ -1,19 +1,24 @@
 #!/bin/bash
-source /rfs/project/rfs-L33A9wsNuJk/shared/lsst_stack/loadLSST.bash
+source /rfs/project/rfs-L33A9wsNuJk/shared/lsst_stack_v21/loadLSST.bash
 setup lsst_distrib
 setup obs_vista
 eups admin clearLocks
 
-varArray="$(python jobDict.py $1 patch_job_dict.json)"
+varArray="$(python jobDict.py $1 $2)"
 varArray=($varArray)
 tract=${varArray[0]}
 patch=${varArray[1]}
-numCPUs=1
+numCPUs=10
 
 echo "Job info:"
 echo $tract
 echo $patch
 echo $numCPUs
+
+for f in ../data/rerun/coadd/deepCoadd/VISTA-Z/$tract/$patch/*; do export Z_VISITS=$Z_VISITS^${f:${#f}-23:6}; done
+export Z_VISITS=${Z_VISITS//-}
+export Z_VISITS=${Z_VISITS//^/' --selectId filter=VISTA-Z visit='}
+assembleCoadd.py ../data --rerun coadd $Z_VISITS --id filter=VISTA-Z tract=$tract patch=$patch -j=$numCPUs
 
 for f in ../data/rerun/coadd/deepCoadd/VISTA-Y/$tract/$patch/*; do export Y_VISITS=$Y_VISITS^${f:${#f}-23:6}; done
 export Y_VISITS=${Y_VISITS//-}
