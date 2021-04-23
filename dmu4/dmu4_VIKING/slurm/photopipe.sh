@@ -37,16 +37,16 @@ mergeCoaddDetections.py $repo --rerun coaddPhot --id filter=VISTA-Z^VISTA-Y^VIST
 
 
 
-deblendCoaddSources.py $repo --rerun coaddPhot --id filter=VISTA-Z tract=$tract patch=$patch --clobber-config
-deblendCoaddSources.py $repo --rerun coaddPhot --id filter=VISTA-Y tract=$tract patch=$patch --clobber-config
-deblendCoaddSources.py $repo --rerun coaddPhot --id filter=VISTA-J tract=$tract patch=$patch --clobber-config
-deblendCoaddSources.py $repo --rerun coaddPhot --id filter=VISTA-H tract=$tract patch=$patch --clobber-config
-deblendCoaddSources.py $repo --rerun coaddPhot --id filter=VISTA-Ks tract=$tract patch=$patch --clobber-config
-deblendCoaddSources.py $repo --rerun coaddPhot --id filter=HSC-G tract=$tract patch=$patch --clobber-config
-deblendCoaddSources.py $repo --rerun coaddPhot --id filter=HSC-R tract=$tract patch=$patch --clobber-config
-deblendCoaddSources.py $repo --rerun coaddPhot --id filter=HSC-I tract=$tract patch=$patch --clobber-config
-deblendCoaddSources.py $repo --rerun coaddPhot --id filter=HSC-Z tract=$tract patch=$patch --clobber-config
-deblendCoaddSources.py $repo --rerun coaddPhot --id filter=HSC-Y tract=$tract patch=$patch --clobber-config
+deblendCoaddSources.py $repo --rerun coaddPhot --id filter=VISTA-Z tract=$tract patch=$patch 
+deblendCoaddSources.py $repo --rerun coaddPhot --id filter=VISTA-Y tract=$tract patch=$patch 
+deblendCoaddSources.py $repo --rerun coaddPhot --id filter=VISTA-J tract=$tract patch=$patch 
+deblendCoaddSources.py $repo --rerun coaddPhot --id filter=VISTA-H tract=$tract patch=$patch 
+deblendCoaddSources.py $repo --rerun coaddPhot --id filter=VISTA-Ks tract=$tract patch=$patch 
+deblendCoaddSources.py $repo --rerun coaddPhot --id filter=HSC-G tract=$tract patch=$patch 
+deblendCoaddSources.py $repo --rerun coaddPhot --id filter=HSC-R tract=$tract patch=$patch 
+deblendCoaddSources.py $repo --rerun coaddPhot --id filter=HSC-I tract=$tract patch=$patch 
+deblendCoaddSources.py $repo --rerun coaddPhot --id filter=HSC-Z tract=$tract patch=$patch 
+deblendCoaddSources.py $repo --rerun coaddPhot --id filter=HSC-Y tract=$tract patch=$patch 
 
 measureCoaddSources.py $repo --rerun coaddPhot --id filter=VISTA-Z tract=$tract patch=$patch
 measureCoaddSources.py $repo --rerun coaddPhot --id filter=VISTA-Y tract=$tract patch=$patch

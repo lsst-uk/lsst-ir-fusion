@@ -4,9 +4,9 @@ setup lsst_distrib
 setup obs_vista
 eups admin clearLocks
 
-for i in {0..306}
+for i in {0..17799}
 do 
-  varArray="$(python jobDict.py $i w02_images_job_dict_306.json)"
+  varArray="$(python jobDict.py $i full_images_job_dict_17800.json)"
   varArray=($varArray)
   dateObs=${varArray[0]}
   numObs=${varArray[1]}

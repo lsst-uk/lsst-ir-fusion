@@ -4,7 +4,7 @@ setup lsst_distrib
 setup obs_vista
 eups admin clearLocks
 
-varArray="$(python jobDict.py $1 w02_images_job_dict_306.json)"
+varArray="$(python jobDict.py $1 $2)"
 varArray=($varArray)
 dateObs=${varArray[0]}
 numObs=${varArray[1]}

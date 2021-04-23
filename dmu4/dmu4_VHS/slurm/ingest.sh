@@ -1,12 +1,12 @@
 #!/bin/bash
-source /rfs/project/rfs-L33A9wsNuJk/shared/lsst_stack/loadLSST.bash
+source /rfs/project/rfs-L33A9wsNuJk/shared/lsst_stack_v21/loadLSST.bash
 setup lsst_distrib
 setup obs_vista
 eups admin clearLocks
 
-for i in {0..2225}
+for i in {0..7173}
 do 
-  varArray="$(python jobDict.py $i processCcd_job_dict.json)"
+  varArray="$(python jobDict.py $i full_images_job_dict_7174.json)"
   varArray=($varArray)
   dateObs=${varArray[0]}
   numObs=${varArray[1]}
