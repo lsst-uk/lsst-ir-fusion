@@ -4,7 +4,7 @@ setup lsst_distrib
 setup obs_vista
 eups admin clearLocks
 
-for i in {0..17799}
+for i in {14550..17799}
 do 
   varArray="$(python jobDict.py $i full_images_job_dict_17800.json)"
   varArray=($varArray)
