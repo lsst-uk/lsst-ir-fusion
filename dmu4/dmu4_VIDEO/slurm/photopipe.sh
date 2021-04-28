@@ -21,17 +21,17 @@ detectCoaddSources.py $repo --rerun coadd:coaddPhot --id filter=VISTA-J tract=$t
 detectCoaddSources.py $repo --rerun coadd:coaddPhot --id filter=VISTA-H tract=$tract patch=$patch
 detectCoaddSources.py $repo --rerun coadd:coaddPhot --id filter=VISTA-Ks tract=$tract patch=$patch
 
-mkdir -p $repo/rerun/coaddPhot/deepCoadd-results/HSC-G/$tract
-mkdir -p $repo/rerun/coaddPhot/deepCoadd-results/HSC-R/$tract
-mkdir -p $repo/rerun/coaddPhot/deepCoadd-results/HSC-I/$tract
-mkdir -p $repo/rerun/coaddPhot/deepCoadd-results/HSC-Z/$tract
-mkdir -p $repo/rerun/coaddPhot/deepCoadd-results/HSC-Y/$tract
+mkdir -p $repo/rerun/coaddPhot/deepCoadd-results/HSC-G/$tract/$patch
+mkdir -p $repo/rerun/coaddPhot/deepCoadd-results/HSC-R/$tract/$patch
+mkdir -p $repo/rerun/coaddPhot/deepCoadd-results/HSC-I/$tract/$patch
+mkdir -p $repo/rerun/coaddPhot/deepCoadd-results/HSC-Z/$tract/$patch
+mkdir -p $repo/rerun/coaddPhot/deepCoadd-results/HSC-Y/$tract/$patch
 
-cp -r ../../../dmu0/dmu0_HSC/data/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_dud/deepCoadd-results/HSC-G/$tract/$patch $repo/rerun/coaddPhot/deepCoadd-results/HSC-G/$tract/
-cp -r ../../../dmu0/dmu0_HSC/data/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_dud/deepCoadd-results/HSC-R/$tract/$patch $repo/rerun/coaddPhot/deepCoadd-results/HSC-R/$tract/
-cp -r ../../../dmu0/dmu0_HSC/data/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_dud/deepCoadd-results/HSC-I/$tract/$patch $repo/rerun/coaddPhot/deepCoadd-results/HSC-I/$tract/
-cp -r ../../../dmu0/dmu0_HSC/data/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_dud/deepCoadd-results/HSC-Z/$tract/$patch $repo/rerun/coaddPhot/deepCoadd-results/HSC-Z/$tract/
-cp -r ../../../dmu0/dmu0_HSC/data/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_dud/deepCoadd-results/HSC-Y/$tract/$patch $repo/rerun/coaddPhot/deepCoadd-results/HSC-Y/$tract/
+cp -r ../../../dmu0/dmu0_HSC/data/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_dud/deepCoadd-results/HSC-G/$tract/$patch/{calexp*.fits,det*.fits} $repo/rerun/coaddPhot/deepCoadd-results/HSC-G/$tract/$patch/
+cp -r ../../../dmu0/dmu0_HSC/data/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_dud/deepCoadd-results/HSC-R/$tract/$patch/{calexp*.fits,det*.fits} $repo/rerun/coaddPhot/deepCoadd-results/HSC-R/$tract/$patch/
+cp -r ../../../dmu0/dmu0_HSC/data/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_dud/deepCoadd-results/HSC-I/$tract/$patch/{calexp*.fits,det*.fits} $repo/rerun/coaddPhot/deepCoadd-results/HSC-I/$tract/$patch/
+cp -r ../../../dmu0/dmu0_HSC/data/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_dud/deepCoadd-results/HSC-Z/$tract/$patch/{calexp*.fits,det*.fits} $repo/rerun/coaddPhot/deepCoadd-results/HSC-Z/$tract/$patch/
+cp -r ../../../dmu0/dmu0_HSC/data/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_dud/deepCoadd-results/HSC-Y/$tract/$patch/{calexp*.fits,det*.fits} $repo/rerun/coaddPhot/deepCoadd-results/HSC-Y/$tract/$patch/
 
 mergeCoaddDetections.py $repo --rerun coaddPhot --id filter=VISTA-Z^VISTA-Y^VISTA-J^VISTA-H^VISTA-Ks^HSC-G^HSC-R^HSC-I^HSC-Z^HSC-Y tract=$tract patch=$patch
 
@@ -61,13 +61,13 @@ measureCoaddSources.py $repo --rerun coaddPhot --id filter=HSC-Y tract=$tract pa
 
 mergeCoaddMeasurements.py $repo --rerun coaddPhot --id filter=VISTA-Z^VISTA-Y^VISTA-J^VISTA-H^VISTA-Ks^HSC-G^HSC-R^HSC-I^HSC-Z^HSC-Y tract=$tract patch=$patch
 
-forcedPhotCoadd.py $repo --rerun coaddPhot:coaddForcedPhot --id filter=VISTA-Z tract=$tract patch=$patch
-forcedPhotCoadd.py $repo --rerun coaddForcedPhot --id filter=VISTA-Y tract=$tract patch=$patch
-forcedPhotCoadd.py $repo --rerun coaddForcedPhot --id filter=VISTA-J tract=$tract patch=$patch
-forcedPhotCoadd.py $repo --rerun coaddForcedPhot --id filter=VISTA-H tract=$tract patch=$patch
-forcedPhotCoadd.py $repo --rerun coaddForcedPhot --id filter=VISTA-Ks tract=$tract patch=$patch
-forcedPhotCoadd.py $repo --rerun coaddForcedPhot --id filter=HSC-G tract=$tract patch=$patch
-forcedPhotCoadd.py $repo --rerun coaddForcedPhot --id filter=HSC-R tract=$tract patch=$patch
-forcedPhotCoadd.py $repo --rerun coaddForcedPhot --id filter=HSC-I tract=$tract patch=$patch
-forcedPhotCoadd.py $repo --rerun coaddForcedPhot --id filter=HSC-Z tract=$tract patch=$patch
-forcedPhotCoadd.py $repo --rerun coaddForcedPhot --id filter=HSC-Y tract=$tract patch=$patch
+forcedPhotCoadd.py $repo --rerun coaddPhot --id filter=VISTA-Z tract=$tract patch=$patch
+forcedPhotCoadd.py $repo --rerun coaddPhot --id filter=VISTA-Y tract=$tract patch=$patch
+forcedPhotCoadd.py $repo --rerun coaddPhot --id filter=VISTA-J tract=$tract patch=$patch
+forcedPhotCoadd.py $repo --rerun coaddPhot --id filter=VISTA-H tract=$tract patch=$patch
+forcedPhotCoadd.py $repo --rerun coaddPhot --id filter=VISTA-Ks tract=$tract patch=$patch
+forcedPhotCoadd.py $repo --rerun coaddPhot --id filter=HSC-G tract=$tract patch=$patch
+forcedPhotCoadd.py $repo --rerun coaddPhot --id filter=HSC-R tract=$tract patch=$patch
+forcedPhotCoadd.py $repo --rerun coaddPhot --id filter=HSC-I tract=$tract patch=$patch
+forcedPhotCoadd.py $repo --rerun coaddPhot --id filter=HSC-Z tract=$tract patch=$patch
+forcedPhotCoadd.py $repo --rerun coaddPhot --id filter=HSC-Y tract=$tract patch=$patch
