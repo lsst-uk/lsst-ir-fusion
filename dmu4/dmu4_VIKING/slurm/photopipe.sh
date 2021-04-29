@@ -61,13 +61,13 @@ measureCoaddSources.py $repo --rerun coaddPhot --id filter=HSC-Y tract=$tract pa
 
 mergeCoaddMeasurements.py $repo --rerun coaddPhot --id filter=VISTA-Z^VISTA-Y^VISTA-J^VISTA-H^VISTA-Ks^HSC-G^HSC-R^HSC-I^HSC-Z^HSC-Y tract=$tract patch=$patch
 
-forcedPhotCoadd.py $repo --rerun coaddPhot:coaddForcedPhot --id filter=VISTA-Z tract=$tract patch=$patch
-forcedPhotCoadd.py $repo --rerun coaddForcedPhot --id filter=VISTA-Y tract=$tract patch=$patch
-forcedPhotCoadd.py $repo --rerun coaddForcedPhot --id filter=VISTA-J tract=$tract patch=$patch
-forcedPhotCoadd.py $repo --rerun coaddForcedPhot --id filter=VISTA-H tract=$tract patch=$patch
-forcedPhotCoadd.py $repo --rerun coaddForcedPhot --id filter=VISTA-Ks tract=$tract patch=$patch
-forcedPhotCoadd.py $repo --rerun coaddForcedPhot --id filter=HSC-G tract=$tract patch=$patch
-forcedPhotCoadd.py $repo --rerun coaddForcedPhot --id filter=HSC-R tract=$tract patch=$patch
-forcedPhotCoadd.py $repo --rerun coaddForcedPhot --id filter=HSC-I tract=$tract patch=$patch
-forcedPhotCoadd.py $repo --rerun coaddForcedPhot --id filter=HSC-Z tract=$tract patch=$patch
-forcedPhotCoadd.py $repo --rerun coaddForcedPhot --id filter=HSC-Y tract=$tract patch=$patch
+forcedPhotCoadd.py $repo --rerun coaddPhot --id filter=VISTA-Z tract=$tract patch=$patch
+forcedPhotCoadd.py $repo --rerun coaddPhot --id filter=VISTA-Y tract=$tract patch=$patch
+forcedPhotCoadd.py $repo --rerun coaddPhot --id filter=VISTA-J tract=$tract patch=$patch
+forcedPhotCoadd.py $repo --rerun coaddPhot --id filter=VISTA-H tract=$tract patch=$patch
+forcedPhotCoadd.py $repo --rerun coaddPhot --id filter=VISTA-Ks tract=$tract patch=$patch
+forcedPhotCoadd.py $repo --rerun coaddPhot --id filter=HSC-G tract=$tract patch=$patch
+forcedPhotCoadd.py $repo --rerun coaddPhot --id filter=HSC-R tract=$tract patch=$patch
+forcedPhotCoadd.py $repo --rerun coaddPhot --id filter=HSC-I tract=$tract patch=$patch
+forcedPhotCoadd.py $repo --rerun coaddPhot --id filter=HSC-Z tract=$tract patch=$patch
+forcedPhotCoadd.py $repo --rerun coaddPhot --id filter=HSC-Y tract=$tract patch=$patch
