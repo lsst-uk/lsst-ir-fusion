@@ -27,11 +27,11 @@ mkdir -p $repo/rerun/coaddPhot/deepCoadd-results/HSC-I/$tract/$patch
 mkdir -p $repo/rerun/coaddPhot/deepCoadd-results/HSC-Z/$tract/$patch
 mkdir -p $repo/rerun/coaddPhot/deepCoadd-results/HSC-Y/$tract/$patch
 
-cp -r ../../../dmu0/dmu0_HSC/data/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_dud/deepCoadd-results/HSC-G/$tract/$patch/{calexp*.fits,det*.fits} $repo/rerun/coaddPhot/deepCoadd-results/HSC-G/$tract/$patch/
-cp -r ../../../dmu0/dmu0_HSC/data/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_dud/deepCoadd-results/HSC-R/$tract/$patch/{calexp*.fits,det*.fits} $repo/rerun/coaddPhot/deepCoadd-results/HSC-R/$tract/$patch/
-cp -r ../../../dmu0/dmu0_HSC/data/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_dud/deepCoadd-results/HSC-I/$tract/$patch/{calexp*.fits,det*.fits} $repo/rerun/coaddPhot/deepCoadd-results/HSC-I/$tract/$patch/
-cp -r ../../../dmu0/dmu0_HSC/data/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_dud/deepCoadd-results/HSC-Z/$tract/$patch/{calexp*.fits,det*.fits} $repo/rerun/coaddPhot/deepCoadd-results/HSC-Z/$tract/$patch/
-cp -r ../../../dmu0/dmu0_HSC/data/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_dud/deepCoadd-results/HSC-Y/$tract/$patch/{calexp*.fits,det*.fits} $repo/rerun/coaddPhot/deepCoadd-results/HSC-Y/$tract/$patch/
+cp -r ../../../dmu0/dmu0_HSC/data/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_wide/deepCoadd-results/HSC-G/$tract/$patch/{calexp*.fits,det*.fits} $repo/rerun/coaddPhot/deepCoadd-results/HSC-G/$tract/$patch/
+cp -r ../../../dmu0/dmu0_HSC/data/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_wide/deepCoadd-results/HSC-R/$tract/$patch/{calexp*.fits,det*.fits} $repo/rerun/coaddPhot/deepCoadd-results/HSC-R/$tract/$patch/
+cp -r ../../../dmu0/dmu0_HSC/data/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_wide/deepCoadd-results/HSC-I/$tract/$patch/{calexp*.fits,det*.fits} $repo/rerun/coaddPhot/deepCoadd-results/HSC-I/$tract/$patch/
+cp -r ../../../dmu0/dmu0_HSC/data/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_wide/deepCoadd-results/HSC-Z/$tract/$patch/{calexp*.fits,det*.fits} $repo/rerun/coaddPhot/deepCoadd-results/HSC-Z/$tract/$patch/
+cp -r ../../../dmu0/dmu0_HSC/data/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_wide/deepCoadd-results/HSC-Y/$tract/$patch/{calexp*.fits,det*.fits} $repo/rerun/coaddPhot/deepCoadd-results/HSC-Y/$tract/$patch/
 
 mergeCoaddDetections.py $repo --rerun coaddPhot --id filter=VISTA-Z^VISTA-Y^VISTA-J^VISTA-H^VISTA-Ks^HSC-G^HSC-R^HSC-I^HSC-Z^HSC-Y tract=$tract patch=$patch
 
