@@ -2,14 +2,14 @@
 #! This line is a comment
 #! Make sure you only have comments and #SBATCH directives between here and the end of the #SBATCH directives, or things will break
 #! Name of the job:
-#SBATCH -J VIDphotopipe
+#SBATCH -J VIKINGMake_cat
 #! Account name for group, use SL2 for paying queue:
 #SBATCH -A IRIS-IP005-CPU
 #! Output filename:
 #! %A means slurm job ID and %a means array index
-#SBATCH --output=photopipe_%A_%a.out
+#SBATCH --output=VIK_Make_cat_%A_%a.out
 #! Errors filename:
-#SBATCH --error=photopipe_%A_%a.err
+#SBATCH --error=VIK_Make_cat_%A_%a.err
 
 #! Number of nodes to be allocated for the job (for single core jobs always leave this at 1)
 #SBATCH --nodes=1
@@ -18,14 +18,14 @@
 #! How many many cores will be allocated per task? (for single core jobs always leave this at 1)
 #SBATCH --cpus-per-task=1
 #! Estimated runtime: hh:mm:ss (job is force-stopped after if exceeded):
-#SBATCH --time=36:00:00
+#SBATCH --time=5:00:00
 #! Estimated maximum memory needed (job is force-stopped if exceeded):
 #! RAM is allocated in ~5980mb blocks, you are charged per block used,
 #! and unused fractions of blocks will not be usable by others.
 #! coadding VIDEO needs ~ 5 cpus worth of memory SBATCH --mem=5980mb
 #! Submit a job array with index values between 0 and 31
 #! NOTE: This must be a range, not a single number (i.e. specifying '32' here would only run one job, with index 32)
-#SBATCH --array=0-218
+#SBATCH --array=0-5556
 
 #! This is the partition name.
 #SBATCH -p cclake
@@ -42,7 +42,7 @@
 
 #! The variable $SLURM_ARRAY_TASK_ID contains the array index for each job.
 #! In this example, each job will be passed its index, so each output file will contain a different value
-echo "This is job" $SLURM_ARRAY_TASK_ID
+echo "This is job" $SLURM_ARRAY_TASK_ID "or job index" $(( $SLURM_ARRAY_TASK_ID + 10000))
 
 #! Command line that we want to run:
-/home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/dmu4/dmu4_VIDEO/slurm/multiBandDriver.sh $SLURM_ARRAY_TASK_ID sxds_patch_job_dict_219.json
+/home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/dmu5/dmu5_VIKING/slurm/make_cat.sh $(( $SLURM_ARRAY_TASK_ID + 10000)) ../../../dmu4/dmu4_VIKING/slurm/full_patch_job_dict_15557.json

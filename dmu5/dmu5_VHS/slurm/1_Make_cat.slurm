@@ -2,7 +2,7 @@
 #! This line is a comment
 #! Make sure you only have comments and #SBATCH directives between here and the end of the #SBATCH directives, or things will break
 #! Name of the job:
-#SBATCH -J SXDS_Make_cat
+#SBATCH -J VHSMake_cat
 #! Account name for group, use SL2 for paying queue:
 #SBATCH -A IRIS-IP005-CPU
 #! Output filename:
@@ -18,17 +18,17 @@
 #! How many many cores will be allocated per task? (for single core jobs always leave this at 1)
 #SBATCH --cpus-per-task=1
 #! Estimated runtime: hh:mm:ss (job is force-stopped after if exceeded):
-#SBATCH --time=5:00:00
+#SBATCH --time=1:00:00
 #! Estimated maximum memory needed (job is force-stopped if exceeded):
 #! RAM is allocated in ~5980mb blocks, you are charged per block used,
 #! and unused fractions of blocks will not be usable by others.
 #! coadding VIDEO needs ~ 5 cpus worth of memory SBATCH --mem=5980mb
 #! Submit a job array with index values between 0 and 31
 #! NOTE: This must be a range, not a single number (i.e. specifying '32' here would only run one job, with index 32)
-#SBATCH --array=0-218
+#SBATCH --array=0-9999
 
 #! This is the partition name.
-#SBATCH -p skylake
+#SBATCH -p cclake
 
 #! mail alert at start, end and abortion of execution
 #! emails will default to going to your email address
@@ -45,4 +45,4 @@
 echo "This is job" $SLURM_ARRAY_TASK_ID
 
 #! Command line that we want to run:
-/home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/dmu5/dmu5_SXDS/slurm/make_cat.sh $SLURM_ARRAY_TASK_ID
+/home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/dmu5/dmu5_VHS/slurm/make_cat.sh $SLURM_ARRAY_TASK_ID ../../../dmu4/dmu4_VHS/slurm/full_patch_job_dict_13164.json

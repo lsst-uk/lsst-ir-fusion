@@ -25,10 +25,10 @@
 #! coadding VIDEO needs ~ 5 cpus worth of memory SBATCH --mem=5980mb
 #! Submit a job array with index values between 0 and 31
 #! NOTE: This must be a range, not a single number (i.e. specifying '32' here would only run one job, with index 32)
-#SBATCH --array=0-13163
+#SBATCH --array=0-9999
 
 #! This is the partition name.
-#SBATCH -p skylake
+#SBATCH -p cclake
 
 #! mail alert at start, end and abortion of execution
 #! emails will default to going to your email address
@@ -45,4 +45,4 @@
 echo "This is job" $SLURM_ARRAY_TASK_ID
 
 #! Command line that we want to run:
-/home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/dmu4/dmu4_VHS/slurm/photopipe.sh $SLURM_ARRAY_TASK_ID full_patch_job_dict_13164.json
+/home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/dmu4/dmu4_VHS/slurm/multiBandDriver.sh $SLURM_ARRAY_TASK_ID full_patch_job_dict_13164.json
