@@ -21,11 +21,11 @@ allBands = ['HSC-' +b for b in hscBands] + ['VISTA-' +b for b in vistaBands]
 
 #Allow local testing
 if os.getcwd()=='/Users/raphaelshirley/Documents/github/'\
-        'lsst-ir-fusion/dmu5/dmu5_VIDEO/slurm':
+        'lsst-ir-fusion/dmu5/dmu5_VHS/slurm':
     BUTLER_LOC = '../../../dmu4/dmu4_Example/data'
     DATA = '../data'
 else:
-    BUTLER_LOC = '../../../dmu4/dmu4_VIDEO/data'
+    BUTLER_LOC = '../../../dmu4/dmu4_VHS/data'
     DATA =  '../data'
 butler =  dafPersist.Butler(inputs='{}/rerun/coaddPhot'.format(BUTLER_LOC))
 
