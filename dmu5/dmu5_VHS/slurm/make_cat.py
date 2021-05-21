@@ -120,17 +120,22 @@ def makeCat(tract, patch, BUTLER_LOC,DATA=DATA,writeBandCats=True,writeReducedCa
                 if c != 'id':
                     measCat[c].name = "{}_{}_{}".format(band.replace('-','_'),'m', c)
                 
-            forcedSources = butler.get(
-                'deepCoadd_forced_src', 
-                {'filter': band, 'tract': tract, 'patch': patch}
-            )
-            forcedCat = forcedSources.asAstropy()
-            forcedCat = addFlux(forcedCat, forcedSources, CoaddPhotoCalib)
-            for c in forcedCat.colnames:    
-                if c != 'id':
-                    forcedCat[c].name = "{}_{}_{}".format(band,'f', c)
+            bandCat = measCat
+            
+            try:
+                forcedSources = butler.get(
+                    'deepCoadd_forced_src', 
+                    {'filter': band, 'tract': tract, 'patch': patch}
+                )
+                forcedCat = forcedSources.asAstropy()
+                forcedCat = addFlux(forcedCat, forcedSources, CoaddPhotoCalib)
+                for c in forcedCat.colnames:    
+                    if c != 'id':
+                        forcedCat[c].name = "{}_{}_{}".format(band,'f', c)
                     
-            bandCat = join(measCat,forcedCat,join_type='outer')
+                bandCat = join(bandCat,forcedCat,join_type='outer')
+            except:
+                warnings.warn("Band {} forced phot failed.".format(band))
             
             for c in bandCat.colnames:    
                 if c != 'id':
