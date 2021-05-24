@@ -11,6 +11,7 @@ import gc
 
 from astropy.table import Table, join, vstack, MaskedColumn
 import astropy.units as u
+from astropy.io import ascii
 
 import warnings
 warnings.filterwarnings("ignore")
@@ -138,6 +139,8 @@ def makeCat(tract, patch, BUTLER_LOC,DATA=DATA,writeBandCats=True,writeReducedCa
                 measCat.meta=None
                 measCat.sort('id')
                 for c in measCat.colnames:
+                    if measCat[c].dtype=='bool':
+                        measCat[c]=measCat[c].astype(int)
                     measCat[c] = MaskedColumn(measCat[c])
                     measCat[c].mask = np.isnan(measCat[c]) | np.isinf(measCat[c])
                 measCat['tract']=tract
@@ -149,6 +152,7 @@ def makeCat(tract, patch, BUTLER_LOC,DATA=DATA,writeBandCats=True,writeReducedCa
                         band,tract,patch,band,tract,patch), 
                     overwrite=True
                 )
+
         except:
             warnings.warn("Band {} meas phot failed.".format(band))
             
@@ -177,6 +181,8 @@ def makeCat(tract, patch, BUTLER_LOC,DATA=DATA,writeBandCats=True,writeReducedCa
                 forcedCat.meta=None
                 forcedCat.sort('id')
                 for c in forcedCat.colnames:
+                    if forcedCat[c].dtype=='bool':
+                        forcedCat[c]=forcedCat[c].astype(int)
                     forcedCat[c] = MaskedColumn(forcedCat[c])
                     forcedCat[c].mask = np.isnan(forcedCat[c]) | np.isinf(forcedCat[c])
                 forcedCat['tract']=tract
