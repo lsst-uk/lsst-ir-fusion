@@ -25,7 +25,7 @@ if os.getcwd().startswith('/Users/raphaelshirley'):
     BUTLER_LOC = '../../../dmu4/dmu4_Example/data_g2'
     DATA = '../data'
 else:
-    BUTLER_LOC = '{}/data'.format(os.getcwd().replace('dmu5','dmu4'))
+    BUTLER_LOC = '{}/data'.format(os.getcwd().replace('dmu5','dmu4').replace('/slurm',''))
     DATA =  '../data'
 butler =  dafPersist.Butler(inputs='{}/rerun/coaddPhot'.format(BUTLER_LOC))
 
