@@ -20,12 +20,11 @@ vistaBands = ['Z', 'Y', 'J', 'H', 'Ks']
 allBands = ['HSC-' +b for b in hscBands] + ['VISTA-' +b for b in vistaBands]
 
 #Allow local testing
-if os.getcwd()=='/Users/raphaelshirley/Documents/github/'\
-        'lsst-ir-fusion/dmu5/dmu5_VIKING/slurm':
-    BUTLER_LOC = '../../../dmu4/dmu4_Example/data'
+if os.getcwd().startswith('/Users/raphaelshirley'):
+    BUTLER_LOC = '../../../dmu4/dmu4_Example/data_g2'
     DATA = '../data'
 else:
-    BUTLER_LOC = '../../../dmu4/dmu4_VIKING/data'
+    BUTLER_LOC = '{}/data'.format(os.getcwd().replace('dmu5','dmu4'))
     DATA =  '../data'
 butler =  dafPersist.Butler(inputs='{}/rerun/coaddPhot'.format(BUTLER_LOC))
 
@@ -102,7 +101,11 @@ def makeCat(tract, patch, BUTLER_LOC,DATA=DATA,writeBandCats=True,writeReducedCa
             'badInitialCentroid':'BIC',
             'sincCoeffsTruncated':'SCT',
         }
-
+        CoaddPhotoCalib=None
+        measCat=None
+        measSources=None
+        forcedCat=None
+        forcedSources=None
         try:
             CoaddCalexp = butler.get(
                 'deepCoadd_calexp',  
@@ -120,65 +123,94 @@ def makeCat(tract, patch, BUTLER_LOC,DATA=DATA,writeBandCats=True,writeReducedCa
                 if c != 'id':
                     measCat[c].name = "{}_{}_{}".format(band.replace('-','_'),'m', c)
                 
-            bandCat = measCat
-            
-            try:
-                forcedSources = butler.get(
-                    'deepCoadd_forced_src', 
-                    {'filter': band, 'tract': tract, 'patch': patch}
-                )
-                forcedCat = forcedSources.asAstropy()
-                forcedCat = addFlux(forcedCat, forcedSources, CoaddPhotoCalib)
-                for c in forcedCat.colnames:    
-                    if c != 'id':
-                        forcedCat[c].name = "{}_{}_{}".format(band,'f', c)
-                    
-                bandCat = join(bandCat,forcedCat,join_type='outer')
-            except:
-                warnings.warn("Band {} forced phot failed.".format(band))
-            
-            for c in bandCat.colnames:    
+            for c in measCat.colnames:    
                 if c != 'id':
                     newName = c
                     for k in mapping:
                         newName = newName.replace(k, mapping[k])
-                    bandCat[c].name = newName
+                    measCat[c].name = newName
                     if len(newName)>68:
                         print('Name {} too long for fits writing.'.format(c))
             if writeBandCats:
                 Path(DATA+'/{}/{}/{}'.format(band,tract,patch)).mkdir(
                     parents=True, exist_ok=True)
                 #print(len(bandCat))
-                bandCat.meta=None
-                bandCat.sort('id')
-                for c in bandCat.colnames:
-                    bandCat[c] = MaskedColumn(bandCat[c])
-                    bandCat[c].mask = np.isnan(bandCat[c]) | np.isinf(bandCat[c])
-                bandCat['tract']=tract
-                bandCat['patch']=patch
-                bandCat.write(
-                    DATA+'/{}/{}/{}/{}_{}_{}_mergedCat.csv'.format(
+                measCat.meta=None
+                measCat.sort('id')
+                for c in measCat.colnames:
+                    measCat[c] = MaskedColumn(measCat[c])
+                    measCat[c].mask = np.isnan(measCat[c]) | np.isinf(measCat[c])
+                measCat['tract']=tract
+                measCat['patch']=patch
+                measCat['patchX']=int(patch[0])
+                measCat['patchY']=int(patch[2])
+                measCat.write(
+                    DATA+'/{}/{}/{}/{}_{}_{}_measCat.csv'.format(
                         band,tract,patch,band,tract,patch), 
                     overwrite=True
                 )
-                #forcedCat.write(
-                #    DATA+'/{}/{}/{}/{}_{}_{}_forcedCat.csv'.format(
-                #        band,tract,patch,band,tract,patch), 
-                #    overwrite=True
-                #)
-                
-            if len(cat)==0:
-                #On first band no join
-                cat = bandCat
-            else:
-                #After first band join tables in
-                cols = list(bandCat.colnames)
+        except:
+            warnings.warn("Band {} meas phot failed.".format(band))
+            
+        try:
+            forcedSources = butler.get(
+                'deepCoadd_forced_src', 
+                {'filter': band, 'tract': tract, 'patch': patch}
+            )
+            forcedCat = forcedSources.asAstropy()
+            forcedCat = addFlux(forcedCat, forcedSources, CoaddPhotoCalib)
+            for c in forcedCat.colnames:    
+                if c != 'id':
+                    forcedCat[c].name = "{}_{}_{}".format(band,'f', c)
+            for c in forcedCat.colnames:    
+                if c != 'id':
+                    newName = c
+                    for k in mapping:
+                        newName = newName.replace(k, mapping[k])
+                    forcedCat[c].name = newName
+                    if len(newName)>68:
+                        print('Name {} too long for fits writing.'.format(c))
+            if writeBandCats:
+                Path(DATA+'/{}/{}/{}'.format(band,tract,patch)).mkdir(
+                    parents=True, exist_ok=True)
+                #print(len(bandCat))
+                forcedCat.meta=None
+                forcedCat.sort('id')
+                for c in forcedCat.colnames:
+                    forcedCat[c] = MaskedColumn(forcedCat[c])
+                    forcedCat[c].mask = np.isnan(forcedCat[c]) | np.isinf(forcedCat[c])
+                forcedCat['tract']=tract
+                forcedCat['patch']=patch
+                forcedCat['patchX']=int(patch[0])
+                forcedCat['patchY']=int(patch[2])
+                forcedCat.write(
+                    DATA+'/{}/{}/{}/{}_{}_{}_forcedCat.csv'.format(
+                        band,tract,patch,band,tract,patch), 
+                    overwrite=True
+                )
+        except:
+            warnings.warn("Band {} forced phot failed.".format(band))
+            
+
+
+        #make all band joins for reduced cat
+        if (len(cat)==0) and (measCat is not None):
+            #On first band no join
+            cat = measCat
+            if forcedCat is not None:
+                cat = join(cat,forcedCat,join_type='outer')
+        elif (measCat is not None):
+            #After first band join tables in
+            cols = list(measCat.colnames)
+            for r in ['tract','patch']: cols.remove(r)
+            cat = join(cat, measCat[cols],join_type='outer')
+            if forcedCat is not None:
+                cols = list(forcedCat.colnames)
                 for r in ['tract','patch']: cols.remove(r)
-                cat = join(cat, bandCat[cols],join_type='outer')
+                cat = join(cat, forcedCat[cols],join_type='outer')
   
             
-        except:
-            warnings.warn("Band {} failed.".format(band))
+
                 
 
     if len(cat) == 0:
@@ -190,7 +222,7 @@ def makeCat(tract, patch, BUTLER_LOC,DATA=DATA,writeBandCats=True,writeReducedCa
         Path(DATA+'/merged/{}/{}'.format(tract,patch)).mkdir(
                     parents=True, exist_ok=True)
         cat.write(
-            DATA+'/merged/{}/{}/{}_{}_reduced_cat.fits'.format(tract,patch,tract,patch), 
+            DATA+'/merged/{}/{}/{}_{}_reducedCat.fits'.format(tract,patch,tract,patch), 
             overwrite=True
         )
     return cat
