@@ -144,7 +144,7 @@ def makeCat(tract, patch, BUTLER_LOC,DATA=DATA,writeBandCats=True,writeReducedCa
                     measCat[c] = MaskedColumn(measCat[c])
                     measCat[c].mask = np.isnan(measCat[c]) | np.isinf(measCat[c])
                 measCat['tract']=tract
-                measCat['patch']=patch
+                measCat['patch']=patch.replace(',','')
                 measCat['patchX']=int(patch[0])
                 measCat['patchY']=int(patch[2])
                 measCat.write(
@@ -186,7 +186,7 @@ def makeCat(tract, patch, BUTLER_LOC,DATA=DATA,writeBandCats=True,writeReducedCa
                     forcedCat[c] = MaskedColumn(forcedCat[c])
                     forcedCat[c].mask = np.isnan(forcedCat[c]) | np.isinf(forcedCat[c])
                 forcedCat['tract']=tract
-                forcedCat['patch']=patch
+                forcedCat['patch']=patch.replace(',','')
                 forcedCat['patchX']=int(patch[0])
                 forcedCat['patchY']=int(patch[2])
                 forcedCat.write(
