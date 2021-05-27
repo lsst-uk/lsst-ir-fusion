@@ -36,24 +36,24 @@ patch_dict = sys.argv[2]
 #Set columns to go in a 'reduced catalogue' for sharing.
 reduced_cols = [ 
     'id', 
-    'VISTA_Ks_f_coord_ra', 
-    'VISTA_Ks_f_coord_dec',
-    'VISTA_Ks_f_detect_isPatchInner',
-    'VISTA_Ks_f_detect_isTractInner'
+    'VISTA_Ks_m_coord_ra', 
+    'VISTA_Ks_m_coord_dec',
+    'VISTA_Ks_m_detect_isPatchInner',
+    'VISTA_Ks_m_detect_isTractInner'
 ]
 for aper in ['6', '9', '12', '17']:
     reduced_cols += [
-        '{}_f_base_CircularApertureFlux_{}_0_mag'.format(b,aper) for b in allBands
+        '{}_m_base_CircularApertureFlux_{}_0_mag'.format(b.replace('-','_'),aper) for b in allBands
     ]
     reduced_cols += [
-        '{}_f_base_CircularApertureFlux_{}_0_magErr'.format(b,aper) for b in allBands
+        '{}_m_base_CircularApertureFlux_{}_0_magErr'.format(b.replace('-','_'),aper) for b in allBands
     ]
     #reduced_cols += [
     #    '{}_f_base_CircularApertureFlux_{}_0_flag'.format(b,aper) for b in allBands
     #]
     
-reduced_cols += ['{}_f_base_PsfFlux_mag'.format(b) for b in allBands]
-reduced_cols += ['{}_f_base_PsfFlux_magErr'.format(b) for b in allBands]
+reduced_cols += ['{}_m_base_PsfFlux_mag'.format(b.replace('-','_')) for b in allBands]
+reduced_cols += ['{}_m_base_PsfFlux_magErr'.format(b.replace('-','_')) for b in allBands]
 
 def addFlux(cat, sources, photoCalib):
     """Add magnitudes and fluxes to an astropy catalogues with instrument fluxes"""
@@ -89,7 +89,7 @@ def addFlux(cat, sources, photoCalib):
                 pass
     return cat
 
-def makeCat(tract, patch, BUTLER_LOC,DATA=DATA,writeBandCats=True,writeReducedCat=False):
+def makeCat(tract, patch, BUTLER_LOC,DATA=DATA,writeBandCats=True,writeReducedCat=True):
     """make the final catalogue on a given patch for ingestion to a database"""
     cat =Table()
     tract = int(tract)
@@ -204,16 +204,18 @@ def makeCat(tract, patch, BUTLER_LOC,DATA=DATA,writeBandCats=True,writeReducedCa
             #On first band no join
             cat = measCat
             if forcedCat is not None:
-                cat = join(cat,forcedCat,join_type='outer')
+                cols=list(forcedCat.colnames)
+                for r in ['tract','patch','patchX','patchY']: cols.remove(r)
+                cat = join(cat,forcedCat,join_type='left')
         elif (measCat is not None):
             #After first band join tables in
             cols = list(measCat.colnames)
-            for r in ['tract','patch']: cols.remove(r)
-            cat = join(cat, measCat[cols],join_type='outer')
+            for r in ['tract','patch','patchX','patchY']: cols.remove(r)
+            cat = join(cat, measCat[cols],join_type='left')
             if forcedCat is not None:
                 cols = list(forcedCat.colnames)
-                for r in ['tract','patch']: cols.remove(r)
-                cat = join(cat, forcedCat[cols],join_type='outer')
+                for r in ['tract','patch','patchX','patchY']: cols.remove(r)
+                cat = join(cat, forcedCat[cols],join_type='left')
   
             
 

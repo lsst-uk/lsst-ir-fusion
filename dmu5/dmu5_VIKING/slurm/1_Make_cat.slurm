@@ -7,9 +7,9 @@
 #SBATCH -A IRIS-IP005-CPU
 #! Output filename:
 #! %A means slurm job ID and %a means array index
-#SBATCH --output=SXDS_Make_cat_%A_%a.out
+#SBATCH --output=Make_cat_%A_%a.out
 #! Errors filename:
-#SBATCH --error=SXDS_Make_cat_%A_%a.err
+#SBATCH --error=Make_cat_%A_%a.err
 
 #! Number of nodes to be allocated for the job (for single core jobs always leave this at 1)
 #SBATCH --nodes=1
@@ -18,7 +18,7 @@
 #! How many many cores will be allocated per task? (for single core jobs always leave this at 1)
 #SBATCH --cpus-per-task=1
 #! Estimated runtime: hh:mm:ss (job is force-stopped after if exceeded):
-#SBATCH --time=5:00:00
+#SBATCH --time=1:00:00
 #! Estimated maximum memory needed (job is force-stopped if exceeded):
 #! RAM is allocated in ~5980mb blocks, you are charged per block used,
 #! and unused fractions of blocks will not be usable by others.

@@ -6,4 +6,4 @@ setup lsst_distrib
 setup obs_vista
 eups admin clearLocks
 
-python make_cat.py $1 ../../../dmu4/dmu4_VIDEO/slurm/sxds_patch_job_dict_219.json
+python make_cat.py $1 $2

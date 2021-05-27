@@ -18,7 +18,7 @@
 #! How many many cores will be allocated per task? (for single core jobs always leave this at 1)
 #SBATCH --cpus-per-task=1
 #! Estimated runtime: hh:mm:ss (job is force-stopped after if exceeded):
-#SBATCH --time=5:00:00
+#SBATCH --time=1:00:00
 #! Estimated maximum memory needed (job is force-stopped if exceeded):
 #! RAM is allocated in ~5980mb blocks, you are charged per block used,
 #! and unused fractions of blocks will not be usable by others.
@@ -28,7 +28,7 @@
 #SBATCH --array=0-218
 
 #! This is the partition name.
-#SBATCH -p skylake
+#SBATCH -p cclake
 
 #! mail alert at start, end and abortion of execution
 #! emails will default to going to your email address
@@ -45,4 +45,4 @@
 echo "This is job" $SLURM_ARRAY_TASK_ID
 
 #! Command line that we want to run:
-/home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/dmu5/dmu5_SXDS/slurm/make_cat.sh $SLURM_ARRAY_TASK_ID
+/home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/dmu5/dmu5_SXDS/slurm/make_cat.sh $SLURM_ARRAY_TASK_ID /home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/dmu4/dmu4_VIDEO/slurm/sxds_patch_job_dict_219.json
