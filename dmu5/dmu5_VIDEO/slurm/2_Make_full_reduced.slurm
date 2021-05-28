@@ -17,7 +17,7 @@
 #SBATCH --nodes=1
 #! How many (MPI) tasks will there be in total? (<= nodes*32)
 #! The skylake/skylake-himem nodes have 32 CPUs (cores) each.
-#SBATCH --ntasks=1
+#SBATCH --ntasks=4
 #! How much wallclock time will be required?
 #SBATCH --time=10:00:00
 #! What types of email messages do you wish to receive?
@@ -27,7 +27,7 @@
 ##SBATCH --no-requeue
 
 #! For 6GB per CPU, set "-p skylake"; for 12GB per CPU, set "-p skylake-himem": 
-#SBATCH -p skylake-himem
+#SBATCH -p cclake
 
 #! sbatch directives end here (put any additional directives above this line)
 
@@ -57,7 +57,7 @@ module load rhel7/default-peta4            # REQUIRED - loads the basic environm
 #! Insert additional module load commands after this line if needed:
 
 #! Full path to application executable: 
-application="/home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/dmu5/dmu5_SXDS/slurm/make_full_reduced.sh"
+application="/home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/dmu5/dmu5_VIDEO/slurm/make_full_reduced.sh"
 
 #! Run options for the application:
 options=""

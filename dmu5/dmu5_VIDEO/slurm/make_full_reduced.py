@@ -6,17 +6,17 @@ if os.getcwd()=='/Users/rs548/GitHub/lsst-ir-fusion/dmu5/dmu5_SXDS/slurm':
     BUTLER_LOC = '/Volumes/Raph500/lsst-ir-fusion/dmu4/dmu4_Example/data'
     DATA = '/Volumes/Raph500/lsst-ir-fusion/dmu5/dmu5_Example/data'
 else:
-    BUTLER_LOC = '../../../dmu4/dmu4_SXDS/data'
+    BUTLER_LOC = '../../../dmu4/dmu4_VIDEO/data'
     DATA =  '../data'
 #butler =  dafPersist.Butler(inputs='{}/rerun/coaddForcedPhot'.format(BUTLER_LOC))
 
-red_cats = glob.glob(DATA+'/reduced*.fits')
+red_cats = glob.glob(DATA+'/merged/*/*/*reducedCat.fits')
 
 full_cat = Table()
 for r in red_cats:
     try:
         t= Table.read(r)
-        mask = t['VISTA-Ks_f_detect_isPatchInner'] & t['VISTA-Ks_f_detect_isTractInner']
+        mask = t['VISTA_Ks_m_detect_isPatchInner'].astype('bool') & t['VISTA_Ks_m_detect_isTractInner'].astype('bool')
         full_cat=vstack([full_cat,t[mask]])
     except:
         print(r,' failed')

@@ -16,7 +16,7 @@
 #! Number of tasks. By default SLURM assumes 1 task per node and 1 CPU per task. (for single core jobs always leave this at 1)
 #SBATCH --ntasks=1
 #! How many many cores will be allocated per task? (for single core jobs always leave this at 1)
-#SBATCH --cpus-per-task=1
+#SBATCH --cpus-per-task=2
 #! Estimated runtime: hh:mm:ss (job is force-stopped after if exceeded):
 #SBATCH --time=1:00:00
 #! Estimated maximum memory needed (job is force-stopped if exceeded):
@@ -45,4 +45,4 @@
 echo "This is job" $SLURM_ARRAY_TASK_ID
 
 #! Command line that we want to run:
-/home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/dmu5/dmu5_SXDS/slurm/make_cat.sh $SLURM_ARRAY_TASK_ID /home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/dmu4/dmu4_VIDEO/slurm/sxds_patch_job_dict_219.json
+/home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/dmu5/dmu5_VIDEO/slurm/make_cat.sh $SLURM_ARRAY_TASK_ID /home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/dmu4/dmu4_VIDEO/slurm/sxds_patch_job_dict_219.json
