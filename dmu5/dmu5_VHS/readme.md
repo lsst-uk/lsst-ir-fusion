@@ -1,12 +1,13 @@
-# SXDS Prototype catalogues and tests
+# VHS catalogues and tests
 
-In this folder we make the final all field catalogues for distribution. We also test the photometry here.
+In this folder we make the final VHS all field catalogues for distribution. We also present diagnostics.
 
 
 ## Issues and requirements
 
-What do we need to change for future reruns?
+### Prototype run 2021.1
 
-1) CModel fluxes. The CModel flux algorithm is performed in teh public HSC data and we should add it for comparison.
+Following the 2020 VIDEO runs we conducted an all sky VHS run. 
 
-2) Calibrating VISTA-Z and Y against VIDEO. Since we were originally using 2MASS to calibrate JHKs we decided that the PanSTARRS would be better calibrators for Z and Y as they were closer in wavelength and deeper. However this requires the computation of colour terms and since we are now calibrating JHKs by bootstrapping against VHS it makes more sense to bootstrap VIDEO against VIDEO to get all the bands without colour terms.
+Issues:
+ - mergeCoaddDetections.py yielded very low numbers of sources and hence very small final catalogues. This issue should be fixed by adding coaddDriver.py configs to obs_vista to use image wide standard deviation for pixel detections.
