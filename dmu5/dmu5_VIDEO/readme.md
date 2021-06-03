@@ -14,6 +14,9 @@ We will provide some top level details of each run that has been performed. Prot
 
 This run was conducted in May 2021 and was over the complete overlap of HSC PDR2 and the VISTA VIDEO, VIKING, and VHS surveys. 
 
+Issues:
+    - 1. We used private VIDEO aperture fluxes as calibrators. These now appear to be non aperture corrected. We need to use the public VIDEO catalogues but these appear to have an issue with the PSTAR flag.
+
 ### Prototype run 2020.1 
 
 This run was conducted in December 2020 and was solely over the XMM field. This run was based on VISTA Ks detections only and only included baseline measurements.
