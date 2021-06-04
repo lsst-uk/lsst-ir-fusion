@@ -5,4 +5,4 @@ setup lsst_distrib
 setup obs_vista
 eups admin clearLocks
 
-python make_full_reduced.py 
+python make_full_reduced.py $1 

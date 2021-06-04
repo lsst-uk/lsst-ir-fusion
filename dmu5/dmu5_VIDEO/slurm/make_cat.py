@@ -38,19 +38,24 @@ reduced_cols = [
     'id', 
     'VISTA_Ks_m_coord_ra', 
     'VISTA_Ks_m_coord_dec',
+    'VISTA_Ks_f_coord_ra',
+    'VISTA_Ks_f_coord_dec'
     'VISTA_Ks_m_detect_isPatchInner',
     'VISTA_Ks_m_detect_isTractInner'
 ]
-for aper in ['6', '9', '12', '17']:
+for aper in ['6','12']:
     reduced_cols += [
         '{}_m_base_CircularApertureFlux_{}_0_mag'.format(b.replace('-','_'),aper) for b in allBands
     ]
-    reduced_cols += [
+    reduced_cols+=[
         '{}_m_base_CircularApertureFlux_{}_0_magErr'.format(b.replace('-','_'),aper) for b in allBands
     ]
-    #reduced_cols += [
-    #    '{}_f_base_CircularApertureFlux_{}_0_flag'.format(b,aper) for b in allBands
-    #]
+    reduced_cols += [
+        '{}_f_base_CircularApertureFlux_{}_0_mag'.format(b,aper) for b in allBands
+    ]
+    reduced_cols += [
+        '{}_f_base_CircularApertureFlux_{}_0_magErr'.format(b,aper) for b in allBands
+    ]
     
 reduced_cols += ['{}_m_base_PsfFlux_mag'.format(b.replace('-','_')) for b in allBands]
 reduced_cols += ['{}_m_base_PsfFlux_magErr'.format(b.replace('-','_')) for b in allBands]

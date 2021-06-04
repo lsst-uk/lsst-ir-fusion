@@ -45,4 +45,4 @@
 echo "This is job" $SLURM_ARRAY_TASK_ID
 
 #! Command line that we want to run:
-/home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/dmu4/dmu4_VIDEO/slurm/coadd.sh $SLURM_ARRAY_TASK_ID sxds_patch_job_dict_219.json
+/home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/dmu4/dmu4_VIDEO/slurm/coaddDriver.sh $SLURM_ARRAY_TASK_ID sxds_patch_job_dict_219.json
