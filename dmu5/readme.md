@@ -1,12 +1,12 @@
 # DMU5 Catalogue creation, comparisons, and diagnostics
 
-In this folder we take the LSST stack outputs from DMU4 and stack the catalogues to make all field or even all sky catalogues. csv files for ingestion into the VISTA Scvience Archive are stored in 'dmu5/dmu5_$SURVEY/data/$band/$tract/$patch/'.
+In this folder we take the LSST Science Pipeline outputs from the Butler repositories in dmu4 and combine the catalogues to make all field or even all sky catalogues. CSV files for ingestion into the VISTA Science Archive (VSA) are stored in 'dmu5/dmu5_$SURVEY/data/$band/$tract/$patch/'.
 
-the large area catalogues are stacked using the patch lists in dmu4 for a given field and using isInner flags to remove overlap regions.
+The large area reduced column catalogues are stacked using the patch lists in dmu4 for a given field and using isInner flags to remove overlap regions.
 
 ## Data access
 
-The raw files are currently private. The first prototype run is being served on the Vista Science Archive (VSA):
+The raw files are currently private. The first prototype run is being served on the VSA:
 
 http://horus.roe.ac.uk:8080/vdfs/WP35_form.jsp
 
