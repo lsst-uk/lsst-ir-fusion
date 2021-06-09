@@ -1,21 +1,20 @@
-# XMM VHS HSC Wide run
+# VHS HSC Wide run
 
-This is the first VHS field run alongside the HSC Wide survey data. Eventually we may merge all runs into a single Butler.
+This is the first VHS field run alongside the HSC Wide survey data. There is some VHS overlap with all the sourthern HSC Wide fields w01-05. The generation 2 Butler runs are stored locally. The generation 3 runs will be stored in a single top level repository.
 
-![XMM Field ](./figs/xmm_HSC-all_tracts.png)
+![w01 Field ](./figs/w01_HSC-all_tracts.png)
 
-## Running the code
+![w02 Field ](./figs/w02_HSC-all_tracts.png)
 
-In the [./slurm](./slurm) directory are multiple array jobs to be submitted to the Slurm queue on IRIS. These are numbered such that each is to be run in turn after the completion of the previous array job:
+![w03 Field ](./figs/w03_HSC-all_tracts.png)
 
-```
-#The first job should be small enough to run direct from a login node
-bash 1_setup_butler.sh
-#Then we submit an array of jobs to ingest and process the input exposures
-qsub 2_processCcd.slurm
-#After all those jobs have completed we submit the coadd array job (one 10 CPU job per patch)
-qsub 3_coadd.slurm
-#After coaddition we submit the array of photometry pipeline jobs (one 1 CPU job per patch)
-qsub 4_photopipe.slurm
-# Now you need to use the notebooks to check for any failed patches
-```
+![w04 Field ](./figs/w04_HSC-all_tracts.png)
+
+![w05 Field ](./figs/w05_HSC-all_tracts.png)
+
+
+## Run details
+
+### Prototype run April 2021 (P2021.1)
+
+Currently underway.
