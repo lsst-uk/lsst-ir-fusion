@@ -4,6 +4,41 @@ In this folder we take the LSST stack outputs from DMU4 and stack the catalogues
 
 the large area catalogues are stacked using the patch lists in dmu4 for a given field and using isInner flags to remove overlap regions.
 
+## Data access
+
+The raw files are currently private. The first prototype run is being served on the Vista Science Archive (VSA):
+
+http://horus.roe.ac.uk:8080/vdfs/WP35_form.jsp
+
+Example query:
+
+"""
+SELECT TOP 10 * FROM 
+    HSCG, 
+    HSCR, 
+    HSCI, 
+    HSCZ, 
+    HSCY, 
+    VISTAZ,
+    VISTAY,
+    VISTAJ,
+    VISTAH, 
+    VISTAKs  
+WHERE HSCG.id=HSCR.id 
+AND HSCG.id=HSCI.id 
+AND HSCG.id=HSCZ.id 
+AND HSCG.id=HSCY.id 
+AND HSCG.id=VISTAZ.id 
+AND HSCG.id=VISTAY.id 
+AND HSCG.id=VISTAJ.id 
+AND HSCG.id=VISTAH.id 
+AND HSCG.id=VISTAKs.id 
+
+AND VISTAKs.tract=8524
+AND VISTAKs.patchx=3
+AND VISTAKs.patchy=5
+"""
+
 
 ## Pipeline runs
 
