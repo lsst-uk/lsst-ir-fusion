@@ -12,7 +12,7 @@ http://horus.roe.ac.uk:8080/vdfs/WP35_form.jsp
 
 Example query:
 
-"""
+``` sql
 SELECT TOP 10 * FROM 
     HSCG, 
     HSCR, 
@@ -37,7 +37,7 @@ AND HSCG.id=VISTAKs.id
 AND VISTAKs.tract=8524
 AND VISTAKs.patchx=3
 AND VISTAKs.patchy=5
-"""
+```
 
 
 ## Pipeline runs
