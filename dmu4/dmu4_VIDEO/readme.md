@@ -8,7 +8,7 @@ We also have SExtractor 'dual mode' VISTA-HSC catalogues on this field which we 
 Please not that these are prototype catalogues. In addition to issues we hqve already found we anticipate further issues to continuously discovered.
 We therefore ask that anybody using the catalogues take care especially when using the data to produce scientific results.
 
-![SXDS VIDEO coverage](./figs/sxds_HSC-all_patches.png "SXDS VIDEO coverage")
+![SXDS VIDEO coverage](./figs/sxds_VIDEO_patches.png "SXDS VIDEO coverage")
 
 Figure 1. Red squares show HSC DUD patches, blue shows VIDEO patches.
 
