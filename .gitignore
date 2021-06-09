@@ -1,5 +1,6 @@
 data/
 data_tmp/
+archive/
 *~
 .ipynb_checkpoints
 .idea
