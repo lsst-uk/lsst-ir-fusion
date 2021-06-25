@@ -27,7 +27,7 @@ if os.getcwd().startswith('/Users/raphaelshirley'):
 else:
     BUTLER_LOC = '{}/data'.format(os.getcwd().replace('dmu5','dmu4').replace('/slurm',''))
     DATA =  '../data'
-butler =  dafPersist.Butler(inputs='{}/rerun/coaddPhot'.format(BUTLER_LOC))
+butler =  dafPersist.Butler(inputs='{}/rerun/coadd'.format(BUTLER_LOC))
 
 
 job_id = sys.argv[1]
@@ -43,7 +43,7 @@ reduced_cols = [
     'VISTA_Ks_m_detect_isPatchInner',
     'VISTA_Ks_m_detect_isTractInner'
 ]
-for aper in ['6','12']:
+for aper in ['6']:
     reduced_cols += [
         '{}_m_base_CircularApertureFlux_{}_0_mag'.format(b.replace('-','_'),aper) for b in allBands
     ]

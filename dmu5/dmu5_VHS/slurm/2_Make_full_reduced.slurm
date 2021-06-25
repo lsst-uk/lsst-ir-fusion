@@ -17,7 +17,7 @@
 #SBATCH --nodes=1
 #! How many (MPI) tasks will there be in total? (<= nodes*32)
 #! The skylake/skylake-himem nodes have 32 CPUs (cores) each.
-#SBATCH --ntasks=4
+#SBATCH --ntasks=10
 #! How much wallclock time will be required?
 #SBATCH --time=1:00:00
 #! What types of email messages do you wish to receive?
@@ -27,7 +27,7 @@
 ##SBATCH --no-requeue
 
 #! For 6GB per CPU, set "-p skylake"; for 12GB per CPU, set "-p skylake-himem": 
-#SBATCH -p cclake
+#SBATCH -p skylake-himem
 
 #! sbatch directives end here (put any additional directives above this line)
 
@@ -60,7 +60,7 @@ module load rhel7/default-peta4            # REQUIRED - loads the basic environm
 application="/home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/dmu5/dmu5_VHS/slurm/make_full_reduced.sh"
 
 #! Run options for the application:
-options="../../../dmu4/dmu4_VHS/slurm/w02_patch_job_dict_3996.json"
+options="../../../dmu4/dmu4_VIDEO/slurm/sxds_patch_job_dict_219.json"
 
 #! Work directory (i.e. where the job will run):
 workdir="$SLURM_SUBMIT_DIR"  # The value of SLURM_SUBMIT_DIR sets workdir to the directory

@@ -10,14 +10,14 @@
 
 #! sbatch directives begin here ###############################
 #! Name of the job:
-#SBATCH -J SXDS_Make_full_cat
+#SBATCH -J VIK_SXDS_MakeFullCat
 #! Which project should be charged:
 #SBATCH -A IRIS-IP005-CPU
 #! How many whole nodes should be allocated?
 #SBATCH --nodes=1
 #! How many (MPI) tasks will there be in total? (<= nodes*32)
 #! The skylake/skylake-himem nodes have 32 CPUs (cores) each.
-#SBATCH --ntasks=4
+#SBATCH --ntasks=32
 #! How much wallclock time will be required?
 #SBATCH --time=10:00:00
 #! What types of email messages do you wish to receive?
@@ -27,7 +27,7 @@
 ##SBATCH --no-requeue
 
 #! For 6GB per CPU, set "-p skylake"; for 12GB per CPU, set "-p skylake-himem": 
-#SBATCH -p cclake
+#SBATCH -p skylake-himem
 
 #! sbatch directives end here (put any additional directives above this line)
 

@@ -25,7 +25,7 @@
 #! coadding VIDEO needs ~ 5 cpus worth of memory SBATCH --mem=5980mb
 #! Submit a job array with index values between 0 and 31
 #! NOTE: This must be a range, not a single number (i.e. specifying '32' here would only run one job, with index 32)
-#SBATCH --array=385-9999
+#SBATCH --array=0-9999
 
 #! This is the partition name.
 #SBATCH -p cclake

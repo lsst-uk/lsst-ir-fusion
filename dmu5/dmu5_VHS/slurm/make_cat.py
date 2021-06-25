@@ -27,7 +27,7 @@ if os.getcwd().startswith('/Users/raphaelshirley'):
 else:
     BUTLER_LOC = '{}/data'.format(os.getcwd().replace('dmu5','dmu4').replace('/slurm',''))
     DATA =  '../data'
-butler =  dafPersist.Butler(inputs='{}/rerun/coaddPhot'.format(BUTLER_LOC))
+butler =  dafPersist.Butler(inputs='{}/rerun/coadd'.format(BUTLER_LOC))
 
 
 job_id = sys.argv[1]
