@@ -12,7 +12,7 @@ import gc
 from astropy.table import Table, join, vstack, MaskedColumn
 import astropy.units as u
 from astropy.io import ascii
-
+import itertools
 import warnings
 warnings.filterwarnings("ignore")
 
@@ -38,8 +38,8 @@ reduced_cols = [
     'id', 
     'VISTA_Ks_m_coord_ra', 
     'VISTA_Ks_m_coord_dec',
-    'VISTA_Ks_f_coord_ra',
-    'VISTA_Ks_f_coord_dec'
+#     'VISTA_Ks_f_coord_ra',
+#     'VISTA_Ks_f_coord_dec'
     'VISTA_Ks_m_detect_isPatchInner',
     'VISTA_Ks_m_detect_isTractInner',
     'VISTA_Ks_m_deblend_nChild',
@@ -47,14 +47,14 @@ reduced_cols = [
 ]
 
     
-col_types=[
-    '{}_m_base_CircularApertureFlux_6_0_{}','
+colTypes=[
+    '{}_m_base_CircularApertureFlux_6_0_{}',
     '{}_m_base_PsfFlux_{}',
     '{}_m_slot_ModelFlux_{}',
 ]
-for c in col_types:
-    for m in ['mag', 'magErr', 'flux', 'fluxErr']:
-        reduced_cols += [c.format(b.replace('-','_'),m) for b in allBands]
+measTypes=['mag', 'magErr', 'flux', 'fluxErr']
+for c,b,m in itertools.product(colTypes,allBands,measTypes):
+    reduced_cols+=[c.format(b.replace('-','_'),m)]
 
 
 def addFlux(cat, sources, photoCalib):
