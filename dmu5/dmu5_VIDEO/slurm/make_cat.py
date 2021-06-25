@@ -41,24 +41,21 @@ reduced_cols = [
     'VISTA_Ks_f_coord_ra',
     'VISTA_Ks_f_coord_dec'
     'VISTA_Ks_m_detect_isPatchInner',
-    'VISTA_Ks_m_detect_isTractInner'
+    'VISTA_Ks_m_detect_isTractInner',
+    'VISTA_Ks_m_deblend_nChild',
+    'VISTA_Ks_merge_peak_sky',
 ]
-for aper in ['6']:
-    reduced_cols += [
-        '{}_m_base_CircularApertureFlux_{}_0_mag'.format(b.replace('-','_'),aper) for b in allBands
-    ]
-    reduced_cols+=[
-        '{}_m_base_CircularApertureFlux_{}_0_magErr'.format(b.replace('-','_'),aper) for b in allBands
-    ]
-    reduced_cols += [
-        '{}_f_base_CircularApertureFlux_{}_0_mag'.format(b,aper) for b in allBands
-    ]
-    reduced_cols += [
-        '{}_f_base_CircularApertureFlux_{}_0_magErr'.format(b,aper) for b in allBands
-    ]
+
     
-reduced_cols += ['{}_m_base_PsfFlux_mag'.format(b.replace('-','_')) for b in allBands]
-reduced_cols += ['{}_m_base_PsfFlux_magErr'.format(b.replace('-','_')) for b in allBands]
+col_types=[
+    '{}_m_base_CircularApertureFlux_6_0_{}','
+    '{}_m_base_PsfFlux_{}',
+    '{}_m_slot_ModelFlux_{}',
+]
+for c in col_types:
+    for m in ['mag', 'magErr', 'flux', 'fluxErr']:
+        reduced_cols += [c.format(b.replace('-','_'),m) for b in allBands]
+
 
 def addFlux(cat, sources, photoCalib):
     """Add magnitudes and fluxes to an astropy catalogues with instrument fluxes"""

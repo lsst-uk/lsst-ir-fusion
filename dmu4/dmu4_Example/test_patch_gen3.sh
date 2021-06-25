@@ -16,7 +16,9 @@ butler ingest-raws data ../../dmu0/dmu0_VISTA/dmu0_VIDEO/data/*/*_st.fit
 butler define-visits data lsst.obs.vista.VIRCAM --collections VIRCAM/raw/all
 
 
-pipetask run -d "exposure=622538" -b data/butler.yaml --input VIRCAM/raw/all --register-dataset-types -p "${PIPE_TASKS_DIR}/pipelines/_SingleFrame.yaml" --instrument lsst.obs.vista.VIRCAM --output-run demo_collection
+pipetask run -d "exposure=622538" -b data/butler.yaml --input VIRCAM/raw/all --register-dataset-types -p _SingleFrame.yaml --instrument lsst.obs.vista.VIRCAM --output-run demo_collection 
+#use --extend-run if rerunning
+#pipetask run -d "exposure=622538" -b data/butler.yaml --input VIRCAM/raw/all --register-dataset-types -p "${PIPE_TASKS_DIR}/pipelines/DRP.yaml#singleFrame" --instrument lsst.obs.vista.VIRCAM --output-run demo_collection
 
 
 #export TRACTS=8524 
