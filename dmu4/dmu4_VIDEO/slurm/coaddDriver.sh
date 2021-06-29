@@ -29,7 +29,7 @@ do
         #export VISITS=${VISITS//^/' --selectId filter=VISTA-$FILTER visit='}
         #assembleCoadd.py ../data --rerun coadd $Z_VISITS --id filter=VISTA-Z tract=$tract patch=$patch -j=$numCPUs
         #echo $VISITS
-        coaddDriver.py ../data --rerun coadd --selectId filter=VISTA-$FILTER visit=$VISITS --id filter=VISTA-$FILTER tract=$tract patch=$patch --reuse-outputs-from all --clobber-config --no-versions --cores=$numCPUs
+        coaddDriver.py ../data --rerun coadd --selectId filter=VISTA-$FILTER visit=$VISITS --id filter=VISTA-$FILTER tract=$tract patch=$patch --reuse-outputs-from all --no-versions --cores=$numCPUs
     fi
 done
 
