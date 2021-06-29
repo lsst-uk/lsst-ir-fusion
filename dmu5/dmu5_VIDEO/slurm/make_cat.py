@@ -43,7 +43,8 @@ reduced_cols = [
     'VISTA_Ks_m_detect_isPatchInner',
     'VISTA_Ks_m_detect_isTractInner',
     'VISTA_Ks_m_deblend_nChild',
-    'VISTA_Ks_merge_peak_sky',
+    'VISTA_Ks_m_merge_peak_sky',
+    'VISTA_Ks_m_base_ClassificationExtendedness_value',
 ]
 
     

@@ -10,7 +10,7 @@ butler register-instrument data lsst.obs.vista.VIRCAM
 
 
 # Import the reference catalogues to the butler.
-butler import data "${PWD}/../../dmu2/data/ref_cats_video" --export-file "${PWD}/../../dmu2/data/ref_cats_video/export.yaml" --skip-dimensions instrument,physical_filter,detector
+butler import data "${PWD}/../../dmu2/data/ref_cats_video_ingested/ref_cats/cal_ref_cat" --export-file "${PWD}/../../dmu2/data/ref_cats_video_ingested/ref_cats/cal_ref_cat/export.yaml" --skip-dimensions instrument,physical_filter,detector
 
 butler ingest-raws data ../../dmu0/dmu0_VISTA/dmu0_VIDEO/data/*/*_st.fit
 butler define-visits data lsst.obs.vista.VIRCAM --collections VIRCAM/raw/all
