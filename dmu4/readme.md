@@ -23,6 +23,10 @@ There are a number of decisions made in the notebooks regarding which stacks to 
 
 http://casu.ast.cam.ac.uk/surveys-projects/vista/data-processing/eso-grades
 
+### Slurm config
+
+We are using the pipe drivers which can be parellised. In general we are submitting to only one node. The coaddDriver.py jobs are sent to 10 cpus on one node partly to ensure there is enough memory. The multiBandDriver.py jobs can be sent to 16 cpus to avoid the majority timing out. The scripts are set up to first test if the job has been run by checking if the final files are present. This means that slurm jobs can be reletaively safely resubmitted without wasting large amounts of cpu time on rerunning jobs.
+
 ## Example commands
 
 All the steps might loosely be executed after all the appropriate files are put in place  on IRIS with the following commands:
