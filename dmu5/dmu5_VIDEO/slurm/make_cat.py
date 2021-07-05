@@ -38,13 +38,15 @@ reduced_cols = [
     'id', 
     'VISTA_Ks_m_coord_ra', 
     'VISTA_Ks_m_coord_dec',
-#     'VISTA_Ks_f_coord_ra',
-#     'VISTA_Ks_f_coord_dec'
+    'HSC_R_m_coord_ra',
+    'HSC_R_m_coord_dec',
     'VISTA_Ks_m_detect_isPatchInner',
     'VISTA_Ks_m_detect_isTractInner',
+    'VISTA_Ks_m_detect_isPrimary',
     'VISTA_Ks_m_deblend_nChild',
     'VISTA_Ks_m_merge_peak_sky',
-    'VISTA_Ks_m_base_ClassificationExtendedness_value',
+    #'VISTA_Ks_m_base_ClassificationExtendedness_value',
+    #'VISTA_Ks_m_base_ClassificationExtendedness_flag',
 ]
 
     
@@ -52,8 +54,10 @@ colTypes=[
     '{}_m_base_CircularApertureFlux_6_0_{}',
     '{}_m_base_PsfFlux_{}',
     '{}_m_slot_ModelFlux_{}',
+    '{}_m_base_ClassificationExtendedness_value',
+    '{}_m_base_ClassificationExtendedness_flag',
 ]
-measTypes=['mag', 'magErr', 'flux', 'fluxErr']
+measTypes=['mag', 'magErr', 'flux', 'fluxErr', 'flag']
 for c,b,m in itertools.product(colTypes,allBands,measTypes):
     reduced_cols+=[c.format(b.replace('-','_'),m)]
 

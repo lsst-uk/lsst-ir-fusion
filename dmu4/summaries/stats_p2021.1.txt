@@ -1,0 +1,90 @@
+VIDEO Z det
+180
+VIDEO Z meas
+180
+VIDEO Z forc
+180
+VIDEO Y det
+212
+VIDEO Y meas
+212
+VIDEO Y forc
+212
+VIDEO J det
+212
+VIDEO J meas
+212
+VIDEO J forc
+212
+VIDEO H det
+212
+VIDEO H meas
+212
+VIDEO H forc
+212
+VIDEO Ks det
+212
+VIDEO Ks meas
+212
+VIDEO Ks forc
+212
+VHS Z det
+0
+VHS Z meas
+0
+VHS Z forc
+0
+VHS Y det
+0
+VHS Y meas
+0
+VHS Y forc
+0
+VHS J det
+11898
+VHS J meas
+5345
+VHS J forc
+4822
+VHS H det
+10012
+VHS H meas
+4787
+VHS H forc
+4313
+VHS Ks det
+11858
+VHS Ks meas
+5342
+VHS Ks forc
+4827
+VIKING Z det
+15218
+VIKING Z meas
+14902
+VIKING Z forc
+14825
+VIKING Y det
+15182
+VIKING Y meas
+14935
+VIKING Y forc
+14859
+VIKING J det
+15383
+VIKING J meas
+15142
+VIKING J forc
+15065
+VIKING H det
+13821
+VIKING H meas
+13599
+VIKING H forc
+13536
+VIKING Ks det
+13006
+VIKING Ks meas
+12836
+VIKING Ks forc
+12772

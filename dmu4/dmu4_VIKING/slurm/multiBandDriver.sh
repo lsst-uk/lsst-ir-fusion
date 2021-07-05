@@ -29,5 +29,5 @@ else
     cp -rn ../../../dmu0/dmu0_HSC/data/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_wide/deepCoadd-results/HSC-I/$tract/$patch/{calexp*.fits,det*.fits} $repo/rerun/coadd/deepCoadd-results/HSC-I/$tract/$patch/
     cp -rn ../../../dmu0/dmu0_HSC/data/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_wide/deepCoadd-results/HSC-Z/$tract/$patch/{calexp*.fits,det*.fits} $repo/rerun/coadd/deepCoadd-results/HSC-Z/$tract/$patch/
     cp -rn ../../../dmu0/dmu0_HSC/data/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_wide/deepCoadd-results/HSC-Y/$tract/$patch/{calexp*.fits,det*.fits} $repo/rerun/coadd/deepCoadd-results/HSC-Y/$tract/$patch/
-    multiBandDriver.py $repo --rerun coadd --id filter=VISTA-Z^VISTA-Y^VISTA-J^VISTA-H^VISTA-Ks^HSC-G^HSC-R^HSC-I^HSC-Z^HSC-Y tract=$tract patch=$patch --reuse-outputs-from all --no-versions --cores=5
+    multiBandDriver.py $repo --rerun coadd --id filter=VISTA-Z^VISTA-Y^VISTA-J^VISTA-H^VISTA-Ks^HSC-G^HSC-R^HSC-I^HSC-Z^HSC-Y tract=$tract patch=$patch --reuse-outputs-from all --no-versions --cores=8
 fi
