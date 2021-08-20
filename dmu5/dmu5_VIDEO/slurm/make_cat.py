@@ -53,7 +53,7 @@ colTypes=[
     '{}_m_base_PsfFlux_{}',
     '{}_m_slot_ModelFlux_{}',
 ]
-measTypes=['mag', 'magErr', 'flux', 'fluxErr']
+measTypes=['mag', 'magErr', 'flux', 'fluxErr', 'flag']
 for c,b,m in itertools.product(colTypes,allBands,measTypes):
     reduced_cols+=[c.format(b.replace('-','_'),m)]
 
