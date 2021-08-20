@@ -44,6 +44,15 @@ AND VISTAKs.patchy=5
 
 We have been conducting pipeline runs in preparation for final runs with Rubin data. We are naming these prototype runs using P followed by the year and the run number for that year.
 
+### P2021.2
+This run is upcoming. Changes to be made for upcoming run:
+
+1) Use the generation 3 Butler.
+2) Read number of dithers from stack header to set gain.
+3) Apply confidence maps to variance plane.
+4) Scale variance plane using autocorrelation to account for correlated noise.
+5) Investigate using exposures instead of stacks.
+6) Put all surveys in a single butler.
 
 ### P2021.1
 This was the first complete run of overlapping HSC and VISTA data in the VHS, VIKING, and VIDEO surveys.

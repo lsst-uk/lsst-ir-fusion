@@ -21,8 +21,8 @@ Each folder contained here will have a corresponding data folder not stored on G
  [DMU1](dmu1)      |  Summaries and stats for raw data in DMU0
  [DMU2](dmu2)      |  Constructing photometric and astrometric reference catalogues
  [DMU3](dmu3)      |  SExtractor baseline catalogues
- [DMU4](dmu4)      |  LSST pipeline catalogues
- [DMU5](dmu5)      |  Comparisons and diagnostics
+ [DMU4](dmu4)      |  LSST pipeline runs and Butler repositories
+ [DMU5](dmu5)      |  Production of final catalogues and diagnostics
 
 
 
