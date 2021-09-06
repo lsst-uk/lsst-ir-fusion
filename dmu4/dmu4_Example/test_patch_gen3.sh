@@ -2,8 +2,10 @@
 #source /home/ir-shir1/rds/rds-iris-ip005/ras81/lsst_stack/loadLSST.bash
 #source /Users/raphaelshirley/Documents/github/lsst-stack/loadLSST.bash
 source /Users/raphaelshirley/Documents/github/stack22/loadLSST.bash
-setup lsst_distrib
 setup obs_vista 22.0.0-2
+setup lsst_distrib -t w_latest
+#setup lsst_apps -t w_latest
+
 export repo=data
 #export TRACTS=8524 
 #export PATCHES=3,5
@@ -28,12 +30,12 @@ butler write-curated-calibrations data VIRCAM
 
 #Run processCcd on some exposures
 #AND (exposure=658653 OR exposure=642039)
-pipetask run -d "(detector=10 or detector=9)" -b $repo --input VIRCAM/raw/all,refcats,VIRCAM/calib --register-dataset-types -p './DRP.yaml#processCcd' --instrument lsst.obs.vista.VIRCAM  --output-run processCcdOutputs --do-raise 
+pipetask run -d "(detector=10 or detector=9) AND physical_filter='VIRCAM-Ks'" -b $repo --input VIRCAM/raw/all,refcats,VIRCAM/calib --register-dataset-types -p './DRP.yaml#processCcd' --instrument lsst.obs.vista.VIRCAM  --output-run processCcdOutputs  
 
 #Coadd the exposures
-pipetask run -b $repo --input processCcdOutputs --input skymaps --input  VIRCAM/raw/all,refcats,VIRCAM/calib  --register-dataset-types -p "./DRP.yaml#coaddition" --instrument lsst.obs.vista.VIRCAM --output-run coadd 
+pipetask run -b $repo --input processCcdOutputs --input skymaps --input  VIRCAM/raw/all,refcats,VIRCAM/calib  --register-dataset-types -p "./DRP.yaml#coaddition" --instrument lsst.obs.vista.VIRCAM --output-run coadd --debug
 #Run photometry pipeline
-pipetask run -b $repo --input processCcdOutputs --input  VIRCAM/raw/all,refcats,VIRCAM/calib --input skymaps --input coadd --register-dataset-types -p "./DRP.yaml#multiband" --instrument lsst.obs.vista.VIRCAM --output-run photo
+pipetask run -b $repo --input processCcdOutputs --input  VIRCAM/raw/all,refcats,VIRCAM/calib --input skymaps --input coadd --register-dataset-types -p "./DRP.yaml#multiband" --instrument lsst.obs.vista.VIRCAM --output-run photo --debug
 
 
 
