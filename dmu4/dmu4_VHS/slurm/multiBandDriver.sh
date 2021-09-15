@@ -14,7 +14,7 @@ echo "Photopipe job info:"
 echo $tract
 echo $patch
 
-if [ -f $repo/rerun/coadd/deepCoadd-results/VISTA-Ks/$tract/$patch/forcedSrc-VISTA-Ks-$tract-$patch.fits ]
+if [ -f $repo/rerun/coadd/deepCoadd-results/HSC-Y/$tract/$patch/forcedSrc-HSC-Y-$tract-$patch.fits ]
 then
     echo "Already run full photopipe on patch" $tract $patch
 else
@@ -29,5 +29,5 @@ else
     cp -r ../../../dmu0/dmu0_HSC/data/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_wide/deepCoadd-results/HSC-I/$tract/$patch/{calexp*.fits,det*.fits} $repo/rerun/coadd/deepCoadd-results/HSC-I/$tract/$patch/
     cp -r ../../../dmu0/dmu0_HSC/data/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_wide/deepCoadd-results/HSC-Z/$tract/$patch/{calexp*.fits,det*.fits} $repo/rerun/coadd/deepCoadd-results/HSC-Z/$tract/$patch/
     cp -r ../../../dmu0/dmu0_HSC/data/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_wide/deepCoadd-results/HSC-Y/$tract/$patch/{calexp*.fits,det*.fits} $repo/rerun/coadd/deepCoadd-results/HSC-Y/$tract/$patch/
-    multiBandDriver.py $repo --rerun coadd --id filter=VISTA-Z^VISTA-Y^VISTA-J^VISTA-H^VISTA-Ks^HSC-G^HSC-R^HSC-I^HSC-Z^HSC-Y tract=$tract patch=$patch --reuse-outputs-from all --no-versions --cores=16
+    multiBandDriver.py $repo --rerun coadd --id filter=VISTA-Z^VISTA-Y^VISTA-J^VISTA-H^VISTA-Ks^HSC-G^HSC-R^HSC-I^HSC-Z^HSC-Y tract=$tract patch=$patch --reuse-outputs-from all --no-versions --cores=8
 fi

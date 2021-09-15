@@ -60,7 +60,7 @@ module load rhel7/default-peta4            # REQUIRED - loads the basic environm
 application="du"
 
 #! Run options for the application:
-options="-h --max-depth=8 ../../"
+options="-h --max-depth=8 ../../../../"
 
 #! Work directory (i.e. where the job will run):
 workdir="$SLURM_SUBMIT_DIR"  # The value of SLURM_SUBMIT_DIR sets workdir to the directory
