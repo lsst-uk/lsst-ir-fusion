@@ -23,7 +23,8 @@ Each folder contained here will have a corresponding data folder not stored on G
  [DMU3](dmu3)      |  SExtractor baseline catalogues
  [DMU4](dmu4)      |  LSST pipeline runs and Butler repositories
  [DMU5](dmu5)      |  Production of final catalogues and diagnostics
-
+ [DMU6](dmu6)      |  Photometric redhshifts
+ [DMU7](dmu7)      |  Spectral Energy Distribution (SED) modelling   
 
 
 ## Tiling, warping and pixel spaces

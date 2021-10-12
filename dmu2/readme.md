@@ -35,3 +35,10 @@ Some code has been reused from here:
 
 https://github.com/jrmullaney/filter_PanSTARRS
 
+### Gen 3 format
+
+The gen 3 ref cat ingester is currently being developed:
+
+https://jira.lsstcorp.org/browse/DM-29543
+
+For now I am importing the gen 2 reference catalogues using an export.yaml file. They key problem with this is that the proper motion or epoch units are wrong causing massively overlarge proper motions and breaking astrometry. For now I have just set proper motion to zero to get astrometry working but this has increased scatter by around a factor of ten from 0.01 arcsec to 0.1 arcsec.

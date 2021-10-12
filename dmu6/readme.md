@@ -5,3 +5,20 @@ In this directory we take the large area catalogues from DMU5 and compute photom
 https://github.com/dunkenj/eazy-pype
 
 It is a modifcation of the EaZY code. The code there was originally optimized for the same XMM-LSS field with the same underlying data albeit with additional bands.
+
+
+## Running
+
+There is a notebook in each survey folder which creates the input catalogues, filter curve files, and config files in the data folder. The eazy pype code available here:
+
+https://github.com/dunkenj/eazy-pype/
+
+Should then be run with 
+
+```Shell
+pythonw eazy-pype.py -p params.py
+```
+
+Where that params file points to the correct working directory here.
+
+See the example params file [./dmu6_VIDEO/sxds_params.py](./dmu6_VIDEO/sxds_params.py)
