@@ -40,5 +40,5 @@ pipetask run -d "tract=8524 AND patch IN (39,48) AND skymap='hscPdr2' " -b $repo
 butler import $repo "../../dmu0/dmu0_HSC" --export-file "../../dmu0/dmu0_HSC/export.yaml" 
 
 #Run photometry pipeline
-pipetask run -d "tract=8524 AND patch IN (39,48) AND skymap='hscPdr2' " -b $repo --input videoTest,VIRCAM/raw/all,refcats,VIRCAM/calib,skymaps --register-dataset-types -p "./DRP.yaml#multiVisitLater" --instrument lsst.obs.vista.VIRCAM --output-run videoTestMeas
+pipetask run -d "tract=8524 AND patch IN (39,48) AND skymap='hscPdr2' " -b $repo --input videoTest,VIRCAM/raw/all,refcats,VIRCAM/calib,skymaps --register-dataset-types -p "./DRP.yaml#multiVisitLater" --instrument lsst.obs.vista.VIRCAM --output-run videoTest
 
