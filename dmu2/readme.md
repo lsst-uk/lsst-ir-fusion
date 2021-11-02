@@ -37,6 +37,29 @@ https://github.com/jrmullaney/filter_PanSTARRS
 
 ### Gen 3 format
 
+The gen 3 ref cat ingester is described here:
+
+https://pipelines.lsst.io/v/weekly/modules/lsst.meas.algorithms/creating-a-reference-catalog.html
+
+The basic procedure is:
+
+```Shell
+setup meas_algorithms
+mkdir data/video_gen3
+convertReferenceCatalog data/video_gen3/ indexReferenceCatalogOverride.py "/Users/raphaelshirley/Documents/github/lsst-ir-fusion/dmu2/data/ref_cats_video/*" &> convert.log
+```
+
+These then need to be ingested into the Butler (as described in the convert.log file):
+
+```Shell
+butler register-dataset-type REPO cal_ref_cat SimpleCatalog htm7
+butler ingest-files -t direct REPO ps1_pv3_3pi_20170110_vista refcats ../../dmu2/data/video_gen3/filename_to_htm.ecsv
+```
+
+
+
+At 20211020 this superseeds the following info: 
+
 The gen 3 ref cat ingester is currently being developed:
 
 https://jira.lsstcorp.org/browse/DM-29543

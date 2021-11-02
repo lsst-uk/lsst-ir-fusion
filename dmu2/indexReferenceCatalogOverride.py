@@ -1,3 +1,6 @@
+# The name of the output reference catalog dataset.
+config.dataset_config.ref_dataset_name = "ps1_pv3_3pi_20170110_vista"
+
 from lsst.meas.algorithms.readFitsCatalogTask import ReadFitsCatalogTask
 config.file_reader.retarget(ReadFitsCatalogTask)
 config.id_name = "id"
