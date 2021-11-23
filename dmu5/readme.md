@@ -13,26 +13,26 @@ http://horus.roe.ac.uk:8080/vdfs/WP35_form.jsp
 Example query:
 
 ``` sql
-SELECT TOP 10 * FROM 
-    HSCG, 
-    HSCR, 
-    HSCI, 
-    HSCZ, 
-    HSCY, 
-    VISTAZ,
-    VISTAY,
-    VISTAJ,
-    VISTAH, 
-    VISTAKs  
-WHERE HSCG.id=HSCR.id 
-AND HSCG.id=HSCI.id 
-AND HSCG.id=HSCZ.id 
-AND HSCG.id=HSCY.id 
-AND HSCG.id=VISTAZ.id 
-AND HSCG.id=VISTAY.id 
-AND HSCG.id=VISTAJ.id 
-AND HSCG.id=VISTAH.id 
-AND HSCG.id=VISTAKs.id 
+SELECT TOP 10 * FROM
+   VIKING_HSC_G_Meas as HSCG,
+   VIKING_HSC_R_Meas as HSCR,
+   VIKING_HSC_I_Meas as HSCI,
+   VIKING_HSC_Z_Meas as HSCZ,
+   VIKING_HSC_Y_Meas as HSCY,
+   VIKING_VISTA_Z_Meas as VISTAZ,
+   VIKING_VISTA_Y_Meas as VISTAY,
+   VIKING_VISTA_J_Meas as VISTAJ,
+   VIKING_VISTA_H_Meas as VISTAH,
+   VIKING_VISTA_Ks_Meas as VISTAKs
+WHERE HSCG.id=HSCR.id
+AND HSCG.id=HSCI.id
+AND HSCG.id=HSCZ.id
+AND HSCG.id=HSCY.id
+AND HSCG.id=VISTAZ.id
+AND HSCG.id=VISTAY.id
+AND HSCG.id=VISTAJ.id
+AND HSCG.id=VISTAH.id
+AND HSCG.id=VISTAKs.id
 
 AND VISTAKs.tract=8524
 AND VISTAKs.patchx=3
