@@ -39,7 +39,40 @@ AND VISTAKs.patchx=3
 AND VISTAKs.patchy=5
 ```
 
+The full list of tables is:
 
+``` sql
+VHS_HSC_G_Meas
+VHS_HSC_I_Meas
+VHS_HSC_R_Meas
+VHS_HSC_Y_Meas
+VHS_HSC_Z_Meas
+VHS_VISTA_H_Meas
+VHS_VISTA_J_Meas
+VHS_VISTA_Ks_Meas
+VIDEO_HSC_G_Meas
+VIDEO_HSC_I_Meas
+VIDEO_HSC_R_Meas
+VIDEO_HSC_Y_Meas
+VIDEO_HSC_Z_Meas
+VIDEO_VISTA_H_Meas
+VIDEO_VISTA_J_Meas
+VIDEO_VISTA_Ks_Meas
+VIDEO_VISTA_Y_Meas
+VIDEO_VISTA_Z_Meas
+VIKING_HSC_G_Meas
+VIKING_HSC_I_Meas
+VIKING_HSC_R_Meas
+VIKING_HSC_Y_Meas
+VIKING_HSC_Z_Meas
+VIKING_VISTA_H_Meas
+VIKING_VISTA_J_Meas
+VIKING_VISTA_Ks_Meas
+VIKING_VISTA_Y_Meas
+VIKING_VISTA_Z_Meas
+```
+
+There are thousands of columns in each table. We advise getting a small test table first and selecting only the columns you need for a larger query.
 ## Pipeline runs
 
 We have been conducting pipeline runs in preparation for final runs with Rubin data. We are naming these prototype runs using P followed by the year and the run number for that year.
