@@ -5,9 +5,9 @@ setup lsst_distrib
 setup obs_vista
 eups admin clearLocks
 
-for i in {14550..17799}
+for i in {2..3594}
 do 
-  varArray="$(python jobDict.py $i full_images_job_dict_17800.json)"
+  varArray="$(python jobDict.py $i w03_images_job_dict_3595.json)"
   varArray=($varArray)
   dateObs=${varArray[0]}
   numObs=${varArray[1]}
@@ -20,7 +20,10 @@ do
   echo $filter
   echo $tracts
   echo $filename
-  ingestImages.py ../data $filename --ignore-ingested 
+  echo ${filename:53}
+  echo ../../../dmu0/dmu0_VISTA/dmu0_VIKING/data/${filename:53}
+  ~/mc cp iris/vista/${filename:53} ../../../dmu0/dmu0_VISTA/dmu0_VIKING/data/${filename:53}
+  ingestImages.py ../data ../../../dmu0/dmu0_VISTA/dmu0_VIKING/data/${filename:53} --ignore-ingested 
 done
 #processCcd.py ../data --rerun processCcdOutputs --id dateObs=$dateObs numObs=$numObs --clobber-config
 #makeCoaddTempExp.py ../data --rerun coadd --selectId dateObs=$dateObs numObs=$numObs filter=$filter --id filter=$filter tract=$tracts  --clobber-config

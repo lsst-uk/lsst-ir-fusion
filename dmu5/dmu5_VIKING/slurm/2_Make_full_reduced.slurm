@@ -60,7 +60,7 @@ module load rhel7/default-peta4            # REQUIRED - loads the basic environm
 application="/home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/dmu5/dmu5_VIKING/slurm/make_full_reduced.sh"
 
 #! Run options for the application:
-options="../../../dmu4/dmu4_VIKING/slurm/w02_patch_job_dict_386.json"
+options="../../../dmu4/dmu4_VIKING/slurm/w03_patch_job_dict_3342.json"
 
 #! Work directory (i.e. where the job will run):
 workdir="$SLURM_SUBMIT_DIR"  # The value of SLURM_SUBMIT_DIR sets workdir to the directory
