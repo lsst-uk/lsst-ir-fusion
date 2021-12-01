@@ -10,7 +10,7 @@
 
 #! sbatch directives begin here ###############################
 #! Name of the job:
-#SBATCH -J download_HSC_WIDE
+#SBATCH -J downHSCDUD3
 #! Which project should be charged:
 #SBATCH -A IRIS-IP005-CPU
 #! How many whole nodes should be allocated?
@@ -58,7 +58,7 @@ module load rhel7/default-peta4            # REQUIRED - loads the basic environm
 #! Insert additional module load commands after this line if needed:
 
 #! Full path to application executable: 
-application="/home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/dmu0/dmu0_HSC/data/download_wide.sh"
+application="/home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/dmu0/dmu0_HSC/data/download_deep.sh"
 
 #! Run options for the application:
 options=""

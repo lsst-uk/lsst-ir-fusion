@@ -12,7 +12,7 @@ https://hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_wide/
 
 The file structure within those directories should mirror the policy file in the obs_subaru package at the time of creation. We are aiming to mirror this file structure policy with obs_vista data. The full wide data set is ~17TB.
 
-
+You can get all the tracts below +2 degrees declination by downloading all tracts that begin with 8 or 9. Some of the VIKING tiles go to around +3 degrees. All tracts starting with 8, 9, or 10 will retrieve all data that overlaps with VISTA coverage.
 
 ## Ingesting HSC data into the obs_vista Butler repository
 
