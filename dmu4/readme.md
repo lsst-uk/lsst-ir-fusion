@@ -9,9 +9,9 @@ https://pipelines.lsst.io/getting-started/data-setup.html
 In the 'dmu4_Example' folder we run the pipeline on a minimal VISTA-Ks^VISTA-Y^HSC-R which is executed by downloading all the requisite image files and running the shell script here with executes all the LSST stack command line tasks. The final datasets are stored in the directories here for different pairs of VISTA and HSC surveys.
 
 - [./dmu4_Example](./dmu4_Example) Minimal example training data set in SXDS for pipeline development.
-- [./dmu4_VIDEO](./dmu4_VIDEO) The SXDS field of the HSC PDR2 DUD survey with the VIDEO survey with multiple sets of detection catalogues.
-- [./dmu4_VHS](./dmu4_VHS) VHS survey processing. For now only on HSC PDR2 coverage.
-- [./dmu4_VIKING](./dmu4_VIKING) VIKING survey processing run. For now this only over HSC PDR2 coverage.
+- [./dmu4_VIDEO](./dmu4_VIDEO) The SXDS field of the HSC PDR3 DUD survey with the VIDEO survey with multiple sets of detection catalogues.
+- [./dmu4_VHS](./dmu4_VHS) VHS survey processing. For now only on HSC PDR3 coverage.
+- [./dmu4_VIKING](./dmu4_VIKING) VIKING survey processing run. For now this only over HSC PDR3 coverage.
 
 In the future we plan to produce on the Slurm machinery in the individual folders and then preduce a single Butler in this top level directory. 
 For now we use a separate Butler for every survey run.
@@ -37,12 +37,16 @@ All the steps might loosely be executed after all the appropriate files are put 
 
 ```Shell
 #Setup a fresh Butler and copy the requisite reference objects
-bash setup.sh
+bash 1_butler_setup.sh
+#Ingest the exposures
+qsub 1_Ingest.slurm
 #Submit all the image processing jobs
-qsub 1_ProcessCcd.slurm
+qsub 2_ProcessCcd.slurm
 #Wait for all jobs to complete
-qsub 2_Coadd.slurm
+qsub 3_Coadd.slurm
 #Wait for all coadd jobs to complete
-qsub 3_Photopipe.slurm
+qsub 4_Photopipe.slurm
 #Run diagnostics and final catalogue production in DMU5
 ```
+
+Occasionally the resources given to each patch or image in the slurm file need to be increased for failed patches or images. They should be set such that the majority (>95%) pass first time but checks must be made to see any that require increased resources and rerunning.
