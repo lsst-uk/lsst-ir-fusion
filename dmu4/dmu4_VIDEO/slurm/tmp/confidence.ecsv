@@ -1,0 +1,24 @@
+# %ECSV 1.0
+# ---
+# datatype:
+# - {name: filename, datatype: string}
+# - {name: instrument, datatype: string}
+# - {name: detector, datatype: int64}
+# schema: astropy-2.0
+filename instrument detector
+/home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/dmu4/dmu4_VIDEO/slurm/tmp/tmp_confidence.fit VIRCAM 1
+/home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/dmu4/dmu4_VIDEO/slurm/tmp/tmp_confidence.fit VIRCAM 2
+/home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/dmu4/dmu4_VIDEO/slurm/tmp/tmp_confidence.fit VIRCAM 3
+/home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/dmu4/dmu4_VIDEO/slurm/tmp/tmp_confidence.fit VIRCAM 4
+/home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/dmu4/dmu4_VIDEO/slurm/tmp/tmp_confidence.fit VIRCAM 5
+/home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/dmu4/dmu4_VIDEO/slurm/tmp/tmp_confidence.fit VIRCAM 6
+/home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/dmu4/dmu4_VIDEO/slurm/tmp/tmp_confidence.fit VIRCAM 7
+/home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/dmu4/dmu4_VIDEO/slurm/tmp/tmp_confidence.fit VIRCAM 8
+/home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/dmu4/dmu4_VIDEO/slurm/tmp/tmp_confidence.fit VIRCAM 9
+/home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/dmu4/dmu4_VIDEO/slurm/tmp/tmp_confidence.fit VIRCAM 10
+/home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/dmu4/dmu4_VIDEO/slurm/tmp/tmp_confidence.fit VIRCAM 11
+/home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/dmu4/dmu4_VIDEO/slurm/tmp/tmp_confidence.fit VIRCAM 12
+/home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/dmu4/dmu4_VIDEO/slurm/tmp/tmp_confidence.fit VIRCAM 13
+/home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/dmu4/dmu4_VIDEO/slurm/tmp/tmp_confidence.fit VIRCAM 14
+/home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/dmu4/dmu4_VIDEO/slurm/tmp/tmp_confidence.fit VIRCAM 15
+/home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/dmu4/dmu4_VIDEO/slurm/tmp/tmp_confidence.fit VIRCAM 16
