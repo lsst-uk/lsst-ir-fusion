@@ -19,6 +19,6 @@ Should then be run with
 pythonw eazy-pype.py -p params.py
 ```
 
-Where that params file points to the correct working directory here.
+Where that params file points to the correct working directory here and input table name.
 
 See the example params file [./dmu6_VIDEO/sxds_params.py](./dmu6_VIDEO/sxds_params.py)

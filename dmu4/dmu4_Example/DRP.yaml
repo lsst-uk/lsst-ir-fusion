@@ -3,7 +3,8 @@ description: >
   Never run this pipeline or any of its subsets directly; always use an
   obs_* package pipeline that imports it instead.
 tasks:
-  isr: lsst.ip.isr.IsrTask
+  #isr: lsst.ip.isr.IsrTask
+  isr: lsst.obs.vista.VircamIsrTask
   characterizeImage: lsst.pipe.tasks.characterizeImage.CharacterizeImageTask
   calibrate: lsst.pipe.tasks.calibrate.CalibrateTask
   writeSourceTable: lsst.pipe.tasks.postprocess.WriteSourceTableTask
