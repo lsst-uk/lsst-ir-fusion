@@ -55,6 +55,8 @@ This stage consists of many steps which are documented in DMU4. In the final DMU
 
 For many purposes we would like to have a single catalogue. We merge bands and patches together and conduct all field diagnostics in DMU5.
 
+## Running using BPS
+To run at scale jobs must be run using the batch processing system. To do this using Slurm the [gen3_workflow](https://github.com/LSSTDESC/gen3_workflow/tree/master/python/desc/gen3_workflow) code must be installed.
 
 
 ---

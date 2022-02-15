@@ -16,7 +16,7 @@ if [ ! -f $repo/butler.yaml ]; then
     #butler register-instrument $repo lsst.obs.subaru.HyperSuprimeCam
     butler register-instrument $repo lsst.obs.vista.VIRCAM
     #Make and register the all sky skymap using local config file
-    #butler register-skymap $repo -C makeSkyMap.py
+    butler register-skymap $repo -C makeSkyMap.py
     
     # Import the reference catalogues to the butler.
     butler register-dataset-type $repo ps1_pv3_3pi_20170110_vista SimpleCatalog htm7
@@ -24,8 +24,8 @@ if [ ! -f $repo/butler.yaml ]; then
     butler ingest-files -t direct $repo ps1_pv3_3pi_20170110_vista refcats data/video_gen3/filename_to_htm.ecsv 
     
     #Ingest the raw exposures _st for stacks [0-9] for exposures
-    #butler ingest-raws $repo ../../dmu0/dmu0_VISTA/dmu0_VIDEO/data/*/*_st.fit -t copy
-    butler ingest-raws $repo ../../dmu0/dmu0_VISTA/dmu0_VIDEO/data/20121122/v20121122_00088_st.fit -t copy
+    butler ingest-raws $repo ../../dmu0/dmu0_VISTA/dmu0_VIDEO/data/*/*_st.fit -t copy
+    #butler ingest-raws $repo ../../dmu0/dmu0_VISTA/dmu0_VIDEO/data/20121122/v20121122_00088_st.fit -t copy
     #Define the visits from the ingested exposures
     butler define-visits $repo VIRCAM 
     #We don't have calibs but we need the collection for later processing
@@ -35,17 +35,19 @@ fi
 #Import confidence maps
 #butler import $repo "../../dmu0/dmu0_VISTA/dmu0_VIDEO" --export-file "../../dmu0/dmu0_VISTA/dmu0_VIDEO/export_test.yaml" 
 butler register-dataset-type $repo confidence ExposureF instrument band physical_filter exposure detector
-butler ingest-files --formatter=lsst.obs.vista.VircamRawFormatter $repo confidence videoTest ../../dmu0/dmu0_VISTA/dmu0_VIDEO/test_export_confidence_658653.ecsv
+butler ingest-files --formatter=lsst.obs.vista.VircamRawFormatter $repo confidence videoTest ../../dmu0/dmu0_VISTA/dmu0_VIDEO/test_export_confidence.ecsv -t copy
 
 #Run processCcd on some exposures singleFrame processCcd
-pipetask run -d "detector IN (9,10) AND band IN ('K') " -b $repo --input videoTest,VIRCAM/raw/all,refcats,VIRCAM/calib --register-dataset-types -p './DRP.yaml#singleFrame' --instrument lsst.obs.vista.VIRCAM --output-run videoTest  --extend-run #--clobber-outputs --skip-existing
+pipetask run -d "detector IN (9,10) AND band IN ('J','K')" -b $repo --input videoTest,VIRCAM/raw/all,refcats,VIRCAM/calib --register-dataset-types -p "$OBS_VISTA_DIR/pipelines/DRP_full.yaml#singleFrame" --output-run videoTest  --extend-run #--clobber-outputs --skip-existing
 
 #Coadd the exposures
-pipetask run -d "tract=8524 AND patch IN (39,48) AND skymap='hscPdr2' " -b $repo --input videoTest,skymaps,VIRCAM/raw/all,refcats,VIRCAM/calib  --register-dataset-types -p "./DRP.yaml#coaddition" --instrument lsst.obs.vista.VIRCAM --output-run videoTest --extend-run 
+pipetask run -d "tract=8524 AND patch IN (39,48) AND skymap='hscPdr2' " -b $repo --input videoTest,skymaps,VIRCAM/raw/all,refcats,VIRCAM/calib  --register-dataset-types -p "$OBS_VISTA_DIR/pipelines/DRP_full.yaml#coaddDetect" --output-run videoTest --extend-run 
 
 #Import HSC images
-butler import $repo "../../dmu0/dmu0_HSC" --export-file "../../dmu0/dmu0_HSC/export.yaml" 
+#butler import $repo "../../dmu0/dmu0_HSC" --export-file "../../dmu0/dmu0_HSC/export.yaml" 
+butler ingest-files --formatter=lsst.obs.base.formatters.fitsExposure.FitsExposureFormatter $repo deepCoadd videoTest ../../dmu0/dmu0_HSC/data/calexp_2.ecsv
+butler ingest-files --formatter=lsst.obs.base.formatters.fitsExposure.FitsExposureFormatter $repo deepCoadd videoTest ../../dmu0/dmu0_HSC/data/det_2.ecsv
 
 #Run photometry pipeline
-pipetask run -d "tract=8524 AND patch IN (39,48) AND skymap='hscPdr2' " -b $repo --input videoTest,VIRCAM/raw/all,refcats,VIRCAM/calib,skymaps --register-dataset-types -p "./DRP.yaml#multiVisitLater" --instrument lsst.obs.vista.VIRCAM --output-run videoTest --extend-run
+pipetask run -d "tract=8524 AND patch IN (39,48) AND skymap='hscPdr2' " -b $repo --input videoTest,VIRCAM/raw/all,refcats,VIRCAM/calib,skymaps --register-dataset-types -p "$OBS_VISTA_DIR/pipelines/DRP_full.yaml#multiVisitLater" --output-run videoTest --extend-run
 
