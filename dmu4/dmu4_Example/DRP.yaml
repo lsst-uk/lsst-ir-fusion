@@ -2,6 +2,7 @@ description: >
   Base Pipeline that describes the Data Release Production process.
   Never run this pipeline or any of its subsets directly; always use an
   obs_* package pipeline that imports it instead.
+instrument: lsst.obs.vista.VIRCAM
 tasks:
   #isr: lsst.ip.isr.IsrTask
   isr: lsst.obs.vista.VircamIsrTask
@@ -181,7 +182,7 @@ subsets:
       #- makeWarp
       #- assembleCoadd
       #- healSparsePropertyMaps # needs visit info
-      - detection
+      #- detection
       - mergeDetections
       - deblend
       - measure # needs visit src catalogues if propagating flags
