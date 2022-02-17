@@ -45,8 +45,11 @@ pipetask run -d "tract=8524 AND patch IN (39,48) AND skymap='hscPdr2' " -b $repo
 
 #Import HSC images
 #butler import $repo "../../dmu0/dmu0_HSC" --export-file "../../dmu0/dmu0_HSC/export.yaml" 
-butler ingest-files --formatter=lsst.obs.base.formatters.fitsExposure.FitsExposureFormatter $repo deepCoadd videoCoaddDetect ../../dmu0/dmu0_HSC/data/calexp_2.ecsv
-butler ingest-files --formatter=lsst.obs.base.formatters.fitsExposure.FitsExposureFormatter $repo deepCoadd videoCoaddDetect ../../dmu0/dmu0_HSC/data/det_2.ecsv
+coaddRun=$(ls $repo/videoCoaddDetect)
+butler ingest-files --formatter=lsst.obs.base.formatters.fitsExposure.FitsExposureFormatter $repo deepCoadd videoCoaddDetect/$coaddRun ../../dmu0/dmu0_HSC/data/calexp_2.ecsv
+coaddRun=$(ls $repo/videoCoaddDetect)
+butler ingest-files --formatter=lsst.obs.base.formatters.fitsExposure.FitsExposureFormatter $repo deepCoadd_calexp videoCoaddDetect/$coaddRun ../../dmu0/dmu0_HSC/data/calexp_2.ecsv
+butler ingest-files --formatter=lsst.obs.base.formatters.fitsGeneric.FitsGenericFormatter $repo deepCoadd_det videoCoaddDetect/$coaddRun ../../dmu0/dmu0_HSC/data/det_2.ecsv
 
 #Run photometry pipeline
 pipetask run -d "tract=8524 AND patch IN (39,48) AND skymap='hscPdr2' " -b $repo --input videoConfidence,VIRCAM/raw/all,refcats,VIRCAM/calib,skymaps,videoSingleFrame,videoCoaddDetect --register-dataset-types -p "$OBS_VISTA_DIR/pipelines/DRP_full.yaml#multiVisitLater" --output videoMultiVisitLater
