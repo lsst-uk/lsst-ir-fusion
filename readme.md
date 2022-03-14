@@ -55,6 +55,10 @@ This stage consists of many steps which are documented in DMU4. In the final DMU
 
 For many purposes we would like to have a single catalogue. We merge bands and patches together and conduct all field diagnostics in DMU5.
 
+## Test data set
+
+We have made a test data set available [here](https://drive.google.com/file/d/1fLFjtHErYV3CXE5avS6w5vAR2Z52TEiN/view?usp=sharing). Copy these files in to this repository and you should have the basic files required to run the test script in dmu4/dmu4_Example.
+
 ## Running using BPS
 To run at scale jobs must be run using the batch processing system. To do this using Slurm the [gen3_workflow](https://github.com/LSSTDESC/gen3_workflow/tree/master/python/desc/gen3_workflow) code must be installed.
 
