@@ -132,6 +132,14 @@ subsets:
       - healSparsePropertyMaps
     description: >
       A set of tasks to run when coadding images.
+  coaddDetect:
+    subset:
+      - makeWarp
+      - assembleCoadd
+      - healSparsePropertyMaps
+      - detect
+    description: >
+      A set of tasks to run when coadding images with coaddition.
   multiband:
     subset:
       - detection
