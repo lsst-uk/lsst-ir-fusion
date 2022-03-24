@@ -1,0 +1,24 @@
+includeConfigs:
+  - /home/ir-shir1/rds/rds-iris-ip005/ras81/stack23/stack/miniconda3-py38_4.9.2-1.0.0/Linux64/gen3_workflow/20220209_w50/python/desc/gen3_workflow/etc/bps_drp_baseline.yaml
+  - /home/ir-shir1/rds/rds-iris-ip005/ras81/stack23/stack/miniconda3-py38_4.9.2-1.0.0/Linux64/gen3_workflow/20220209_w50/examples/bps_DC2-3828-y1_resources.yaml
+
+pipelineYaml: "/home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/dmu4/dmu4_Example/DRP.yaml#singleFrame"
+
+project: dev
+campaign: quick
+computeSite: iris
+
+payload:
+  payloadName: DRP/singleFrame
+  butlerConfig: /home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/dmu4/data/butler.yaml
+  inCollection: video,VIRCAM/raw/all,videoRefCats,VIRCAM/calib 
+  dataQuery: "band in ('Z','Y','J','H','K')"
+
+
+parsl_config:
+  retries: 1
+  monitoring: true
+  executor: WorkQueue
+  provider: Local
+  nodes_per_block: 31
+  worker_options: "--memory=160000"

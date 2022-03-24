@@ -16,7 +16,7 @@
 #! Number of tasks. By default SLURM assumes 1 task per node and 1 CPU per task. (for single core jobs always leave this at 1)
 #SBATCH --ntasks=1
 #! How many many cores will be allocated per task? (for single core jobs always leave this at 1)
-#SBATCH --cpus-per-task=1
+#SBATCH --cpus-per-task=10
 #! Estimated runtime: hh:mm:ss (job is force-stopped after if exceeded):
 #SBATCH --time=36:00:00
 #! Estimated maximum memory needed (job is force-stopped if exceeded):
@@ -25,10 +25,17 @@
 #! coadding VIDEO needs ~ 5 cpus worth of memory SBATCH --mem=5980mb
 #! Submit a job array with index values between 0 and 31
 #! NOTE: This must be a range, not a single number (i.e. specifying '32' here would only run one job, with index 32)
-#SBATCH --array=0-5072
+#SBATCH --array=0-0
+
+#! Stuff sent by Jim Chiang
+#! SBATCH --constraint=knl
+#! SBATCH --qos=regular
+#! SBATCH --exclusive
+#! SBATCH --account=ir-shir1
+
 
 #! This is the partition name.
-#SBATCH -p skylake
+#SBATCH -p cclake
 
 #! mail alert at start, end and abortion of execution
 #! emails will default to going to your email address
@@ -45,4 +52,4 @@
 echo "This is job" $SLURM_ARRAY_TASK_ID
 
 #! Command line that we want to run:
-/home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/dmu4/dmu4_VIDEO/slurm/processCcd.sh $SLURM_ARRAY_TASK_ID sxds_images_job_dict_5073.json
+/home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/dmu4/dmu4_VIDEO/slurm/processCcd_g3.sh $SLURM_ARRAY_TASK_ID sxds_images_job_dict_5073.json
