@@ -137,7 +137,7 @@ subsets:
       - makeWarp
       - assembleCoadd
       - healSparsePropertyMaps
-      - detect
+      - detection
     description: >
       A set of tasks to run when coadding images with coaddition.
   multiband:
