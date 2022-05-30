@@ -1,8 +1,8 @@
 includeConfigs:
-  - /home/ir-shir1/rds/rds-iris-ip005/ras81/stack23/stack/miniconda3-py38_4.9.2-1.0.0/Linux64/gen3_workflow/20220209_w50/python/desc/gen3_workflow/etc/bps_drp_baseline.yaml
-  - /home/ir-shir1/rds/rds-iris-ip005/ras81/stack23/stack/miniconda3-py38_4.9.2-1.0.0/Linux64/gen3_workflow/20220209_w50/examples/bps_DC2-3828-y1_resources.yaml
+  - ${GEN3_WORKFLOW_DIR}/python/desc/gen3_workflow/etc/bps_drp_baseline.yaml
+  - ${GEN3_WORKFLOW_DIR}/examples/bps_DC2-3828-y1_resources.yaml
 
-pipelineYaml: "/home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/dmu4/dmu4_Example/DRP.yaml#singleFrame"
+pipelineYaml: "${OBS_VISTA_DIR}/pipelines/DRP_full.yaml#singleFrame"
 
 project: dev
 campaign: quick

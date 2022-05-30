@@ -10,7 +10,7 @@
 
 #! sbatch directives begin here ###############################
 #! Name of the job:
-#SBATCH -J cpujob
+#SBATCH -J dataOverview
 #! Which project should be charged:
 #SBATCH -A IRIS-IP005-CPU
 #! How many whole nodes should be allocated?

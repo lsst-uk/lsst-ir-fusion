@@ -1,11 +1,11 @@
 #!/bin/bash
 #source /rfs/project/rfs-L33A9wsNuJk/shared/stack23/loadLSST.bash
-source /home/ir-shir1/rds/rds-iris-ip005/ras81/stack23/loadLSST.bash
-setup lsst_distrib
-setup obs_vista
-eups admin clearLocks
-
-export NUMEXPR_MAX_THREADS=32
+#source /home/ir-shir1/rds/rds-iris-ip005/ras81/stack23/loadLSST.bash
+#setup lsst_distrib
+#setup obs_vista
+#eups admin clearLocks
+#export NUMEXPR_MAX_THREADS=32
+source /home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/setup.sh
 
 #butler ingest-raws ../../data /home/ir-shir1/rds/rds-iris-ip005/data/private/VISTA/VIDEO/*/*st.fit -t copy -j 32
 export repo=../../data
