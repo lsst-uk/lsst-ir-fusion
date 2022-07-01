@@ -4,6 +4,20 @@ The Hyper SuprimeCam (HSC) data is currently from PDR2. We aim to use both the d
 
 ## Getting the data
 
+### PDR3
+
+The third release data is the data currently used. We created a list of tracts that are below +2 degrees declination in the notebooks here. Download scripts are in the slurm folder. The data is available to download with a login from here:
+
+https://hsc-release.mtk.nao.ac.jp/archive/filetree/pdr3_dud/
+
+https://hsc-release.mtk.nao.ac.jp/archive/filetree/pdr3_wide/
+
+The folder structure uses the deprecated patch format with commas. To ingest the files these must be 
+
+### PDR2
+
+The PDR2 data is no longer used. The following information is for archival purposes only.
+
 The data is downloaded from the direct access filetree.
 
 https://hsc-release.mtk.nao.ac.jp/archive/filetree/pdr2_dud/
