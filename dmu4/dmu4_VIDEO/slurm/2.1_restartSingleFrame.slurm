@@ -16,6 +16,7 @@
 #SBATCH -p cclake
 #! How many whole nodes should be allocated?
 #SBATCH --nodes=32
+#! SBATCH --ntasks=32
 #SBATCH --exclusive
 #! How many (MPI) tasks will there be in total? (<= nodes*56)
 #! The Cascade Lake (cclake) nodes have 56 CPUs (cores) each and
@@ -53,14 +54,18 @@ mpi_tasks_per_node=$(echo "$SLURM_TASKS_PER_NODE" | sed -e  's/^\([0-9][0-9]*\).
 . /etc/profile.d/modules.sh                # Leave this line (enables the module command)
 module purge                               # Removes all modules still loaded
 module load rhel7/default-ccl              # REQUIRED - loads the basic environment
-
+source /home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/setup.sh
 #! Insert additional module load commands after this line if needed:
 
 #! Full path to application executable: 
-application="runQGraph.sh"
+#! application="bps"
+application="python"
+#! application="runQGraph.sh"
 
 #! Run options for the application:
-options=""
+#! options="restart --wms-service-class desc.gen3_workflow.ParslService --id u/ir-shir1/DRP/singleFrame/20220530T145444Z"
+options="run_pipeline.py '/rds/project/rds-rPTGgs6He74/ras81/lsst-ir-fusion/dmu4/dmu4_VIDEO/slurm/submit/u/ir-shir1/DRP/singleFrame/20220530T145444Z/parsl_graph_config.pickle'"
+#! options=""
 
 #! Work directory (i.e. where the job will run):
 workdir="$SLURM_SUBMIT_DIR"  # The value of SLURM_SUBMIT_DIR sets workdir to the directory

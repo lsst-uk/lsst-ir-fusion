@@ -1,0 +1,29 @@
+includeConfigs:
+  - ${GEN3_WORKFLOW_DIR}/python/desc/gen3_workflow/etc/bps_drp_baseline.yaml
+  - ${GEN3_WORKFLOW_DIR}/examples/bps_DC2-3828-y1_resources.yaml
+
+# Overwrite coadd memory request to raise it
+pipetask:
+ assembleCoadd:
+  requestMemory: 50000
+
+pipelineYaml: "${OBS_VISTA_DIR}/pipelines/DRP_full.yaml#coaddDetect"
+
+project: dev
+campaign: quick
+computeSite: iris
+
+payload:
+  payloadName: DRP/videoCoadd
+  butlerConfig: /home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/dmu4/data/butler.yaml
+  inCollection: VIRCAM/raw/all,videoRefCats,VIRCAM/calib,u/ir-shir1/DRP/singleFrame,skymaps 
+  dataQuery: "tract IN (8284,8283,8282,8525,8524,8523,8767,8766,8765) AND skymap='hscPdr2'"
+
+
+parsl_config:
+  retries: 1
+  monitoring: true
+  executor: WorkQueue
+  provider: Local
+  nodes_per_block: 31
+  worker_options: "--memory=160000"
