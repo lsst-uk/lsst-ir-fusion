@@ -19,7 +19,7 @@ warnings.filterwarnings("ignore")
 
 hscBands = ['G', 'R', 'I', 'Z', 'Y']
 vistaBands = ['Z', 'Y', 'J', 'H', 'Ks']
-allBands = ['HSC-' +b for b in hscBands] + ['VIRCAM-' +b for b in vistaBands]
+allBands = ['HSC_' +b for b in hscBands] + ['VIRCAM_' +b for b in vistaBands]
 
 #Allow local testing
 if os.getcwd().startswith('/Users/raphaelshirley'):
@@ -106,7 +106,7 @@ def makeCat(tract, patch, BUTLER_LOC,DATA=DATA,writeBandCats=True,writeReducedCa
     patch=patchX+9*patchY
     print('Running tract {} patch {}'.format(tract,patch))
     for band in allBands:
-        bandType=band.split('_')[0]
+        bandType=band.split('_')[1][0]
         if 'HSC' in band:
             bandType=bandType.lower()
         #We must keep columns under 68 characters by replacing long names
@@ -134,6 +134,7 @@ def makeCat(tract, patch, BUTLER_LOC,DATA=DATA,writeBandCats=True,writeReducedCa
         forcedCat=None
         forcedSources=None
         try:
+            print(band,bandType,tract,patch)
             CoaddCalexp = butler.get(
                 'deepCoadd_calexp',  
                 {'band': bandType, 'tract': tract, 'patch': patch, 'skymap':'hscPdr2'},
