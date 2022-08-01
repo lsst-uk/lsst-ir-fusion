@@ -58,13 +58,13 @@ source /home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/setup.sh
 #! Insert additional module load commands after this line if needed:
 
 #! Full path to application executable: 
-#! application="bps"
-application="python"
+application="bps"
+#! application="python"
 #! application="runQGraph.sh"
 
 #! Run options for the application:
-#! options="restart --wms-service-class desc.gen3_workflow.ParslService --id u/ir-shir1/DRP/singleFrame/20220530T145444Z"
-options="run_pipeline.py '/rds/project/rds-rPTGgs6He74/ras81/lsst-ir-fusion/dmu4/dmu4_VIDEO/slurm/submit/u/ir-shir1/DRP/singleFrame/20220530T145444Z/parsl_graph_config.pickle'"
+options="restart --wms-service-class desc.gen3_workflow.ParslService --id u/ir-shir1/DRP/singleFrame/20220707T132740Z"
+#! options="run_pipeline.py '/rds/project/rds-rPTGgs6He74/ras81/lsst-ir-fusion/dmu4/dmu4_VIDEO/slurm/submit/u/ir-shir1/DRP/singleFrame/20220707T132740Z/parsl_graph_config.pickle'"
 #! options=""
 
 #! Work directory (i.e. where the job will run):

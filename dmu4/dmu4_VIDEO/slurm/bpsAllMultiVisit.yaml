@@ -1,21 +1,27 @@
 includeConfigs:
-  - /home/ir-shir1/rds/rds-iris-ip005/ras81/stack23/stack/miniconda3-py38_4.9.2-1.0.0/Linux64/gen3_workflow/20220209_w50/python/desc/gen3_workflow/etc/bps_drp_baseline.yaml
-  - /home/ir-shir1/rds/rds-iris-ip005/ras81/stack23/stack/miniconda3-py38_4.9.2-1.0.0/Linux64/gen3_workflow/20220209_w50/examples/bps_DC2-3828-y1_resources.yaml
+  - ${GEN3_WORKFLOW_DIR}/python/desc/gen3_workflow/etc/bps_drp_baseline.yaml
+  - ${GEN3_WORKFLOW_DIR}/examples/bps_DC2-3828-y1_resources.yaml
 
-pipelineYaml: "/home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/dmu4/dmu4_Example/DRP.yaml#multiVisitLater"
+pipelineYaml: "${OBS_VISTA_DIR}/pipelines/DRP_full.yaml#multiVisitLater"
 
 pipetask:
   deblend:
-    requestMemory: 50000
+    requestMemory: 30000
+  writeObjectTable:
+    requestMemory: 2000
+  transformObjectTable:
+    requestMemory: 2000
+  consolidateVisitTable:
+    requestMemory: 2000
 
 project: dev
 campaign: quick
 computeSite: iris
 
 payload:
-  payloadName: DRP/videoMultiVisit3
+  payloadName: DRP/videoMultiVisit
   butlerConfig: /home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/dmu4/data/butler.yaml
-  inCollection: VIRCAM/raw/all,videoRefCats,VIRCAM/calib,skymaps,u/ir-shir1/DRP/singleFrame,u/ir-shir1/DRP/videoCoadd,u/ir-shir1/DRP/videoCoadd/hscImports 
+  inCollection: VIRCAM/raw/all,videoRefCats,VIRCAM/calib,skymaps,u/ir-shir1/DRP/singleFrame,u/ir-shir1/DRP/videoCoaddDetect,hscImports/pdr3_dud 
   dataQuery: "skymap='hscPdr2' AND (
 (tract=8766 AND patch IN (0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30))
 OR (tract=8524 AND patch IN (18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80))
@@ -27,7 +33,7 @@ OR (tract=8525 AND patch IN (22,23,24,25,26,31,32,33,34,35,40,41,42,43,44,49,50,
 
 
 parsl_config:
-  retries: 3
+  retries: 1
   monitoring: true
   executor: WorkQueue
   provider: Local
