@@ -134,19 +134,20 @@ def makeCat(tract, patch, BUTLER_LOC,DATA=DATA,writeBandCats=True,writeReducedCa
         forcedCat=None
         forcedSources=None
         try:
-            print(band,bandType,tract,patch)
+            #print(band,bandType,tract,patch)
             CoaddCalexp = butler.get(
                 'deepCoadd_calexp',  
                 {'band': bandType, 'tract': tract, 'patch': patch, 'skymap':'hscPdr2'},
-                collections='videoCoaddDetect'
+                collections='u/ir-shir1/DRP/videoMultiVisit'
             )
             CoaddPhotoCalib = CoaddCalexp.getPhotoCalib()
-        
+            #print('Got photo calib')    
             measSources = butler.get(
                 'deepCoadd_meas', 
                 {'band': bandType, 'tract': tract, 'patch': patch, 'skymap':'hscPdr2'},
-                collections='videoMultiVisit'
+                collections='u/ir-shir1/DRP/videoMultiVisit'
             )
+            #print('Got meas cat')
             measCat = measSources.asAstropy()
             measCat = addFlux(measCat, measSources, CoaddPhotoCalib)
             for c in measCat.colnames:    
@@ -167,20 +168,28 @@ def makeCat(tract, patch, BUTLER_LOC,DATA=DATA,writeBandCats=True,writeReducedCa
                 #print(len(bandCat))
                 measCat.meta=None
                 measCat.sort('id')
+                #print('preloop')
                 for c in measCat.colnames:
+                    #print(c)
                     if measCat[c].dtype=='bool':
                         measCat[c]=measCat[c].astype(int)
+                        #print('bool if')
                     if (measCat[c].dtype==np.dtype('float64')) and ('coord' not in c):
+                        measCat[c] = MaskedColumn(measCat[c])
+                        measCat[c].mask = np.isnan(measCat[c]) | np.isinf(measCat[c])
                         measCat[c]=measCat[c].astype('float32')
                     if 'coord' in c:
                         measCat[c].convert_unit_to(u.deg)
-                    measCat[c] = MaskedColumn(measCat[c])
-                    measCat[c].mask = np.isnan(measCat[c]) | np.isinf(measCat[c])
+                    #print('pre mask')
+                    #measCat[c] = MaskedColumn(measCat[c])
+                    #measCat[c].mask = np.isnan(measCat[c]) | np.isinf(measCat[c])
+                    #print(c)
+                #print('postloop')
                 measCat['tract']=tract
                 measCat['patch']=patch
-                measCat['patchX']=patchX
-                measCat['patchY']=patchY
-               
+                #measCat['patchX']=patchX
+                #measCat['patchY']=patchY
+                #print('prewrite')
                 measCat.write(
                     DATA+'/{}/{}/{}/{}_{}_{}_measCat.csv'.format(
                         band,tract,patch,band,tract,patch), 
@@ -194,7 +203,7 @@ def makeCat(tract, patch, BUTLER_LOC,DATA=DATA,writeBandCats=True,writeReducedCa
             forcedSources = butler.get(
                 'deepCoadd_forced_src', 
                 {'band': bandType, 'tract': tract, 'patch': patch,'skymap':'hscPdr2'},
-                collections='videoCoaddDetect'
+                collections='u/ir-shir1/DRP/videoMultiVisit'
             )
             forcedCat = forcedSources.asAstropy()
             forcedCat = addFlux(forcedCat, forcedSources, CoaddPhotoCalib)
@@ -224,12 +233,12 @@ def makeCat(tract, patch, BUTLER_LOC,DATA=DATA,writeBandCats=True,writeReducedCa
                         forcedCat[c]=forcedCat[c].astype('float32')
                     if 'coord' in c:
                         forcedCat[c].convert_unit_to(u.deg)
-                    forcedCat[c] = MaskedColumn(forcedCat[c])
-                    forcedCat[c].mask = np.isnan(forcedCat[c]) | np.isinf(measCat[c])
+                    #forcedCat[c] = MaskedColumn(forcedCat[c])
+                    #forcedCat[c].mask = np.isnan(forcedCat[c]) | np.isinf(measCat[c])
                 forcedCat['tract']=tract
                 forcedCat['patch']=patch
-                forcedCat['patchX']=patchX
-                forcedCat['patchY']=patchY
+                #forcedCat['patchX']=patchX
+                #forcedCat['patchY']=patchY
                 forcedCat.write(
                     DATA+'/{}/{}/{}/{}_{}_{}_forcedCat.csv'.format(
                         band,tract,patch,band,tract,patch), 
@@ -246,16 +255,16 @@ def makeCat(tract, patch, BUTLER_LOC,DATA=DATA,writeBandCats=True,writeReducedCa
             cat = measCat
             if forcedCat is not None:
                 cols=list(forcedCat.colnames)
-                for r in ['tract','patch','patchX','patchY']: cols.remove(r)
+                for r in ['tract','patch']: cols.remove(r)
                 cat = join(cat,forcedCat,join_type='left')
         elif (measCat is not None):
             #After first band join tables in
             cols = list(measCat.colnames)
-            for r in ['tract','patch','patchX','patchY']: cols.remove(r)
+            for r in ['tract','patch']: cols.remove(r)
             cat = join(cat, measCat[cols],join_type='left')
             if forcedCat is not None:
                 cols = list(forcedCat.colnames)
-                for r in ['tract','patch','patchX','patchY']: cols.remove(r)
+                for r in ['tract','patch']: cols.remove(r)
                 cat = join(cat, forcedCat[cols],join_type='left')
   
             
@@ -294,4 +303,10 @@ patch = job_dict[str(job_id)][1]
 #print('Running tract {} patch {}'.format(tract,patch))
 cat = makeCat(tract, patch, BUTLER_LOC)
 
-
+if job_id==0:
+    cols = Table()
+    cols['name'] = cat.colnames
+    cols['description'] = [cat[c].description for c in cat.colnames]
+    cols['unit'] = [str(cat[c].unit) for c in cat.colnames]
+    cols['type'] = [cat[c].dtype for c in cat.colnames]
+    cols.write('./columns_descriptions.csv',overwrite=True)

@@ -26,7 +26,7 @@
 #! Submit a job array with index values between 0 and 31
 #! NOTE: This must be a range, not a single number (i.e. specifying '32' here would only run one job, with index 32)
 #! 0-218
-#SBATCH --array=0-1
+#SBATCH --array=0-218
 
 #! This is the partition name.
 #SBATCH -p cclake
