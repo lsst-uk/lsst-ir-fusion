@@ -13,6 +13,16 @@ Some useful links:
 
 On key difference compared to the gen3 runs is that we cannot submit large job arrays to slurm. This would essentially be using multiple parellelisation technologies simultaneously and the timestamped directories cannot handle large numbers in the same second. For this reason we instead need to submit larger single jobs over multiple nodes. Further down there is possibly superior way of doing this.
 
+## Installation
+In general we have followed the installation in the link above
+
+Following an issue with segmentation faults we also tried uninstalling zmq and building from scratch using
+
+```Shell
+pip install --no-binary :all: zmq
+```
+
+
 ## Correspondence with Jim Chiang
 
 ### Regarding basic installation and running

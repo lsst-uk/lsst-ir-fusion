@@ -5,7 +5,8 @@ import os
 from pathlib import Path
 import json
 import numpy as np
-import lsst.daf.persistence as dafPersist
+#import lsst.daf.persistence as dafPersist
+import lsst.daf.butler as dafButler
 import time
 import gc
 
@@ -18,16 +19,16 @@ warnings.filterwarnings("ignore")
 
 hscBands = ['G', 'R', 'I', 'Z', 'Y']
 vistaBands = ['Z', 'Y', 'J', 'H', 'Ks']
-allBands = ['HSC-' +b for b in hscBands] + ['VISTA-' +b for b in vistaBands]
+allBands = ['HSC_' +b for b in hscBands] + ['VIRCAM_' +b for b in vistaBands]
 
 #Allow local testing
 if os.getcwd().startswith('/Users/raphaelshirley'):
-    BUTLER_LOC = '../../../dmu4/dmu4_Example/data_g2'
+    BUTLER_LOC = '../../../dmu4/dmu4_Example/data'
     DATA = '../data'
 else:
-    BUTLER_LOC = '{}/data'.format(os.getcwd().replace('dmu5','dmu4').replace('/slurm',''))
+    BUTLER_LOC = os.getcwd().replace('dmu5/dmu5_VIDEO/slurm','dmu4/data')
     DATA =  '../data'
-butler =  dafPersist.Butler(inputs='{}/rerun/coadd'.format(BUTLER_LOC))
+butler =  dafButler.Butler(BUTLER_LOC)
 
 
 job_id = sys.argv[1]
@@ -36,15 +37,15 @@ patch_dict = sys.argv[2]
 #Set columns to go in a 'reduced catalogue' for sharing.
 reduced_cols = [ 
     'id', 
-    'VISTA_Ks_m_coord_ra', 
-    'VISTA_Ks_m_coord_dec',
+    'VIRCAM_Ks_m_coord_ra', 
+    'VIRCAM_Ks_m_coord_dec',
     'HSC_R_m_coord_ra',
     'HSC_R_m_coord_dec',
-    'VISTA_Ks_m_detect_isPatchInner',
-    'VISTA_Ks_m_detect_isTractInner',
-    'VISTA_Ks_m_detect_isPrimary',
-    'VISTA_Ks_m_deblend_nChild',
-    'VISTA_Ks_m_merge_peak_sky',
+    'VIRCAM_Ks_m_detect_isPatchInner',
+    'VIRCAM_Ks_m_detect_isTractInner',
+    'VIRCAM_Ks_m_detect_isPrimary',
+    'VIRCAM_Ks_m_deblend_nChild',
+    'VIRCAM_Ks_m_merge_peak_sky',
     #'VISTA_Ks_m_base_ClassificationExtendedness_value',
     #'VISTA_Ks_m_base_ClassificationExtendedness_flag',
 ]
@@ -52,8 +53,8 @@ reduced_cols = [
     
 colTypes=[
     '{}_m_base_CircularApertureFlux_6_0_{}',
-    '{}_m_base_PsfFlux_{}',
-    '{}_m_slot_ModelFlux_{}',
+    #'{}_m_base_PsfFlux_{}',
+    #'{}_m_slot_ModelFlux_{}',
     '{}_m_base_ClassificationExtendedness_value',
     '{}_m_base_ClassificationExtendedness_flag',
 ]
@@ -100,7 +101,14 @@ def makeCat(tract, patch, BUTLER_LOC,DATA=DATA,writeBandCats=True,writeReducedCa
     """make the final catalogue on a given patch for ingestion to a database"""
     cat =Table()
     tract = int(tract)
+    patchX=int(patch[0])
+    patchY=int(patch[2])
+    patch=patchX+9*patchY
+    print('Running tract {} patch {}'.format(tract,patch))
     for band in allBands:
+        bandType=band.split('_')[1][0]
+        if 'HSC' in band:
+            bandType=bandType.lower()
         #We must keep columns under 68 characters by replacing long names
         mapping = { 
             'SecondDerivative':'SD', 
@@ -108,23 +116,38 @@ def makeCat(tract, patch, BUTLER_LOC,DATA=DATA,writeBandCats=True,writeReducedCa
             'badCentroid':'BC',
             'badInitialCentroid':'BIC',
             'sincCoeffsTruncated':'SCT',
+            'apertureTruncated':'AT',
+            'SourceMomentsRound':'SMR',
+            'photometryKron':'photKron',
         }
+        #replace ambiguous case sensitive bands with physical filter
+        for s in 'grizyZYJHK':
+            inst='HSC_'
+            if s.isupper():
+                inst='VIRCAM_'
+            mapping['footprint_{}'.format(s)]='footprint_'+inst+s
+            mapping['peak_{}'.format(s)]='peak_'+inst+s
+
         CoaddPhotoCalib=None
         measCat=None
         measSources=None
         forcedCat=None
         forcedSources=None
         try:
+            #print(band,bandType,tract,patch)
             CoaddCalexp = butler.get(
                 'deepCoadd_calexp',  
-                {'filter': band, 'tract': tract, 'patch': patch}
+                {'band': bandType, 'tract': tract, 'patch': patch, 'skymap':'hscPdr2'},
+                collections='u/ir-shir1/DRP/videoMultiVisit'
             )
             CoaddPhotoCalib = CoaddCalexp.getPhotoCalib()
-        
+            #print('Got photo calib')    
             measSources = butler.get(
                 'deepCoadd_meas', 
-                {'filter': band, 'tract': tract, 'patch': patch}
+                {'band': bandType, 'tract': tract, 'patch': patch, 'skymap':'hscPdr2'},
+                collections='u/ir-shir1/DRP/videoMultiVisit'
             )
+            #print('Got meas cat')
             measCat = measSources.asAstropy()
             measCat = addFlux(measCat, measSources, CoaddPhotoCalib)
             for c in measCat.colnames:    
@@ -145,15 +168,28 @@ def makeCat(tract, patch, BUTLER_LOC,DATA=DATA,writeBandCats=True,writeReducedCa
                 #print(len(bandCat))
                 measCat.meta=None
                 measCat.sort('id')
+                #print('preloop')
                 for c in measCat.colnames:
+                    #print(c)
                     if measCat[c].dtype=='bool':
                         measCat[c]=measCat[c].astype(int)
-                    measCat[c] = MaskedColumn(measCat[c])
-                    measCat[c].mask = np.isnan(measCat[c]) | np.isinf(measCat[c])
+                        #print('bool if')
+                    if (measCat[c].dtype==np.dtype('float64')) and ('coord' not in c):
+                        measCat[c] = MaskedColumn(measCat[c])
+                        measCat[c].mask = np.isnan(measCat[c]) | np.isinf(measCat[c])
+                        measCat[c]=measCat[c].astype('float32')
+                    if 'coord' in c:
+                        measCat[c].convert_unit_to(u.deg)
+                    #print('pre mask')
+                    #measCat[c] = MaskedColumn(measCat[c])
+                    #measCat[c].mask = np.isnan(measCat[c]) | np.isinf(measCat[c])
+                    #print(c)
+                #print('postloop')
                 measCat['tract']=tract
-                measCat['patch']=patch.replace(',','')
-                measCat['patchX']=int(patch[0])
-                measCat['patchY']=int(patch[2])
+                measCat['patch']=patch
+                #measCat['patchX']=patchX
+                #measCat['patchY']=patchY
+                #print('prewrite')
                 measCat.write(
                     DATA+'/{}/{}/{}/{}_{}_{}_measCat.csv'.format(
                         band,tract,patch,band,tract,patch), 
@@ -166,7 +202,8 @@ def makeCat(tract, patch, BUTLER_LOC,DATA=DATA,writeBandCats=True,writeReducedCa
         try:
             forcedSources = butler.get(
                 'deepCoadd_forced_src', 
-                {'filter': band, 'tract': tract, 'patch': patch}
+                {'band': bandType, 'tract': tract, 'patch': patch,'skymap':'hscPdr2'},
+                collections='u/ir-shir1/DRP/videoMultiVisit'
             )
             forcedCat = forcedSources.asAstropy()
             forcedCat = addFlux(forcedCat, forcedSources, CoaddPhotoCalib)
@@ -192,10 +229,16 @@ def makeCat(tract, patch, BUTLER_LOC,DATA=DATA,writeBandCats=True,writeReducedCa
                         forcedCat[c]=forcedCat[c].astype(int)
                     forcedCat[c] = MaskedColumn(forcedCat[c])
                     forcedCat[c].mask = np.isnan(forcedCat[c]) | np.isinf(forcedCat[c])
+                    if (forcedCat[c].dtype==np.dtype('float64')) and ('coord' not in c):
+                        forcedCat[c]=forcedCat[c].astype('float32')
+                    if 'coord' in c:
+                        forcedCat[c].convert_unit_to(u.deg)
+                    #forcedCat[c] = MaskedColumn(forcedCat[c])
+                    #forcedCat[c].mask = np.isnan(forcedCat[c]) | np.isinf(measCat[c])
                 forcedCat['tract']=tract
-                forcedCat['patch']=patch.replace(',','')
-                forcedCat['patchX']=int(patch[0])
-                forcedCat['patchY']=int(patch[2])
+                forcedCat['patch']=patch
+                #forcedCat['patchX']=patchX
+                #forcedCat['patchY']=patchY
                 forcedCat.write(
                     DATA+'/{}/{}/{}/{}_{}_{}_forcedCat.csv'.format(
                         band,tract,patch,band,tract,patch), 
@@ -212,16 +255,16 @@ def makeCat(tract, patch, BUTLER_LOC,DATA=DATA,writeBandCats=True,writeReducedCa
             cat = measCat
             if forcedCat is not None:
                 cols=list(forcedCat.colnames)
-                for r in ['tract','patch','patchX','patchY']: cols.remove(r)
+                for r in ['tract','patch']: cols.remove(r)
                 cat = join(cat,forcedCat,join_type='left')
         elif (measCat is not None):
             #After first band join tables in
             cols = list(measCat.colnames)
-            for r in ['tract','patch','patchX','patchY']: cols.remove(r)
+            for r in ['tract','patch']: cols.remove(r)
             cat = join(cat, measCat[cols],join_type='left')
             if forcedCat is not None:
                 cols = list(forcedCat.colnames)
-                for r in ['tract','patch','patchX','patchY']: cols.remove(r)
+                for r in ['tract','patch']: cols.remove(r)
                 cat = join(cat, forcedCat[cols],join_type='left')
   
             
@@ -240,6 +283,10 @@ def makeCat(tract, patch, BUTLER_LOC,DATA=DATA,writeBandCats=True,writeReducedCa
             DATA+'/merged/{}/{}/{}_{}_reducedCat.fits'.format(tract,patch,tract,patch), 
             overwrite=True
         )
+        cat.write(
+            DATA+'/merged/{}/{}/{}_{}_reducedCat.csv'.format(tract,patch,tract,patch),
+            overwrite=True
+        )
     return cat
 
 
@@ -253,7 +300,13 @@ job_dict=json.loads(open(
 
 tract = job_dict[str(job_id)][0]
 patch = job_dict[str(job_id)][1]
-
+#print('Running tract {} patch {}'.format(tract,patch))
 cat = makeCat(tract, patch, BUTLER_LOC)
 
-
+if job_id==0:
+    cols = Table()
+    cols['name'] = cat.colnames
+    cols['description'] = [cat[c].description for c in cat.colnames]
+    cols['unit'] = [str(cat[c].unit) for c in cat.colnames]
+    cols['type'] = [cat[c].dtype for c in cat.colnames]
+    cols.write('./columns_descriptions.csv',overwrite=True)

@@ -25,6 +25,7 @@
 #! coadding VIDEO needs ~ 5 cpus worth of memory SBATCH --mem=5980mb
 #! Submit a job array with index values between 0 and 31
 #! NOTE: This must be a range, not a single number (i.e. specifying '32' here would only run one job, with index 32)
+#! 0-218
 #SBATCH --array=0-218
 
 #! This is the partition name.
@@ -45,4 +46,6 @@
 echo "This is job" $SLURM_ARRAY_TASK_ID
 
 #! Command line that we want to run:
-/home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/dmu5/dmu5_VIDEO/slurm/make_cat.sh $SLURM_ARRAY_TASK_ID /home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/dmu4/dmu4_VIDEO/slurm/sxds_patch_job_dict_219.json
+#! /home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/dmu5/dmu5_VIDEO/slurm/make_cat.sh $SLURM_ARRAY_TASK_ID /home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/dmu4/dmu4_VIDEO/slurm/sxds_patch_job_dict_219.json
+source /home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/setup.sh
+python make_cat.py $SLURM_ARRAY_TASK_ID /home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/dmu4/dmu4_VIDEO/slurm/sxds_patch_job_dict_219.json
