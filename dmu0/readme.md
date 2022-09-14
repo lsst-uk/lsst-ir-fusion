@@ -8,12 +8,12 @@ The data was originally stored on CSD3 under:
 ~/rds/rds-iris-ip005/private/VISTA
 ```
 
-It is in the process of being moved to S3 storage which requires the [minio](https://min.io/) code to use on Linux.
+It is in the process of being moved to S3 storage which requires the [MinIO](https://min.io/) code to use on Linux.
 
 
-### MC usage
+### MinIO Client (MC) usage
 
-By default mc loads midnight commander so you need to give the full path to the minio package that allows basic linux commands to work on S3 storage systems.
+By default mc loads midnight commander so you need to give the full path to the MinIO package that allows basic linux commands to work on S3 storage systems.
 
 ```shell
 wget https://dl.min.io/client/mc/release/linux-amd64/mc
