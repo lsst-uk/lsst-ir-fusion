@@ -13,7 +13,7 @@ It is in the process of being moved to S3 storage which requires the MC code to 
 
 ### MC usage
 
-By default mc loads midnight commander so you need to give the full path to mc
+By default mc loads midnight commander so you need to give the full path to the minio package that allows basic linux commands to work on S3 storage systems.
 
 ```shell
 wget https://dl.min.io/client/mc/release/linux-amd64/mc
