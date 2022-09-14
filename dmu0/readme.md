@@ -2,6 +2,13 @@
 
 In this directory we describe all the external data that is used in this database. This is data that has not been modified by code here but is used as an input. Eventually there will be a protocol for how this data may either be stored locally in this directory or referenced at some accessible location.
 
+The data was originally stored on CSD3 under:
+
+~/rds/rds-iris-ip005/private/VISTA
+
+It is in the process of being moved to S3 storage under:
+
+TO DO: Insert S3 location.
 
 
 
