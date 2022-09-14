@@ -4,7 +4,9 @@ In this directory we describe all the external data that is used in this databas
 
 The data was originally stored on CSD3 under:
 
+```shell
 ~/rds/rds-iris-ip005/private/VISTA
+```
 
 It is in the process of being moved to S3 storage which requires the MC code to use on Linux.
 
@@ -13,11 +15,12 @@ It is in the process of being moved to S3 storage which requires the MC code to 
 
 By default mc loads midnight commander so you need to give the full path to mc
 
+```shell
 wget https://dl.min.io/client/mc/release/linux-amd64/mc
 chmod +x mc
 ./mc config host add iris http://128.232.222.169:9000 rshirley vista12345
 ./mc ls iris/vista
-
+```
 
 
 ## VISTA structure
