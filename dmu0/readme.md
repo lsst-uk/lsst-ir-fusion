@@ -8,7 +8,7 @@ The data was originally stored on CSD3 under:
 ~/rds/rds-iris-ip005/private/VISTA
 ```
 
-It is in the process of being moved to S3 storage which requires the MC code to use on Linux.
+It is in the process of being moved to S3 storage which requires the [minio](https://min.io/) code to use on Linux.
 
 
 ### MC usage
