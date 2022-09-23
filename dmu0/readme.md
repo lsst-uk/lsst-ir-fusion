@@ -18,7 +18,7 @@ By default mc loads midnight commander so you need to give the full path to the 
 ```shell
 wget https://dl.min.io/client/mc/release/linux-amd64/mc
 chmod +x mc
-./mc config host add iris http://128.232.222.169:9000 rshirley vista12345
+./mc config host add iris http://128.232.222.169:9000 $USER $PRIVATEKEY
 ./mc ls iris/vista
 ```
 
