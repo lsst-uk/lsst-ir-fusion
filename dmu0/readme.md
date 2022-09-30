@@ -2,7 +2,25 @@
 
 In this directory we describe all the external data that is used in this database. This is data that has not been modified by code here but is used as an input. Eventually there will be a protocol for how this data may either be stored locally in this directory or referenced at some accessible location.
 
+The data was originally stored on CSD3 under:
 
+```shell
+~/rds/rds-iris-ip005/private/VISTA
+```
+
+It is in the process of being moved to S3 storage which requires the [MinIO](https://min.io/) code to use on Linux.
+
+
+### MinIO Client (MC) usage
+
+By default mc loads midnight commander so you need to give the full path to the MinIO package that allows basic linux commands to work on S3 storage systems.
+
+```shell
+wget https://dl.min.io/client/mc/release/linux-amd64/mc
+chmod +x mc
+./mc config host add iris http://128.232.222.169:9000 $USER $PRIVATEKEY
+./mc ls iris/vista
+```
 
 
 ## VISTA structure
