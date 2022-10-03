@@ -27,7 +27,7 @@ if [ ! -f $repo/butler.yaml ]; then
     #butler ingest-files -t direct $repo ps1_pv3_3pi_20170110_vista refcats data/g3_2mass/filename_to_htm.ecsv 
     
     #Ingest the raw exposures _st for stacks [0-9] for exposures
-    butler ingest-raws $repo ../../dmu0/dmu0_VISTA/dmu0_VIDEO/data/*/*_st.fit -t copy
+    butler ingest-raws $repo ../../dmu0/dmu0_VISTA/dmu0_VIDEO/data/*/*_st.fit -t copy --output-run VIRCAM/raw/video
     #butler ingest-raws $repo ../../dmu0/dmu0_VISTA/dmu0_VIDEO/data/20121122/v20121122_00088_st.fit -t copy
     #Define the visits from the ingested exposures
     butler define-visits $repo VIRCAM 
@@ -38,15 +38,15 @@ fi
 #Import confidence maps
 #butler import $repo "../../dmu0/dmu0_VISTA/dmu0_VIDEO" --export-file "../../dmu0/dmu0_VISTA/dmu0_VIDEO/export_test.yaml" 
 butler register-dataset-type $repo confidence ExposureF instrument band physical_filter exposure detector
-butler ingest-files --formatter=lsst.obs.vista.VircamRawFormatter $repo confidence videoConfidence ../../dmu0/dmu0_VISTA/dmu0_VIDEO/test_export_confidence.ecsv -t copy
+butler ingest-files --formatter=lsst.obs.vista.VircamRawFormatter $repo confidence confidence/video ../../dmu0/dmu0_VISTA/dmu0_VIDEO/test_export_confidence.ecsv -t copy
 
 #pipetask run -d "exposure=658653 AND detector=10" -b $repo --input videoConfidence,VIRCAM/raw/all,refcats,VIRCAM/calib --register-dataset-types -p "$OBS_VISTA_DIR/pipelines/DRP_full.yaml#singleFrame" --output videoSingleFrame  
 
 #Run processCcd on some exposures singleFrame processCcd
-pipetask run -d "detector IN (9,10) AND band IN ('J','K')" -b $repo --input videoConfidence,VIRCAM/raw/all,refcats,VIRCAM/calib --register-dataset-types -p "$OBS_VISTA_DIR/pipelines/DRP_full.yaml#singleFrame" --output videoSingleFrame   #--extend-run --clobber-outputs --skip-existing
+pipetask run -d "detector IN (9,10) AND band IN ('J','K')" -b $repo --input confidence/video,VIRCAM/raw/video,refcats,VIRCAM/calib --register-dataset-types -p "$OBS_VISTA_DIR/pipelines/DRP_full.yaml#singleFrame" --output videoSingleFrame   #--extend-run --clobber-outputs --skip-existing
 
 #Coadd the exposures
-pipetask run -d "tract=8524 AND patch IN (39,48) AND skymap='hscPdr2' " -b $repo --input videoConfidence,skymaps,VIRCAM/raw/all,refcats,VIRCAM/calib,videoSingleFrame  --register-dataset-types -p "$OBS_VISTA_DIR/pipelines/DRP_full.yaml#coaddDetect" --output videoCoaddDetect
+pipetask run -d "tract=8524 AND patch IN (39,48) AND skymap='hscPdr2' " -b $repo --input confidence/video,skymaps,VIRCAM/raw/video,refcats,VIRCAM/calib,videoSingleFrame  --register-dataset-types -p "$OBS_VISTA_DIR/pipelines/DRP_full.yaml#coaddDetect" --output videoCoaddDetect
 
 #Import HSC deepCoadd images and detections
 #These must be ingested into a RUN collection so we ls it from the coadd collection 
@@ -57,5 +57,5 @@ butler ingest-files --formatter=lsst.obs.base.formatters.fitsExposure.FitsExposu
 butler ingest-files --formatter=lsst.obs.base.formatters.fitsGeneric.FitsGenericFormatter $repo deepCoadd_det videoCoaddDetect/$coaddRun ../../dmu0/dmu0_HSC/data/det_2.ecsv
 
 #Run photometry pipeline
-pipetask run -d "tract=8524 AND patch IN (39,48) AND skymap='hscPdr2' " -b $repo --input videoConfidence,VIRCAM/raw/all,refcats,VIRCAM/calib,skymaps,videoSingleFrame,videoCoaddDetect,videoCoaddDetect/$coaddRun --register-dataset-types -p "$OBS_VISTA_DIR/pipelines/DRP_full.yaml#multiVisitLater" --output videoMultiVisitLater
+pipetask run -d "tract=8524 AND patch IN (39,48) AND skymap='hscPdr2' " -b $repo --input confidence/video,VIRCAM/raw/video,refcats,VIRCAM/calib,skymaps,videoSingleFrame,videoCoaddDetect,videoCoaddDetect/$coaddRun --register-dataset-types -p "$OBS_VISTA_DIR/pipelines/DRP_full.yaml#multiVisitLater" --output videoMultiVisitLater
 
