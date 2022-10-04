@@ -32,18 +32,18 @@ do
   echo $filename
   rm ./tmp/tmp_stack.fit
   rm ./tmp/tmp_confidence.fit
-  filename=${filename/"/home/ir-shir1/rds/rds-iris-ip005/data/private/VISTA/VHS"/"/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/vhs"}
+  filename=${filename/"/home/ir-shir1/rds/rds-iris-ip005/data/private/VISTA/VHS"/"/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/vista/vhs"}
   cp $filename ./tmp/tmp_stack.fit
   cp ${filename/st.fit/st_conf.fit} ./tmp/tmp_confidence.fit
   #visit="$(python fitToExpNum.py ./tmp/tmp_stack.fit)"
   echo $visit
   
-  butler ingest-raws $repo $filename -t copy
-  butler ingest-files --formatter=lsst.obs.vista.VircamRawFormatter $repo confidence video ./tmp/confidence.ecsv --data-id exposure=$visit,band=$band,physical_filter=$filter -t copy
+  butler ingest-raws $repo $filename -t copy --output-run VIRCAM/raw/vhs
+  butler ingest-files --formatter=lsst.obs.vista.VircamRawFormatter $repo confidence vhs ./tmp/confidence.ecsv --data-id exposure=$visit,band=$band,physical_filter=$filter -t copy
 done
 
 #Define the visits from the ingested exposures
-butler define-visits $repo VIRCAM 
+butler define-visits $repo VIRCAM --collections VIRCAM/raw/vhs
 #We don't have calibs but we need the collection for later processing
 butler write-curated-calibrations $repo VIRCAM
 
