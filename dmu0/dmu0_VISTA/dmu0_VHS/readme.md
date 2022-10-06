@@ -11,6 +11,45 @@ The images are stored accroding to observation date and contain exposures, reduc
 
 As our reference catalogue we use the VHS public catalogues on the VSA. These can be downloaded with the following SQL queries run seperately to keep under Vista Science Archive ([VSA](http://horus.roe.ac.uk:8080/vdfs/VSQL_form.jsp)) row limits.:
 
+### PDR3
+
+These generate the new PDR3 fields Spring and Autumn which cover the whole Wide overlap.
+
+```Shell
+#Spring
+SELECT 
+    SOURCEID,
+    RA,
+    DEC,
+    PSTAR,
+    JAPERMAG3,
+    JAPERMAG3ERR,
+    HAPERMAG3,
+    HAPERMAG3ERR,
+    KSAPERMAG3,
+    KSAPERMAG3ERR 
+FROM vhsSource WHERE ra > 120 AND ra < 235 AND dec > -3 AND dec < 3
+#Autumn - very simply defined in terms of two rectangles
+SELECT 
+    SOURCEID,
+    RA,
+    DEC,
+    PSTAR,
+    JAPERMAG3,
+    JAPERMAG3ERR,
+    HAPERMAG3,
+    HAPERMAG3ERR,
+    KSAPERMAG3,
+    KSAPERMAG3ERR 
+FROM vhsSource WHERE 
+((ra < 45 OR ra > 325) AND dec > -3 AND dec < 3)
+OR ((ra < 45 AND ra > 25) AND dec > -10 AND dec <= -3)
+```
+
+### PDR2
+
+These commands are for the original PDR2 fields W01-W06
+
 ```Shell
 #W01
 SELECT * from vhsSource WHERE ra > 14 AND ra < 24 AND dec > -3 AND dec < 3
