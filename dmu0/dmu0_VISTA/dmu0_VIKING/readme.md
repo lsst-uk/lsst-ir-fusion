@@ -4,6 +4,31 @@ The images are stored on IRIS under '~/rds/rds-iris-ip005/data/private/VISTA/VIK
 
 http://horus.roe.ac.uk:8080/vdfs/VSQL_form.jsp
 
+### PDR3
+
+These generate the new PDR3 fields Spring and Autumn which cover the whole Wide overlap.
+
+```Shell
+#Spring and Autumn - very simply defined in terms of two rectangles
+SELECT 
+    SOURCEID,
+    RA,
+    DEC,
+    PSTAR,
+    JAPERMAG3,
+    JAPERMAG3ERR,
+    HAPERMAG3,
+    HAPERMAG3ERR,
+    KSAPERMAG3,
+    KSAPERMAG3ERR 
+FROM vhsSource WHERE 
+((ra < 45 OR ra > 325) AND dec > -3 AND dec < 3)
+OR ((ra < 45 AND ra > 25) AND dec > -10 AND dec <= -3)
+OR (ra > 120 AND ra < 235 AND dec > -3 AND dec < 3)
+```
+
+### PDR2
+
 We use the following queries to get around row limits:
 
 ```Shell
