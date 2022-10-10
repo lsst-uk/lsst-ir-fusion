@@ -21,7 +21,7 @@ SELECT
     HAPERMAG3ERR,
     KSAPERMAG3,
     KSAPERMAG3ERR 
-FROM vhsSource WHERE 
+FROM vikingSource WHERE 
 ((ra < 45 OR ra > 325) AND dec > -3 AND dec < 3)
 OR ((ra < 45 AND ra > 25) AND dec > -10 AND dec <= -3)
 OR (ra > 120 AND ra < 235 AND dec > -3 AND dec < 3)
