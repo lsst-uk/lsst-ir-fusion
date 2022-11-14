@@ -29,7 +29,7 @@ if [ ! -f $repo/butler.yaml ]; then
     butler ingest-raws $repo ../../dmu0/dmu0_VISTA/dmu0_VIDEO/data/*/*_st.fit -t copy --output-run VIRCAM/raw/video
 
     #Define the visits from the ingested exposures
-    butler define-visits $repo VIRCAM 
+    butler define-visits $repo VIRCAM --collections VIRCAM/raw/video
     #We don't have calibs but we need the collection for later processing
     butler write-curated-calibrations $repo VIRCAM
 fi
