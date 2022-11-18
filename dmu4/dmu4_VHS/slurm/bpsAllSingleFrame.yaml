@@ -1,0 +1,24 @@
+includeConfigs:
+  - ${GEN3_WORKFLOW_DIR}/python/desc/gen3_workflow/etc/bps_drp_baseline.yaml
+  - ${GEN3_WORKFLOW_DIR}/examples/bps_DC2-3828-y1_resources.yaml
+
+pipelineYaml: "${OBS_VISTA_DIR}/pipelines/DRP_full.yaml#singleFrame"
+
+project: dev
+campaign: quick
+computeSite: iris
+
+payload:
+  payloadName: DRP/vhsSingleFrame
+  butlerConfig: /home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data/butler.yaml
+  inCollection: vhs,VIRCAM/raw/vhs,refcats/vhs,VIRCAM/calib 
+  dataQuery: "band in ('Z','Y','J','H','K')"
+
+
+parsl_config:
+  retries: 1
+  monitoring: true
+  executor: WorkQueue
+  provider: Local
+  nodes_per_block: 31
+  worker_options: "--memory=160000"

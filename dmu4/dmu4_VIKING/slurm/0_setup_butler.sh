@@ -13,7 +13,7 @@ export repo=/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_2022
 #    rm -rf $repo
 #fi
 
-if [ ! -f $repo/butler.yaml ]; then
+if [ -f $repo/butler.yaml ]; then
     #rm -r $repo
     #butler create $repo
     #butler register-instrument $repo lsst.obs.subaru.HyperSuprimeCam
