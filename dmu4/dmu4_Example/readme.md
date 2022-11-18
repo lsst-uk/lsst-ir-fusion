@@ -22,22 +22,9 @@ in json dictionary form is:
 If everything is set up correctly the test patch will run with test shell script:
 
 ```Shell
-sh test_patch.sh
+bash test_patch_gen3.sh
 ```
 
 You can then use the notebooks to investigate the data produced which will be in the form 
 of a Butler repository in the './data' folder.
 
-#Gen 3
-
-The command line tasks are completely changed for the gen 3 Butler. Here are some basic 
-gen3 commands:
-
-```Shell
-source /Users/raphaelshirley/Documents/github/lsst_stack/loadLSST.bash
-setup lsst_distrib
-setup obs_vista
-mkdir data
-butler create data
-butler register-instrument data lsst.obs.vista.VISTA
-```
