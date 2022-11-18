@@ -24,8 +24,8 @@ if [ ! -f $repo/butler.yaml ]; then
     cp -r ../../../dmu2/data/video_gen3 $repo 
     cd $repo
     cd ..
-    butler ingest-files -t direct data ps1_pv3_3pi_20170110_vista videoRefCats data/video_gen3/filename_to_htm.ecsv 
-    
+    butler ingest-files -t copy data ps1_pv3_3pi_20170110_vista refcats/video data/video_gen3/filename_to_htm.ecsv 
+    rm -r data/video_gen3
     #Ingest the raw exposures _st for stacks [0-9] for exposures
     #butler ingest-raws $repo ../../dmu0/dmu0_VISTA/dmu0_VIDEO/data/*/*_st.fit 
     #Define the visits from the ingested exposures

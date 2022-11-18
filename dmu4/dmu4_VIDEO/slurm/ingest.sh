@@ -37,12 +37,12 @@ do
   #visit="$(python fitToExpNum.py ./tmp/tmp_stack.fit)"
   echo $visit
   
-  butler ingest-raws $repo $filename -t copy
-  butler ingest-files --formatter=lsst.obs.vista.VircamRawFormatter $repo confidence video ./tmp/confidence.ecsv --data-id exposure=$visit,band=$band,physical_filter=$filter -t copy
+  butler ingest-raws $repo $filename -t copy --output-run VIRCAM/raw/video
+  butler ingest-files --formatter=lsst.obs.vista.VircamRawFormatter $repo confidence confidence/video ./tmp/confidence.ecsv --data-id exposure=$visit,band=$band,physical_filter=$filter -t copy
 done
 
 #Define the visits from the ingested exposures
-butler define-visits $repo VIRCAM 
+butler define-visits $repo VIRCAM/raw/video 
 #We don't have calibs but we need the collection for later processing
 butler write-curated-calibrations $repo VIRCAM
 
