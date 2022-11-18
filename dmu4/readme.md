@@ -33,19 +33,25 @@ The slurm files must be run sequentially following completion of earlier stages.
 
 ## Example commands
 
-All the steps might loosely be executed after all the appropriate files are put in place  on IRIS with the following commands:
+All the steps might loosely be executed after all the appropriate files are put in place on IRIS with the following commands run inside a given slurm folder above:
 
 ```Shell
-#Setup a fresh Butler and copy the requisite reference objects
-bash 1_butler_setup.sh
+#Setup a fresh Butler and copy the requisite reference files
+bash 0_setup_butler.sh
 #Ingest the exposures
 qsub 1_Ingest.slurm
 #Submit all the image processing jobs
-qsub 2_ProcessCcd.slurm
-#Wait for all jobs to complete
-qsub 3_Coadd.slurm
-#Wait for all coadd jobs to complete
-qsub 4_Photopipe.slurm
+qsub 2.0_startSingleFrame.slurm
+#Wait for the job to complete using the following command to check on current jobs
+qstat -u $USER
+#If the job does not finish in 36 hours it will need to be restarted - the run id will have to be changedin the restart script
+qsub 2.1_restartSingleFrame.slurm
+#Wait before doing the same for coadding
+qsub 3.0_startCoadd.slurm  
+#Wait before ingesting the optical images and detections
+bash 4_ingestHSC.sh 
+#Wait before submitting the final photometry stage
+qsub 5.0_startMultiVisit.slurm  
 #Run diagnostics and final catalogue production in DMU5
 ```
 
