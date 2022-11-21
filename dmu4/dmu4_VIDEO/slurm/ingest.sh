@@ -8,7 +8,7 @@
 source /home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/setup.sh
 
 #butler ingest-raws ../../data /home/ir-shir1/rds/rds-iris-ip005/data/private/VISTA/VIDEO/*/*st.fit -t copy -j 32
-export repo=../../data
+export repo=/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data
 butler register-dataset-type $repo confidence ExposureF instrument band physical_filter exposure detector
 
 for i in {0..5072}
