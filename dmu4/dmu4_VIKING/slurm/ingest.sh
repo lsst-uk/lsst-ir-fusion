@@ -39,7 +39,7 @@ do
   echo $visit
   
   butler ingest-raws $repo $filename -t copy --output-run VIRCAM/raw/viking
-  butler ingest-files --formatter=lsst.obs.vista.VircamRawFormatter $repo confidence viking ./tmp/confidence.ecsv --data-id exposure=$visit,band=$band,physical_filter=$filter -t copy
+  butler ingest-files --formatter=lsst.obs.vista.VircamRawFormatter $repo confidence confidence/viking ./tmp/confidence.ecsv --data-id exposure=$visit,band=$band,physical_filter=$filter -t copy
 done
 
 #Define the visits from the ingested exposures

@@ -9,7 +9,8 @@ find $repo/u/ir-shir1/DRP/singleFrame -name calexp*.fits  | wc -l
 
 echo "viking postISRCCD singleFrame"
 find $repo/u/ir-shir1/DRP/vikingSingleFrame/20221121T132807Z -name postISRCCD*.fits  | wc -l
-
+echo "viking calexp singleFrame"
+find $repo/u/ir-shir1/DRP/vikingSingleFrame/20221121T132807Z -name calexp*.fits  | wc -l
 
 
 #echo "video directWarp videoCoaddDetect"

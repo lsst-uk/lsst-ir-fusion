@@ -42,7 +42,7 @@ do
 done
 
 #Define the visits from the ingested exposures
-butler define-visits $repo VIRCAM/raw/video 
+butler define-visits $repo VIRCAM --collections VIRCAM/raw/video 
 #We don't have calibs but we need the collection for later processing
 butler write-curated-calibrations $repo VIRCAM
 
