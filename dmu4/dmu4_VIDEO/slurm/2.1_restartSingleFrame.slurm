@@ -63,7 +63,7 @@ application="bps"
 #! application="runQGraph.sh"
 
 #! Run options for the application:
-options="restart --wms-service-class desc.gen3_workflow.ParslService --id u/ir-shir1/DRP/singleFrame/20220707T132740Z"
+options="restart --wms-service-class desc.gen3_workflow.ParslService --id u/ir-shir1/DRP/videoSingleFrame/20221124T141958Z"
 #! options="run_pipeline.py '/rds/project/rds-rPTGgs6He74/ras81/lsst-ir-fusion/dmu4/dmu4_VIDEO/slurm/submit/u/ir-shir1/DRP/singleFrame/20220707T132740Z/parsl_graph_config.pickle'"
 #! options=""
 

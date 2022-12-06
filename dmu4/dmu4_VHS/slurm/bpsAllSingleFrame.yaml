@@ -16,7 +16,7 @@ payload:
 
 
 parsl_config:
-  retries: 0
+  retries: 3
   monitoring: true
   executor: WorkQueue
   provider: Local

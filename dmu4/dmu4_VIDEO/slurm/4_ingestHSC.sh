@@ -1,6 +1,7 @@
 #!/bin/bash
 source /home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/setup.sh
-repo=../../data
+#repo=../../data
+export repo=/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data
 coaddRun=hscImports/pdr3_dud_full
 #Register dataset types if not already done by earlier stages
 # butler register-dataset-type $repo deepCoadd ExposureF band skymap tract patch

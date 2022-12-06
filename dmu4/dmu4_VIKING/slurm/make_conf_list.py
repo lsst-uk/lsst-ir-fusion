@@ -2,7 +2,7 @@
 
 import glob
 
-visit_list=glob.glob('/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data/viking/confidence/*/*/*.fit')
+visit_list=glob.glob('/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_full_20221201/data/confidence/viking/confidence/*/*/*.fit')
 visits=[int(t.split('_')[-3]) for t in visit_list]
 
 f=open('bpsConfList.yaml','a')
@@ -22,8 +22,8 @@ computeSite: iris
 end="""
 payload:
   payloadName: DRP/vikingSingleFrame
-  butlerConfig: /home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data/butler.yaml
-  inCollection: viking,VIRCAM/raw/viking,vikingRefCats,VIRCAM/calib
+  butlerConfig: /home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_full_20221201/data/butler.yaml
+  inCollection: confidence/viking,VIRCAM/raw/viking,refcats/viking,VIRCAM/calib
   dataQuery: "band in ('Z','Y','J','H','K') AND visit IN ({})"
 
 
