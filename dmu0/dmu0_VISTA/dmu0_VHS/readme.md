@@ -13,28 +13,17 @@ As our reference catalogue we use the VHS public catalogues on the VSA. These ca
 
 ### PDR3
 
-These generate the new PDR3 fields Spring and Autumn which cover the whole Wide overlap.
+These generate the new PDR3 fields Spring and Autumn which cover the whole Wide overlap. The YJHK bandsare available.
 
 ```Shell
-#Spring
+#Spring and Autumn
 SELECT 
     SOURCEID,
     RA,
     DEC,
     PSTAR,
-    JAPERMAG3,
-    JAPERMAG3ERR,
-    HAPERMAG3,
-    HAPERMAG3ERR,
-    KSAPERMAG3,
-    KSAPERMAG3ERR 
-FROM vhsSource WHERE ra > 120 AND ra < 235 AND dec > -3 AND dec < 3
-#Autumn - very simply defined in terms of two rectangles
-SELECT 
-    SOURCEID,
-    RA,
-    DEC,
-    PSTAR,
+    YAPERMAG3,
+    YAPERMAG3ERR,
     JAPERMAG3,
     JAPERMAG3ERR,
     HAPERMAG3,
@@ -44,6 +33,7 @@ SELECT
 FROM vhsSource WHERE 
 ((ra < 45 OR ra > 325) AND dec > -3 AND dec < 3)
 OR ((ra < 45 AND ra > 25) AND dec > -10 AND dec <= -3)
+OR (ra > 120 AND ra < 235 AND dec > -3 AND dec < 3)
 ```
 
 ### PDR2
