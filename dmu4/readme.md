@@ -56,3 +56,20 @@ qsub 5.0_startMultiVisit.slurm
 ```
 
 Occasionally the resources given to each patch or image in the slurm file need to be increased for failed patches or images. They should be set such that the majority (>95%) pass first time but checks must be made to see any that require increased resources and rerunning.
+
+
+
+## Run details
+
+We have conducted numerous test and production runs since the start of the project in 2020.
+
+### First prototype December 2020
+
+We conducted the first run in December 2020. This version was only VISTA Ks band detected.
+In that regard and some other crucial ways it differs from the later runs which are all band detected.
+Later runs also had changes to the photometric reference catalogues and additional measurements included.
+
+### Second prototype run April 2021
+
+We conducted a full overlap run in April 2021. This will likely be the last run using the gen 2 Butler.
+This run is all band selected and includes Kron, CModel, and convolved aperture fluxes.
