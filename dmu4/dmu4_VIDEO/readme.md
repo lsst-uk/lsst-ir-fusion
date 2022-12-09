@@ -16,18 +16,6 @@ Figure 1. Red squares show HSC DUD patches, blue shows VIDEO patches.
 
 We are making the catalogues available on the VISTA Science Archive (VSA).
 
-## Run details
-
-### First prototype December 2020
-
-We conducted the first run in December 2020. This version was only VISTA Ks band detected.
-In that regard and some other crucial ways it differs from the later runs which are all band detected.
-Later runs also had changes to the photometric reference catalogues and additional measurements included.
-
-### Second prototype run April 2021
-
-We conducted a full overlap run in April 2021. This will likely be the last run using the gen 2 Butler.
-This run is all band selected and includes Kron, CModel, and convolved aperture fluxes.
 
 
 

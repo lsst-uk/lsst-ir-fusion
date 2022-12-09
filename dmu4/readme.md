@@ -16,6 +16,8 @@ In the 'dmu4_Example' folder we run the pipeline on a minimal VISTA-Ks^VISTA-Y^H
 In the future we plan to produce on the Slurm machinery in the individual folders and then preduce a single Butler in this top level directory. 
 For now we use a separate Butler for every survey run.
 
+Installing the parsl software in order to run at scale is described in [gen3_workflow.md](gen3_workflow.md).
+
 ## Slurm files
 This directory also contains the scripts used to generate 'slurm' files for submitting jobs to the IRIS HPC. These can be modified to produce job scripts on other platforms.
 
@@ -29,7 +31,13 @@ We are using the pipe drivers which can be parellised. In general we are submitt
 
 ### Running notes
 
-The slurm files must be run sequentially following completion of earlier stages. I believe it is possible to delete intermediate products but you cannot remove the whole rerun the config must be left in place. It is also necessary for the skymap to be present for example so take care when deleting intermediate directories.
+The slurm files must be run sequentially following completion of earlier stages. I believe it is possible to delete intermediate products but you cannot remove the whole rerun the config must be left in place. It is also necessary for the skymap to be present for example so take care when deleting intermediate directories. All deletion must be performed with a butler command and not a straightforeward delete to ensure the database is updated. These deletions should be submitted as slurm jobs because they can take a long tiome and if interupted the sqlite database may b corrupted. 
+
+I recommend regular backing up of the sqlite database file incase it is corrupted. It can also be cleaned in the case of an interupted write using:
+
+```Shell
+sqlite3 ge3.sqlite 'VACUUM;'
+```
 
 ## Example commands
 
@@ -56,3 +64,32 @@ qsub 5.0_startMultiVisit.slurm
 ```
 
 Occasionally the resources given to each patch or image in the slurm file need to be increased for failed patches or images. They should be set such that the majority (>95%) pass first time but checks must be made to see any that require increased resources and rerunning.
+
+The jobs will often end withou completing so output files must be inspected to check that the quantum graph has completed and you can move on to the next stage.
+
+## Run details
+
+We have conducted numerous test and production runs since the start of the project in 2020.
+
+### P2022.3
+
+This is the first full wide area run of VHS, VIKING, and VIDEO overlapping with the HSC PDR3 Wide survey. As of December 2022 this run is under way. This will hopefully lead to the final data set presented by phase B of the project which ends in March 2023. This will be transferred to the UK RSP for further testing and presentation of the data for science purposes.
+
+### P2022.2
+
+This was the second full run of VIDEO on the HSC PDR3 DUD field SXDS. This produced the first full set of imaging and catalogues that were sent to the UK RSP for testing. It fixed issues with completeness in the run P2022.1 where patches were missing and patches with partical coverage by the Z band were leading to deblending failures.
+
+### P2022.1
+
+This was the first full scale VIDEO run conducted with the gen3 pipeline and confidence map integration. Following this run we found issues with the reference catalogue photometry due to using the incorrect aperture correction.
+
+### P2021.1 Second prototype run April 2021
+
+We conducted a full overlap run in April 2021. This will likely be the last run using the gen 2 Butler.
+This run is all band selected and includes Kron, CModel, and convolved aperture fluxes.
+
+### P2020.1 First prototype December 2020
+
+We conducted the first run in December 2020. This version was only VISTA Ks band detected.
+In that regard and some other crucial ways it differs from the later runs which are all band detected.
+Later runs also had changes to the photometric reference catalogues and additional measurements included.
