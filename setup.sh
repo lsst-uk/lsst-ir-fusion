@@ -14,6 +14,6 @@ conda activate --stack ${wq_env}
 export PYTHONPATH=${wq_env}/lib/python3.8/site-packages:${PYTHONPATH}
 export PATH=${wq_env}/bin:${PATH}
 export NUMEXPR_MAX_THREADS=1
-export OMP_NUM_THREADS=1
+#export OMP_NUM_THREADS=1
 export BPS_WMS_SERVICE_CLASS=desc.gen3_workflow.ParslService
 

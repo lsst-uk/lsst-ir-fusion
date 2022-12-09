@@ -12,7 +12,7 @@
 #! Name of the job:
 #SBATCH -J vikingSingFramAll
 #! Which project should be charged:
-#SBATCH -A IRIS-IP005-CPU
+#SBATCH -A IRIS-IP009-CPU
 #SBATCH -p cclake
 #! How many whole nodes should be allocated?
 #SBATCH --nodes=32

@@ -10,12 +10,13 @@
 
 #! sbatch directives begin here ###############################
 #! Name of the job:
-#SBATCH -J vhsCoadd
+#SBATCH -J vikCoaddRe
 #! Which project should be charged:
 #SBATCH -A IRIS-IP009-CPU
 #SBATCH -p cclake
 #! How many whole nodes should be allocated?
 #SBATCH --nodes=32
+#! SBATCH --ntasks=32
 #SBATCH --exclusive
 #! How many (MPI) tasks will there be in total? (<= nodes*56)
 #! The Cascade Lake (cclake) nodes have 56 CPUs (cores) each and
@@ -54,13 +55,18 @@ mpi_tasks_per_node=$(echo "$SLURM_TASKS_PER_NODE" | sed -e  's/^\([0-9][0-9]*\).
 module purge                               # Removes all modules still loaded
 module load rhel7/default-ccl              # REQUIRED - loads the basic environment
 source /home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/setup.sh
+
+#! python run_pipeline.py '/rds/project/rds-rPTGgs6He74/ras81/lsst-ir-fusion/dmu4/dmu4_VIDEO/slurm/submit/u/ir-shir1/DRP/singleFrame/20220317T193549Z/parsl_graph_config.pickle'
+
 #! Insert additional module load commands after this line if needed:
 
 #! Full path to application executable: 
+#! application="python"
 application="bps"
 
-#! Run options for the application:
-options="submit bpsAllCoadd.yaml"
+#! Run options for the application: 20220709T095923Z
+#! options="run_pipeline.py /rds/project/rds-rPTGgs6He74/ras81/lsst-ir-fusion/dmu4/dmu4_VIDEO/slurm/submit/u/ir-shir1/DRP/videoCoaddDetect/20220709T095923Z/parsl_graph_config.pickle"
+options="restart --wms-service-class desc.gen3_workflow.ParslService --id u/ir-shir1/DRP/vikingCoaddDetect/"
 
 #! Work directory (i.e. where the job will run):
 workdir="$SLURM_SUBMIT_DIR"  # The value of SLURM_SUBMIT_DIR sets workdir to the directory
@@ -68,7 +74,7 @@ workdir="$SLURM_SUBMIT_DIR"  # The value of SLURM_SUBMIT_DIR sets workdir to the
 
 #! Are you using OpenMP (NB this is unrelated to OpenMPI)? If so increase this
 #! safe value to no more than 56:
-#export OMP_NUM_THREADS=1
+export OMP_NUM_THREADS=1
 
 #! Number of MPI tasks to be started by the application per node and in total (do not change):
 np=$[${numnodes}*${mpi_tasks_per_node}]

@@ -10,9 +10,9 @@
 
 #! sbatch directives begin here ###############################
 #! Name of the job:
-#SBATCH -J vidCoaddRe
+#SBATCH -J vhsCoaddRe
 #! Which project should be charged:
-#SBATCH -A IRIS-IP005-CPU
+#SBATCH -A IRIS-IP009-CPU
 #SBATCH -p cclake
 #! How many whole nodes should be allocated?
 #SBATCH --nodes=32
@@ -66,7 +66,7 @@ application="bps"
 
 #! Run options for the application: 20220709T095923Z
 #! options="run_pipeline.py /rds/project/rds-rPTGgs6He74/ras81/lsst-ir-fusion/dmu4/dmu4_VIDEO/slurm/submit/u/ir-shir1/DRP/videoCoaddDetect/20220709T095923Z/parsl_graph_config.pickle"
-options="restart --wms-service-class desc.gen3_workflow.ParslService --id u/ir-shir1/DRP/videoCoaddDetect/20220720T183849Z"
+options="restart --wms-service-class desc.gen3_workflow.ParslService --id u/ir-shir1/DRP/vhsCoaddDetect/20221209T131239Z"
 
 #! Work directory (i.e. where the job will run):
 workdir="$SLURM_SUBMIT_DIR"  # The value of SLURM_SUBMIT_DIR sets workdir to the directory

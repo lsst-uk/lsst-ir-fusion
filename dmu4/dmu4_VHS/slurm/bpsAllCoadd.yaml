@@ -3,6 +3,7 @@ includeConfigs:
   - ${GEN3_WORKFLOW_DIR}/examples/bps_DC2-3828-y1_resources.yaml
 
 pipetask:
+  #Shouldn't need so much memory in VHS regions
   #assembleCoadd:
   #  requestMemory: 50000
   healSparsePropertyMaps:
@@ -16,8 +17,8 @@ computeSite: iris
 
 payload:
   payloadName: DRP/vhsCoaddDetect
-  butlerConfig: /home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/dmu4/data/butler.yaml
-  inCollection: u/ir-shir1/DRP/singleFrame 
+  butlerConfig: /home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data/butler.yaml
+  inCollection: skymaps,u/ir-shir1/DRP/vhsSingleFrame 
   dataQuery: "skymap='hscPdr2'"
 
 

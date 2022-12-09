@@ -3,7 +3,12 @@
 import glob
 
 visit_list=glob.glob('/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_full_20221201/data/confidence/viking/confidence/*/*/*.fit')
-visits=[int(t.split('_')[-3]) for t in visit_list]
+visits=[int(t.split('_')[-4]) for t in visit_list]
+
+images=glob.glob('/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_full_20221201/data/VIRCAM/raw/viking/raw/*/*/*.fit')
+images=[int(t.split('_')[-5]) for t in images]
+
+visits=list(set(images)-set(visits))
 
 f=open('bpsConfList.yaml','a')
 
@@ -24,11 +29,11 @@ payload:
   payloadName: DRP/vikingSingleFrame
   butlerConfig: /home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_full_20221201/data/butler.yaml
   inCollection: confidence/viking,VIRCAM/raw/viking,refcats/viking,VIRCAM/calib
-  dataQuery: "band in ('Z','Y','J','H','K') AND visit IN ({})"
+  dataQuery: "band in ('Z','Y','J','H','K') AND visit NOT IN ({})"
 
 
 parsl_config:
-  retries: 1
+  retries: 0
   monitoring: true
   executor: WorkQueue
   provider: Local
