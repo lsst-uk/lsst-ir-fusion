@@ -31,7 +31,13 @@ We are using the pipe drivers which can be parellised. In general we are submitt
 
 ### Running notes
 
-The slurm files must be run sequentially following completion of earlier stages. I believe it is possible to delete intermediate products but you cannot remove the whole rerun the config must be left in place. It is also necessary for the skymap to be present for example so take care when deleting intermediate directories.
+The slurm files must be run sequentially following completion of earlier stages. I believe it is possible to delete intermediate products but you cannot remove the whole rerun the config must be left in place. It is also necessary for the skymap to be present for example so take care when deleting intermediate directories. All deletion must be performed with a butler command and not a straightforeward delete to ensure the database is updated. These deletions should be submitted as slurm jobs because they can take a long tiome and if interupted the sqlite database may b corrupted. 
+
+I recommend regular backing up of the sqlite database file incase it is corrupted. It can also be cleaned in the case of an interupted write using:
+
+```Shell
+sqlite3 ge3.sqlite 'VACUUM;'
+```
 
 ## Example commands
 
