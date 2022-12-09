@@ -63,13 +63,23 @@ Occasionally the resources given to each patch or image in the slurm file need t
 
 We have conducted numerous test and production runs since the start of the project in 2020.
 
-### First prototype December 2020
+### P2022.3
+
+This is the first full wide area run of VHS, VIKING, and VIDEO overlapping with the HSC PDR3 Wide survey. As of December 2022 this run is under way.
+
+### P2022.2
+
+This was the first full run of VIDEO on the HSC PDR3 DUD field SXDS. This produced the first full set of imaging and catalogues that were sent to the UK RSP for testing.
+
+### P2022.1
+
+### P2021.1 Second prototype run April 2021
+
+We conducted a full overlap run in April 2021. This will likely be the last run using the gen 2 Butler.
+This run is all band selected and includes Kron, CModel, and convolved aperture fluxes.
+
+### P2020.1 First prototype December 2020
 
 We conducted the first run in December 2020. This version was only VISTA Ks band detected.
 In that regard and some other crucial ways it differs from the later runs which are all band detected.
 Later runs also had changes to the photometric reference catalogues and additional measurements included.
-
-### Second prototype run April 2021
-
-We conducted a full overlap run in April 2021. This will likely be the last run using the gen 2 Butler.
-This run is all band selected and includes Kron, CModel, and convolved aperture fluxes.
