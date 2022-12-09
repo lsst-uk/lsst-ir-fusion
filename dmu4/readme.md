@@ -16,6 +16,8 @@ In the 'dmu4_Example' folder we run the pipeline on a minimal VISTA-Ks^VISTA-Y^H
 In the future we plan to produce on the Slurm machinery in the individual folders and then preduce a single Butler in this top level directory. 
 For now we use a separate Butler for every survey run.
 
+Installing the parsl software in order to run at scale is described in [gen3_workflow.md](gen3_workflow.md).
+
 ## Slurm files
 This directory also contains the scripts used to generate 'slurm' files for submitting jobs to the IRIS HPC. These can be modified to produce job scripts on other platforms.
 
