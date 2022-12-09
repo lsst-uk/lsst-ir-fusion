@@ -57,7 +57,7 @@ qsub 5.0_startMultiVisit.slurm
 
 Occasionally the resources given to each patch or image in the slurm file need to be increased for failed patches or images. They should be set such that the majority (>95%) pass first time but checks must be made to see any that require increased resources and rerunning.
 
-
+The jobs will often end withou completing so output files must be inspected to check that the quantum graph has completed and you can move on to the next stage.
 
 ## Run details
 
