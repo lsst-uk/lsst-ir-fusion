@@ -65,13 +65,15 @@ We have conducted numerous test and production runs since the start of the proje
 
 ### P2022.3
 
-This is the first full wide area run of VHS, VIKING, and VIDEO overlapping with the HSC PDR3 Wide survey. As of December 2022 this run is under way.
+This is the first full wide area run of VHS, VIKING, and VIDEO overlapping with the HSC PDR3 Wide survey. As of December 2022 this run is under way. This will hopefully lead to the final data set presented by phase B of the project which ends in March 2023. This will be transferred to the UK RSP for further testing and presentation of the data for science purposes.
 
 ### P2022.2
 
-This was the first full run of VIDEO on the HSC PDR3 DUD field SXDS. This produced the first full set of imaging and catalogues that were sent to the UK RSP for testing.
+This was the second full run of VIDEO on the HSC PDR3 DUD field SXDS. This produced the first full set of imaging and catalogues that were sent to the UK RSP for testing. It fixed issues with completeness in the run P2022.1 where patches were missing and patches with partical coverage by the Z band were leading to deblending failures.
 
 ### P2022.1
+
+This was the first full scale VIDEO run conducted with the gen3 pipeline and confidence map integration. Following this run we found issues with the reference catalogue photometry due to using the incorrect aperture correction.
 
 ### P2021.1 Second prototype run April 2021
 
