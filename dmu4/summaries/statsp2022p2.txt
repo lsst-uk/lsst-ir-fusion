@@ -1,0 +1,962 @@
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data
+Fri 25 Nov 11:26:50 UTC 2022
+video postISRCCD singleFrame
+61178
+video calexp singleFrame
+47016
+vhs postISRCCD singleFrame
+0
+vhs calexp singleFrame
+0
+viking postISRCCD singleFrame
+0
+viking calexp singleFrame
+0
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data
+Fri 25 Nov 14:18:24 UTC 2022
+video postISRCCD singleFrame
+61178
+video calexp singleFrame
+47016
+vhs postISRCCD singleFrame
+0
+vhs calexp singleFrame
+0
+viking postISRCCD singleFrame
+0
+viking calexp singleFrame
+0
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data
+Fri 25 Nov 14:37:49 UTC 2022
+video postISRCCD singleFrame
+61178
+video calexp singleFrame
+47016
+video calexpBack singleFrame
+23508
+vhs postISRCCD singleFrame
+0
+vhs calexp singleFrame
+0
+viking postISRCCD singleFrame
+0
+viking calexp singleFrame
+0
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data
+Sat 26 Nov 15:32:34 UTC 2022
+video postISRCCD singleFrame
+70812
+video calexp singleFrame
+90270
+video calexpBack singleFrame
+45135
+vhs postISRCCD singleFrame
+0
+vhs calexp singleFrame
+0
+viking postISRCCD singleFrame
+1288
+viking calexp singleFrame
+0
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data
+Mon 28 Nov 11:04:01 UTC 2022
+video postISRCCD singleFrame
+80560
+video calexp singleFrame
+159946
+video calexpBack singleFrame
+79973
+vhs postISRCCD singleFrame
+0
+vhs calexp singleFrame
+0
+viking postISRCCD singleFrame
+15563
+viking calexp singleFrame
+0
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data
+Tue 29 Nov 12:37:39 UTC 2022
+video postISRCCD singleFrame
+80560
+video calexp singleFrame
+159946
+video calexpBack singleFrame
+79973
+video calexp coaddDetect
+0
+vhs postISRCCD singleFrame
+0
+vhs calexp singleFrame
+0
+viking postISRCCD singleFrame
+23222
+viking calexp singleFrame
+0
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data
+Tue 29 Nov 13:13:30 UTC 2022
+video postISRCCD singleFrame
+80560
+video calexp singleFrame
+159946
+video calexpBack singleFrame
+79973
+video calexp coaddDetect
+0
+vhs postISRCCD singleFrame
+0
+vhs calexp singleFrame
+0
+viking postISRCCD singleFrame
+0
+viking calexp singleFrame
+0
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data
+Tue 29 Nov 15:35:26 UTC 2022
+video postISRCCD singleFrame
+80560
+video calexp singleFrame
+159946
+video calexpBack singleFrame
+79973
+video calexp coaddDetect
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data
+Tue 29 Nov 15:49:57 UTC 2022
+video postISRCCD singleFrame
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data
+Tue 29 Nov 15:56:13 UTC 2022
+video postISRCCD singleFrame
+80560
+video calexp singleFrame
+159946
+video calexpBack singleFrame
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data
+Tue 29 Nov 16:01:41 UTC 2022
+video postISRCCD singleFrame
+80560
+video calexp singleFrame
+159946
+video calexpBack singleFrame
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data
+Wed 30 Nov 12:49:11 UTC 2022
+video postISRCCD singleFrame
+80560
+video calexp singleFrame
+159946
+video calexpBack singleFrame
+79973
+video deepCoadd_calexp coaddDetect
+4
+vhs postISRCCD singleFrame
+0
+vhs calexp singleFrame
+0
+viking postISRCCD singleFrame
+0
+viking calexp singleFrame
+0
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data
+Wed 30 Nov 17:20:28 UTC 2022
+video postISRCCD singleFrame
+80560
+video calexp singleFrame
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_full_20221201/data
+Thu 1 Dec 15:14:31 UTC 2022
+video postISRCCD singleFrame
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_full_20221201/data
+Fri 2 Dec 15:37:30 UTC 2022
+video postISRCCD singleFrame
+80560
+video calexp singleFrame
+79973
+video deepCoadd coaddDetect
+20
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_full_20221201/data
+Fri 2 Dec 18:09:18 UTC 2022
+video postISRCCD singleFrame
+80560
+video calexp singleFrame
+79973
+video deepCoadd coaddDetect
+113
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_full_20221201/data
+Fri 2 Dec 18:55:57 UTC 2022
+video postISRCCD singleFrame
+80560
+video calexp singleFrame
+79973
+video deepCoadd coaddDetect
+115
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_full_20221201/data
+Fri 2 Dec 19:36:05 UTC 2022
+video postISRCCD singleFrame
+80560
+video calexp singleFrame
+79973
+video deepCoadd coaddDetect
+121
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_full_20221201/data
+Sun 4 Dec 11:13:14 UTC 2022
+video postISRCCD singleFrame
+80560
+video calexp singleFrame
+79973
+video deepCoadd coaddDetect
+1028
+vhs postISRCCD singleFrame
+130512
+vhs calexp singleFrame
+41304
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_full_20221201/data
+Mon 5 Dec 11:09:51 UTC 2022
+video postISRCCD singleFrame
+80560
+video calexp singleFrame
+79973
+video deepCoadd coaddDetect
+1028
+vhs postISRCCD singleFrame
+130512
+vhs calexp singleFrame
+94477
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_full_20221201/data
+Mon 5 Dec 14:31:20 UTC 2022
+video postISRCCD singleFrame
+80560
+video calexp singleFrame
+79973
+video deepCoadd coaddDetect
+1028
+video deepCoadd_forced_src multiVisit
+1982
+vhs postISRCCD singleFrame
+130512
+vhs calexp singleFrame
+106106
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_full_20221201/data
+Mon 5 Dec 15:43:24 UTC 2022
+video postISRCCD singleFrame
+80560
+video calexp singleFrame
+79973
+video deepCoadd coaddDetect
+1028
+video deepCoadd_forced_src multiVisit
+2008
+vhs postISRCCD singleFrame
+130512
+vhs calexp singleFrame
+110021
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_full_20221201/data
+Mon 5 Dec 16:13:04 UTC 2022
+video postISRCCD singleFrame
+80560
+video calexp singleFrame
+79973
+video deepCoadd coaddDetect
+1028
+video deepCoadd_forced_src multiVisit
+2018
+vhs postISRCCD singleFrame
+130512
+vhs calexp singleFrame
+110150
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_full_20221201/data
+Mon 5 Dec 21:18:08 UTC 2022
+video postISRCCD singleFrame
+80560
+video calexp singleFrame
+79973
+video deepCoadd coaddDetect
+1028
+video deepCoadd_forced_src multiVisit
+2059
+vhs postISRCCD singleFrame
+130512
+vhs calexp singleFrame
+110420
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_full_20221201/data
+Tue 6 Dec 10:02:52 UTC 2022
+video postISRCCD singleFrame
+80560
+video calexp singleFrame
+79973
+video deepCoadd coaddDetect
+1028
+video deepCoadd_forced_src multiVisit
+2061
+vhs postISRCCD singleFrame
+130512
+vhs calexp singleFrame
+111530
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_full_20221201/data
+Tue 6 Dec 10:17:06 UTC 2022
+video postISRCCD singleFrame
+80560
+video calexp singleFrame
+79973
+video deepCoadd coaddDetect
+1028
+video deepCoadd_forced_src multiVisit
+2061
+vhs postISRCCD singleFrame
+130512
+vhs calexp singleFrame
+111530
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_full_20221201/data
+Tue 6 Dec 11:02:08 UTC 2022
+video postISRCCD singleFrame
+80560
+video calexp singleFrame
+79973
+video deepCoadd coaddDetect
+1028
+video deepCoadd_forced_src multiVisit
+2061
+vhs postISRCCD singleFrame
+130512
+vhs calexp singleFrame
+111578
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_full_20221201/data
+Tue 6 Dec 12:03:27 UTC 2022
+video postISRCCD singleFrame
+80560
+video calexp singleFrame
+79973
+video deepCoadd coaddDetect
+1028
+video deepCoadd_forced_src multiVisit
+2061
+vhs postISRCCD singleFrame
+130512
+vhs calexp singleFrame
+111751
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_full_20221201/data
+Tue 6 Dec 12:18:16 UTC 2022
+video postISRCCD singleFrame
+80560
+video calexp singleFrame
+79973
+video deepCoadd coaddDetect
+1028
+video deepCoadd_forced_src multiVisit
+2061
+vhs postISRCCD singleFrame
+130512
+vhs calexp singleFrame
+111920
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_full_20221201/data
+Tue 6 Dec 12:58:22 UTC 2022
+video postISRCCD singleFrame
+80560
+video calexp singleFrame
+79973
+video deepCoadd coaddDetect
+1028
+video deepCoadd_forced_src multiVisit
+2061
+vhs postISRCCD singleFrame
+130512
+vhs calexp singleFrame
+112531
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_full_20221201/data
+Tue 6 Dec 13:14:19 UTC 2022
+video postISRCCD singleFrame
+80560
+video calexp singleFrame
+79973
+video deepCoadd coaddDetect
+1028
+video deepCoadd_forced_src multiVisit
+2061
+vhs postISRCCD singleFrame
+130512
+vhs calexp singleFrame
+112600
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_full_20221201/data
+Tue 6 Dec 13:44:30 UTC 2022
+video postISRCCD singleFrame
+80560
+video calexp singleFrame
+79973
+video deepCoadd coaddDetect
+1028
+video deepCoadd_forced_src multiVisit
+2061
+vhs postISRCCD singleFrame
+130512
+vhs calexp singleFrame
+112600
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_full_20221201/data
+Tue 6 Dec 13:50:27 UTC 2022
+video postISRCCD singleFrame
+80560
+video calexp singleFrame
+79973
+video deepCoadd coaddDetect
+1028
+video deepCoadd_forced_src multiVisit
+2061
+vhs postISRCCD singleFrame
+130512
+vhs calexp singleFrame
+112600
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_full_20221201/data
+Tue 6 Dec 13:52:53 UTC 2022
+video postISRCCD singleFrame
+80560
+video calexp singleFrame
+79973
+video deepCoadd coaddDetect
+1028
+video deepCoadd_forced_src multiVisit
+2061
+vhs postISRCCD singleFrame
+130512
+vhs calexp singleFrame
+112600
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_full_20221201/data
+Tue 6 Dec 16:08:53 UTC 2022
+video postISRCCD singleFrame
+80560
+video calexp singleFrame
+79973
+video deepCoadd coaddDetect
+1028
+video deepCoadd_forced_src multiVisit
+2061
+vhs postISRCCD singleFrame
+130512
+vhs calexp singleFrame
+112600
+viking postISRCCD singleFrame
+0
+viking calexp singleFrame
+0
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_full_20221201/data
+Wed 7 Dec 12:41:15 UTC 2022
+video postISRCCD singleFrame
+80560
+video calexp singleFrame
+79973
+video deepCoadd coaddDetect
+1028
+video deepCoadd_forced_src multiVisit
+2061
+vhs postISRCCD singleFrame
+130512
+vhs calexp singleFrame
+112600
+viking postISRCCD singleFrame
+0
+viking calexp singleFrame
+0
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_full_20221201/data
+Wed 7 Dec 12:43:57 UTC 2022
+video postISRCCD singleFrame
+80560
+video calexp singleFrame
+79973
+video deepCoadd coaddDetect
+1028
+video deepCoadd_forced_src multiVisit
+2061
+vhs postISRCCD singleFrame
+130512
+vhs calexp singleFrame
+112600
+viking postISRCCD singleFrame
+53286
+viking calexp singleFrame
+16334
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_full_20221201/data
+Wed 7 Dec 14:12:08 UTC 2022
+video postISRCCD singleFrame
+80560
+video calexp singleFrame
+79973
+video deepCoadd coaddDetect
+1028
+video deepCoadd_forced_src multiVisit
+2061
+vhs postISRCCD singleFrame
+130512
+vhs calexp singleFrame
+112600
+viking postISRCCD singleFrame
+53286
+viking calexp singleFrame
+16334
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_full_20221201/data
+Wed 7 Dec 15:07:29 UTC 2022
+video postISRCCD singleFrame
+80560
+video calexp singleFrame
+79973
+video deepCoadd coaddDetect
+1028
+video deepCoadd_forced_src multiVisit
+2061
+vhs postISRCCD singleFrame
+130512
+vhs calexp singleFrame
+112600
+viking postISRCCD singleFrame
+53286
+viking calexp singleFrame
+16334
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_full_20221201/data
+Wed 7 Dec 15:24:26 UTC 2022
+video postISRCCD singleFrame
+80560
+video calexp singleFrame
+79973
+video deepCoadd coaddDetect
+1028
+video deepCoadd_forced_src multiVisit
+2061
+vhs postISRCCD singleFrame
+130512
+vhs calexp singleFrame
+112600
+viking postISRCCD singleFrame
+54365
+viking calexp singleFrame
+16750
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_full_20221201/data
+Wed 7 Dec 15:39:00 UTC 2022
+video postISRCCD singleFrame
+80560
+video calexp singleFrame
+79973
+video deepCoadd coaddDetect
+1028
+video deepCoadd_forced_src multiVisit
+2061
+vhs postISRCCD singleFrame
+130512
+vhs calexp singleFrame
+112600
+viking postISRCCD singleFrame
+55945
+viking calexp singleFrame
+19568
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_full_20221201/data
+Wed 7 Dec 16:04:05 UTC 2022
+video postISRCCD singleFrame
+80560
+video calexp singleFrame
+79973
+video deepCoadd coaddDetect
+1028
+video deepCoadd_forced_src multiVisit
+2061
+vhs postISRCCD singleFrame
+130512
+vhs calexp singleFrame
+112600
+viking postISRCCD singleFrame
+58174
+viking calexp singleFrame
+24336
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_full_20221201/data
+Wed 7 Dec 16:18:30 UTC 2022
+video postISRCCD singleFrame
+80560
+video calexp singleFrame
+79973
+video deepCoadd coaddDetect
+1028
+video deepCoadd_forced_src multiVisit
+2061
+vhs postISRCCD singleFrame
+130512
+vhs calexp singleFrame
+112600
+viking postISRCCD singleFrame
+59419
+viking calexp singleFrame
+27021
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_full_20221201/data
+Wed 7 Dec 16:28:05 UTC 2022
+video postISRCCD singleFrame
+80560
+video calexp singleFrame
+79973
+video deepCoadd coaddDetect
+1028
+video deepCoadd_forced_src multiVisit
+2061
+vhs postISRCCD singleFrame
+130512
+vhs calexp singleFrame
+112600
+viking postISRCCD singleFrame
+60201
+viking calexp singleFrame
+28650
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_full_20221201/data
+Wed 7 Dec 17:08:12 UTC 2022
+video postISRCCD singleFrame
+80560
+video calexp singleFrame
+79973
+video deepCoadd coaddDetect
+1028
+video deepCoadd_forced_src multiVisit
+2061
+vhs postISRCCD singleFrame
+130512
+vhs calexp singleFrame
+112600
+viking postISRCCD singleFrame
+62430
+viking calexp singleFrame
+32521
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_full_20221201/data
+Thu 8 Dec 09:51:09 UTC 2022
+video postISRCCD singleFrame
+80560
+video calexp singleFrame
+79973
+video deepCoadd coaddDetect
+1028
+video deepCoadd_forced_src multiVisit
+2061
+vhs postISRCCD singleFrame
+130512
+vhs calexp singleFrame
+112600
+viking postISRCCD singleFrame
+74528
+viking calexp singleFrame
+65831
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_full_20221201/data
+Thu 8 Dec 11:58:54 UTC 2022
+video postISRCCD singleFrame
+80560
+video calexp singleFrame
+79973
+video deepCoadd coaddDetect
+1028
+video deepCoadd_forced_src multiVisit
+2061
+vhs postISRCCD singleFrame
+130512
+vhs calexp singleFrame
+112600
+viking postISRCCD singleFrame
+74528
+viking calexp singleFrame
+65831
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_full_20221201/data
+Thu 8 Dec 12:29:54 UTC 2022
+video postISRCCD singleFrame
+80560
+video calexp singleFrame
+79973
+video deepCoadd coaddDetect
+1028
+video deepCoadd_forced_src multiVisit
+2061
+vhs postISRCCD singleFrame
+130512
+vhs calexp singleFrame
+112600
+viking postISRCCD singleFrame
+74528
+viking calexp singleFrame
+65831
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_full_20221201/data
+Thu 8 Dec 14:20:37 UTC 2022
+video postISRCCD singleFrame
+80560
+video calexp singleFrame
+79973
+video deepCoadd coaddDetect
+1028
+video deepCoadd_forced_src multiVisit
+2061
+vhs postISRCCD singleFrame
+130512
+vhs calexp singleFrame
+112600
+viking postISRCCD singleFrame
+74528
+viking calexp singleFrame
+65831
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_full_20221201/data
+Thu 8 Dec 14:26:04 UTC 2022
+video postISRCCD singleFrame
+80560
+video calexp singleFrame
+79973
+video deepCoadd coaddDetect
+1028
+video deepCoadd_forced_src multiVisit
+2061
+vhs postISRCCD singleFrame
+130512
+vhs calexp singleFrame
+112600
+vhs visitSummary singleFrame
+5413
+viking postISRCCD singleFrame
+74528
+viking calexp singleFrame
+65831
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_full_20221201/data
+Thu 8 Dec 14:29:19 UTC 2022
+video postISRCCD singleFrame
+80560
+video calexp singleFrame
+79973
+video deepCoadd coaddDetect
+1028
+video deepCoadd_forced_src multiVisit
+2061
+vhs postISRCCD singleFrame
+130512
+vhs calexp singleFrame
+112600
+vhs visitSummary singleFrame
+5413
+viking postISRCCD singleFrame
+74528
+viking calexp singleFrame
+65831
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_full_20221201/data
+Thu 8 Dec 15:18:42 UTC 2022
+video postISRCCD singleFrame
+80560
+video calexp singleFrame
+79973
+video deepCoadd coaddDetect
+1028
+video deepCoadd_forced_src multiVisit
+2061
+vhs postISRCCD singleFrame
+130512
+vhs calexp singleFrame
+112600
+vhs visitSummary singleFrame
+5413
+viking postISRCCD singleFrame
+74528
+viking calexp singleFrame
+65831
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_full_20221201/data
+Thu 8 Dec 15:41:04 UTC 2022
+video postISRCCD singleFrame
+80560
+video calexp singleFrame
+79973
+video deepCoadd coaddDetect
+1028
+video deepCoadd_forced_src multiVisit
+2061
+vhs postISRCCD singleFrame
+130512
+vhs calexp singleFrame
+112600
+vhs visitSummary singleFrame
+5413
+viking postISRCCD singleFrame
+74528
+viking calexp singleFrame
+65831
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_full_20221201/data
+Fri 9 Dec 11:54:04 UTC 2022
+video postISRCCD singleFrame
+80560
+video calexp singleFrame
+79973
+video deepCoadd coaddDetect
+1028
+video deepCoadd_forced_src multiVisit
+2061
+vhs postISRCCD singleFrame
+130512
+vhs calexp singleFrame
+112600
+vhs visitSummary singleFrame
+5413
+viking postISRCCD singleFrame
+0
+viking calexp singleFrame
+0
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_full_20221201/data
+Fri 9 Dec 13:06:39 UTC 2022
+video postISRCCD singleFrame
+80560
+video calexp singleFrame
+79973
+video deepCoadd coaddDetect
+1028
+video deepCoadd_forced_src multiVisit
+2061
+vhs postISRCCD singleFrame
+130512
+vhs calexp singleFrame
+112600
+vhs visitSummary singleFrame
+5413
+viking postISRCCD singleFrame
+2566
+viking calexp singleFrame
+81
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_full_20221201/data
+Fri 9 Dec 13:53:13 UTC 2022
+video postISRCCD singleFrame
+80560
+video calexp singleFrame
+79973
+video deepCoadd coaddDetect
+1028
+video deepCoadd_forced_src multiVisit
+2061
+vhs postISRCCD singleFrame
+130512
+vhs calexp singleFrame
+112600
+vhs visitSummary singleFrame
+5413
+viking postISRCCD singleFrame
+10735
+viking calexp singleFrame
+5376
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_full_20221201/data
+Fri 9 Dec 14:18:28 UTC 2022
+video postISRCCD singleFrame
+80560
+video calexp singleFrame
+79973
+video deepCoadd coaddDetect
+1028
+video deepCoadd_forced_src multiVisit
+2061
+vhs postISRCCD singleFrame
+130512
+vhs calexp singleFrame
+112600
+vhs visitSummary singleFrame
+5413
+viking postISRCCD singleFrame
+11781
+viking calexp singleFrame
+5995
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_full_20221201/data
+Fri 9 Dec 16:27:26 UTC 2022
+video postISRCCD singleFrame
+80560
+video calexp singleFrame
+79973
+video deepCoadd coaddDetect
+1028
+video deepCoadd_forced_src multiVisit
+2061
+vhs postISRCCD singleFrame
+130512
+vhs calexp singleFrame
+112600
+vhs visitSummary singleFrame
+5413
+viking postISRCCD singleFrame
+17736
+viking calexp singleFrame
+8457
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_full_20221201/data
+Fri 9 Dec 16:42:57 UTC 2022
+video postISRCCD singleFrame
+80560
+video calexp singleFrame
+79973
+video deepCoadd coaddDetect
+1028
+video deepCoadd_forced_src multiVisit
+2061
+vhs postISRCCD singleFrame
+130512
+vhs calexp singleFrame
+112600
+vhs visitSummary singleFrame
+5413
+viking postISRCCD singleFrame
+17736
+viking calexp singleFrame
+8457
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_full_20221201/data
+Fri 9 Dec 16:50:54 UTC 2022
+video postISRCCD singleFrame
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data
+/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_full_20221201/data
+Fri 9 Dec 16:51:08 UTC 2022
+VIDEO:
+video postISRCCD singleFrame
+80560
+video calexp singleFrame
+79973
+video deepCoadd coaddDetect
+1028
+video deepCoadd_forced_src multiVisit
+2061
+VHS:
+vhs postISRCCD singleFrame
+130512
+vhs calexp singleFrame
+112600
+vhs visitSummary singleFrame
+5413
+video deepCoadd coaddDetect
+1772
+VIKING:
+viking postISRCCD singleFrame
+17740
+viking calexp singleFrame
+8457
