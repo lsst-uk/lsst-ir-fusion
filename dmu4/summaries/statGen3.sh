@@ -28,13 +28,13 @@ echo "vhs deepCoadd coaddDetect"
 find $repo/u/ir-shir1/DRP/vhsCoaddDetect/20221209T131239Z/deepCoadd -name deepCoadd*.fits  | wc -l
 echo "vhs deepCoadd_calexp coaddDetect"
 find $repo/u/ir-shir1/DRP/vhsCoaddDetect/20221209T131239Z/deepCoadd_calexp -name deepCoadd_calexp*.fits  | wc -l
-echo "Y run"
-echo "vhs postISRCCD singleFrame"
-find $repo/u/ir-shir1/DRP/vhsSingleFrame/20221219T145247Z/postISRCCD -name postISRCCD*.fits  | wc -l
-echo "vhs calexp singleFrame"
-find $repo/u/ir-shir1/DRP/vhsSingleFrame/20221219T145247Z/calexp -name calexp*.fits  | wc -l
-echo "vhs visitSummary singleFrame"
-find $repo/u/ir-shir1/DRP/vhsSingleFrame/20221219T145247Z/visitSummary -name visitSummary*.fits  | wc -l
+#echo "Y run"
+#echo "vhs postISRCCD singleFrame"
+#find $repo/u/ir-shir1/DRP/vhsSingleFrame/20221219T145247Z/postISRCCD -name postISRCCD*.fits  | wc -l
+#echo "vhs calexp singleFrame"
+#find $repo/u/ir-shir1/DRP/vhsSingleFrame/20221219T145247Z/calexp -name calexp*.fits  | wc -l
+#echo "vhs visitSummary singleFrame"
+#find $repo/u/ir-shir1/DRP/vhsSingleFrame/20221219T145247Z/visitSummary -name visitSummary*.fits  | wc -l
 
 echo "VIKING:"
 echo "viking postISRCCD singleFrame"
