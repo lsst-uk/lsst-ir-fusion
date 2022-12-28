@@ -9,9 +9,7 @@ export repo=/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_full_2022
 
 #Mostly commented out assuming butler already made by VHS and just importing reference catalogues.
 
-if [ -f $repo/butler.yaml ]; then
-    rm -rf $repo
-fi
+#rm manually for safety
 
 if [ ! -f $repo/butler.yaml ]; then
     #rm -r $repo

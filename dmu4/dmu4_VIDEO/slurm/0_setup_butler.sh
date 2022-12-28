@@ -7,9 +7,7 @@ source /home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/setup.sh
 
 export repo=../../data
 
-if [ -f $repo/butler.yaml ]; then
-    rm -rf $repo
-fi
+#rm manually for safety
 
 if [ ! -f $repo/butler.yaml ]; then
     #rm -r $repo
