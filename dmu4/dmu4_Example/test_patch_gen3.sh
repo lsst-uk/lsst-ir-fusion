@@ -2,7 +2,7 @@
 #This script should conduct a full example run of a small subset of VIDEO
 
 #Setup LSST Science pipeline environment
-source ../../lsst-ir-fusion/setup_local.sh
+source ../../setup_mac.sh
 
 #Set location of Butler
 export repo=data
@@ -47,7 +47,7 @@ butler ingest-files --formatter=lsst.obs.vista.VircamRawFormatter $repo \
 #Run the singleFrame processing
 pipetask run -d "detector IN (9,10) AND band IN ('J','K')" \
     -b $repo --input confidence/video,VIRCAM/raw/video,refcats/video,VIRCAM/calib \
-    --register-dataset-types -p "$OBS_VISTA_DIR/pipelines/DRP_full.yaml#singleFrame" \ 
+    --register-dataset-types -p "$OBS_VISTA_DIR/pipelines/DRP_full.yaml#singleFrame" \
     --output videoSingleFrame  
 
 #Coadd the exposures
@@ -58,7 +58,7 @@ pipetask run -d "tract=8524 AND patch IN (39,48) AND skymap='hscPdr2' " \
     --output videoCoaddDetect
 
 #Import HSC deepCoadd images and detections
-export coaddRun=hsc/dud
+export coaddRun=hsc/pdr3_dud
 butler ingest-files \
     --formatter=lsst.obs.base.formatters.fitsExposure.FitsExposureFormatter $repo \
     deepCoadd $coaddRun ../../dmu0/dmu0_HSC/data/calexp_2.ecsv
