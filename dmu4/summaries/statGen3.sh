@@ -28,6 +28,11 @@ echo "vhs deepCoadd coaddDetect"
 find $repo/u/ir-shir1/DRP/vhsCoaddDetect/20221209T131239Z/deepCoadd -name deepCoadd*.fits  | wc -l
 echo "vhs deepCoadd_calexp coaddDetect"
 find $repo/u/ir-shir1/DRP/vhsCoaddDetect/20221209T131239Z/deepCoadd_calexp -name deepCoadd_calexp*.fits  | wc -l
+echo "vhs deepCoadd_meas multiVisit"
+find $repo/u/ir-shir1/DRP/vhsMultiVisit/20221230T140318Z/deepCoadd_meas -name deepCoadd_meas*.fits | wc -l
+echo "vhs deepCoadd_forced_src multiVisit"
+find $repo/u/ir-shir1/DRP/vhsMultiVisit/20221230T140318Z/deepCoadd_forced_src -name deepCoadd_forced_src*.fits | wc -l
+
 #echo "Y run"
 #echo "vhs postISRCCD singleFrame"
 #find $repo/u/ir-shir1/DRP/vhsSingleFrame/20221219T145247Z/postISRCCD -name postISRCCD*.fits  | wc -l
@@ -41,7 +46,10 @@ echo "viking postISRCCD singleFrame"
 find $repoNew/u/ir-shir1/DRP/vikingSingleFrame/20221208T120837Z/postISRCCD -name postISRCCD*.fits  | wc -l
 echo "viking calexp singleFrame"
 find $repoNew/u/ir-shir1/DRP/vikingSingleFrame/20221208T120837Z/calexp -name calexp*.fits  | wc -l
-
+echo "viking deepCoadd coaddDetect"
+find $repoNew/u/ir-shir1/DRP/vikingCoaddDetect/20230104T184755Z/deepCoadd -name deepCoadd*.fits  | wc -l
+echo "viking deepCoadd_calexp coaddDetect"
+find $repoNew/u/ir-shir1/DRP/vikingCoaddDetect/20230104T184755Z/deepCoadd_calexp -name deepCoadd_calexp*.fits  | wc -l
 
 #echo "video directWarp videoCoaddDetect"
 #find $repo/u/ir-shir1/DRP/videoCoaddDetect/20220720T183849Z/deepCoadd_directWarp -name deepCoadd_directWarp_VIRCAM*.fits | wc -l
