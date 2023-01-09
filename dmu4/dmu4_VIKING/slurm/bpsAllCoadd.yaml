@@ -3,8 +3,8 @@ includeConfigs:
   - ${GEN3_WORKFLOW_DIR}/examples/bps_DC2-3828-y1_resources.yaml
 
 pipetask:
-  #assembleCoadd:
-  #  requestMemory: 50000
+  assembleCoadd:
+    requestMemory: 20000
   healSparsePropertyMaps:
     requestMemory: 2000
 

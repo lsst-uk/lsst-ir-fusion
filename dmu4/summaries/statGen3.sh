@@ -28,10 +28,10 @@ echo "vhs deepCoadd coaddDetect"
 find $repo/u/ir-shir1/DRP/vhsCoaddDetect/20221209T131239Z/deepCoadd -name deepCoadd*.fits  | wc -l
 echo "vhs deepCoadd_calexp coaddDetect"
 find $repo/u/ir-shir1/DRP/vhsCoaddDetect/20221209T131239Z/deepCoadd_calexp -name deepCoadd_calexp*.fits  | wc -l
-echo "vhs deepCoadd_meas multiVisit"
-find $repo/u/ir-shir1/DRP/vhsMultiVisit/20221230T140318Z/deepCoadd_meas -name deepCoadd_meas*.fits | wc -l
-echo "vhs deepCoadd_forced_src multiVisit"
-find $repo/u/ir-shir1/DRP/vhsMultiVisit/20221230T140318Z/deepCoadd_forced_src -name deepCoadd_forced_src*.fits | wc -l
+echo "vhs deepCoadd_meas multiVisitReduced"
+find $repo/u/ir-shir1/DRP/vhsMultiVisitReduced/20230106T200522Z/deepCoadd_meas -name deepCoadd_meas*.fits | wc -l
+echo "vhs deepCoadd_forced_src multiVisitReduced"
+find $repo/u/ir-shir1/DRP/vhsMultiVisitReduced/20230106T200522Z/deepCoadd_forced_src -name deepCoadd_forced_src*.fits | wc -l
 
 #echo "Y run"
 #echo "vhs postISRCCD singleFrame"
