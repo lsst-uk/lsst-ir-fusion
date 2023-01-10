@@ -47,9 +47,9 @@ find $repoNew/u/ir-shir1/DRP/vikingSingleFrame/20221208T120837Z/postISRCCD -name
 echo "viking calexp singleFrame"
 find $repoNew/u/ir-shir1/DRP/vikingSingleFrame/20221208T120837Z/calexp -name calexp*.fits  | wc -l
 echo "viking deepCoadd coaddDetect"
-find $repoNew/u/ir-shir1/DRP/vikingCoaddDetect/20230104T184755Z/deepCoadd -name deepCoadd*.fits  | wc -l
+find $repoNew/u/ir-shir1/DRP/vikingCoaddDetect/20230109T125653Z/deepCoadd -name deepCoadd*.fits  | wc -l
 echo "viking deepCoadd_calexp coaddDetect"
-find $repoNew/u/ir-shir1/DRP/vikingCoaddDetect/20230104T184755Z/deepCoadd_calexp -name deepCoadd_calexp*.fits  | wc -l
+find $repoNew/u/ir-shir1/DRP/vikingCoaddDetect/20230109T125653Z/deepCoadd_calexp -name deepCoadd_calexp*.fits  | wc -l
 
 #echo "video directWarp videoCoaddDetect"
 #find $repo/u/ir-shir1/DRP/videoCoaddDetect/20220720T183849Z/deepCoadd_directWarp -name deepCoadd_directWarp_VIRCAM*.fits | wc -l

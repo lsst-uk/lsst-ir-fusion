@@ -5,7 +5,7 @@
 #setup obs_vista
 source /home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/setup.sh
 
-export repo=../../data
+export repo=/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_$(date +"%Y%m%d")/data
 
 #rm manually for safety
 

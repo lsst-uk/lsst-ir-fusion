@@ -4,7 +4,7 @@ includeConfigs:
 
 pipetask:
   assembleCoadd:
-    requestMemory: 50000
+    requestMemory: 80000
   healSparsePropertyMaps:
     requestMemory: 2000
 
@@ -27,4 +27,4 @@ parsl_config:
   executor: WorkQueue
   provider: Local
   nodes_per_block: 31
-  worker_options: "--memory=160000"
+  worker_options: "--memory=100000"

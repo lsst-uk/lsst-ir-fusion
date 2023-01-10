@@ -5,7 +5,7 @@
 #setup obs_vista
 source /home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/setup.sh
 
-export repo=/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_full_20221201/data
+export repo=/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_$(date +"%Y%m%d")/data
 
 #Mostly commented out assuming butler already made by VHS and just importing reference catalogues.
 

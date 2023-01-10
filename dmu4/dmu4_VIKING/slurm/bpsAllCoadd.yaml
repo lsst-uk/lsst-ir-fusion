@@ -4,7 +4,7 @@ includeConfigs:
 
 pipetask:
   assembleCoadd:
-    requestMemory: 20000
+    requestMemory: 50000
   healSparsePropertyMaps:
     requestMemory: 2000
 

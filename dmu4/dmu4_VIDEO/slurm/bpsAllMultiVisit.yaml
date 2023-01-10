@@ -43,4 +43,4 @@ parsl_config:
   executor: WorkQueue
   provider: Local
   nodes_per_block: 31
-  worker_options: "--memory=160000"
+  worker_options: "--memory=100000"
