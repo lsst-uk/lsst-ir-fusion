@@ -57,7 +57,7 @@ module load rhel7/default-peta4            # REQUIRED - loads the basic environm
 #! Insert additional module load commands after this line if needed:
 
 #! Full path to application executable: 
-application="install.sh"
+application="install_stack.sh"
 
 #! Run options for the application:
 options=""

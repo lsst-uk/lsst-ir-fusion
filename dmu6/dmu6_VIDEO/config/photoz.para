@@ -94,7 +94,7 @@ ZPHOTLIB	CE_COSMOS,STAR_COSMOS,QSO_COSMOS  # Library used for Chi2 (max:3)
 #
 #------------------     Output catalog Name           ---------------------------------
 CAT_OUT		zphot.out 	# Output catalog  (-> working directory) 
-PARA_OUT    /Users/raphaelshirley/Documents/github/lsst-ir-fusion/dmu6/dmu6_VIDEO/data/8524/48/output.para     # Ouput parameters (full path) 
+PARA_OUT    ../dmu6/dmu6_VIDEO/config/output.para     # Ouput parameters (full path) 
 VERBOSE         YES             # Display the templates/objects which are computed
 #
 #################           PHOTOMETRIC REDSHIFTS OPTIONS    
