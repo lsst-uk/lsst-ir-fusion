@@ -1,5 +1,5 @@
 import glob
-calexp_folder='/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data/u/ir-shir1/DRP/vhsCoaddDetect/20221209T131239Z/deepCoadd_calexp'
+calexp_folder='/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_full_20221201/data/u/ir-shir1/DRP/vikingCoaddDetect/20230110T180302Z/deepCoadd_calexp'
 tracts=glob.glob('{}/*'.format(calexp_folder))
 tracts=[int(s.split('/')[-1]) for s in tracts]
 
@@ -12,7 +12,7 @@ pipelineYaml: "${OBS_VISTA_DIR}/pipelines/DRP_full.yaml#multiVisitLater"
 
 pipetask:
   deblend:
-    requestMemory: 30000
+    requestMemory: 10000
   writeObjectTable:
     requestMemory: 2000
   transformObjectTable:
@@ -27,9 +27,9 @@ computeSite: iris
 
 bpsEnd="""
 payload:
-  payloadName: DRP/vhsMultiVisitReduced
-  butlerConfig: /home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data/butler.yaml
-  inCollection: u/ir-shir1/DRP/vhsCoaddDetect/20221209T131239Z,skymaps,hscImports/pdr3_wide,refcats/vhs_Y
+  payloadName: DRP/vikingMultiVisit
+  butlerConfig: /home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_full_20221201/data/butler.yaml
+  inCollection: u/ir-shir1/DRP/vikingCoaddDetect/20230110T180302Z,skymaps,hscImports/pdr3_wide_full,refcats/viking
   dataQuery: "skymap='hscPdr2' AND tract in ({FULLTRACTS})"
 
 
@@ -44,7 +44,7 @@ parsl_config:
 patch_sql=[]
 full_tracts=[]
 tracts_lim=[]
-lim=40
+lim=1
 for t in tracts:
     patches=glob.glob('{}/{}/*'.format(calexp_folder,t))
     patches=[s.split('/')[-1] for s in patches]
@@ -53,13 +53,7 @@ for t in tracts:
         continue
     patch_sql.append('(tract={} and patch IN ({}))'.format(t,','.join(patches)))
     if len(patches)>=lim:
-        tracts_lim.append(t)
-
-# Some tracts are not covered by reference catalogues so are manually removed
-to_remove=[9712]
-for r in to_remove:
-    if r in tracts:
-        tracts.remove(r)
+        tracts_lim.append(str(t))
 tracts=[str(t) for t in tracts]
 print('{} full tracts out of {}'.format(len(full_tracts),len(tracts)))
 print('{} tracts with more than {} patches'.format(len(tracts_lim),lim))
