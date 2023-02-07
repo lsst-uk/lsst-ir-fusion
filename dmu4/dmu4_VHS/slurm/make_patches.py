@@ -27,7 +27,7 @@ computeSite: iris
 
 bpsEnd="""
 payload:
-  payloadName: DRP/vhsMultiVisitReduced
+  payloadName: DRP/vhsMultiVisitVersion2
   butlerConfig: /home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data/butler.yaml
   inCollection: u/ir-shir1/DRP/vhsCoaddDetect/20221209T131239Z,skymaps,hscImports/pdr3_wide,refcats/vhs_Y
   dataQuery: "skymap='hscPdr2' AND tract in ({FULLTRACTS})"
