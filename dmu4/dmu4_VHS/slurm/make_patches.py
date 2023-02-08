@@ -56,14 +56,15 @@ for t in tracts:
         tracts_lim.append(t)
 
 # Some tracts are not covered by reference catalogues so are manually removed
-to_remove=[9712]
-for r in to_remove:
-    if r in tracts:
+#to_remove=[9712,9713,9714,9715]
+for r in tracts:
+    if ((r > 9712) and (r< 9750)) or ((r>9932) and (r<9954)):
+        print('Removing {}'.format(r))
         tracts.remove(r)
 tracts=[str(t) for t in tracts]
 print('{} full tracts out of {}'.format(len(full_tracts),len(tracts)))
 print('{} tracts with more than {} patches'.format(len(tracts_lim),lim))
-f=open('bpsVISTAPatchesMulti.yaml','w')
+f=open('bpsVISTAMultiVisit.yaml','w')
 f.write(bpsText)
 f.write(bpsEnd.format(
     FULLTRACTS=', '.join(tracts)

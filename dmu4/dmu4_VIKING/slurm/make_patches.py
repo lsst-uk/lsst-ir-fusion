@@ -54,10 +54,17 @@ for t in tracts:
     patch_sql.append('(tract={} and patch IN ({}))'.format(t,','.join(patches)))
     if len(patches)>=lim:
         tracts_lim.append(str(t))
-tracts=[str(t) for t in tracts]
+
+# Some tracts are not covered by reference catalogues so are manually removed
+for r in tracts:
+    if ((r > 10039) and (r< 10107)): # or ((r>9932) and (r<9954)):
+        print('Removing {}'.format(r))
+        tracts.remove(r)
 print('{} full tracts out of {}'.format(len(full_tracts),len(tracts)))
 print('{} tracts with more than {} patches'.format(len(tracts_lim),lim))
-f=open('bpsVISTAPatchesMulti.yaml','w')
+
+tracts=[str(t) for t in tracts]
+f=open('bpsVISTAMultiVisit.yaml','w')
 f.write(bpsText)
 f.write(bpsEnd.format(
     FULLTRACTS=', '.join(tracts)

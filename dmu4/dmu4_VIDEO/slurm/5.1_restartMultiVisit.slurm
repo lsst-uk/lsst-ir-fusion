@@ -61,10 +61,10 @@ source /home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/setup.sh
 #! Insert additional module load commands after this line if needed:
 
 #! Full path to application executable: 
-application="python"
+application="bps"
 
 #! Run options for the application:
-options="run_pipeline.py /rds/project/rds-rPTGgs6He74/ras81/lsst-ir-fusion/dmu4/dmu4_VIDEO/slurm/submit/u/ir-shir1/DRP/videoMultiVisitFull/20220906T155115Z/parsl_graph_config.pickle"
+options="restart --wms-service-class desc.gen3_workflow.ParslService --id u/ir-shir1/DRP/videoMultiVisit/20221204T111133Z"
 
 #! Work directory (i.e. where the job will run):
 workdir="$SLURM_SUBMIT_DIR"  # The value of SLURM_SUBMIT_DIR sets workdir to the directory
