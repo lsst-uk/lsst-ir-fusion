@@ -5,14 +5,14 @@ import numpy as np
 from astropy.time import Time
 
 
-red_cats = glob.glob(../data/*/*/*.out')
+red_cats = glob.glob('../data/*/*/*.out')
 
 full_cat = Table()
 for r in red_cats:
     try:
         t= Table.read(
         r,format='ascii.commented_header',
-        header_start=48,data_start=49,delimiter='\s')
+        header_start=47,data_start=48,delimiter='\s')
         full_cat=vstack([full_cat,t])
     except:
         print(r,' failed')

@@ -60,7 +60,7 @@ source /home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/setup.sh
 application="bps"
 
 #! Run options for the application:
-options="submit bpsVISTAMultiVisit.yaml"
+options="submit bpsEFEDSMultiVisit.yaml"
 
 #! Work directory (i.e. where the job will run):
 workdir="$SLURM_SUBMIT_DIR"  # The value of SLURM_SUBMIT_DIR sets workdir to the directory

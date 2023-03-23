@@ -27,9 +27,9 @@ computeSite: iris
 
 bpsEnd="""
 payload:
-  payloadName: DRP/vhsMultiVisitVersion2
+  payloadName: DRP/vhsMultiVisit
   butlerConfig: /home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data/butler.yaml
-  inCollection: u/ir-shir1/DRP/vhsCoaddDetect/20221209T131239Z,skymaps,hscImports/pdr3_wide,refcats/vhs_Y
+  inCollection: u/ir-shir1/DRP/vhsCoaddDetect/20221209T131239Z,skymaps,hscImports/pdr3_wide_full,refcats/vhs
   dataQuery: "skymap='hscPdr2' AND tract in ({FULLTRACTS})"
 
 
@@ -57,11 +57,11 @@ for t in tracts:
 
 # Some tracts are not covered by reference catalogues so are manually removed
 #to_remove=[9712,9713,9714,9715]
-for r in tracts:
-    if ((r > 9712) and (r< 9750)) or ((r>9932) and (r<9954)):
-        print('Removing {}'.format(r))
-        tracts.remove(r)
-tracts=[str(t) for t in tracts]
+#for r in tracts:
+#    if ((r > 9712) and (r< 9750)) or ((r>9932) and (r<9954)):
+#        print('Removing {}'.format(r))
+#        tracts.remove(r)
+tracts=[str(t) for t in tracts if not (((t > 9711) and (t< 9750)) or ((t>9932) and (t<9954)))]
 print('{} full tracts out of {}'.format(len(full_tracts),len(tracts)))
 print('{} tracts with more than {} patches'.format(len(tracts_lim),lim))
 f=open('bpsVISTAMultiVisit.yaml','w')

@@ -12,7 +12,7 @@
 #! Name of the job:
 #SBATCH -J vhsMultiRe
 #! Which project should be charged:
-#SBATCH -A IRIS-IP009-CPU
+#SBATCH -A IRIS-IP005-CPU
 #SBATCH -p cclake
 #! How many whole nodes should be allocated?
 #SBATCH --nodes=32
@@ -64,7 +64,7 @@ source /home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/setup.sh
 application="bps"
 
 #! Run options for the application:
-options="restart --wms-service-class desc.gen3_workflow.ParslService --id u/ir-shir1/DRP/vhsMultiVisitReduced/20230106T200522Z"
+options="restart --wms-service-class desc.gen3_workflow.ParslService --id u/ir-shir1/DRP/vhsMultiVisitVersion3/20230212T135006Z"
 
 #! Work directory (i.e. where the job will run):
 workdir="$SLURM_SUBMIT_DIR"  # The value of SLURM_SUBMIT_DIR sets workdir to the directory

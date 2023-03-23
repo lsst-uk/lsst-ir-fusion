@@ -18,7 +18,7 @@
 #! How many many cores will be allocated per task? (for single core jobs always leave this at 1)
 #SBATCH --cpus-per-task=1
 #! Estimated runtime: hh:mm:ss (job is force-stopped after if exceeded):
-#SBATCH --time=1:00:00
+#SBATCH --time=20:00:00
 #! Estimated maximum memory needed (job is force-stopped if exceeded):
 #! RAM is allocated in ~5980mb blocks, you are charged per block used,
 #! and unused fractions of blocks will not be usable by others.
@@ -54,11 +54,14 @@ varArray="$(python jobDict.py $SLURM_ARRAY_TASK_ID ../../../dmu4/dmu4_VIDEO/slur
 varArray=($varArray)
 tract=${varArray[0]}
 patch=${varArray[1]}
-echo "Tract: " $tract ", patch: " $patch
-$LEPHAREDIR/bin/zphota \
+let patchNew=${patch:0:1}+9*${patch:2:2}
+echo "Tract: " $tract ", patch: " $patch ", newPatch: " $patchNew
+
+#patches from dict are still in old format
+$LEPHAREDIR/source/zphota \
     -c ../config/photoz.para \
-    -CAT_IN ../data/$tract/$patch/photoz.in \
-    -CAT_OUT ../data/$tract/$patch/zphot_short.out \
+    -CAT_IN ../data/$tract/$patchNew/photoz.in \
+    -CAT_OUT ../data/$tract/$patchNew/zphot_short.out \
     -PARA_OUT ../config/output.para \
     -ZPHOTLIB VISTA_COSMOS_FREE,ALLSTAR_COSMOS,QSO_COSMOS \
     -ADD_EMLINES 0,100 \

@@ -3,7 +3,13 @@
 In order to make running the code reprodtciblm we are scripting the installation. In this directory we will install each weekly as a separate directory which can then be called by the setup script.
 Furthermore any processes which take more than a minute run the risk of being killed or interupted so it is better to perform all tasks using the Slurm submission system.
 
-You will need to first run the sinple script which downloads the weekly install script and runs the first stage. The second stage can take more time so is submitted to Slurm.
+You should be able to perform the installation by simply submitting the Slurm script:
+
+```Shell
+qsub 0_install_stack.slurm
+```
+
+You may want to edit the weekly to the latest version in the install shell script.
 
 We broadly follow the installation procedure described in:
 

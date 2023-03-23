@@ -12,7 +12,7 @@
 #! Name of the job:
 #SBATCH -J vikingMultiRe
 #! Which project should be charged:
-#SBATCH -A IRIS-IP009-CPU
+#SBATCH -A IRIS-IP005-CPU
 #SBATCH -p cclake
 #! How many whole nodes should be allocated?
 #SBATCH --nodes=32
@@ -23,7 +23,7 @@
 #! 3420 MiB of memory per CPU.
 #! How many many cores will be allocated per task? (for single core jobs always leave this at 1)
 #! How much wallclock time will be required?
-#SBATCH --time=36:00:00
+#SBATCH --time=24:00:00
 #! What types of email messages do you wish to receive?
 #SBATCH --mail-type=NONE
 #! Uncomment this to prevent the job from being requeued (e.g. if
@@ -64,7 +64,7 @@ source /home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/setup.sh
 application="bps"
 
 #! Run options for the application:
-options="restart --wms-service-class desc.gen3_workflow.ParslService --id u/ir-shir1/DRP/vikingMultiVisitReduced/2023"
+options="restart --wms-service-class desc.gen3_workflow.ParslService --id u/ir-shir1/DRP/vikingMultiVisit/20230216T190116Z"
 
 #! Work directory (i.e. where the job will run):
 workdir="$SLURM_SUBMIT_DIR"  # The value of SLURM_SUBMIT_DIR sets workdir to the directory

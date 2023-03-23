@@ -2,7 +2,7 @@ import glob
 calexp_folder='/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_full_20221201/data/u/ir-shir1/DRP/vikingCoaddDetect/20230110T180302Z/deepCoadd_calexp'
 tracts=glob.glob('{}/*'.format(calexp_folder))
 tracts=[int(s.split('/')[-1]) for s in tracts]
-
+#print(tracts)
 bpsText="""
 includeConfigs:
   - ${GEN3_WORKFLOW_DIR}/python/desc/gen3_workflow/etc/bps_drp_baseline.yaml
@@ -44,30 +44,33 @@ parsl_config:
 patch_sql=[]
 full_tracts=[]
 tracts_lim=[]
-lim=1
+lim=40
 for t in tracts:
     patches=glob.glob('{}/{}/*'.format(calexp_folder,t))
     patches=[s.split('/')[-1] for s in patches]
     if len(patches)==81:
         full_tracts.append(str(t))
-        continue
+        #continue
     patch_sql.append('(tract={} and patch IN ({}))'.format(t,','.join(patches)))
     if len(patches)>=lim:
         tracts_lim.append(str(t))
-
+#print(tracts)
 # Some tracts are not covered by reference catalogues so are manually removed
-for r in tracts:
-    if ((r > 10039) and (r< 10107)): # or ((r>9932) and (r<9954)):
-        print('Removing {}'.format(r))
-        tracts.remove(r)
+#Loop doesn't work because it shifts the later list elements
+#for r in tracts:
+#    print(r,type(r))
+#    if ((r > 10039) and (r< 10107)): # or ((r>9932) and (r<9954)):
+#        print('Removing {}'.format(r))
+#        tracts.remove(r)
 print('{} full tracts out of {}'.format(len(full_tracts),len(tracts)))
 print('{} tracts with more than {} patches'.format(len(tracts_lim),lim))
-
-tracts=[str(t) for t in tracts]
+#print(tracts)
+tracts_to_run=[str(t) for t in tracts_lim if not ((int(t) > 10039) and (int(t)< 10107))]
+#print(tracts)
 f=open('bpsVISTAMultiVisit.yaml','w')
 f.write(bpsText)
 f.write(bpsEnd.format(
-    FULLTRACTS=', '.join(tracts)
+    FULLTRACTS=', '.join(tracts_to_run)
     #PATCHES=' OR '.join(patch_sql)
 ))
 f.close()

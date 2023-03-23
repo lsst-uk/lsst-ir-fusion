@@ -85,16 +85,18 @@ def cat_to_lephare_in(cat_name,write_loc,tract,patch):
             out_cat['d_'+physical_filter][mask]=-99.9
             
             
-            n+=1
+            #n+=1
         except KeyError:
             print('VISTA Error: band {} missing on tract {} and patch {}.'.format(
                 b,tract,patch))
-        
-        
+            out_cat[physical_filter]=np.full(len(out_cat),-99.9,dtype='float64')
+            out_cat['d_'+physical_filter]=np.full(len(out_cat),-99.9,dtype='float64')
+            context+=~np.isclose(out_cat['d_'+physical_filter],-99.9)*2**n
+        n+=1
     out_cat['context']=context
     out_cat['z-spec']=np.full(len(out_cat),-99.9)#np.nan)
     #Write the input catalogue
-    Path('./data/{}/{}'.format(tract,patch)).mkdir(
+    Path('../data/{}/{}'.format(tract,patch)).mkdir(
                     parents=True, exist_ok=True)
     out_cat.write(write_loc, format='ascii.commented_header',overwrite=True)
     return out_cat
@@ -116,7 +118,7 @@ patchX=int(patch[0])
 patchY=int(patch[2])
 patch=patchX+9*patchY
 print('Running tract {} patch {}'.format(tract,patch))
-cat_name='../../dmu5/dmu5_VIDEO/data/merged/{}/{}/{}_{}_reducedCat.fits'.format(
+cat_name='../../../dmu5/dmu5_VIDEO/data/merged/{}/{}/{}_{}_reducedCat.fits'.format(
     tract,patch,tract,patch)
 write_loc='../data/{}/{}/photoz.in'.format(tract,patch)
 cat=cat_to_lephare_in(cat_name,write_loc,tract,patch)
