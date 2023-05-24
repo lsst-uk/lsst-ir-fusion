@@ -45,4 +45,5 @@
 echo "This is job" $SLURM_ARRAY_TASK_ID
 
 #! Command line that we want to run:
-/home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/dmu5/dmu5_VHS/slurm/make_cat.sh $SLURM_ARRAY_TASK_ID ../../../dmu4/dmu4_VHS/slurm/full_patch_job_dict_13164.json
+source /home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/install/setup.sh
+python make_cat.py $SLURM_ARRAY_TASK_ID ../../../dmu4/dmu4_VHS/slurm/full_patch_job_dict_15308.json

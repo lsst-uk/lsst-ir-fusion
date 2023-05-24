@@ -7,16 +7,16 @@
 #SBATCH -A IRIS-IP005-CPU
 #! Output filename:
 #! %A means slurm job ID and %a means array index
-#SBATCH --output=Make_cat_%A_%a.out
+#SBATCH --output=VIK_Make_cat_%A_%a.out
 #! Errors filename:
-#SBATCH --error=Make_cat_%A_%a.err
+#SBATCH --error=VIK_Make_cat_%A_%a.err
 
 #! Number of nodes to be allocated for the job (for single core jobs always leave this at 1)
 #SBATCH --nodes=1
 #! Number of tasks. By default SLURM assumes 1 task per node and 1 CPU per task. (for single core jobs always leave this at 1)
 #SBATCH --ntasks=1
 #! How many many cores will be allocated per task? (for single core jobs always leave this at 1)
-#SBATCH --cpus-per-task=4
+#SBATCH --cpus-per-task=1
 #! Estimated runtime: hh:mm:ss (job is force-stopped after if exceeded):
 #SBATCH --time=1:00:00
 #! Estimated maximum memory needed (job is force-stopped if exceeded):
@@ -42,8 +42,8 @@
 
 #! The variable $SLURM_ARRAY_TASK_ID contains the array index for each job.
 #! In this example, each job will be passed its index, so each output file will contain a different value
-echo "This is job" $SLURM_ARRAY_TASK_ID
+echo "This is job" $SLURM_ARRAY_TASK_ID "or job index" $(( $SLURM_ARRAY_TASK_ID + 10000))
 
 #! Command line that we want to run:
 source /home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/install/setup.sh
-python make_cat.py  $SLURM_ARRAY_TASK_ID ../../../dmu4/dmu4_VIKING/slurm/full_patch_job_dict_20205.json
+python make_cat.py $(( $SLURM_ARRAY_TASK_ID + 10000)) ../../../dmu4/dmu4_VIKING/slurm/full_patch_job_dict_20205.json

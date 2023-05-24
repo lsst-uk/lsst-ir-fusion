@@ -25,9 +25,13 @@ allBands = ['HSC_' +b for b in hscBands] + ['VIRCAM_' +b for b in vistaBands]
 if os.getcwd().startswith('/Users/raphaelshirley'):
     BUTLER_LOC = '../../../dmu4/dmu4_Example/data'
     DATA = '../data'
+    COLLECTION='u/ir-shir1/DRP/multiVisitLater'
 else:
-    BUTLER_LOC = os.getcwd().replace('dmu5/dmu5_VIDEO/slurm','dmu4/data')
-    DATA =  '../data'
+    #BUTLER_LOC = os.getcwd().replace('dmu5/dmu5_VIDEO/slurm','dmu4/data')
+    BUTLER_LOC ='/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data'
+    #DATA =  '../data'
+    DATA = '/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/csv/video'
+    COLLECTION='u/ir-shir1/DRP/videoMultiVisit' #/20221204T111133Z'
 butler =  dafButler.Butler(BUTLER_LOC)
 
 
@@ -138,14 +142,14 @@ def makeCat(tract, patch, BUTLER_LOC,DATA=DATA,writeBandCats=True,writeReducedCa
             CoaddCalexp = butler.get(
                 'deepCoadd_calexp',  
                 {'band': bandType, 'tract': tract, 'patch': patch, 'skymap':'hscPdr2'},
-                collections='u/ir-shir1/DRP/videoMultiVisit'
+                collections=COLLECTION
             )
             CoaddPhotoCalib = CoaddCalexp.getPhotoCalib()
             #print('Got photo calib')    
             measSources = butler.get(
                 'deepCoadd_meas', 
                 {'band': bandType, 'tract': tract, 'patch': patch, 'skymap':'hscPdr2'},
-                collections='u/ir-shir1/DRP/videoMultiVisit'
+                collections=COLLECTION
             )
             #print('Got meas cat')
             measCat = measSources.asAstropy()
@@ -189,7 +193,7 @@ def makeCat(tract, patch, BUTLER_LOC,DATA=DATA,writeBandCats=True,writeReducedCa
                 measCat['patch']=patch
                 #measCat['patchX']=patchX
                 #measCat['patchY']=patchY
-                #print('prewrite')
+                #print('prewrite:', tract,'/',patch)
                 measCat.write(
                     DATA+'/{}/{}/{}/{}_{}_{}_measCat.csv'.format(
                         band,tract,patch,band,tract,patch), 
@@ -203,7 +207,7 @@ def makeCat(tract, patch, BUTLER_LOC,DATA=DATA,writeBandCats=True,writeReducedCa
             forcedSources = butler.get(
                 'deepCoadd_forced_src', 
                 {'band': bandType, 'tract': tract, 'patch': patch,'skymap':'hscPdr2'},
-                collections='u/ir-shir1/DRP/videoMultiVisit'
+                collections=COLLECTION
             )
             forcedCat = forcedSources.asAstropy()
             forcedCat = addFlux(forcedCat, forcedSources, CoaddPhotoCalib)
