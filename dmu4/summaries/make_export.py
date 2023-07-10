@@ -17,11 +17,11 @@ datasetTypes=butler.registry.queryDatasetTypes()
 #        items.extend(found)  
 #    export.saveDatasets(items)
 
-with butler.export(filename="exports/exports_vhs_{}.yaml".format(time.strftime("%Y%m%d"))) as export:
-    export.saveDatasets(butler.registry.queryDatasets(datasetType=...,collections='u/ir-shir1/DRP/vhsMultiVisit'))
+with butler.export(filename="/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/exports_deepCoadd_calexp_vhs_{}.yaml".format(time.strftime("%Y%m%d"))) as export:
+    export.saveDatasets(butler.registry.queryDatasets(datasetType='deepCoadd_calexp',collections='u/ir-shir1/DRP/vhsMultiVisit'))
 
-with butler.export(filename="exports/exports_video_{}.yaml".format(time.strftime("%Y%m%d"))) as export:
-    export.saveDatasets(butler.registry.queryDatasets(datasetType=...,collections='u/ir-shir1/DRP/videoMultiVisit'))
+with butler.export(filename="/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/exports_deepCoadd_calexp_video_{}.yaml".format(time.strftime("%Y%m%d"))) as export:
+    export.saveDatasets(butler.registry.queryDatasets(datasetType='deepCoadd_calexp',collections='u/ir-shir1/DRP/videoMultiVisit'))
 
 
 
@@ -38,7 +38,7 @@ datasetTypes=butler.registry.queryDatasetTypes()
 #        items.extend(found)
 #    export.saveDatasets(items)
 
-with butler.export(filename="exports/exports_{}.yaml".format(time.strftime("%Y%m%d"))) as export:
-    export.saveDatasets(butler.registry.queryDatasets(datasetType=...,collections='u/ir-shir1/DRP/vikingMultiVisit'))
+with butler.export(filename="/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_full_20221201/exports_deepCoadd_calexp_viking_{}.yaml".format(time.strftime("%Y%m%d"))) as export:
+    export.saveDatasets(butler.registry.queryDatasets(datasetType='deepCoadd_calexp',collections='u/ir-shir1/DRP/vikingMultiVisit'))
 
 

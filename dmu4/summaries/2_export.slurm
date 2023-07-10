@@ -17,7 +17,8 @@
 #SBATCH --nodes=1
 #! How many (MPI) tasks will there be in total? (<= nodes*32)
 #! The skylake/skylake-himem nodes have 32 CPUs (cores) each.
-#SBATCH --ntasks=32
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=56
 #! How much wallclock time will be required?
 #SBATCH --time=36:00:00
 #! What types of email messages do you wish to receive?
@@ -27,7 +28,7 @@
 ##SBATCH --no-requeue
 
 #! For 6GB per CPU, set "-p skylake"; for 12GB per CPU, set "-p skylake-himem": 
-#SBATCH -p skylake-himem
+#SBATCH -p cclake-himem
 
 #! sbatch directives end here (put any additional directives above this line)
 
