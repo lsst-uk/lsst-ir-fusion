@@ -17,6 +17,9 @@ import itertools
 import warnings
 warnings.filterwarnings("ignore")
 
+#                   1 2               3               5               6
+#python make_cat.py 1 patch_dict      butler_loc/data output_loc/data collection_name
+
 hscBands = ['G', 'R', 'I', 'Z', 'Y']
 vistaBands = ['Z', 'Y', 'J', 'H', 'Ks']
 allBands = ['HSC_' +b for b in hscBands] + ['VIRCAM_' +b for b in vistaBands]
@@ -28,10 +31,12 @@ if os.getcwd().startswith('/Users/raphaelshirley'):
     COLLECTION='u/ir-shir1/DRP/multiVisitLater'
 else:
     #BUTLER_LOC = os.getcwd().replace('dmu5/dmu5_VIDEO/slurm','dmu4/data')
-    BUTLER_LOC ='/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data'
+    BUTLER_LOC =sys.argv[3] #'/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data'
     #DATA =  '../data'
-    DATA = '/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/csv/video'
-    COLLECTION='u/ir-shir1/DRP/videoMultiVisit' #/20221204T111133Z'
+    DATA = sys.argv[5] #'/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/csv/video'
+    COLLECTION= sys.argv[6]# 'u/ir-shir1/DRP/videoMultiVisit' #/20221204T111133Z'
+
+
 butler =  dafButler.Butler(BUTLER_LOC)
 
 
