@@ -5,17 +5,17 @@
 #
 #-------------------    STELLAR LIBRARY (ASCII SEDs)        ---------------------------       
 STAR_SED        STAR_SWIRE.list         # STAR list (full path)
-STAR_LIB	LIB_STAR		# Binary STAR LIBRARY (-> $ZPHOTWORK/lib_bin/*)
+STAR_LIB	LIB_BIN_STAR		# Binary STAR LIBRARY (-> $ZPHOTWORK/lib_bin/*)
 STAR_FSCALE	3.432E-09		# Arbitrary Flux Scale 
 #
 #-------------------    QSO LIBRARY (ASCII SEDs)            ---------------------------  
 QSO_SED		AGN_LONSDALE.list       # QSO list (full path)
-QSO_LIB		LIB_QSO			# Binary QSO LIBRARY (-> $ZPHOTWORK/lib_bin/*)
+QSO_LIB		LIB_BIN_QSO			# Binary QSO LIBRARY (-> $ZPHOTWORK/lib_bin/*)
 QSO_FSCALE	1.			# Arbitrary Flux Scale 
 #
 #-------------------  GALAXY LIBRARY (ASCII or BINARY SEDs) ---------------------------
 GAL_SED		 CE_MOD.list            # GALAXMuzzin09_SEDY list (full path)
-GAL_LIB	         LIB_CE	                # Binary GAL LIBRARY (-> $ZPHOTWORK/lib_bin/*)
+GAL_LIB	         LIB_BIN_GAL	                # Binary GAL LIBRARY (-> $ZPHOTWORK/lib_bin/*)
 GAL_FSCALE      1.                      # Arbitrary Flux Scale
 #SEL_AGE 	/data/zphot_vers25_03_03/sed/GAL/HYPERZ/AGE_GISSEL_HZ.dat	# List of Age for GISSEL(full path)
 AGE_RANGE  0.,15.e9                                     # Age Min-Max in yr
@@ -24,9 +24,9 @@ AGE_RANGE  0.,15.e9                                     # Age Min-Max in yr
 ###########                          FILTERS                                     #############
 ########### Run : $ZPHOTDIR/source/filter  -c zphot.para                         #############
 ##############################################################################################
-# 
+# vista/Z.reduced filter below is made by cutting tails and not in default install
 FILTER_REP   $LEPHAREDIR/filt           # Repository in which the filters are stored
-FILTER_LIST  hsc/gHSC.pb,hsc/rHSC.pb,hsc/iHSC.pb,hsc/zHSC.pb,hsc/yHSC.pb,vista/Z.pb,vista/Y.lowres,vista/J.lowres,vista/H.lowres,vista/K.lowres
+FILTER_LIST  hsc/gHSC.pb,hsc/rHSC.pb,hsc/iHSC.pb,hsc/zHSC.pb,hsc/yHSC.pb,vista/Z.reduced,vista/Y.lowres,vista/J.lowres,vista/H.lowres,vista/K.lowres
 TRANS_TYPE	 1			# TRANSMISSION TYPE
                                         # 0[-def]: Energy, 1: Nb of photons
 FILTER_CALIB    0,0,0,0,0,0,0,0,0,0     # 0[-def]:  fnu=ctt 
@@ -34,7 +34,7 @@ FILTER_CALIB    0,0,0,0,0,0,0,0,0,0     # 0[-def]:  fnu=ctt
                                         # 2      :  fnu=nu 
                                         # 3      :  fnu=Black Body @ T=10000K
                                         # 4      :  for MIPS (leff with nu fnu=ctt and flux with BB @ 10000K  
-FILTER_FILE	filter_cosmos	# name of file with filters (-> $ZPHOTWORK/filt/)
+FILTER_FILE	filter_sxds	# name of file with filters (-> $ZPHOTWORK/filt/)
 #
 ##############################################################################################
 ###########                THEORETICAL  MAGNITUDES                               #############
@@ -43,16 +43,16 @@ FILTER_FILE	filter_cosmos	# name of file with filters (-> $ZPHOTWORK/filt/)
 ##############################################################################################
 #
 #-------------------      From STELLAR LIBRARY           ------------------------------  
-STAR_LIB_IN	LIB_STAR	# Input  STELLAR LIBRARY (in $ZPHOTWORK/lib_bin/*) 
-STAR_LIB_OUT	STAR_COSMOS	# Output STELLAR MAGN.   (-> $ZPHOTWORK/lib_mag/*)  
+STAR_LIB_IN	LIB_BIN_STAR	# Input  STELLAR LIBRARY (in $ZPHOTWORK/lib_bin/*) 
+STAR_LIB_OUT	LIB_MAG_STAR_SXDS	# Output STELLAR MAGN.   (-> $ZPHOTWORK/lib_mag/*)  
 #
 #-------------------      From QSO LIBRARY               ------------------------------
-QSO_LIB_IN	LIB_QSO		# Input  QSO LIBRARY     (in $ZPHOTWORK/lib_bin/*)
-QSO_LIB_OUT	QSO_COSMOS	# Output QSO MAGN.       (-> $ZPHOTWORK/lib_mag/*) 
+QSO_LIB_IN	LIB_BIN_QSO		# Input  QSO LIBRARY     (in $ZPHOTWORK/lib_bin/*)
+QSO_LIB_OUT	LIB_MAG_QSO_SXDS	# Output QSO MAGN.       (-> $ZPHOTWORK/lib_mag/*) 
 #
 #-------------------      From GALAXY LIBRARY            ------------------------------
-GAL_LIB_IN	LIB_CE 	        # Input GALAXY LIBRARY   (in $ZPHOTWORK/lib_bin/*)
-GAL_LIB_OUT	CE_COSMOS	# Output GALAXY LIBRARY  (-> $ZPHOTWORK/lib_mag/*) 
+GAL_LIB_IN	LIB_BIN_GAL 	        # Input GALAXY LIBRARY   (in $ZPHOTWORK/lib_bin/*)
+GAL_LIB_OUT	LIB_MAG_GAL_SXDS	# Output GALAXY LIBRARY  (-> $ZPHOTWORK/lib_mag/*) 
 #
 #------------------   MAG + Z_STEP + COSMO + EXTINCTION   -----------------------------
 MAGTYPE         AB		# Magnitude type (AB or VEGA)

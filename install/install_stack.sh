@@ -1,6 +1,6 @@
 #!/bin/bash
 #Get latest weekly from https://github.com/lsst/lsst/tags
-export weekly='w.2023.09'
+export weekly='w.2023.25'
 unset LSST_HOME EUPS_PATH LSST_DEVEL EUPS_PKGROOT REPOSITORY_PATH
 
 mkdir -p source/$weekly
@@ -12,7 +12,8 @@ eups distrib install -t w_latest lsst_distrib
 curl -sSL https://raw.githubusercontent.com/lsst/shebangtron/main/shebangtron | python
 
 # obs_vista installation
-cd stack/current/Linux64/
+#cd stack/current/Linux64/
+cd stack/current/Darwin64/
 mkdir obs_vista
 cd obs_vista
 git clone https://github.com/lsst-uk/obs_vista.git
