@@ -16,7 +16,7 @@ fi
 #Create the Butler
 butler create $repo
 #Register VIRCAM
-butler register-instrument $repo lsst.obs.vista.VIRCAM
+butler register-instrument $repo lsstuk.obs.vista.VIRCAM
 #Make and register the all sky skymap using local config file
 butler register-skymap $repo -C "$OBS_VISTA_DIR/config/makeSkyMap.py"
 
@@ -40,7 +40,7 @@ butler write-curated-calibrations $repo VIRCAM
 #Import confidence maps
 butler register-dataset-type $repo \
     confidence ExposureF instrument band physical_filter exposure detector
-butler ingest-files --formatter=lsst.obs.vista.VircamRawFormatter $repo \
+butler ingest-files --formatter=lsstuk.obs.vista.VircamRawFormatter $repo \
     confidence confidence/video \
     ../../dmu0/dmu0_VISTA/dmu0_VIDEO/test_export_confidence.ecsv -t copy 
 
