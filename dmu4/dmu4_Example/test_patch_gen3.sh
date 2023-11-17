@@ -2,7 +2,7 @@
 #This script should conduct a full example run of a small subset of VIDEO
 
 #Setup LSST Science pipeline environment
-source ../../setup_mac.sh
+source ../../install/setup_mac.sh
 
 #Set location of Butler
 export repo=data
@@ -47,15 +47,20 @@ butler ingest-files --formatter=lsstuk.obs.vista.VircamRawFormatter $repo \
 #Run the singleFrame processing
 pipetask run -d "detector IN (9,10) AND band IN ('J','K')" \
     -b $repo --input confidence/video,VIRCAM/raw/video,refcats/video,VIRCAM/calib \
-    --register-dataset-types -p "$OBS_VISTA_DIR/pipelines/DRP_full.yaml#singleFrame" \
-    --output videoSingleFrame  
+    --register-dataset-types -p "$OBS_VISTA_DIR/pipelines/DRP_new.yaml#step1" \
+    --output videoStep1 
+    
+pipetask run -d "detector IN (9,10) AND band IN ('J','K')" \
+    -b $repo --input videoStep1 \
+    --register-dataset-types -p "$OBS_VISTA_DIR/pipelines/DRP_new.yaml#step2" \
+    --output videoStep2
 
 #Coadd the exposures
 pipetask run -d "tract=8524 AND patch IN (39,48) AND skymap='hscPdr2' " \
     -b $repo \
-    --input videoSingleFrame \
-    --register-dataset-types -p "$OBS_VISTA_DIR/pipelines/DRP_full.yaml#coaddDetect" \
-    --output videoCoaddDetect
+    --input videoStep2 \
+    --register-dataset-types -p "$OBS_VISTA_DIR/pipelines/DRP_new.yaml#step3a" \
+    --output videoStep3a
 
 #Import HSC deepCoadd images and detections
 export coaddRun=hsc/pdr3_dud
@@ -71,8 +76,8 @@ butler ingest-files \
 
 #Run photometry pipeline
 pipetask run -d "tract=8524 AND patch IN (39,48) AND skymap='hscPdr2' " -b $repo \
-    --input videoCoaddDetect,$coaddRun \
+    --input videoStep3a,$coaddRun \
     --register-dataset-types \
-    -p "$OBS_VISTA_DIR/pipelines/DRP_full.yaml#multiVisitLater" \
-    --output videoMultiVisitLater
+    -p "$OBS_VISTA_DIR/pipelines/DRP_new.yaml#step3b" \
+    --output videostep3b
 
