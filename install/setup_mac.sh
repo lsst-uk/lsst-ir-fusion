@@ -7,7 +7,7 @@ setup lsst_distrib
 setup obs_vista 
 #setup meas_algorithms
 #the following effectively switches off model measurements.
-unsetup -j meas_modelfit
+#unsetup -j meas_modelfit
 
 export NUMEXPR_MAX_THREADS=4
 export OMP_NUM_THREADS=4

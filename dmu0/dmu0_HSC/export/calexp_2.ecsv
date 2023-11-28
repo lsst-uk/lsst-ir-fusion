@@ -9,5 +9,5 @@
 # - {name: tract, datatype: int64}
 # schema: astropy-2.0
 filename band patch physical_filter skymap tract
-/Users/raphaelshirley/Documents/github/lsst-ir-fusion/dmu0/dmu0_HSC/data/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr3_dud/deepCoadd-results/HSC-R/8524/3,4/calexp-HSC-R-8524-3,4.fits r 39 HSC-R hscPdr2 8524
-/Users/raphaelshirley/Documents/github/lsst-ir-fusion/dmu0/dmu0_HSC/data/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr3_dud/deepCoadd-results/HSC-R/8524/3,5/calexp-HSC-R-8524-3,5.fits r 48 HSC-R hscPdr2 8524
+../../dmu0/dmu0_HSC/data/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr3_dud/deepCoadd-results/HSC-R/8524/3,4/calexp-HSC-R-8524-3,4.fits r 39 HSC-R hscPdr2 8524
+../../dmu0/dmu0_HSC/data/hsc-release.mtk.nao.ac.jp/archive/filetree/pdr3_dud/deepCoadd-results/HSC-R/8524/3,5/calexp-HSC-R-8524-3,5.fits r 48 HSC-R hscPdr2 8524

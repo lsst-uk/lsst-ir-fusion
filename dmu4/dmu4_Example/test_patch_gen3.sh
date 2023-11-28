@@ -1,8 +1,8 @@
 #!/bin/bash
 #This script should conduct a full example run of a small subset of VIDEO
 
-#Setup LSST Science pipeline environment
-source ../../install/setup_mac.sh
+#Setup LSST Science pipeline environment - copy working setup to local file first.
+source ../../install/setup_local.sh
 
 #Set location of Butler
 export repo=data
@@ -44,40 +44,44 @@ butler ingest-files --formatter=lsstuk.obs.vista.VircamRawFormatter $repo \
     confidence confidence/video \
     ../../dmu0/dmu0_VISTA/dmu0_VIDEO/test_export_confidence.ecsv -t copy 
 
-#Run the singleFrame processing
-pipetask run -d "detector IN (9,10) AND band IN ('J','K')" \
-    -b $repo --input confidence/video,VIRCAM/raw/video,refcats/video,VIRCAM/calib \
-    --register-dataset-types -p "$OBS_VISTA_DIR/pipelines/DRP_new.yaml#step1" \
+#Run the singleFrame processing AND detector IN (9,10) AND band IN ('J','K') AND exposure=658653"
+pipetask run -d "instrument='VIRCAM' AND detector IN (9,10) AND band IN ('J','K')" \
+    -b $repo \
+    --input confidence/video,VIRCAM/raw/video,refcats/video,VIRCAM/calib,skymaps \
+    --register-dataset-types \
+    -p "$OBS_VISTA_DIR/pipelines/DRP.yaml#step1" \
     --output videoStep1 
     
-pipetask run -d "detector IN (9,10) AND band IN ('J','K')" \
+pipetask run -d "instrument='VIRCAM' AND skymap='hscPdr2' " \
     -b $repo --input videoStep1 \
-    --register-dataset-types -p "$OBS_VISTA_DIR/pipelines/DRP_new.yaml#step2" \
+    --register-dataset-types \
+    -p "$OBS_VISTA_DIR/pipelines/DRP.yaml#step2" \
     --output videoStep2
 
 #Coadd the exposures
 pipetask run -d "tract=8524 AND patch IN (39,48) AND skymap='hscPdr2' " \
     -b $repo \
     --input videoStep2 \
-    --register-dataset-types -p "$OBS_VISTA_DIR/pipelines/DRP_new.yaml#step3a" \
+    --register-dataset-types \
+    -p "$OBS_VISTA_DIR/pipelines/DRP.yaml#step3a" \
     --output videoStep3a
 
 #Import HSC deepCoadd images and detections
 export coaddRun=hsc/pdr3_dud
 butler ingest-files \
     --formatter=lsst.obs.base.formatters.fitsExposure.FitsExposureFormatter $repo \
-    deepCoadd $coaddRun ../../dmu0/dmu0_HSC/data/calexp_2.ecsv
+    deepCoadd $coaddRun ../../dmu0/dmu0_HSC/export/calexp_2.ecsv
 butler ingest-files \
     --formatter=lsst.obs.base.formatters.fitsExposure.FitsExposureFormatter $repo \
-    deepCoadd_calexp $coaddRun ../../dmu0/dmu0_HSC/data/calexp_2.ecsv
+    deepCoadd_calexp $coaddRun ../../dmu0/dmu0_HSC/export/calexp_2.ecsv
 butler ingest-files \
     --formatter=lsst.obs.base.formatters.fitsGeneric.FitsGenericFormatter $repo \
-    deepCoadd_det $coaddRun ../../dmu0/dmu0_HSC/data/det_2.ecsv
+    deepCoadd_det $coaddRun ../../dmu0/dmu0_HSC/export/det_2.ecsv
 
 #Run photometry pipeline
 pipetask run -d "tract=8524 AND patch IN (39,48) AND skymap='hscPdr2' " -b $repo \
     --input videoStep3a,$coaddRun \
     --register-dataset-types \
-    -p "$OBS_VISTA_DIR/pipelines/DRP_new.yaml#step3b" \
+    -p "$OBS_VISTA_DIR/pipelines/DRP.yaml#step3b" \
     --output videostep3b
 
