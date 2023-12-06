@@ -83,5 +83,5 @@ pipetask run -d "tract=8524 AND patch IN (39,48) AND skymap='hscPdr2' " -b $repo
     --input videoStep3a,$coaddRun \
     --register-dataset-types \
     -p "$OBS_VISTA_DIR/pipelines/DRP.yaml#step3b" \
-    --output videostep3b
+    --output videoStep3b
 

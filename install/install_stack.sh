@@ -12,8 +12,11 @@ eups distrib install -t w_latest lsst_distrib
 curl -sSL https://raw.githubusercontent.com/lsst/shebangtron/main/shebangtron | python
 
 # obs_vista installation
-#cd stack/current/Linux64/
-cd stack/current/DarwinX86/
+cd stack/current/
+# try Linux
+cd Linux64
+# try Mac
+cd DarwinX86
 mkdir obs_vista
 cd obs_vista
 git clone https://github.com/lsst-uk/obs_vista.git
