@@ -1,8 +1,10 @@
 includeConfigs:
-  - ${GEN3_WORKFLOW_DIR}/python/desc/gen3_workflow/etc/bps_drp_baseline.yaml
-  - ${GEN3_WORKFLOW_DIR}/examples/bps_DC2-3828-y1_resources.yaml
+#  - ${GEN3_WORKFLOW_DIR}/python/desc/gen3_workflow/etc/bps_drp_baseline.yaml
+#  - ${GEN3_WORKFLOW_DIR}/examples/bps_DC2-3828-y1_resources.yaml
 
-pipelineYaml: "${OBS_VISTA_DIR}/pipelines/DRP_full.yaml#singleFrame"
+pipelineYaml: "${OBS_VISTA_DIR}/pipelines/DRP.yaml#step1"
+
+wmsServiceClass: lsst.ctrl.bps.parsl.ParslService
 
 project: dev
 campaign: quick
