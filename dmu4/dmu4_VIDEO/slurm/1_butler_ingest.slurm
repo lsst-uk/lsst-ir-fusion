@@ -26,7 +26,7 @@
 #! interrupted by node failure or system downtime):
 ##SBATCH --no-requeue
 
-#! For 6GB per CPU, set "-p skylake"; for 12GB per CPU, set "-p skylake-himem": 
+#! For 6GB per CPU, set "-p skylake"; for 12GB per CPU, set "-p skylake-himem":
 #SBATCH -p cclake
 
 #! sbatch directives end here (put any additional directives above this line)
@@ -45,7 +45,7 @@ numnodes=$SLURM_JOB_NUM_NODES
 numtasks=$SLURM_NTASKS
 mpi_tasks_per_node=$(echo "$SLURM_TASKS_PER_NODE" | sed -e  's/^\([0-9][0-9]*\).*$/\1/')
 #! ############################################################
-#! Modify the settings below to specify the application's environment, location 
+#! Modify the settings below to specify the application's environment, location
 #! and launch method:
 
 #! Optionally modify the environment seen by the application
@@ -56,8 +56,8 @@ module load rhel7/default-peta4            # REQUIRED - loads the basic environm
 
 #! Insert additional module load commands after this line if needed:
 
-#! Full path to application executable: 
-application="./ingest.sh"
+#! Full path to application executable:
+application="./butler_ingest.sh"
 
 #! Run options for the application:
 options=""
@@ -123,4 +123,4 @@ echo -e "\nnumtasks=$numtasks, numnodes=$numnodes, mpi_tasks_per_node=$mpi_tasks
 
 echo -e "\nExecuting command:\n==================\n$CMD\n"
 
-eval $CMD 
+eval $CMD
