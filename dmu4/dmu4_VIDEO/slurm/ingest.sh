@@ -1,18 +1,17 @@
 #!/bin/bash
-#source /rfs/project/rfs-L33A9wsNuJk/shared/stack23/loadLSST.bash
-#source /home/ir-shir1/rds/rds-iris-ip005/ras81/stack23/loadLSST.bash
-#setup lsst_distrib
-#setup obs_vista
-#eups admin clearLocks
-#export NUMEXPR_MAX_THREADS=32
-source /home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/setup.sh
 
-#butler ingest-raws ../../data /home/ir-shir1/rds/rds-iris-ip005/data/private/VISTA/VIDEO/*/*st.fit -t copy -j 32
-export repo=/home/ir-shir1/rds/rds-iris-ip009-lT5YGmtKack/ras81/butler_wide_20220930/data
-butler register-dataset-type $repo confidence ExposureF instrument band physical_filter exposure detector
+# Setup LSST Science pipeline environment
+source ./setup.sh
+
+# Set location of Butler
+export repo=../data
+
+# Import confidence maps and Ingest the raw exposures _st
+butler register-dataset-type $repo confidence ExposureF instrument \
+       band physical_filter exposure detector
 
 for i in {0..5072}
-do 
+do
   varArray="$(python jobDict.py $i sxds_images_job_dict_5073.json)"
   varArray=($varArray)
   dateObs=${varArray[0]}
@@ -36,13 +35,15 @@ do
   cp ${filename/st.fit/st_conf.fit} ./tmp/tmp_confidence.fit
   #visit="$(python fitToExpNum.py ./tmp/tmp_stack.fit)"
   echo $visit
-  
+
   butler ingest-raws $repo $filename -t copy --output-run VIRCAM/raw/video
-  butler ingest-files --formatter=lsst.obs.vista.VircamRawFormatter $repo confidence confidence/video ./tmp/confidence.ecsv --data-id exposure=$visit,band=$band,physical_filter=$filter -t copy
+  butler ingest-files --formatter=lsstuk.obs.vista.VircamRawFormatter \
+	 $repo confidence confidence/video ./tmp/confidence.ecsv \
+	 --data-id exposure=$visit,band=$band,physical_filter=$filter -t copy
 done
 
-#Define the visits from the ingested exposures
-butler define-visits $repo VIRCAM --collections VIRCAM/raw/video 
-#We don't have calibs but we need the collection for later processing
-butler write-curated-calibrations $repo VIRCAM
+# Define the visits from the ingested exposures
+butler define-visits $repo VIRCAM --collections VIRCAM/raw/video
 
+# We don't have calibs but we need the collection for later processing
+butler write-curated-calibrations $repo VIRCAM
