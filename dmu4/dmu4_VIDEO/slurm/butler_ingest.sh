@@ -3,7 +3,7 @@
 # Setup LSST Science pipeline environment; The weekly tag within the
 # "setup.sh" file should be revised based on the installed stack
 # version.
-source ./setup.sh
+source setup.sh
 
 # Set location of Butler
 export repo=../data
@@ -17,7 +17,7 @@ fi
 butler create $repo
 
 # Register VIRCAM
-butler register-instrument $repo lsst.obs.vista.VIRCAM
+butler register-instrument $repo lsstuk.obs.vista.VIRCAM
 
 # Make and register the all sky skymap using local config file
 butler register-skymap $repo -C "$OBS_VISTA_DIR/config/makeSkyMap.py"
@@ -31,6 +31,7 @@ cd ..
 butler ingest-files -t copy data ps1_pv3_3pi_20170110_vista \
        refcats/video data/video_gen3/filename_to_htm.ecsv
 rm -r data/video_gen3
+cd slurm
 
 # Import confidence maps and Ingest the raw exposures _st
 butler register-dataset-type $repo confidence ExposureF instrument \
