@@ -14,13 +14,16 @@
 #! Which project should be charged:
 #SBATCH -A IRIS-IP005-CPU
 #SBATCH -p cclake
-#! How many whole nodes should be allocated?
-#SBATCH --nodes=32
 #SBATCH --exclusive
+#! How many whole nodes should be allocated?
+#SBATCH --nodes=1
 #! How many (MPI) tasks will there be in total? (<= nodes*56)
 #! The Cascade Lake (cclake) nodes have 56 CPUs (cores) each and
 #! 3420 MiB of memory per CPU.
-#! How many many cores will be allocated per task? (for single core jobs always leave this at 1)
+#!SBATCH --tasks-per-node=1
+#! How many many cores will be allocated per task? 
+#! (for single core jobs always leave this at 1)
+#!SBATCH --cpus-per-task=56
 #! How much wallclock time will be required?
 #SBATCH --time=36:00:00
 #! What types of email messages do you wish to receive?
@@ -53,7 +56,10 @@ mpi_tasks_per_node=$(echo "$SLURM_TASKS_PER_NODE" | sed -e  's/^\([0-9][0-9]*\).
 . /etc/profile.d/modules.sh                # Leave this line (enables the module command)
 module purge                               # Removes all modules still loaded
 module load rhel7/default-ccl              # REQUIRED - loads the basic environment
-source /home/ir-shir1/rds/rds-iris-ip005/ras81/lsst-ir-fusion/setup.sh
+
+#! Setup LSST Science pipeline environment
+source setup.sh
+
 #! Insert additional module load commands after this line if needed:
 
 #! Full path to application executable: 
