@@ -15,7 +15,7 @@ site:
   work_queue:
     class: lsst.ctrl.bps.parsl.sites.work_queue.LocalSrunWorkQueue
     worker_options: "--memory=100000"   # work_queue expects memory in MB
-    nodes_per_block: 1
+    nodes_per_block: 31
 
 
 payload:
@@ -23,4 +23,3 @@ payload:
   butlerConfig: /home/ir-sare1/rds/rds-iris-ip005/Elham/lsst-ir-fusion/dmu4/dmu4_VIDEO/data/butler.yaml
   inCollection: confidence/video,VIRCAM/raw/video,refcats/video,VIRCAM/calib,skymaps
   dataQuery: "band in ('Z','Y','J','H','K')"
-# dataQuery: "instrument='VIRCAM' AND tract IN (8524) AND skymap='hscPdr2' AND band in ('K') exposure IN (658744)"

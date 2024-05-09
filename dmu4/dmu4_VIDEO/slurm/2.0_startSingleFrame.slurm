@@ -16,7 +16,7 @@
 #SBATCH -p cclake
 #SBATCH --exclusive
 #! How many whole nodes should be allocated?
-#SBATCH --nodes=1
+#SBATCH --nodes=32
 #! How many (MPI) tasks will there be in total? (<= nodes*56)
 #! The Cascade Lake (cclake) nodes have 56 CPUs (cores) each and
 #! 3420 MiB of memory per CPU.
