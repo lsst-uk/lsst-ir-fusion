@@ -15,7 +15,7 @@ bash newinstall.sh -ctb
 source loadLSST.bash
 
 # Install Science Pipelines packages
-eups distrib install -t w_latest lsst_distrib
+eups distrib install -t w_2024_15 lsst_distrib
 curl -sSL https://raw.githubusercontent.com/lsst/shebangtron/main/shebangtron | python
 
 # Install "obs_vista" package
