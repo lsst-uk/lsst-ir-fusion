@@ -15,12 +15,11 @@ site:
   work_queue:
     class: lsst.ctrl.bps.parsl.sites.work_queue.LocalSrunWorkQueue
     worker_options: "--memory=100000"   # work_queue expects memory in MB
-    nodes_per_block: 1
+    nodes_per_block: 32
 
 
 payload:
   payloadName: DRP/videoCoaddDetect
   butlerConfig: /home/ir-sare1/rds/rds-iris-ip005/Elham/lsst-ir-fusion/dmu4/dmu4_VIDEO/data/butler.yaml
   inCollection: skymaps,u/ir-sare1/DRP/videoCalibrate
-# dataQuery: "tract IN (8284,8283,8282,8525,8524,8523,8767,8766,8765) AND skymap='hscPdr2'"
-  dataQuery: "tract IN (8524) AND skymap='hscPdr2'"
+  dataQuery: "tract IN (8284,8283,8282,8525,8524,8523,8767,8766,8765) AND skymap='hscPdr2'"

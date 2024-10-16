@@ -52,8 +52,10 @@ mpi_tasks_per_node=$(echo "$SLURM_TASKS_PER_NODE" | sed -e  's/^\([0-9][0-9]*\).
 #! (note that SLURM reproduces the environment at submission irrespective of ~/.bashrc):
 . /etc/profile.d/modules.sh                # Leave this line (enables the module command)
 module purge                               # Removes all modules still loaded
-module load rhel7/default-peta4            # REQUIRED - loads the basic environment
-
+#!module load rhel8/slurm
+#!module load intel-oneapi-compilers/2022.1.0/gcc/b6zld2mz
+#!module load intel-oneapi-mpi/2021.6.0/intel/guxuvcpm
+module load rhel8/default-icl
 #! Insert additional module load commands after this line if needed:
 
 #! Full path to application executable:
@@ -87,7 +89,7 @@ export I_MPI_PIN_ORDER=scatter # Adjacent domains have minimal sharing of caches
 #! Uncomment one choice for CMD below (add mpirun/mpiexec options if necessary):
 
 #! Choose this for a MPI code (possibly using OpenMP) using Intel MPI.
-CMD="mpirun -ppn $mpi_tasks_per_node -np $np $application $options"
+CMD="mpiexec -np $np $application $options"
 
 #! Choose this for a pure shared-memory OpenMP parallel program on a single node:
 #! (OMP_NUM_THREADS threads will be created):
@@ -112,11 +114,8 @@ echo "Running on master node: `hostname`"
 echo "Current directory: `pwd`"
 
 if [ "$SLURM_JOB_NODELIST" ]; then
-        #! Create a machine file:
-        export NODEFILE=`generate_pbs_nodefile`
-        cat $NODEFILE | uniq > machine.file.$JOBID
-        echo -e "\nNodes allocated:\n================"
-        echo `cat machine.file.$JOBID | sed -e 's/\..*$//g'`
+    echo -e "\nNodes allocated:\n================"
+    echo "$SLURM_JOB_NODELIST"
 fi
 
 echo -e "\nnumtasks=$numtasks, numnodes=$numnodes, mpi_tasks_per_node=$mpi_tasks_per_node (OMP_NUM_THREADS=$OMP_NUM_THREADS)"
