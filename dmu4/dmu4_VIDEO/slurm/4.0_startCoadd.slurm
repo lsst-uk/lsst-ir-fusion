@@ -16,11 +16,11 @@
 #SBATCH -p cclake
 #SBATCH --exclusive
 #! How many whole nodes should be allocated?
-#SBATCH --nodes=1
+#SBATCH --nodes=32
 #! How many (MPI) tasks will there be in total? (<= nodes*56)
 #! The Cascade Lake (cclake) nodes have 56 CPUs (cores) each and
 #! 3420 MiB of memory per CPU.
-#!SBATCH --tasks-per-node=1
+#SBATCH --tasks-per-node=1
 #! How many many cores will be allocated per task? 
 #! (for single core jobs always leave this at 1)
 #SBATCH --cpus-per-task=56
@@ -55,7 +55,8 @@ mpi_tasks_per_node=$(echo "$SLURM_TASKS_PER_NODE" | sed -e  's/^\([0-9][0-9]*\).
 #! (note that SLURM reproduces the environment at submission irrespective of ~/.bashrc):
 . /etc/profile.d/modules.sh                # Leave this line (enables the module command)
 module purge                               # Removes all modules still loaded
-module load rhel7/default-ccl              # REQUIRED - loads the basic environment
+module load rhel8/default-ccl              # REQUIRED - loads the basic environment
+
 
 #! Setup LSST Science pipeline environment
 source setup.sh
