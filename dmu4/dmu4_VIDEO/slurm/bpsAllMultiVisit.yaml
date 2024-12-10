@@ -15,7 +15,7 @@ site:
   work_queue:
     class: lsst.ctrl.bps.parsl.sites.work_queue.LocalSrunWorkQueue
     worker_options: "--memory=100000"   # work_queue expects memory in MB
-    nodes_per_block: 1
+    nodes_per_block: 32
 
 
 payload:
