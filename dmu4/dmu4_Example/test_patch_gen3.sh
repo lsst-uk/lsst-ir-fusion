@@ -47,7 +47,7 @@ butler ingest-files --formatter=lsstuk.obs.vista.VircamRawFormatter $repo \
 #Run the singleFrame processing AND detector IN (9,10) AND band IN ('J','K') AND exposure=658653"
 pipetask run -d "instrument='VIRCAM' AND detector IN (9,10) AND band IN ('J','K')" \
     -b $repo \
-    --input confidence/video,VIRCAM/raw/video,refcats/video,VIRCAM/calib,skymaps \
+    --input confidence/video,VIRCAM/raw/video,refcats/video,VIRCAM/calib/video,skymaps \
     --register-dataset-types \
     -p "$OBS_VISTA_DIR/pipelines/DRP.yaml#step1" \
     --output videoStep1 
