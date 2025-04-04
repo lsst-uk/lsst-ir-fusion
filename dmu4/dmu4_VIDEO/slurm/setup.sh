@@ -4,7 +4,7 @@
 
 # The weekly tag should be revised based on the installed stack
 # version.
-export weekly='w.2024.30'
+export weekly='w.2025.14'
 
 # Load the LSST software environment into the shell
 source ../../../install/source/${weekly}/loadLSST.bash
@@ -18,7 +18,7 @@ setup obs_vista
 # Setup of wq_env for using ctrl_bps and the Parsl-based plug-in
 export wq_env=../../../install/source/${weekly}/stack/wq_env
 conda activate --stack ${wq_env}
-export PYTHONPATH=${wq_env}/lib/python3.12/site-packages:${PYTHONPATH}
+export PYTHONPATH=${wq_env}/lib/python3.13/site-packages:${PYTHONPATH}
 export PATH=${wq_env}/bin:${PATH}
 export NUMEXPR_MAX_THREADS=1
 export OMP_NUM_THREADS=1
