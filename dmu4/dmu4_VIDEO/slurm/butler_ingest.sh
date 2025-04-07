@@ -73,4 +73,4 @@ done
 butler define-visits $repo VIRCAM --collections VIRCAM/raw/video
 
 # We don't have calibs but we need the collection for later processing
-butler write-curated-calibrations $repo VIRCAM
+butler write-curated-calibrations $repo VIRCAM video
