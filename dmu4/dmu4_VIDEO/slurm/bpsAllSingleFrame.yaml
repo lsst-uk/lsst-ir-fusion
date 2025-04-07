@@ -21,6 +21,6 @@ site:
 payload:
   payloadName: DRP/videoSingleFrame
   butlerConfig: /home/ir-sare1/rds/rds-iris-ip005/Elham/lsst-ir-fusion/dmu4/dmu4_VIDEO/data/butler.yaml
-  inCollection: confidence/video,VIRCAM/raw/video,refcats/video,VIRCAM/calib,skymaps
+  inCollection: confidence/video,VIRCAM/raw/video,refcats/video,VIRCAM/calib/video,skymaps
   dataQuery: "band in ('Z','Y','J','H','K')"
-# dataQuery: "instrument='VIRCAM' AND tract IN (8524) AND skymap='hscPdr2' AND band in ('K') exposure IN (658744)"
+# dataQuery: "instrument='VIRCAM' AND skymap='hscPdr2' AND band in ('K') exposure IN (658744)"
