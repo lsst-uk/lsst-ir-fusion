@@ -2,7 +2,7 @@
 
 # Get the latest weekly or official release tag from https://github.com/lsst/lsst/tags
 #export weekly='w.2025.14'
-export release='v29.0.1'
+export release='v29.1.1'
 
 unset LSST_HOME EUPS_PATH LSST_DEVEL EUPS_PKGROOT REPOSITORY_PATH
 
@@ -14,16 +14,16 @@ cd source/$release
 
 # Download and run of "newinstall.sh" 
 # For official release, we use 28.0.2 not v28.0.2 for example instead of $weekly.
-curl -OL https://raw.githubusercontent.com/lsst/lsst/29.0.1/scripts/newinstall.sh
+curl -OL https://raw.githubusercontent.com/lsst/lsst/29.1.1/scripts/newinstall.sh
 bash newinstall.sh -ctb
 
 # Load the LSST software environment into the shell
 source loadLSST.bash
 
 # Install Science Pipelines packages
-# For official release, we use v29_0_1, for example.
+# For official release, we use v29_1_1, for example.
 #eups distrib install -t w_2025_14 lsst_distrib
-eups distrib install -t v29_0_1 lsst_distrib
+eups distrib install -t v29_1_1 lsst_distrib
 curl -sSL https://raw.githubusercontent.com/lsst/shebangtron/main/shebangtron | python
 
 # Install "obs_vista" package
