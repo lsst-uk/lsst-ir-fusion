@@ -5,3 +5,7 @@ archive/
 .ipynb_checkpoints
 .idea
 .DS_Store
+**/data/
+**/data_tmp/
+**/archive/
+**/source
