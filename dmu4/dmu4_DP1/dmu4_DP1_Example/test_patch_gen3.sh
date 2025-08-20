@@ -28,3 +28,10 @@ butler register-instrument $repo lsstuk.obs.vista.VIRCAM
 
 #Make and register the all sky skymap using local config file
 butler register-skymap $repo -C "$OBS_VISTA_DIR/config/comCam/makeSkyMap.py"
+
+# Import the reference catalogues to the butler.
+butler register-dataset-type $repo the_monster_20250219_vista SimpleCatalog htm7
+cp -r ../../../dmu2/dmu2_DP1/data/video_cdfs $repo
+butler ingest-files -t copy $repo the_monster_20250219_vista refcats/video \
+	data/video_cdfs/filename_to_htm.ecsv
+rm -r $repo/video_cdfs 
