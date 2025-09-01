@@ -68,7 +68,7 @@ pipetask run -d "instrument='VIRCAM' AND detector IN (9)" \
     -b $repo \
     --input confidence/video,VIRCAM/raw/video,refcats/video,VIRCAM/calib/video,skymaps \
     --register-dataset-types \
-    -p "$OBS_VISTA_DIR/pipelines/DRP.yaml#step1" \
+    -p "$OBS_VISTA_DIR/pipelines/DRP-DP1.yaml#step1" \
     --output videoStep1
 
 
@@ -76,5 +76,14 @@ pipetask run -d "instrument='VIRCAM' AND detector IN (9)" \
 pipetask run -d "instrument='VIRCAM' AND skymap='lsst_cells_v1'" \
     -b $repo --input videoStep1 \
     --register-dataset-types \
-    -p "$OBS_VISTA_DIR/pipelines/DRP.yaml#step2" \
+    -p "$OBS_VISTA_DIR/pipelines/DRP-DP1.yaml#step2" \
     --output videoStep2
+
+
+# Run the coadd step
+pipetask run -d "tract=5063 AND patch IN (22) AND skymap='lsst_cells_v1'" \
+    -b $repo \
+    --input videoStep2 \
+    --register-dataset-types \
+    -p "$OBS_VISTA_DIR/pipelines/DRP-DP1.yaml#step3a" \
+    --output videoStep3a
