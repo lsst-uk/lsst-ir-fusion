@@ -7,6 +7,9 @@ source ../../install/setup_local.sh
 #Set location of Butler
 export repo=data
 
+#Set an environment variable to decide which config profile to use
+export OBS_VISTA_PROFILE=HSC
+
 #Delete old butler if already present
 if [ -f $repo/butler.yaml ]; then
     rm -rf $repo

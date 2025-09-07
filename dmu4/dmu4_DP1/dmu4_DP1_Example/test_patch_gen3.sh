@@ -15,7 +15,7 @@ setup obs_vista
 export repo=data
 
 # Set an environment variable to decide which config profile to use
-export OBS_VISTA_PROFILE=comCam
+export OBS_VISTA_PROFILE=ComCam
 
 
 # Delete old butler if already present
@@ -33,7 +33,7 @@ butler register-instrument $repo lsstuk.obs.vista.VIRCAM
 
 
 # Make and register the all sky skymap using local config file
-butler register-skymap $repo -C "$OBS_VISTA_DIR/config/comCam/makeSkyMap.py"
+butler register-skymap $repo -C "$OBS_VISTA_DIR/config/ComCam/makeSkyMap.py"
 
 
 # Import the reference catalogues to the butler.
