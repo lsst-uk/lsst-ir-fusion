@@ -45,7 +45,7 @@ rm -r $repo/video_cdfs
 
 
 # Ingest the raw exposures _st for stacks [0-9] for exposures
-butler ingest-raws $repo ../../../dmu0/dmu0_VISTA/dmu0_VIDEO_CSDF/data/*/*_st.fit \
+butler ingest-raws $repo ../../../dmu0/dmu0_VISTA/dmu0_VIDEO_CDFS/data/*/*_st.fit \
 	-t copy --output-run VIRCAM/raw/video
 
 
@@ -60,7 +60,7 @@ butler register-dataset-type $repo \
     confidence ExposureF instrument band physical_filter exposure detector
 butler ingest-files --formatter=lsstuk.obs.vista.VircamRawFormatter $repo \
     confidence confidence/video \
-    ../../../dmu0/dmu0_VISTA/dmu0_VIDEO_CSDF/example_export_confidence.ecsv -t copy
+    ../../../dmu0/dmu0_VISTA/dmu0_VIDEO_CDFS/example_export_confidence.ecsv -t copy
 
 
 # Run the singleFrame processing (detector 9 for example)
