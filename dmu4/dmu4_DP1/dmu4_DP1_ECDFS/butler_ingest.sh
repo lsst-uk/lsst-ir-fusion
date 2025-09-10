@@ -44,3 +44,17 @@ butler ingest-files -t copy data \
        data/video_cdfs/filename_to_htm.ecsv
 rm -r data/video_cdfs
 cd dmu4_DP1_ECDFS
+
+
+# Ingest the raw exposures *_st.fit
+butler ingest-raws $repo \
+       $(cat ../../../dmu0/dmu0_VISTA/dmu0_VIDEO_CDFS/cdfs_images.txt) \
+       -t copy --output-run VIRCAM/raw/video_cdfs
+
+
+# Define the visits from the ingested exposures
+butler define-visits $repo VIRCAM --collections VIRCAM/raw/video_cdfs
+
+
+# We don't have calibs but we need the collection for later processing
+butler write-curated-calibrations $repo VIRCAM video
