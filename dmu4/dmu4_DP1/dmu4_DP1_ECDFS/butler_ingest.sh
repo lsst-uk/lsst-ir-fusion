@@ -58,3 +58,11 @@ butler define-visits $repo VIRCAM --collections VIRCAM/raw/video_cdfs
 
 # We don't have calibs but we need the collection for later processing
 butler write-curated-calibrations $repo VIRCAM video
+
+
+# Ingest confidence maps
+butler register-dataset-type $repo confidence ExposureF instrument \
+       band physical_filter exposure detector day_obs
+butler ingest-files --formatter=lsstuk.obs.vista.VircamRawFormatter \
+       $repo confidence confidence/video_cdfs \
+       ../../../dmu0/dmu0_VISTA/dmu0_VIDEO_CDFS/cdfs_index_conf.ecsv -t copy
