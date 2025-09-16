@@ -87,3 +87,13 @@ pipetask run -d "tract=5063 AND patch IN (22) AND skymap='lsst_cells_v1'" \
     --register-dataset-types \
     -p "$OBS_VISTA_DIR/pipelines/DRP-DP1.yaml#step3a" \
     --output videoStep3a
+
+
+# Ingest ComCam deepCoadd images and detection catalogs
+butler ingest-files $repo deepCoadd_calexp comcam/deepCoadd_results \
+    ../../../dmu0/dmu0_ComCam/example_comcam_deepcoadd.ecsv \
+    --formatter=lsst.obs.base.formatters.fitsExposure.FitsExposureFormatter
+
+butler ingest-files $repo deepCoadd_det comcam/deepCoadd_results \
+    ../../../dmu0/dmu0_ComCam/example_comcam_detection.ecsv \
+    --formatter=lsst.obs.base.formatters.fitsExposure.FitsExposureFormatter
