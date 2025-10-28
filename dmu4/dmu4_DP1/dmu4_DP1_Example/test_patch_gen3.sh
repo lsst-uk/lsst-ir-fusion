@@ -90,10 +90,21 @@ pipetask run -d "tract=5063 AND patch IN (22) AND skymap='lsst_cells_v1'" \
 
 
 # Ingest ComCam deepCoadd images and detection catalogs
+butler ingest-files $repo deepCoadd comcam/deepCoadd_results \
+    ../../../dmu0/dmu0_ComCam/example_comcam_deepcoadd.ecsv \
+    --formatter=lsst.obs.base.formatters.fitsExposure.FitsExposureFormatter
+
 butler ingest-files $repo deepCoadd_calexp comcam/deepCoadd_results \
     ../../../dmu0/dmu0_ComCam/example_comcam_deepcoadd.ecsv \
     --formatter=lsst.obs.base.formatters.fitsExposure.FitsExposureFormatter
 
 butler ingest-files $repo deepCoadd_det comcam/deepCoadd_results \
     ../../../dmu0/dmu0_ComCam/example_comcam_detection.ecsv \
-    --formatter=lsst.obs.base.formatters.fitsExposure.FitsExposureFormatter
+    --formatter=lsst.obs.base.formatters.fitsGeneric.FitsGenericFormatter
+
+
+# Run the photometry step
+pipetask run -d "tract=5063 AND patch IN (22) AND skymap='lsst_cells_v1' " \
+    -b $repo --input videoStep3a,comcam/deepCoadd_results \
+    --register-dataset-types -p "$OBS_VISTA_DIR/pipelines/DRP-DP1.yaml#step3b" \
+    --output videoStep3b
