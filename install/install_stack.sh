@@ -14,7 +14,7 @@ cd source/$release
 
 # Download and run of "newinstall.sh" 
 # For official release, we use 28.0.2 not v28.0.2 for example instead of $weekly.
-curl -OL https://raw.githubusercontent.com/lsst/lsst/29.1.1/scripts/newinstall.sh
+curl -OL https://raw.githubusercontent.com/lsst/lsst/${release#v}/scripts/newinstall.sh
 bash newinstall.sh -ctb
 
 # Load the LSST software environment into the shell
@@ -31,16 +31,27 @@ cd stack/current/
 # try Linux
 cd Linux64
 # try Mac
-cd DarwinX86
+#cd DarwinX86
 mkdir obs_vista
 cd obs_vista
 git clone https://github.com/lsst-uk/obs_vista.git
 mv obs_vista 24.0.0.1
 eups declare -t current obs_vista 24.0.0.1
 
+
+# Get Python major.minor version from LSST
+PYVER=$(python - <<'EOF'
+import sys
+print(f"{sys.version_info.major}.{sys.version_info.minor}")
+EOF
+)
+
+echo "LSST Python version = $PYVER"
+
+
 # Requirements for using ctrl_bps and the Parsl-based plug-in
-cd ../../../
-wq_env=`pwd -P`/wq_env
-conda create --prefix ${wq_env}
-conda activate --stack ${wq_env}
-conda install -c conda-forge ndcctools --no-deps
+INSTALL_DIR="$(cd ../../../install/source/$release && pwd -P)"
+wq_env="$INSTALL_DIR/stack/wq_env"
+
+conda create -y -p "$wq_env" -c conda-forge python="$PYVER" ndcctools
+"$wq_env/bin/python" -c "import work_queue; print('work_queue OK')"
