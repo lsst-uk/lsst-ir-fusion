@@ -7,21 +7,19 @@ source setup.sh
 
 
 # Set location of Butler
-export repo=../data
+export repo=data
 
+# Create the Butler (using the PostgreSQL database)
+mkdir $repo
+touch $repo/butler-seed.yaml
 
-# Set an environment variable to decide which config profile to use
-export OBS_VISTA_PROFILE=ComCam
+cat > $repo/butler-seed.yaml << EOF
+registry:
+    db: "postgresql://128.232.226.166:5432/desc_csd3"
+    namespace: "lsst_vista_dp1"
+EOF
 
-
-# Delete old butler if already present
-if [ -f $repo/butler.yaml ]; then
-    rm -r $repo
-fi
-
-
-# Create the Butler
-butler create $repo
+butler create --seed-config $repo/butler-seed.yaml --override $repo
 
 
 # Register VIRCAM
@@ -37,19 +35,29 @@ butler register-skymap $repo -C \
 butler register-dataset-type $repo \
        the_monster_20250219_vista SimpleCatalog htm7
 cp -r ../../../dmu2/dmu2_DP1/data/video_cdfs $repo
-cd $repo
-cd ..
 butler ingest-files -t copy data \
        the_monster_20250219_vista refcats/video \
        data/video_cdfs/filename_to_htm.ecsv
 rm -r data/video_cdfs
-cd dmu4_DP1_ECDFS
 
 
 # Ingest the raw exposures *_st.fit
-butler ingest-raws $repo \
-       $(cat ../../../dmu0/dmu0_VISTA/dmu0_VIDEO_CDFS/cdfs_images.txt) \
-       -t copy --output-run VIRCAM/raw/video_cdfs
+list="../../../dmu0/dmu0_VISTA/dmu0_VIDEO_CDFS/cdfs_images.txt"
+chunkdir=$(mktemp -d)
+split -l 50 "$list" "$chunkdir/cdfs_part_"
+
+for f in "$chunkdir"/cdfs_part_*; do
+  echo "Ingesting chunk: $f"
+  butler ingest-raws "$repo" \
+    --transfer copy \
+    --processes 1 \
+    --output-run VIRCAM/raw/video_cdfs \
+    $(cat "$f")
+
+  if [ $? -ne 0 ]; then
+    echo "Chunk FAILED: $f" >> ingest_failed_chunks.log
+  fi
+done
 
 
 # Define the visits from the ingested exposures
