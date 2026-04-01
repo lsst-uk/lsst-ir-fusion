@@ -1,0 +1,74 @@
+name,description,unit,type
+id,unique ID,None,int64
+VIRCAM_Y_m_base_ClassificationExtendedness_value,"Set to 1 for extended sources, 0 for point sources.",None,float64
+VIRCAM_Y_m_base_ClassificationExtendedness_flag,Set to 1 for any fatal failure.,None,bool
+VIRCAM_Y_m_base_CircularApertureFlux_6_0_magErr,mag within 6.000000-pixel aperture,mag,float64
+VIRCAM_Y_m_base_CircularApertureFlux_6_0_mag,mag within 6.000000-pixel aperture,mag,float64
+VIRCAM_Y_m_base_CircularApertureFlux_6_0_fluxErr,flux within 6.000000-pixel aperture,nJy,float64
+VIRCAM_Y_m_base_CircularApertureFlux_6_0_flux,flux within 6.000000-pixel aperture,nJy,float64
+VIRCAM_Y_m_base_CircularApertureFlux_6_0_flag,General Failure Flag,None,bool
+VIRCAM_K_m_merge_peak_sky,Peak detected in filter sky,None,bool
+VIRCAM_K_m_detect_isTractInner,True if source is in the inner region of a coadd tract,None,bool
+VIRCAM_K_m_detect_isPrimary,"True if source has no children and is in the inner region of a coadd patch and is in the inner region of a coadd tract and is not ""detected"" in a pseudo-filter (see config.pseudoFilterList)",None,bool
+VIRCAM_K_m_detect_isPatchInner,True if source is in the inner region of a coadd patch,None,bool
+VIRCAM_K_m_deblend_nChild,Number of children this object has (defaults to 0),None,int32
+VIRCAM_K_m_coord_ra,position in ra/dec,rad,float64
+VIRCAM_K_m_coord_dec,position in ra/dec,rad,float64
+VIRCAM_K_m_base_ClassificationExtendedness_value,"Set to 1 for extended sources, 0 for point sources.",None,float64
+VIRCAM_K_m_base_ClassificationExtendedness_flag,Set to 1 for any fatal failure.,None,bool
+VIRCAM_K_m_base_CircularApertureFlux_6_0_magErr,mag within 6.000000-pixel aperture,mag,float64
+VIRCAM_K_m_base_CircularApertureFlux_6_0_mag,mag within 6.000000-pixel aperture,mag,float64
+VIRCAM_K_m_base_CircularApertureFlux_6_0_fluxErr,flux within 6.000000-pixel aperture,nJy,float64
+VIRCAM_K_m_base_CircularApertureFlux_6_0_flux,flux within 6.000000-pixel aperture,nJy,float64
+VIRCAM_K_m_base_CircularApertureFlux_6_0_flag,General Failure Flag,None,bool
+VIRCAM_J_m_base_ClassificationExtendedness_value,"Set to 1 for extended sources, 0 for point sources.",None,float64
+VIRCAM_J_m_base_ClassificationExtendedness_flag,Set to 1 for any fatal failure.,None,bool
+VIRCAM_J_m_base_CircularApertureFlux_6_0_magErr,mag within 6.000000-pixel aperture,mag,float64
+VIRCAM_J_m_base_CircularApertureFlux_6_0_mag,mag within 6.000000-pixel aperture,mag,float64
+VIRCAM_J_m_base_CircularApertureFlux_6_0_fluxErr,flux within 6.000000-pixel aperture,nJy,float64
+VIRCAM_J_m_base_CircularApertureFlux_6_0_flux,flux within 6.000000-pixel aperture,nJy,float64
+VIRCAM_J_m_base_CircularApertureFlux_6_0_flag,General Failure Flag,None,bool
+VIRCAM_H_m_base_ClassificationExtendedness_value,"Set to 1 for extended sources, 0 for point sources.",None,float64
+VIRCAM_H_m_base_ClassificationExtendedness_flag,Set to 1 for any fatal failure.,None,bool
+VIRCAM_H_m_base_CircularApertureFlux_6_0_magErr,mag within 6.000000-pixel aperture,mag,float64
+VIRCAM_H_m_base_CircularApertureFlux_6_0_mag,mag within 6.000000-pixel aperture,mag,float64
+VIRCAM_H_m_base_CircularApertureFlux_6_0_fluxErr,flux within 6.000000-pixel aperture,nJy,float64
+VIRCAM_H_m_base_CircularApertureFlux_6_0_flux,flux within 6.000000-pixel aperture,nJy,float64
+VIRCAM_H_m_base_CircularApertureFlux_6_0_flag,General Failure Flag,None,bool
+ComCam_z_m_base_ClassificationExtendedness_value,"Set to 1 for extended sources, 0 for point sources.",None,float64
+ComCam_z_m_base_ClassificationExtendedness_flag,Set to 1 for any fatal failure.,None,bool
+ComCam_z_m_base_CircularApertureFlux_6_0_magErr,mag within 6.000000-pixel aperture,mag,float64
+ComCam_z_m_base_CircularApertureFlux_6_0_mag,mag within 6.000000-pixel aperture,mag,float64
+ComCam_z_m_base_CircularApertureFlux_6_0_fluxErr,flux within 6.000000-pixel aperture,nJy,float64
+ComCam_z_m_base_CircularApertureFlux_6_0_flux,flux within 6.000000-pixel aperture,nJy,float64
+ComCam_z_m_base_CircularApertureFlux_6_0_flag,General Failure Flag,None,bool
+ComCam_y_m_base_ClassificationExtendedness_value,"Set to 1 for extended sources, 0 for point sources.",None,float64
+ComCam_y_m_base_ClassificationExtendedness_flag,Set to 1 for any fatal failure.,None,bool
+ComCam_y_m_base_CircularApertureFlux_6_0_magErr,mag within 6.000000-pixel aperture,mag,float64
+ComCam_y_m_base_CircularApertureFlux_6_0_mag,mag within 6.000000-pixel aperture,mag,float64
+ComCam_y_m_base_CircularApertureFlux_6_0_fluxErr,flux within 6.000000-pixel aperture,nJy,float64
+ComCam_y_m_base_CircularApertureFlux_6_0_flux,flux within 6.000000-pixel aperture,nJy,float64
+ComCam_y_m_base_CircularApertureFlux_6_0_flag,General Failure Flag,None,bool
+ComCam_r_m_coord_ra,position in ra/dec,rad,float64
+ComCam_r_m_coord_dec,position in ra/dec,rad,float64
+ComCam_r_m_base_ClassificationExtendedness_value,"Set to 1 for extended sources, 0 for point sources.",None,float64
+ComCam_r_m_base_ClassificationExtendedness_flag,Set to 1 for any fatal failure.,None,bool
+ComCam_r_m_base_CircularApertureFlux_6_0_magErr,mag within 6.000000-pixel aperture,mag,float64
+ComCam_r_m_base_CircularApertureFlux_6_0_mag,mag within 6.000000-pixel aperture,mag,float64
+ComCam_r_m_base_CircularApertureFlux_6_0_fluxErr,flux within 6.000000-pixel aperture,nJy,float64
+ComCam_r_m_base_CircularApertureFlux_6_0_flux,flux within 6.000000-pixel aperture,nJy,float64
+ComCam_r_m_base_CircularApertureFlux_6_0_flag,General Failure Flag,None,bool
+ComCam_i_m_base_ClassificationExtendedness_value,"Set to 1 for extended sources, 0 for point sources.",None,float64
+ComCam_i_m_base_ClassificationExtendedness_flag,Set to 1 for any fatal failure.,None,bool
+ComCam_i_m_base_CircularApertureFlux_6_0_magErr,mag within 6.000000-pixel aperture,mag,float64
+ComCam_i_m_base_CircularApertureFlux_6_0_mag,mag within 6.000000-pixel aperture,mag,float64
+ComCam_i_m_base_CircularApertureFlux_6_0_fluxErr,flux within 6.000000-pixel aperture,nJy,float64
+ComCam_i_m_base_CircularApertureFlux_6_0_flux,flux within 6.000000-pixel aperture,nJy,float64
+ComCam_i_m_base_CircularApertureFlux_6_0_flag,General Failure Flag,None,bool
+ComCam_g_m_base_ClassificationExtendedness_value,"Set to 1 for extended sources, 0 for point sources.",None,float64
+ComCam_g_m_base_ClassificationExtendedness_flag,Set to 1 for any fatal failure.,None,bool
+ComCam_g_m_base_CircularApertureFlux_6_0_magErr,mag within 6.000000-pixel aperture,mag,float64
+ComCam_g_m_base_CircularApertureFlux_6_0_mag,mag within 6.000000-pixel aperture,mag,float64
+ComCam_g_m_base_CircularApertureFlux_6_0_fluxErr,flux within 6.000000-pixel aperture,nJy,float64
+ComCam_g_m_base_CircularApertureFlux_6_0_flux,flux within 6.000000-pixel aperture,nJy,float64
+ComCam_g_m_base_CircularApertureFlux_6_0_flag,General Failure Flag,None,bool

@@ -19,8 +19,8 @@ allBands = ['ComCam_' + b for b in comcamBands] + ['VIRCAM_' + b for b in vistaB
 
 BUTLER_LOC = '../../dmu4/dmu4_DP1/dmu4_DP1_ECDFS/data'
 DATA = 'data'
-COLL_MEAS_FORCED = "u/ir-sare1/DRP/videoMultiVisit/20260119T222850Z"
-COLL_CALEXP_VIRCAM = "u/ir-sare1/DRP/videoCoaddDetects/20260119T111844Z"
+COLL_MEAS_FORCED = "u/ir-sare1/DRP/videoMultiVisit"
+COLL_CALEXP_VIRCAM = "u/ir-sare1/DRP/videoCoaddDetect"
 COLL_CALEXP_COMCAM = "ComCam/deepCoadd_results"
 
 
@@ -33,11 +33,11 @@ patch_dict = sys.argv[2]
 
 # Reduced catalog columns
 reduced_cols = [
-    'id', 'VIRCAM_Ks_m_coord_ra', 'VIRCAM_Ks_m_coord_dec',
-    'comcam_R_m_coord_ra', 'comcam_R_m_coord_dec',
-    'VIRCAM_Ks_m_detect_isPatchInner', 'VIRCAM_Ks_m_detect_isTractInner',
-    'VIRCAM_Ks_m_detect_isPrimary', 'VIRCAM_Ks_m_deblend_nChild',
-    'VIRCAM_Ks_m_merge_peak_sky',
+    'id', 'VIRCAM_K_m_coord_ra', 'VIRCAM_K_m_coord_dec',
+    'ComCam_r_m_coord_ra', 'ComCam_r_m_coord_dec',
+    'VIRCAM_K_m_detect_isPatchInner', 'VIRCAM_K_m_detect_isTractInner',
+    'VIRCAM_K_m_detect_isPrimary', 'VIRCAM_K_m_deblend_nChild',
+    'VIRCAM_K_m_merge_peak_sky',
 ]
 
 colTypes = [
