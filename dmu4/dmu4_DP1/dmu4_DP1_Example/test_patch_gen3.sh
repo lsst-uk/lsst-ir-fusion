@@ -69,7 +69,7 @@ pipetask run -d "instrument='VIRCAM' AND detector IN (9)" \
     --input confidence/video,VIRCAM/raw/video,refcats/video,VIRCAM/calib/video,skymaps \
     --register-dataset-types \
     -p "$OBS_VISTA_DIR/pipelines/DRP-DP1.yaml#step1" \
-    --output videoStep1
+    --output videoStep1 -j10
 
 
 # Run the calibrate step
@@ -80,13 +80,22 @@ pipetask run -d "instrument='VIRCAM' AND skymap='lsst_cells_v1'" \
     --output videoStep2
 
 
-# Run the coadd step
+# Run the Warp step
 pipetask run -d "tract=5063 AND patch IN (22) AND skymap='lsst_cells_v1'" \
     -b $repo \
     --input videoStep2 \
     --register-dataset-types \
     -p "$OBS_VISTA_DIR/pipelines/DRP-DP1.yaml#step3a" \
-    --output videoStep3a
+    --output videoStep3a -j10
+
+
+# Run the Coadd step
+pipetask run -d "tract=5063 AND patch IN (22) AND skymap='lsst_cells_v1'" \
+    -b $repo \
+    --input videoStep2,videoStep3a \
+    --register-dataset-types \
+    -p "$OBS_VISTA_DIR/pipelines/DRP-DP1.yaml#step3b" \
+    --output videoStep3b -j10
 
 
 # Ingest ComCam deepCoadd images and detection catalogs
@@ -105,6 +114,6 @@ butler ingest-files $repo deepCoadd_det comcam/deepCoadd_results \
 
 # Run the photometry step
 pipetask run -d "tract=5063 AND patch IN (22) AND skymap='lsst_cells_v1' " \
-    -b $repo --input videoStep3a,comcam/deepCoadd_results \
-    --register-dataset-types -p "$OBS_VISTA_DIR/pipelines/DRP-DP1.yaml#step3b" \
-    --output videoStep3b
+    -b $repo --input videoStep3b,comcam/deepCoadd_results \
+    --register-dataset-types -p "$OBS_VISTA_DIR/pipelines/DRP-DP1.yaml#step3c" \
+    --output videoStep3c -j10
