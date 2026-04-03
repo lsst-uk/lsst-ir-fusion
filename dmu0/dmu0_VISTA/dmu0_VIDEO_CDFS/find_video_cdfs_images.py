@@ -1,8 +1,8 @@
 import os
 from astropy.io import fits
 
-# Base directory containing observation date directories on Iridis6 (e.g., 20121022, 20121103, etc.)
-base_dir = '/iridisfs/lsstphasec/data/private/VISTA/VIDEO/'
+# Base directory containing observation date directories on CSD3 (e.g., 20121022, 20121103, etc.)
+base_dir = '/home/ir-sare1/rds/rds-iris-ip005/data/private/VISTA/VIDEO/'
 # List to store the paths to CDFS images
 cdfs_images = []
 
