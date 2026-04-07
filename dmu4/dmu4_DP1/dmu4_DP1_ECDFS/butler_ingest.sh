@@ -16,7 +16,7 @@ touch $repo/butler-seed.yaml
 cat > $repo/butler-seed.yaml << EOF
 registry:
     db: "postgresql://128.232.226.166:5432/desc_csd3"
-    namespace: "lsst_vista_dp1"
+    namespace: "lsst_vista_dp1_$(date +%Y%m%d_%H%M%S)"
 EOF
 
 butler create --seed-config $repo/butler-seed.yaml --override $repo

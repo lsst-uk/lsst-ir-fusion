@@ -2,7 +2,7 @@
 
 # Get the latest weekly or official release tag from https://github.com/lsst/lsst/tags
 #export weekly='w.2025.14'
-export release='v29.1.1'
+export release='v29.2.1'
 
 unset LSST_HOME EUPS_PATH LSST_DEVEL EUPS_PKGROOT REPOSITORY_PATH
 
@@ -12,34 +12,32 @@ unset LSST_HOME EUPS_PATH LSST_DEVEL EUPS_PKGROOT REPOSITORY_PATH
 mkdir -p source/$release
 cd source/$release
 
-# Download and run of "newinstall.sh" 
-# For official release, we use 28.0.2 not v28.0.2 for example instead of $weekly.
-curl -OL https://raw.githubusercontent.com/lsst/lsst/${release#v}/scripts/newinstall.sh
-bash newinstall.sh -ctb
+# To install lsst pipleine with -X option for "exact" same environment with DP1.
+# https://pipelines.lsst.io/install/lsstinstall.html#run-lsstinstall
 
-# Load the LSST software environment into the shell
-source loadLSST.bash
+curl -OL https://ls.st/lsstinstall
+chmod u+x lsstinstall
+./lsstinstall -X v29_2_1
 
-# Install Science Pipelines packages
-# For official release, we use v29_1_1, for example.
-#eups distrib install -t w_2025_14 lsst_distrib
-eups distrib install -t v29_1_1 lsst_distrib
+source loadLSST.sh
+
+eups distrib install -t v29_2_1 lsst_distrib
 curl -sSL https://raw.githubusercontent.com/lsst/shebangtron/main/shebangtron | python
+setup lsst_distrib
+
+
+echo $EUPS_PATH
+cd conda/envs/lsst-scipipe-10.1.0-exact/share/eups/Linux64
 
 # Install "obs_vista" package
-cd stack/current/
-# try Linux
-cd Linux64
-# try Mac
-#cd DarwinX86
 mkdir obs_vista
 cd obs_vista
 git clone https://github.com/lsst-uk/obs_vista.git
 mv obs_vista 24.0.0.1
 eups declare -t current obs_vista 24.0.0.1
+setup obs_vista
 
-
-# Get Python major.minor version from LSST
+# Get Python major.minor version from the loaded LSST environment
 PYVER=$(python - <<'EOF'
 import sys
 print(f"{sys.version_info.major}.{sys.version_info.minor}")
@@ -48,10 +46,17 @@ EOF
 
 echo "LSST Python version = $PYVER"
 
+# Find install root from EUPS_PATH
+INSTALL_DIR="$(cd "$EUPS_PATH/../../../../../" && pwd -P)"
+wq_env="$INSTALL_DIR/conda/envs/wq_env"
+
+echo "INSTALL_DIR = $INSTALL_DIR"
+echo "wq_env      = $wq_env"
 
 # Requirements for using ctrl_bps and the Parsl-based plug-in
-INSTALL_DIR="$(cd ../../../install/source/$release && pwd -P)"
-wq_env="$INSTALL_DIR/stack/wq_env"
-
 conda create -y -p "$wq_env" -c conda-forge python="$PYVER" ndcctools
-"$wq_env/bin/python" -c "import work_queue; print('work_queue OK')"
+
+"$wq_env/bin/python" - <<'EOF'
+import work_queue
+print("work_queue OK")
+EOF
