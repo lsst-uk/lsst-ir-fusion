@@ -16,7 +16,7 @@
 #SBATCH -p icelake
 #SBATCH --exclusive
 #! How many whole nodes should be allocated?
-#SBATCH --nodes=10
+#SBATCH --nodes=15
 #! How many (MPI) tasks will there be in total? (<= nodes*56)
 #! The Cascade Lake (cclake) nodes have 56 CPUs (cores) each and
 #! 3420 MiB of memory per CPU.
@@ -25,7 +25,7 @@
 #! (for single core jobs always leave this at 1)
 #SBATCH --cpus-per-task=76
 #! How much wallclock time will be required?
-#SBATCH --time=06:00:00
+#SBATCH --time=36:00:00
 #! What types of email messages do you wish to receive?
 #SBATCH --mail-type=ALL
 #! Uncomment this to prevent the job from being requeued (e.g. if
