@@ -45,8 +45,8 @@ module load rhel8/default-icl
 
 #! Setup LSST Science pipeline environment
 #source ../../dmu4/dmu4_DP1/dmu4_DP1_ECDFS/setup.sh
-export release='v29.1.1'
-source ../../../install/source/${release}/loadLSST.bash
+export release='v29.2.1'
+source ../../install/source/${release}/loadLSST.sh
 setup lsst_distrib
 
 #! Full path to application executable:
