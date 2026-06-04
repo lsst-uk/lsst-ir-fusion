@@ -1,6 +1,6 @@
 # LSST IR fusion
 
-This repository defines the database structure for the upcoming combined Vera C. Rubin Observatory Legacy Survey of Space and Time (LSST) and Visible and Infrared Survey Telescope for Astronomy (VISTA) near infrared data product. This will provide pixel matched images and multiband catalogues. A preliminary data release will be produced using the Hyper SuprimeCam imaging and catalogues as a precursor to the LSST ten year survey due to start in 2023. The raw data is not stored in Git but there are various notebooks, code, and data descriptions here which, together with the raw data, define the data release. The full data product is currently under development and not publicly available. 
+This repository defines the database structure for the upcoming combined Vera C. Rubin Observatory Legacy Survey of Space and Time (LSST) and Visible and Infrared Survey Telescope for Astronomy (VISTA) near infrared data product. This will provide pixel matched images and multiband catalogues. A preliminary data release has been produced using Hyper Suprime-Cam imaging and catalogues as a precursor to the LSST ten-year survey. The raw data is not stored in Git but there are various notebooks, code, and data descriptions here which, together with the raw data, define the data release.  A completed LSST DP1 CDFS run has now been added as an early Rubin/ComCam validation case for the LSST-VISTA workflow.
 
 ## Installation
 
@@ -8,7 +8,7 @@ The code is this repository makes use of the LSST stack and the bespoke obs_vist
 
 https://github.com/lsst-uk/obs_vista
 
-That should then permit running the notebooks in the database here. 
+That should then permit running the notebooks in the database here.
 
 
 ## Data structure
@@ -24,7 +24,7 @@ Each folder contained here will have a corresponding data folder not stored on G
  [DMU4](dmu4)      |  LSST pipeline runs and Butler repositories
  [DMU5](dmu5)      |  Production of final catalogues and diagnostics
  [DMU6](dmu6)      |  Photometric redhshifts
- [DMU7](dmu7)      |  Spectral Energy Distribution (SED) modelling   
+ [DMU7](dmu7)      |  Spectral Energy Distribution (SED) modelling
 
 
 ## Tiling, warping and pixel spaces
