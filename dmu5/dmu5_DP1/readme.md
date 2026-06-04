@@ -111,8 +111,8 @@ Change this to point to your Butler repository.
 
 Set these according to your processing runs:
 ```
-COLL_MEAS_FORCED = "u/ir-sare1/DRP/videoMultiVisit/20260119T222850Z"
-COLL_CALEXP_VIRCAM = "u/ir-sare1/DRP/videoCoaddDetects/20260119T111844Z"
+COLL_MEAS_FORCED = "u/ir-sare1/DRP/videoMultiVisit"
+COLL_CALEXP_VIRCAM = "u/ir-sare1/DRP/videoCoaddDetect"
 COLL_CALEXP_COMCAM = "ComCam/deepCoadd_results"
 ```
 
