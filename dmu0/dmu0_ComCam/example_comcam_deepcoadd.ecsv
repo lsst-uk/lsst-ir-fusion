@@ -1,0 +1,17 @@
+# %ECSV 1.0
+# ---
+# datatype:
+# - {name: filename, datatype: string}
+# - {name: band, datatype: string}
+# - {name: patch, datatype: int64}
+# - {name: physical_filter, datatype: string}
+# - {name: skymap, datatype: string}
+# - {name: tract, datatype: int64}
+# schema: astropy-2.0
+filename band patch physical_filter skymap tract
+../../../dmu0/dmu0_ComCam/data/dp1_ecdfs/deepCoadd_results/ComCam_g/5063/2,2/deep_coadd_5063_22_g_lsst_cells_v1_LSSTComCam_runs_DRP_DP1_DM-51335.fits g 22 ComCam_g lsst_cells_v1 5063
+../../../dmu0/dmu0_ComCam/data/dp1_ecdfs/deepCoadd_results/ComCam_i/5063/2,2/deep_coadd_5063_22_i_lsst_cells_v1_LSSTComCam_runs_DRP_DP1_DM-51335.fits i 22 ComCam_i lsst_cells_v1 5063
+../../../dmu0/dmu0_ComCam/data/dp1_ecdfs/deepCoadd_results/ComCam_r/5063/2,2/deep_coadd_5063_22_r_lsst_cells_v1_LSSTComCam_runs_DRP_DP1_DM-51335.fits r 22 ComCam_r lsst_cells_v1 5063
+../../../dmu0/dmu0_ComCam/data/dp1_ecdfs/deepCoadd_results/ComCam_u/5063/2,2/deep_coadd_5063_22_u_lsst_cells_v1_LSSTComCam_runs_DRP_DP1_DM-51335.fits u 22 ComCam_u lsst_cells_v1 5063
+../../../dmu0/dmu0_ComCam/data/dp1_ecdfs/deepCoadd_results/ComCam_y/5063/2,2/deep_coadd_5063_22_y_lsst_cells_v1_LSSTComCam_runs_DRP_DP1_DM-51335.fits y 22 ComCam_y lsst_cells_v1 5063
+../../../dmu0/dmu0_ComCam/data/dp1_ecdfs/deepCoadd_results/ComCam_z/5063/2,2/deep_coadd_5063_22_z_lsst_cells_v1_LSSTComCam_runs_DRP_DP1_DM-51335.fits z 22 ComCam_z lsst_cells_v1 5063

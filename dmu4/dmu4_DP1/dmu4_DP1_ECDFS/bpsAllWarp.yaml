@@ -1,0 +1,26 @@
+# Warp
+
+pipelineYaml: "${OBS_VISTA_DIR}/pipelines/DRP-DP1.yaml#step3a"
+
+wmsServiceClass: lsst.ctrl.bps.parsl.ParslService
+
+project: dev
+campaign: quick
+computeSite: work_queue
+#monitorEnable: true
+
+parsl:
+  log_level: INFO
+
+site:
+  work_queue:
+    class: lsst.ctrl.bps.parsl.sites.work_queue.LocalSrunWorkQueue
+    worker_options: "--memory=245000"   # work_queue expects memory in MB
+    nodes_per_block: 10
+
+
+payload:
+  payloadName: DRP/videoWarp
+  butlerConfig: /home/ir-sare1/rds/rds-iris-ip005/Elham/lsst-ir-fusion/dmu4/dmu4_DP1/dmu4_DP1_ECDFS/data/butler.yaml
+  inCollection: skymaps,u/ir-sare1/DRP/videoCalibrate
+  dataQuery: "tract IN (4848,4849,5062,5063,5064) AND skymap='lsst_cells_v1'"
