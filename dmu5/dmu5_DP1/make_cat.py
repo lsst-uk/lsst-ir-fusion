@@ -50,6 +50,33 @@ measTypes = ['mag', 'magErr', 'flux', 'fluxErr', 'flag']
 for c, b, m in itertools.product(colTypes, allBands, measTypes):
     reduced_cols.append(c.format(b.replace('-', '_'), m))
 
+# Add forced aperture photometry to the reduced catalogue.
+for b, m in itertools.product(allBands, measTypes):
+    reduced_cols.append(
+        f"{b.replace('-', '_')}_f_"
+        f"base_CircularApertureFlux_6_0_{m}")
+
+# Forced-photometry pixel-quality flags
+forced_pixel_flags = [
+    "base_PixelFlags_flag_offimage",
+    "base_PixelFlags_flag_edgeCenterAll",
+    "base_PixelFlags_flag_nodataCenterAll",
+    "base_PixelFlags_flag_interpolatedCenterAll",
+    "base_PixelFlags_flag_saturatedCenterAll",
+    "base_PixelFlags_flag_crCenterAll",
+    "base_PixelFlags_flag_badCenterAll",
+    "base_PixelFlags_flag_suspectCenterAll",
+    "base_PixelFlags_flag_clippedCenterAll",
+    "base_PixelFlags_flag_sensor_edgeCenterAll",
+    "base_PixelFlags_flag_rejectedCenterAll",
+    "base_PixelFlags_flag_inexact_psfCenterAll",
+]
+
+for b, flag in itertools.product(allBands, forced_pixel_flags):
+    reduced_cols.append(
+        f"{b}_f_{flag}"
+    )
+
 
 def addFlux(cat, sources, photoCalib):
     """Add magnitudes and fluxes to an astropy catalogues with instrument fluxes"""
