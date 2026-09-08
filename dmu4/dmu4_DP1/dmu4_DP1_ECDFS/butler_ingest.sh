@@ -9,14 +9,18 @@ source setup.sh
 # Set location of Butler
 export repo=data
 
-# Create the Butler (using the PostgreSQL database)
-mkdir $repo
-touch $repo/butler-seed.yaml
+# Create a unique PostgreSQL namespace
+timestamp=$(date +%Y%m%d_%H%M%S)
+namespace="lsst_vista_dp1_${timestamp}"
 
-cat > $repo/butler-seed.yaml << EOF
+# Create the Butler
+mkdir "$repo"
+touch "$repo/butler-seed.yaml"
+
+cat > "$repo/butler-seed.yaml" << EOF
 registry:
     db: "postgresql://128.232.226.166:5432/desc_csd3"
-    namespace: "lsst_vista_dp1_$(date +%Y%m%d_%H%M%S)"
+    namespace: "${namespace}"
 EOF
 
 butler create --seed-config $repo/butler-seed.yaml --override $repo
