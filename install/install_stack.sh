@@ -2,7 +2,7 @@
 
 # Get the latest weekly or official release tag from https://github.com/lsst/lsst/tags
 #export weekly='w.2025.14'
-export release='v29.2.1'
+export release='v30_0_10'
 
 unset LSST_HOME EUPS_PATH LSST_DEVEL EUPS_PKGROOT REPOSITORY_PATH
 
@@ -17,17 +17,17 @@ cd source/$release
 
 curl -OL https://ls.st/lsstinstall
 chmod u+x lsstinstall
-./lsstinstall -X v29_2_1
+./lsstinstall -X $release
 
 source loadLSST.sh
 
-eups distrib install -t v29_2_1 lsst_distrib
+eups distrib install -t $release lsst_distrib
 curl -sSL https://raw.githubusercontent.com/lsst/shebangtron/main/shebangtron | python
 setup lsst_distrib
 
 
 echo $EUPS_PATH
-cd conda/envs/lsst-scipipe-10.1.0-exact/share/eups/Linux64
+cd conda/envs/lsst-scipipe-12.3.0-exact/share/eups/Linux64
 
 # Install "obs_vista" package
 mkdir obs_vista
