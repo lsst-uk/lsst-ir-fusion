@@ -19,9 +19,9 @@ export OBS_VISTA_PROFILE=LSSTCam
 
 
 # Delete old butler if already present
-if [ -f $repo/butler.yaml ]; then
-    rm -rf $repo
-fi
+#if [ -f $repo/butler.yaml ]; then
+#    rm -rf $repo
+#fi
 
 
 # Create the Butler
@@ -39,11 +39,11 @@ butler register-skymap $repo -C "$OBS_VISTA_DIR/config/LSSTCam/makeSkyMap.py"
 # Import the reference catalogues to the butler.
 butler register-dataset-type $repo the_monster_20250219_vista SimpleCatalog htm7
 
+
 # ------------------------------------------------------------
 # Approach 1
 # Monster astrometry + direct VIDEO Z,Y,J,H,Ks photometry
 # ------------------------------------------------------------
-
 cp -r ../../../dmu2/dmu2_DP2/data/video_elais_ap1 $repo
 butler ingest-files -t copy $repo \
     the_monster_20250219_vista \
@@ -51,11 +51,11 @@ butler ingest-files -t copy $repo \
     data/video_elais_ap1/filename_to_htm.ecsv
 rm -r $repo/video_elais_ap1
 
+
 # ------------------------------------------------------------
 # Approach 2
 # Monster astrometry + transformed Z/Y + VIDEO J,H,Ks
 # ------------------------------------------------------------
-
 cp -r ../../../dmu2/dmu2_DP2/data/video_elais_ap2 $repo
 butler ingest-files -t copy $repo \
     the_monster_20250219_vista \
@@ -65,6 +65,7 @@ rm -r $repo/video_elais_ap2
 
 
 # Ingest the raw exposures _st for stacks [0-9] for exposures
+# Instead of "-t copy" we can use "-t hardlink"
 butler ingest-raws $repo ../../../dmu0/dmu0_VISTA/dmu0_VIDEO_ELAIS/data/*_st.fit \
 	-t copy --output-run VIRCAM/raw/video_elais
 
@@ -81,3 +82,35 @@ butler register-dataset-type $repo \
 butler ingest-files --formatter=lsstuk.obs.vista.VircamRawFormatter $repo \
     confidence confidence/video_elais \
     ../../../dmu0/dmu0_VISTA/dmu0_VIDEO_ELAIS/example_export_confidence.ecsv -t copy
+
+
+# Run the singleFrame processing (detectors 10 and 11 for example)
+pipetask run -b $repo  --register-dataset-types \
+    -d "instrument='VIRCAM' AND detector IN (10, 11)" \
+    -i confidence/video_elais,VIRCAM/raw/video_elais,refcats/video_elais_ap2,VIRCAM/calib/video_elais,skymaps \
+    -p "$OBS_VISTA_DIR/pipelines/DRP-DP2.yaml#step1" \
+    -o videoStep1 -j10
+
+
+# Run the calibrate step
+pipetask run -b $repo --register-dataset-types \
+    -d "instrument='VIRCAM' AND skymap='lsst_cells_v2'" \
+    -i videoStep1 \
+    -p "$OBS_VISTA_DIR/pipelines/DRP-DP2.yaml#step2" \
+    -o videoStep2
+
+
+# Run the Warp step
+pipetask run -b $repo --register-dataset-types \
+    -d "tract=2877 AND patch IN (77) AND skymap='lsst_cells_v2'" \
+    -i videoStep2 \
+    -p "$OBS_VISTA_DIR/pipelines/DRP-DP2.yaml#step3a" \
+    -o videoStep3a -j10
+
+
+# Run the Coadd step
+pipetask run -b $repo --register-dataset-types \
+    -d "tract=2877 AND patch IN (77) AND skymap='lsst_cells_v2'" \
+    -i videoStep2,videoStep3a \
+    -p "$OBS_VISTA_DIR/pipelines/DRP-DP2.yaml#step3b" \
+    -o videoStep3b -j10
