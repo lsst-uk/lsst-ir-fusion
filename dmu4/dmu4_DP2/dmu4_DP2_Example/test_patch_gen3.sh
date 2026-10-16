@@ -114,3 +114,29 @@ pipetask run -b $repo --register-dataset-types \
     -i videoStep2,videoStep3a \
     -p "$OBS_VISTA_DIR/pipelines/DRP-DP2.yaml#step3b" \
     -o videoStep3b -j10
+
+
+# Ingest Optical data
+python ingest_dp2_optical_predetection.py \
+  --repo "$repo" \
+  --input-dir ../../../dmu0/dmu0_LSSTCam/data/dp2_elais/predetection \
+  --run LSSTCam/elais/optical_predetections \
+  --skymap lsst_cells_v2 \
+  --tract 2877 --patch 77 \
+  --bands u g r i z y
+
+
+# Creating optical detections in butler
+pipetask run -b $repo --register-dataset-types \
+  -d "instrument='LSSTCam' AND skymap='lsst_cells_v2' AND tract=2877 AND patch=77" \
+  -i "LSSTCam/elais/optical_predetections" \
+  -p "$OBS_VISTA_DIR/pipelines/DP2-optical-detection.yaml" \
+  -o "LSSTCam/elais/optical_detections" -j 6
+
+
+# Run the Coadd step
+pipetask run -b $repo --register-dataset-types \
+  -d "instrument='VIRCAM' AND skymap='lsst_cells_v2' AND tract=2877 AND patch=77" \
+  -i "videoStep3b,LSSTCam/elais/optical_detections" \
+  -p "$OBS_VISTA_DIR/pipelines/DRP-DP2.yaml#step3c" \
+  -o videoStep3c -j 11
