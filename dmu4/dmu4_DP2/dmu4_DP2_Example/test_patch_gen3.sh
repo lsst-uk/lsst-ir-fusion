@@ -28,8 +28,9 @@ export OBS_VISTA_PROFILE=LSSTCam
 butler create $repo
 
 
-# Register VIRCAM
+# Register instruments
 butler register-instrument $repo lsstuk.obs.vista.VIRCAM
+butler register-instrument "$repo" lsst.obs.lsst.LsstCam
 
 
 # Make and register the all sky skymap using local config file
